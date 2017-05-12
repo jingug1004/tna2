@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"type="text/css" href="/css/myPage/qna/qna.css">
+
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<body>
+
+    <div class="qna">
+        <div class="qna_haed">
+            <p>번호</p>
+            <p>문의유형</p>
+            <p>문의제목</p>
+            <p>문의일</p>
+            <p>문의상태</p>
+        </div>
+        <div class="qna_container">
+            <div class="qna_list">
+                #foreach($qnaList in $list)
+                <div class="qna_list_title">
+                    <p></p>
+                    #if($!qnaList.qnaClass1 == 1)
+                    <p>없음</p>
+                    #elseif($!qnaList.qnaClass1 == 2)
+                    <p>주문</p>
+                    #elseif($!qnaList.qnaClass1 == 3)
+                    <p>배송</p>
+                    #elseif($!qnaList.qnaClass1 == 4)
+                    <p>반품/교환</p>
+                    #elseif($!qnaList.qnaClass1 == 5)
+                    <p>취소/환불</p>
+                    #elseif($!qnaList.qnaClass1 == 6)
+                    <p>이벤트/쿠폰/포인트</p>
+                    #elseif($!qnaList.qnaClass1 == 7)
+                    <p>회원서비스</p>
+                    #elseif($!qnaList.qnaClass1 == 8)
+                    <p>고객의견</p>
+                    #elseif($!qnaList.qnaClass1 == 9)
+                    <p>광고/제휴/입점문의</p>
+                    #end
+                    <p><a href="#">$qnaList.subject</a></p>
+                    <p>$qnaList.regDate</p>
+                     #set($reply = "Y")
+                     #if($!reply == $!qnaList.replyYn)
+                    <p>답변완료</p>
+                     #else
+                    <p>답변대기</p>
+                     #end
+                </div>
+                 #end
+                <div class="qna_content">
+                    <div>
+                        <p>문의 내용</p>
+                        <div>
+                            제 체격에 95는 좀 크고 90은 작은데<br>
+                            이옷은 어느 정도 일까요?
+                        </div>
+                    </div>
+                </div>
+                <div class="answer_title">
+                    <div>
+                        <p>답변 내용</p>
+                        <div>그걸 왜 저한테 물어보십니까</div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="/js/myPage/qna/jquery-3.1.1.min.js"></script>
+<script>
+ (function(){
+    (".qna_list_title a").each(function(){
+        var idx = (this).index()+1;
+        (this).children(".qna_list_title").find("p").first().text(idx);
+    });
+    (".tt").on("click",function(e){
+        e.preventDefault();
+        
+        var text = (this).parents(".qna_list_title").siblings("div");
+        if(text.is(":visible")){
+            text.slideUp();
+        }else{
+            text.slideDown();
+            (this).parents(".qna_list").siblings().children(".qna_list_title").next("div").slideUp();
+        }
+    })
+});
+ 
+/*  (function(){
+	    (".qna_list").each(function(){
+	        var idx = (this).index()+1;
+	        (this).children(".qna_list_title").find("p").first().text(idx);
+	    });
+	    (".qna_list_title a").on("click",function(e){
+	        e.preventDefault();
+	        
+	        var text = (this).parents(".qna_list_title").siblings("div");
+	        if(text.is(":visible")){
+	            text.slideUp();
+	        }else{
+	            text.slideDown();
+	            (this).parents(".qna_list").siblings().children(".qna_list_title").next("div").slideUp();
+	        }
+	    })
+	}); */
+</script>
+</body>
+</html>

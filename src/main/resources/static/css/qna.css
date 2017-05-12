@@ -1,0 +1,130 @@
+
+element.style {
+    padding: 0 13px;
+}
+
+td.rightpadding {
+    padding-right: 15px;
+}
+
+td {
+    font-size: 14px;
+    padding: 0px 0 0 15px;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+th, td {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 5px 8px;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+body {
+    color: #555555;
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: NanumGothic,'나눔고딕',ng,sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    background: #f0f0f0;
+    max-width: 100%;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: NanumGothic,'나눔고딕',ng,sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    background: #f0f0f0;
+    max-width: 100%;
+}
+
+#birth_month, #birth_year, #birth_day {
+    border: 0px;
+    -webkit-appearance: none;
+    height: 40px;
+    text-align: right;
+    background: #fff;
+}
+
+select {
+    font-size: 12px;
+    color: #555555;
+    font-family: NanumGothic,'나눔고딕',ng,sans-serif;
+}
+
+keygen, select, select[size="0"], select[size="1"] {
+    border-radius: 0px;
+    border-color: rgb(169, 169, 169);
+}
+
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+}
+
+keygen, select {
+    border-radius: 5px;
+}
+
+input, textarea, keygen, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+}
+
+input, textarea, keygen, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+

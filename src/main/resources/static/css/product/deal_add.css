@@ -1,0 +1,3380 @@
+a.dealLink:hover {
+    text-decoration: underline
+}
+
+.btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent
+}
+
+.btnDeal {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    height: 63px;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    border: 1px solid #ff5073;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box
+}
+
+.btnMeme {
+    color: #fff;
+    background-color: #ff5073;
+    -webkit-box-shadow: 0 2px 0 0 rgba(196, 51, 80, 0.95);
+    -moz-box-shadow: 0 2px 0 0 rgba(196, 51, 80, 0.95);
+    box-shadow: 0 2px 0 0 rgba(196, 51, 80, 0.95)
+}
+
+.btnWhite {
+    color: #ff5073;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 0 0 rgba(255, 148, 169, 0.95);
+    -moz-box-shadow: 0 2px 0 0 rgba(255, 148, 169, 0.95);
+    box-shadow: 0 2px 0 0 rgba(255, 148, 169, 0.95)
+}
+
+.btnDisabled, button.btnDisabled[disabled] {
+    color: #aaa;
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+    cursor: auto;
+    -webkit-box-shadow: 0 2px 0 0 rgba(224, 224, 224, 0.95);
+    -moz-box-shadow: 0 2px 0 0 rgba(224, 224, 224, 0.95);
+    box-shadow: 0 2px 0 0 rgba(224, 224, 224, 0.95)
+}
+
+.numTxt {
+    font-family: Tahoma, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    letter-spacing: 0
+}
+
+.memeTab {
+    position: relative;
+    background: #f9f9fa;
+    *zoom: 1
+}
+
+.memeTab:before, .memeTab:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.memeTab:after {
+    clear: both
+}
+
+.memeTab .memeTabInner {
+    position: relative;
+    width: 1080px;
+    margin: 0 auto
+}
+
+.memeTab li {
+    float: left;
+    width: 20%;
+    height: 45px;
+    overflow: visible
+}
+
+
+
+.memeTab .tabItem {
+    position: relative;
+    display: block;
+    padding: 11px 0 13px 0;
+    color: #8a8a8a;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0
+}
+
+.memeTab .tabArr {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 10px;
+    height: 5px;
+    margin: 0 0 0 -5px;
+    /*background: url("/web/images/deal/deal_20161125.png") no-repeat -1170px -20px*/
+}
+
+.memeTab .on {
+    color: #fff;
+    background-color: #ff839c
+}
+
+.memeTab .on .tabArr {
+    display: block
+}
+
+.contentsDetail {
+	display: none;
+	}
+
+.contentsDetail.on {
+	display: block;
+	}
+
+.txtGray {
+    color: #8a8a8a
+}
+
+.dealDescription {
+    position: relative;
+    margin: 33px 0 0 0;
+    padding: 0 0 0 545px;
+    color: #555;
+    z-index: 2;
+    *zoom: 1
+}
+
+.dealDescription:before, .dealDescription:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.dealDescription:after {
+    clear: both
+}
+
+.dealDescription .descInformation {
+    float: right;
+    position: relative;
+    width: 100%;
+    font-size: 12px
+}
+
+.dealDescription .descImage {
+    float: left;
+    position: relative;
+    left: -545px;
+    margin: 0 -545px 0 0;
+    width: 500px;
+    *zoom: 1
+}
+
+.dealDescription .descImage:before, .dealDescription .descImage:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.dealDescription .descImage:after {
+    clear: both
+}
+
+.dealDescription .tag {
+    height: 16px
+}
+
+.dealDescription .tag span {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 0 4px;
+    float: left;
+    height: 16px;
+    font-size: 11px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 19px;
+    *line-height: 16px;
+    font-family: '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
+}
+
+.dealDescription .tag .freeIcon {
+    background: #71a6e2
+}
+
+.dealDescription .tag .businessIcon {
+    background: #45c1a2
+}
+
+.dealDescription .tag .mdIcon {
+    background: #ff7ba3
+}
+
+.dealDescription .tag .priceIcon {
+    background: #ff7758
+}
+
+.dealDescription .tag .sampleIcon {
+    background: #ce68da
+}
+
+.dealDescription .tag .memedeliveryIcon {
+    background: #ff75c0
+}
+
+.dealDescription .tag .giftIcon {
+    background: #2fa6d8
+}
+
+.dealDescription .tag .overseasIcon {
+    background: #874cd0
+}
+
+.dealDescription .tag .payDeliveryIcon {
+    background: #707c94
+}
+
+.dealDescription .tag .overFreeIcon {
+    background: #71a6e2
+}
+
+.dealDescription .tag .codIcon {
+    background: #ac5bff
+}
+
+.dealDescription .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+
+.dealDescription .badge span {
+    width: 60px;
+    height: 60px;
+    display: block;
+    /*background: url("/web/images/deal/deal_20161125.png")*/
+}
+
+.dealDescription .badge .none {
+    display: none;
+    background: #000
+}
+
+.dealDescription .badge .hot {
+    background-position: 0 0
+}
+
+.dealDescription .badge .md {
+    background-position: -70px 0
+}
+
+.dealDescription .badge .memebox {
+    background-position: -140px 0
+}
+
+.dealDescription .badge .best {
+    background-position: -210px 0
+}
+
+.dealDescription .badge .new {
+    background-position: -280px 0
+}
+
+.dealDescription .badge .threeTime {
+    background-position: -140px 0
+}
+
+.dealDescription .badge .lowest {
+    background-position: -350px 0
+}
+
+.dealDescription .badge .freebie {
+    background-position: -420px 0
+}
+
+.dealDescription .badge .refund90 {
+    background-position: -490px 0
+}
+
+.dealDescription .badge .lowest90 {
+    background-position: -560px 0
+}
+
+.dealDescription .badge .sale369 {
+    background-position: -630px 0
+}
+
+.dealDescription .badge .promotion {
+    background-position: -700px 0
+}
+
+.dealDescription .badge .soldOutSoon {
+    background-position: -770px 0
+}
+
+.dealDescription .badge .deal_0 {
+    background-position: -840px 0
+}
+
+.dealDescription .badge .deal_100 {
+    background-position: -910px 0
+}
+
+.dealDescription .badge .reservation {
+    background-position: -980px 0
+}
+
+.infoTitle, .infoPrice {
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
+}
+
+.infoTop {
+    position: relative;
+    margin: 0 0 25px 0;
+    overflow: hidden;
+    font-size: 12px
+}
+
+.toBrand {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    line-height: 14px;
+    margin-top: -6px
+}
+
+.toBrandTxt {
+    display: block;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    padding-right: 12px;
+    color: #555
+}
+
+.icoArr {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: block;
+    width: 7px;
+    height: 11px;
+    margin-top: -5px;
+    /*background: url("/web/images/deal/deal_20161125.png") -390px -70px;*/
+    vertical-align: middle;
+    text-indent: -9999em;
+    overflow: hidden
+}
+
+.infoTitle {
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: bold
+}
+
+.titSub {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.infoPrice {
+    position: relative;
+    margin: 30px 0 0 0;
+    padding: 0 0 0 146px
+}
+
+.discountRate {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    width: 130px;
+    height: 50px;
+    margin-top: -25px;
+    color: #ff5073;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -2px
+}
+
+.nuNumber, .nuUnit {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    line-height: 1
+}
+
+.nuUnit {
+    top: -0.1em;
+    padding: 0 0 0 .1em
+}
+
+.rateNum {
+    margin-right: -12px
+}
+
+.rateUnit {
+    position: relative;
+    font-size: 24px
+}
+
+.priceCommon {
+    color: #aaa;
+    font-weight: bold
+}
+
+.priceCommon .nuNumber, .priceCommon .nuUnit {
+    text-decoration: line-through
+}
+
+.priceCommon .nuNumber {
+    font-size: 14px
+}
+
+.priceCommon .nuUnit {
+    font-size: 12px
+}
+
+.priceSell {
+    display: block;
+    color: #555;
+    font-weight: bold;
+    letter-spacing: 0
+}
+
+.priceSell .nuNumber {
+    font-size: 24px
+}
+
+.priceSell .nuUnit {
+    font-size: 20px
+}
+
+.infoPriceMeme {
+    padding: 0
+}
+
+.infoPriceMeme dt, .infoPriceMeme dd {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle
+}
+
+.memeTit {
+    position: relative;
+    top: -1px;
+    color: #ff5073;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 6px
+}
+
+.needHelp {
+    position: relative;
+    top: -11px;
+    left: -2px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 16px;
+    height: 16px;
+    color: #555;
+    font-size: 12px;
+    font-family: '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-weight: normal
+}
+
+.icoHelp {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 16px;
+    height: 0;
+    padding: 16px 0 0 0;
+    vertical-align: top;
+    letter-spacing: 0;
+    cursor: pointer;
+    /*background: url("/web/images/deal/deal_20161125.png") -560px -70px;*/
+    overflow: hidden
+}
+
+.helpBlock {
+    position: absolute;
+    left: -83px;
+    top: -98px;
+    display: none;
+    width: 185px;
+    height: 45px;
+    border: 1px solid #767676;
+    padding: 20px 20px 18px 20px;
+    background: #fff;
+    font-weight: normal
+}
+
+.helpBlock dt {
+    padding-bottom: 3px;
+    font-weight: bold
+}
+
+.helpBlock dd {
+    font-size: 11px;
+    text-align: left;
+    white-space: nowrap;
+    font-weight: normal
+}
+
+.helpBlock:before, .helpBlock:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 0
+}
+
+.helpBlock:before {
+    left: 84px;
+    border-top: 6px solid #767676;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent
+}
+
+.helpBlock:after {
+    left: 85px;
+    border-top: 5px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent
+}
+
+.needHelp:hover .helpBlock {
+    display: block
+}
+
+.infoAdditional {
+    margin: 28px 0 0 0;
+    padding: 23px 0 0 0;
+    border-top: 1px solid #e0e0e0;
+    font-size: 12px;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
+}
+
+.infoAdditionalInner {
+    position: relative;
+    padding-left: 90px
+}
+
+.infoAdditionalInner:after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both
+}
+
+.additionalTit, .additionalDesc {
+    float: left;
+    margin: 0;
+    padding: 2px 0;
+    line-height: 2
+}
+
+.additionalTit {
+    clear: left;
+    position: relative;
+    left: -90px;
+    width: 88px;
+    margin-right: -100px;
+    font-size: 13px
+}
+
+.additionalDesc {
+    position: relative;
+    width: 100%;
+    float: right;
+    font-size: 13px
+}
+
+dd.cardBenefitWrap {
+    padding: 0;
+    height: 25px
+}
+
+.freeDelivery {
+    font-size: 11px;
+    color: #8a8a8a;
+    margin-left: 5px
+}
+
+.descReview {
+    padding: 1px 0 3px 0;
+    font-weight: bold
+}
+
+.descReview .numTxt {
+    font-size: 16px
+}
+
+.descReview .nuNumber {
+    top: -1px;
+    padding-left: 5px;
+    vertical-align: middle
+}
+
+.descReview .nuUnit {
+    top: -7px;
+    padding-right: 5px;
+    vertical-align: bottom;
+    font-size: 13px
+}
+
+.descToReview {
+    padding-right: 11px;
+    position: relative;
+    color: #555
+}
+
+.descToReview:hover .nuNumber, .descToReview:hover .nuUnit {
+    text-decoration: underline
+}
+
+.descToReview:after {
+    position: absolute;
+    right: 1px;
+    top: 4px;
+    display: block;
+    content: "";
+    width: 11px;
+    height: 8px;
+    /*background: url("/web/images/deal/dealInfo_review_btn.png")*/
+}
+
+.infoTimer {
+    margin: 25px 0 0 0;
+    font-size: 13px;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-weight: bold
+}
+
+.infoTimer .pText, .infoTimer .smallText {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    line-height: 1
+}
+
+.infoTimer .pText {
+    font-family: Tahoma, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    letter-spacing: 0;
+    font-size: 16px
+}
+
+.infoTimer .smallText {
+    top: -0.1em;
+    padding: 0 10px 0 3px
+}
+
+.infoTimer .ico-timer {
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 15px;
+    height: 15px;
+    margin: -8px 0 0 0;
+    /*background: url("/web/images/deal/deal_20161125.png") -1170px top;*/
+    vertical-align: middle
+}
+
+.infoTimer dt, .infoTimer dd {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle
+}
+
+.infoTimer .tit {
+    position: relative;
+    top: -1px;
+    height: 20px;
+    margin: 0;
+    padding: 0 5px 0 24px;
+    white-space: nowrap
+}
+
+.infoTimer .desc {
+    height: 19px;
+    line-height: 1.2;
+    padding-top: 1px
+}
+
+.descInfoOption {
+    position: relative;
+    z-index: 2
+}
+
+.infoItemOption {
+    position: relative;
+    margin: 30px 0 0 0;
+    overflow: visible
+}
+
+.defaultOptionTit {
+    margin: 0;
+    padding: 3px 5px 0 5px
+}
+
+.itemOptionBox {
+    position: relative;
+    margin: 10px 0 0 0;
+    padding: 0
+}
+
+.itemOptionBox.fir {
+    margin: 0
+}
+
+.itemOptionBox .over {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-indent: -9999em;
+    background: #fff;
+    overflow: hidden;
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-opacity: 0;
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    filter: alpha(opacity=0)
+}
+
+.optionListNameText {
+    margin: 0 6px 0 0
+}
+
+.impendSoldOut {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 63px;
+    height: 0;
+    margin: 0 0 0 5px;
+    padding: 17px 0 0 0;
+    /*background: url("/web/images/deal/deal_20161125.png") no-repeat -580px -70px;*/
+    vertical-align: middle;
+    overflow: hidden
+}
+
+.optionStock {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0
+}
+
+.optionStock.approachedSoldOut {
+    color: #ff5073;
+    font-weight: bold
+}
+
+.optionStockLine {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 1px;
+    height: 11px;
+    margin: 0 8px 0 8px;
+    background: #555;
+    overflow: hidden;
+    vertical-align: middle
+}
+
+.selectric-items li.disabled .optionStockLine {
+    background: #e0e0e0
+}
+
+.dealSelect {
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-opacity: 0;
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    filter: alpha(opacity=0)
+}
+
+.availableMaxNum {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    margin: 24px 0 -24px 0;
+    line-height: 1.85;
+    text-align: right
+}
+
+.selectedItemListBlock {
+    position: relative;
+    padding: 25px 0 0 0;
+    overflow: hidden
+}
+
+.selectedItemList {
+    margin: 0;
+    padding: 0;
+    line-height: 1.65
+}
+
+.selectedItem {
+    position: relative;
+    display: block;
+    margin: -1px 0 0 0;
+    padding: 12px 228px 8px 14px;
+    border: 1px solid #e0e0e0;
+    border-width: 1px 0;
+    background: #f9f9fa
+}
+
+.additionalItemList {
+    position: relative;
+    top: -1px;
+    padding: 9px 5px;
+    border: 1px solid #e0e0e0;
+    border-width: 1px 0
+}
+
+.additionalItemList .selectedItem {
+    padding-left: 9px;
+    padding-right: 223px;
+    border-color: #fff
+}
+
+.itemName {
+    position: relative;
+    top: -1px;
+    font-weight: normal
+}
+
+.itemQty, .itemPrice {
+    position: absolute;
+    display: block
+}
+
+.itemQty {
+    right: 134px;
+    top: 10px;
+    width: 47px;
+    height: 18px;
+    padding: 0 19px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    overflow: hidden
+}
+
+.inputQty {
+    display: block;
+    width: 100%;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
+    text-align: center;
+    color: #555;
+    font-size: 12px;
+    line-height: 1.5;
+    background: #fff
+}
+
+.btnQty {
+    position: absolute;
+    top: -1px;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    /*background: #c6c6c6 url("/web/images/deal/deal_20161125.png") no-repeat;*/
+    text-indent: -9999em;
+    overflow: hidden
+}
+
+.btnQty.btnDisabled, .btnQty[disabled="disabled"] {
+    cursor: auto !important
+}
+
+.btnQtyUp {
+    right: -1px;
+    background-position: -800px -70px
+}
+
+.btnQtyDn {
+    left: -1px;
+    background-position: -770px -70px
+}
+
+.btnItemDelete {
+    position: absolute;
+    right: 13px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    /*background: #c6c6c6 url("/web/images/deal/deal_20161125.png") -740px -70px;*/
+    text-indent: -9999em;
+    overflow: hidden
+}
+
+.itemPrice {
+    width: 90px;
+    right: 45px;
+    top: 11px;
+    text-align: right
+}
+
+.additionalItemList .itemName:before {
+    content: '';
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 6px;
+    height: 6px;
+    margin: 0 3px 0 5px;
+    border: 2px solid #6f6f6f;
+    border-width: 0 0 2px 2px;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-topleft: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box
+}
+
+.additionalItemList .btnItemDelete {
+    right: 8px
+}
+
+.additionalItemList .itemPrice {
+    right: 40px
+}
+
+.additionalItemList .itemQty {
+    right: 129px
+}
+
+.descInfoBtn {
+    position: relative
+}
+
+.descInfoBtn.showPrice {
+    display: block;
+    padding-top: 75px
+}
+
+.descInfoBtn.showPrice .selectedItemPrice {
+    display: block
+}
+
+.selectedItemPrice {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 45px;
+    text-align: right
+}
+
+.selectedItemPrice .nuNumber, .selectedItemPrice .nuUnit {
+    color: #333
+}
+
+.selectedItemPrice .nuNumber {
+    font-size: 40px;
+    letter-spacing: 0;
+    margin: 0 0 0 8px
+}
+
+.selectedItemPrice .nuUnit {
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-size: 16px;
+    font-weight: bold
+}
+
+.infoBtn {
+    position: relative;
+    padding: 40px 0 0 0;
+    *zoom: 1
+}
+
+.infoBtn:before, .infoBtn:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.infoBtn:after {
+    clear: both
+}
+
+.infoBtn .btnDeal {
+    width: 97%
+}
+
+.infoBtnCell {
+    display: block;
+    float: left;
+    width: 41%
+}
+
+.infoBtnCell.last {
+    width: 18%;
+    text-align: right
+}
+
+.infoBtnCell.last .btnDeal {
+    width: 100%
+}
+
+.infoBtnEnd {
+    display: block;
+    padding: 20px 0 19px 0;
+    background: #e0e0e0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #aaa;
+    font-size: 23px;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0
+}
+
+.btnTxt {
+    display: block;
+    height: 25px;
+    margin: 0 auto;
+    padding: 0;
+
+    overflow: hidden;
+    /*background: url("/web/images/deal/deal_20161125.png") no-repeat*/
+}
+
+.btnTxt.btnTxtCart {
+    width: 83px;
+    background-position: -1220px -30px
+}
+
+.btnTxt.btnTxtPurchase {
+    width: 85px;
+    background-position: -1220px -60px
+}
+
+.btnTxt.btnTxtLike {
+    width: 22px;
+    background-position: -1190px top
+}
+
+.btnTxt.btnTxtEnd {
+    width: 85px;
+    background-position: -1130px -60px
+}
+
+.btnTxt.btnTxtWait {
+    width: 83px;
+    background-position: -300px -70px
+}
+
+.btnTxt.btnTxtPause {
+    width: 83px;
+    background-position: -830px -70px
+}
+
+.btnTxt.btnTxtSoldout {
+    width: 43px;
+    background-position: -920px -70px
+}
+
+.btnTxt.btnTxtOnlyNewMember {
+    width: 292px;
+    background-position: left -70px
+}
+
+.btnDisabled .btnTxt.btnTxtCart {
+    background-position: -1130px -30px
+}
+
+.descImage {
+    position: relative
+}
+
+.descImage img {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.descImage .imageCnt {
+    display: none;
+    width: 500px;
+    height: 500px
+}
+
+.descImage .imageCnt.on {
+    display: block
+}
+
+.descImageBig {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    overflow: hidden
+}
+
+.descImageBig .item {
+    display: block;
+    float: left;
+    width: 500px;
+    height: 500px
+}
+
+.descImageThumb {
+    position: relative;
+    margin: 30px 0 0 -10px;
+    overflow: hidden
+}
+
+.descImageThumb li {
+    position: relative;
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 0 0 0 10px;
+    background: #f9f9fa;
+    overflow: hidden;
+    /*background: url("/web/images/deal/deal_20161125.png") -1050px -30px*/
+}
+
+.descImageThumb .item {
+    position: relative;
+    display: block;
+    width: 75px;
+    height: 75px
+}
+
+.descImageThumb .item:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    display: none;
+    width: 73px;
+    height: 73px;
+    border: 1px solid #d2d2d2
+}
+
+.descImageThumb .item.on:after {
+    display: block;
+    border-color: #ff5073
+}
+
+.dealContents {
+    clear: both;
+    position: relative;
+    margin: 80px 0 0 0;
+    padding: 0;
+    border: 1px solid #d2d2d2;
+    *z-index: -1
+}
+
+
+.dealContents .dealTabNav {
+    position: relative;
+    height: 45px
+}
+
+.dealContents .fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 1100px;
+    background: transparent;
+    z-index: 11
+}
+
+.dealContents .fixed ul {
+    width: 1080px;
+    background: #f9f9fa;
+    margin: 0 auto;
+    *zoom: 1
+}
+
+.dealContents .fixed ul:before, .dealContents .fixed ul:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.dealContents .fixed ul:after {
+    clear: both
+}
+
+.snsWrap {
+    position: absolute;
+    right: 9px;
+    top: 7px
+}
+
+.snsWrap button {
+    display: block;
+    float: left;
+    width: 27px;
+    height: 27px;
+    border: 0;
+    background: transparent;
+    text-indent: -9999px
+}
+
+.snsWrap .fbIcon {
+    /*background: url("/web/images/deal/deal_20161125.png") -1050px top*/
+}
+
+.snsWrap .kasIcon {
+    margin-left: 6px;
+    /*background: url("/web/images/deal/deal_20161125.png") -1080px top*/
+}
+
+.snsWrap .urlIcon {
+    margin-left: 6px;
+    /*background: url("/web/images/deal/deal_20161125.png") -1140px top*/
+}
+
+.contentsDetail {
+    width: 780px;
+    margin: 0 auto;
+    padding: 80px 0 100px 0
+}
+
+.contentsDetail img {
+    max-width: 100%
+}
+
+.contentsDetail .detailBanner {
+    display: block;
+    margin: 0 auto
+}
+
+.contentsDetail .dealInfoText {
+    text-align: center;
+    color: #ff5073;
+    margin: 45px 0
+}
+
+.contentsDetail.contentsReview {
+    width: auto;
+    padding: 80px 44px 55px 44px
+}
+
+.tableBox caption {
+    border: 1px #d8d8d8 solid
+}
+
+.tableBox {
+    position: relative;
+    width: 780px;
+    margin: 0 auto;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
+}
+
+.tableBox.tbMargin {
+    margin-top: 45px
+}
+
+.tableBox .tbHead {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-bottom: 15px
+}
+
+.tableBox .tbName {
+    font-size: 12px;
+    padding: 5px 0;
+    margin: 0 0 25px 0;
+    line-height: 1.5
+}
+
+.tableBox .name {
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
+}
+
+.tableBox .headLink {
+    position: absolute;
+    right: 0;
+    top: -3px
+}
+
+.tableBox .toInquiry {
+    display: block;
+    color: #fff;
+    font-size: 11px;
+    line-height: 1;
+    padding: 5px 9px;
+    background-color: #99a;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    white-space: nowrap
+}
+
+.tableBox .selectric-wrapper {
+    margin: 0 0 35px 0
+}
+
+.tableBox table {
+    width: 100%;
+    border: 1px #f0f0f0 solid;
+    border-top: 0;
+    color: #222;
+    line-height: 1.3em;
+    border-collapse: separate;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    table-layout: fixed
+}
+
+.tableBox table th, .tableBox table td {
+    border-top: 1px solid #f0f0f0;
+    padding: 13px 10px;
+    font-size: 12px;
+    white-space: pre-wrap;
+    letter-spacing: 0
+}
+
+.tableBox table th {
+    width: 25%;
+    text-align: left;
+    background: #fafafa;
+    font-weight: bold;
+    border-right: 1px solid #f0f0f0
+}
+
+.dealContentsBottom {
+    position: relative;
+    padding-top: 30px
+}
+
+.dealContentsBottom .bestDealWrap {
+    font-weight: bold
+}
+
+#dealSimpleOption {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1100px;
+    color: #555;
+    font-size: 12px
+}
+
+#dealSimpleOption.bottom {
+    position: absolute;
+    min-width: 0;
+    left: -1px
+}
+
+#dealSimpleOption .simpleOptionInner {
+    position: relative;
+    width: 1048px;
+    margin: 0 auto
+}
+
+#dealSimpleOption .btnSimpleOption {
+    position: absolute;
+    top: -84px;
+    right: 30px;
+    display: block;
+    width: 108px;
+    height: 85px;
+    padding: 0 0 0 10px;
+    border: 1px solid #ff5073;
+    border-bottom: 0;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: #ff5073;
+    color: #fff;
+    font-size: 15px;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: left;
+    z-index: 10
+}
+
+#dealSimpleOption .btnSimpleOption .btnSimpleArr, #dealSimpleOption .btnSimpleOption .btnSimpleTxt {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle
+}
+
+#dealSimpleOption .btnSimpleOption .btnSimpleArr {
+    width: 17px;
+    height: 0;
+    margin-right: 4px;
+    padding-top: 10px;
+    /*background: url("/web/images/deal/deal_20161125.png") no-repeat -540px -70px;*/
+    overflow: hidden
+}
+
+#dealSimpleOption .simpleOptionContent {
+    display: none;
+    position: relative;
+    height: auto;
+    padding: 20px 330px 45px 80px;
+    border: 1px solid #ccc;
+    border-width: 1px 0 0 0;
+    background: #fff;
+    *zoom: 1
+}
+
+#dealSimpleOption .simpleOptionContent:before, #dealSimpleOption .simpleOptionContent:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+#dealSimpleOption .simpleOptionContent:after {
+    clear: both
+}
+
+#dealSimpleOption.bottom .simpleOptionContent {
+    border-width: 1px 1px 0 1px
+}
+
+#dealSimpleOption.open .simpleOptionContent {
+    display: block
+}
+
+#dealSimpleOption.open .btnSimpleOption {
+    color: #555;
+    border-color: #ccc;
+    background-color: #fff
+}
+
+#dealSimpleOption.open .btnSimpleOption .btnSimpleArr {
+    background-position: -520px -70px
+}
+
+#dealSimpleOption.open .descInfoOption {
+    float: left;
+    position: relative;
+    padding: 45px 0 0 0;
+    width: 100%
+}
+
+#dealSimpleOption.open .infoItemOption {
+    margin: 0
+}
+
+#dealSimpleOption.open .descInfoBtn {
+    clear: right;
+    float: right;
+    position: relative;
+    right: -250px;
+    bottom: 0;
+    width: 250px;
+    margin: 0 0 0 -250px;
+    padding: 7px 0 0 0
+}
+
+#dealSimpleOption.open .infoTitle {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    width: 638px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 1.75;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+#dealSimpleOption.open .availableMaxNum {
+    height: 22px;
+    margin: 12px 0 -12px 0
+}
+
+#dealSimpleOption.open .selectedItemListBlock {
+    position: relative;
+    margin: 13px 0 0 0;
+    padding: 0;
+    border: 1px solid #e0e0e0;
+    border-width: 1px 0
+}
+
+#dealSimpleOption.open .selectedItemListBlock .inner {
+    position: relative;
+    height: auto;
+    max-height: 113px;
+    overflow: auto
+}
+
+#dealSimpleOption.open .additionalItemList {
+    padding: 5px 5px 4px 5px;
+    border-bottom: 0
+}
+
+#dealSimpleOption.open .selectedItem {
+    border-width: 1px 0 0 0
+}
+
+#dealSimpleOption.open .selectedItemPrice {
+    position: static;
+    left: auto;
+    top: auto;
+    height: auto;
+    margin: 18px 0 0 0;
+    padding: 0
+}
+
+#dealSimpleOption.open .selectedItemPrice .tit {
+    display: block;
+    padding-bottom: 2px
+}
+
+#dealSimpleOption.open .selectedItemPrice .colon {
+    display: none
+}
+
+#dealSimpleOption.open .selectedItemPrice .nuNumber {
+    font-size: 28px
+}
+
+#dealSimpleOption.open .selectedItemPrice .nuUnit {
+    top: -0.2em
+}
+
+#dealSimpleOption.open .infoBtn {
+    position: relative;
+    width: 190px;
+    height: 125px;
+    margin: 0 0 0 60px;
+    padding: 0
+}
+
+#dealSimpleOption.open .infoBtnCell {
+    display: block;
+    width: 100%
+}
+
+#dealSimpleOption.open .infoBtnCell.last {
+    display: none
+}
+
+#dealSimpleOption.open .infoBtnCell.purchaseBlock, #dealSimpleOption.open .infoBtnCell.cartBlock {
+    position: absolute;
+    left: 0
+}
+
+#dealSimpleOption.open .infoBtnCell.purchaseBlock {
+    top: 65px
+}
+
+#dealSimpleOption.open .infoBtnCell.cartBlock {
+    top: 0
+}
+
+#dealSimpleOption.open .btnDeal {
+    width: 100%;
+    height: 58px
+}
+
+.contentsReview {
+    overflow: hidden
+}
+
+.contentsReview a {
+    cursor: pointer
+}
+
+.contentsReview div.reviewTitle {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 18px
+}
+
+.contentsReview div.reviewTitle p {
+    margin: -2px 0 0 24px;
+    color: #ff5073
+}
+
+.contentsReview h5 {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold
+}
+
+.contentsReview .reviewTitleBtn {
+    position: absolute;
+    right: 0;
+    top: 16px
+}
+
+.contentsReview .reviewBtn, .contentsReview .inquiryBtn {
+    float: left;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 11px;
+    line-height: 1;
+    padding: 6px 9px 4px 9px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    white-space: nowrap
+}
+
+.contentsReview .reviewBtn {
+    background-color: #ff5073
+}
+
+.contentsReview .inquiryBtn {
+    margin-right: 5px;
+    background-color: #99a
+}
+
+.contentsReview div.viewSelect {
+    position: relative;
+    background: #f2f2f2;
+    width: 926px;
+    padding: 20px 15px;
+    margin: 20px 0 27px 0;
+    white-space: nowrap;
+    line-height: 1
+}
+
+.contentsReview div.viewSelect .viewSelectText {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding-top: 1px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    white-space: nowrap
+}
+
+.contentsReview div.viewSelect .pText {
+    text-decoration: underline
+}
+
+.contentsReview div.viewSelect .viewSelectOption {
+    position: absolute;
+    right: 5px;
+    top: 19px
+}
+
+.contentsReview div.viewSelect select {
+    margin-left: 10px
+}
+
+.contentsReview div.emptyReview p {
+    text-align: center;
+    margin: 100px 0 45px 0
+}
+
+.contentsReview div.view {
+    width: 956px;
+    border-top: 1px solid #f2f2f2;
+    padding: 10px 0;
+    overflow: hidden
+}
+
+.contentsReview div.imgBox {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    margin-right: 20px;
+    /*background: url("/web/images/deal/deal_20161125.png")*/
+}
+
+.contentsReview div.imgBox span {
+    position: absolute;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    top: 5px;
+    left: 0;
+    height: 13px;
+    padding: 2px 3px 0 4px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 12px;
+    text-align: center;
+    background: #ff5073;
+    letter-spacing: 0
+}
+
+.contentsReview div.great {
+    background-position: 0 -220px
+}
+
+.contentsReview div.good {
+    background-position: -90px -220px
+}
+
+.contentsReview div.soso {
+    background-position: -190px -220px
+}
+
+.contentsReview div.bad {
+    background-position: -280px -220px
+}
+
+.contentsReview div.terrible {
+    background-position: -380px -220px
+}
+
+.contentsReview div.type {
+    margin-right: 20px
+}
+
+.contentsReview div.type p {
+    text-align: center;
+    font-size: 13px;
+    line-height: 22px
+}
+
+.contentsReview .reviewContents {
+    width: 739px;
+    margin: 7px 0 17px 0
+}
+
+.contentsReview .info {
+    margin-bottom: 4px;
+    font-size: 13px
+}
+
+.contentsReview .optionType {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold
+}
+
+.contentsReview .date {
+    color: #8f8f8f;
+    letter-spacing: 0
+}
+
+.contentsReview .title {
+    width: 630px;
+    margin-top: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.contentsReview div.img {
+    overflow: hidden
+}
+
+.contentsReview div.textArea {
+    overflow: hidden
+}
+
+.contentsReview div.commentBox {
+    margin-top: 20px
+}
+
+.contentsReview .commentTop {
+    overflow: hidden
+}
+
+.contentsReview .commentTop a {
+    float: left
+}
+
+.contentsReview .commentTop .rule {
+    float: right;
+    color: #878787
+}
+
+.contentsReview .commentWrite {
+    text-decoration: underline;
+    margin-left: 10px
+}
+
+.contentsReview .commentBottom {
+    overflow: hidden;
+    margin-top: 5px
+}
+
+.contentsReview .commentBottom textarea {
+    width: 498px;
+    height: 38px;
+    padding: 10px 10px 0 10px;
+    border: 1px solid #f2f2f2
+}
+
+.contentsReview .commentBottom button {
+    display: block;
+    width: 118px;
+    height: 50px;
+    /*background: url("/web/images/deal/deal_20161125.png") -360px -160px;*/
+    border: 0;
+    float: left
+}
+
+.contentsReview .commentView {
+    font-size: 12px;
+    margin-top: 10px
+}
+
+.contentsReview .commentWrap {
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-left: 25px
+}
+
+.contentsReview .commentWrap p.writer {
+    color: #989898
+}
+
+.contentsReview .commentWrap p.writer strong {
+    color: #ff5073
+}
+
+.contentsReview button.delete {
+    width: 32px;
+    height: 17px;
+    margin: -2px 0 0 10px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    font-size: 12px;
+    color: #000;
+    *line-height: 16px
+}
+
+.contentsReview .btnGroup {
+    width: 84px
+}
+
+.contentsReview .btnGroup button {
+    display: block;
+    width: 71px;
+    height: 23px;
+    margin-top: 3px;
+    color: #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border: 0;
+    font-size: 13px;
+    float: right
+}
+
+.contentsReview button.like {
+    border: 1px solid #ff5073;
+    color: #ff5073;
+    background: #fff;
+    text-align: center;
+    line-height: 1;
+    vertical-align: middle
+}
+
+.contentsReview .heart, .contentsReview .recomCnt {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    letter-spacing: 0
+}
+
+.contentsReview .heart {
+    position: relative;
+    top: -1px;
+    width: 14px;
+    height: 12px;
+    margin-right: 3px;
+    /*background: url("/web/images/deal/deal_20161125.png") -680px -140px;*/
+    vertical-align: middle
+}
+
+.contentsReview .recomCnt {
+    font-size: 12px;
+    line-height: 13px;
+    padding-top: 1px
+}
+
+.contentsReview button.delete {
+    border: 1px solid #bebebe;
+    background: #fff;
+    color: #444
+}
+
+.contentsReview .faceBook {
+    background: #3b5997
+}
+
+.contentsReview .twitter {
+    background: #5aabec
+}
+
+div.mypaging {
+    margin-top: 35px;
+    line-height: 30px;
+    text-align: center
+}
+
+div.mypaging a {
+    padding: 4px 10px;
+    color: #424242;
+    font-weight: bold
+}
+
+div.mypaging .on {
+    color: #ff5073;
+    text-decoration: underline
+}
+
+div.mypaging .arrow {
+    font-size: 11px;
+    padding: 6px 6px 5px 4px
+}
+
+div.mypaging .unusable {
+    color: #c0c0c0
+}
+
+div.mypaging .first, div.mypaging .last {
+    letter-spacing: -6px
+}
+
+div.appDownModal {
+    position: relative;
+    width: 615px;
+    height: 648px;
+    /*background: url("/web/images/deal/appDownPopup_2.jpg")*/
+}
+
+div.appDownModal button, div.appDownModal input {
+    display: block;
+    position: absolute;
+    border: 0;
+    background: transparent
+}
+
+div.appDownModal button {
+    text-indent: -9999px
+}
+
+div.appDownModal a {
+    display: block;
+    position: absolute
+}
+
+div.appDownModal .closeBtn {
+    top: 11px;
+    right: 10px;
+    width: 44px;
+    height: 44px
+}
+
+div.appDownModal input {
+    top: 277px;
+    left: 46px;
+    width: 304px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 32px
+}
+
+div.appDownModal .sendBtn {
+    top: 270px;
+    right: 171px;
+    width: 82px;
+    height: 49px
+}
+
+div.appDownModal .playStore {
+    top: 381px;
+    left: 228px;
+    width: 138px;
+    height: 143px
+}
+
+div.appDownModal .appStore {
+    top: 381px;
+    left: 386px;
+    width: 138px;
+    height: 143px
+}
+
+div.appDownModal .closeBtn2 {
+    bottom: 21px;
+    left: 179px;
+    width: 264px;
+    height: 60px
+}
+
+div.cover {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    -moz-opacity: .7;
+    -khtml-opacity: .7;
+    -webkit-opacity: .7;
+    opacity: .7;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    filter: alpha(opacity=70);
+    z-index: 1000
+}
+
+div.cartPopupWrap {
+    position: fixed;
+    top: 150px;
+    left: 35%;
+    width: 500px;
+    border: 1px solid #ff5073;
+    z-index: 1001;
+    background: #fff
+}
+
+div.cartPopupWrap .cartPopupTitle {
+    position: relative;
+    padding: 11px 0 0 18px;
+    width: 482px;
+    height: 30px;
+    background: #ff5073;
+    color: #fff
+}
+
+div.cartPopupWrap .cartPopupTitle p {
+    font-size: 14px
+}
+
+div.cartPopupWrap .close {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    /*background: url("http://img2.memebox.com/static/contents/img/upload/contents_20151111140554_oxaTZJLp1g.png");*/
+    cursor: pointer
+}
+
+div.cartPopupWrap .popupContents {
+    padding: 30px 18px
+}
+
+div.cartPopupWrap .subTitle {
+    margin: 0 auto 30px;
+    width: 206px;
+    height: 16px;
+    /*background: url("http://img2.memebox.com/static/contents/img/upload/contents_20151111143406_vxHyUkZ0PL.png")*/
+}
+
+div.cartPopupWrap .cartList {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    width: 424px;
+    height: 65px;
+    background: #f9f9fa;
+    border: 1px solid #e7e7e7;
+    color: #555
+}
+
+div.cartPopupWrap .cartList p {
+    width: 424px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center
+}
+
+div.cartPopupWrap .dealTitle {
+    margin: 11px 0 5px;
+    font-weight: bold
+}
+
+div.cartPopupWrap .oF {
+    margin: 0 auto;
+    width: 260px
+}
+
+div.cartPopupWrap .btn {
+    display: block;
+    padding-top: 10px;
+    width: 120px;
+    height: 26px;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px
+}
+
+div.cartPopupWrap a.cart {
+    background: #8f8f8f
+}
+
+div.cartPopupWrap button.back {
+    padding-top: 0;
+    background: #ff5073;
+    border: 0;
+    height: 36px
+}
+
+div.reviewModal {
+    position: absolute;
+    top: 15%;
+    left: 350px;
+    width: 780px;
+    z-index: 1001
+}
+
+div.reviewModal div.reviewTitle {
+    overflow: hidden;
+    background: #383838;
+    padding: 14px 26px;
+    color: #fff
+}
+
+div.reviewModal h4 {
+    font-size: 17px
+}
+
+div.reviewModal .closeBtn {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    /*background: url("/web/images/deal/deal_20161125.png") -670px -90px*/
+}
+
+div.reviewModal .reviewBody {
+    padding: 30px;
+    background: #fff
+}
+
+div.reviewModal .dealInfo {
+    overflow: hidden;
+    margin-bottom: 30px
+}
+
+div.reviewModal .imgBox {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    margin-right: 10px
+}
+
+div.reviewModal .dealText p {
+    width: 600px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+div.reviewModal .dealTitle {
+    margin-top: 20px
+}
+
+div.reviewModal .dealOption {
+    color: #666;
+    font-size: 12px
+}
+
+div.reviewModal table {
+    width: 720px;
+    margin-bottom: 25px;
+    border-top: 1px solid #e4e4e4
+}
+
+div.reviewModal th {
+    width: 53px;
+    padding: 18px 17px;
+    background: #f7f7f7;
+    border-right: 1px solid #e4e4e4
+}
+
+div.reviewModal td {
+    width: 622px;
+    padding: 10px 0 10px 10px
+}
+
+div.reviewModal th, div.reviewModal td {
+    border-bottom: 1px solid #e4e4e4
+}
+
+div.reviewModal input, div.reviewModal textarea, div.reviewModal select {
+    border: 1px solid #aeaeae
+}
+
+div.reviewModal input.title {
+    width: 602px;
+    height: 24px
+}
+
+div.reviewModal textarea::-webkit-input-placeholder {
+    color: #ff5073
+}
+
+div.reviewModal textarea:-ms-input-placeholder {
+    color: #ff5073
+}
+
+div.reviewModal textarea::-moz-input-placeholder {
+    color: #ff5073
+}
+
+div.reviewModal textarea {
+    min-width: 598px;
+    max-width: 598px;
+    min-height: 102px;
+    max-height: 102px;
+    padding: 5px
+}
+
+div.reviewModal input.imgFile {
+    width: 173px;
+    height: 24px
+}
+
+div.reviewModal button.find {
+    display: block;
+    width: 48px;
+    height: 26px;
+    margin-right: 18px;
+    background: #666;
+    color: #fff;
+    border: 0;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px
+}
+
+div.reviewModal .fileName {
+    line-height: 24px
+}
+
+div.reviewModal button.x {
+    width: 8px;
+    height: 7px;
+    /*background: url("/web/images/myPage/myPage20160303.png") -240px -10px;*/
+    border: 0;
+    margin-left: 5px
+}
+
+div.reviewModal .starComment {
+    margin-left: 10px;
+    color: #ff5073;
+    font-weight: bold
+}
+
+div.reviewModal select {
+    width: 282px
+}
+
+div.reviewModal button.bottom {
+    width: 89px;
+    height: 33px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px
+}
+
+div.reviewModal button.cancel {
+    border: 1px solid #666;
+    background: #fff;
+    color: #666;
+    margin-left: 252px
+}
+
+div.reviewModal button.submit {
+    border: 1px solid #383838;
+    background: #383838;
+    color: #fff;
+    margin-left: 20px
+}
+
+a.starScore {
+    display: block;
+    overflow: hidden;
+    width: 85px;
+    height: 16px;
+    /*background: url("/web/images/myPage/star_v2.png") 0 -16px no-repeat*/
+}
+
+a.starScore button.half {
+    width: 8px;
+    height: 16px;
+    /*background: url("/web/images/myPage/star_v2.png") 0 -16px;*/
+    border: 0
+}
+
+a.starScore button.starBtn {
+    width: 9px;
+    /*background: url("/web/images/myPage/star_v2.png") -9px -16px*/
+}
+
+a.starScore button.over {
+    /*background: url("/web/images/myPage/star_v2.png");*/
+    border: 0
+}
+
+a.starScore button.overR {
+    /*background: url("/web/images/myPage/star_v2.png") -9px 0*/
+}
+
+.linkSelect .label {
+    cursor: pointer
+}
+
+.linkSelect .selectric-items {
+    width: 100%;
+    padding: 0;
+    background: #fff;
+    z-index: 2
+}
+
+.linkSelect .selectric-scroll {
+    margin-right: 28px
+}
+
+.linkSelect.selectric-open .selectric-items .selectric-items {
+    display: none
+}
+
+.linkSelect.selectric-open .selectric-open .selectric-items {
+    display: block
+}
+
+.selectric-wrapper {
+    position: relative;
+    padding-right: 30px;
+    cursor: pointer
+}
+
+.selectric-responsive {
+    width: 100%;
+    padding-right: 0
+}
+
+.selectric {
+    position: relative;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-width: 1px 0 1px 1px;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: #fff
+}
+
+.selectric .labelWrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 28px
+}
+
+.selectric .label {
+    display: block;
+    font-size: 12px;
+    line-height: 29px;
+    color: #555;
+    height: 28px;
+    padding: 0 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    user-select: none
+}
+
+.selectric .button {
+    display: block;
+    position: absolute;
+    right: -29px;
+    top: -1px;
+    width: 30px;
+    height: 0;
+    padding-top: 30px;
+    color: #fff;
+    background: #c6c6c6;
+    text-align: center;
+    font: 0 / 0 a;
+    *font: 20px / 29px Lucida Sans Unicode, Arial Unicode MS, Arial;
+    /*background: #c6c6c6 url("/web/images/deal/deal_20161125.png") no-repeat -440px -71px;*/
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    overflow: hidden
+}
+
+.selectric-focus .selectric {
+    border-color: #ccc
+}
+
+.selectric-hover .selectric {
+    border-color: #ccc
+}
+
+.selectric-open {
+    z-index: 9999
+}
+
+.selectric-open .selectric {
+    border-color: #ccc
+}
+
+.selectric-open .selectric-items {
+    display: block
+}
+
+.selectric-open .button {
+    background-position: -400px -70px
+}
+
+.selectric-disabled {
+    filter: alpha(opacity=50);
+    opacity: .5;
+    cursor: default;
+    user-select: none
+}
+
+.selectric-hide-select {
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    height: 0
+}
+
+.selectric-hide-select select {
+    position: absolute;
+    left: -100%;
+    display: none
+}
+
+.selectric-input {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    outline: none !important;
+    border: none !important;
+    *font: NaN a !important;
+    background: none !important
+}
+
+.selectric-temp-show {
+    position: absolute !important;
+    visibility: hidden !important;
+    display: block !important
+}
+
+.selectric-items {
+    display: none;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    z-index: -1
+}
+
+.selectric-items .selectric-scroll {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: auto
+}
+
+.selectric-above .selectric-items {
+    bottom: auto
+}
+
+.selectric-items ul, .selectric-items li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5
+}
+
+.selectric-items ul {
+    position: relative;
+    padding: 3px 0;
+    *zoom: 1
+}
+
+.selectric-items li {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 4px 15px 2px 15px;
+    color: #555;
+    cursor: pointer
+}
+
+.selectric-items li.selected {
+    background: #ffedf1;
+    color: #555
+}
+
+.selectric-items li.last {
+    margin: 0
+}
+
+.selectric-items li:hover {
+    background: #ffedf1;
+    color: #555
+}
+
+.selectric-items .disabled {
+    cursor: default !important;
+    background: none !important;
+    color: #e0e0e0 !important;
+    user-select: none
+}
+
+.selectric-items .selectric-group .selectric-group-label {
+    font-weight: bold;
+    padding-left: 10px;
+    cursor: default;
+    user-select: none;
+    background: none;
+    color: #444
+}
+
+.selectric-items .selectric-group.disabled li {
+    filter: alpha(opacity=100);
+    opacity: 1
+}
+
+.selectric-items .selectric-group li {
+    padding-left: 25px
+}
+
+.selectric-dealSelect .selectric-items li {
+    padding-right: 115px
+}
+
+.selectric-dealSelect .optionListName .optionListPrice {
+    display: block
+}
+
+.selectric-dealSelect .optionListPrice {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 100px;
+    height: 18px;
+    margin-top: -8px;
+    font-weight: bold;
+    text-align: right
+}
+
+.combinationOption {
+    position: relative;
+    padding-right: 29px
+}
+
+.combinationOptionList {
+    position: absolute;
+    left: 0;
+    top: 29px;
+    width: 100%;
+    background: #fff;
+    z-index: 10
+}
+
+.combinationOptionList .inner {
+    border: 1px solid #ccc;
+    margin: 0 29px 0 0;
+    padding: 0 0 1px 0
+}
+
+.combinationOptionList .itemOptionBox {
+    margin-top: 0
+}
+
+.combinationOptionList .selectric-wrapper {
+    padding-right: 0
+}
+
+.combinationOptionList .selectric {
+    position: relative;
+    height: 30px;
+    border: 0;
+    background: transparent
+}
+
+.combinationOptionList .label {
+    position: relative;
+    display: block;
+    height: 18px;
+    margin: 1px 0 0 0;
+    padding: 6px 55px 6px 14px;
+    font-size: 13px;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-weight: bold;
+    line-height: 18px;
+    background: #f9f9fa;
+    cursor: pointer
+}
+
+.combinationOptionList .selectric-open .label {
+    color: #ff5073
+}
+
+.combinationOptionList .labelTit {
+    float: left
+}
+
+.combinationOptionList .labelValue {
+    float: right;
+    color: #555
+}
+
+.combinationOptionList .button {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 15px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+    /*background: transparent url("/web/images/deal/deal_20161125.png") -500px -70px*/
+}
+
+.combinationOptionList .selectric-open .button {
+    background-position: -480px -70px
+}
+
+.combinationOptionList .on .optionItemName {
+    color: #ff5073
+}
+
+.combinationOptionList .selectric-scroll {
+    height: auto;
+    padding: 0;
+    border-width: 0
+}
+
+.combinationOptionList .selectric-items {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 3px 0 12px 0;
+    border: 0
+}
+
+#dealSimpleOption .button {
+    background-position: -400px -70px
+}
+
+#dealSimpleOption .selectric-open .button {
+    background-position: -440px -70px
+}
+
+#dealSimpleOption .selectric-selectAdditionalItem, #dealSimpleOption .itemOptionBox {
+    margin: 5px 0 0 0
+}
+
+#dealSimpleOption .selectric-items {
+    top: auto;
+    bottom: 29px
+}
+
+#dealSimpleOption .combinationOptionList {
+    top: auto;
+    bottom: 29px
+}
+
+#dealSimpleOption .combinationOptionList .itemOptionBox {
+    margin-top: 0
+}
+
+#dealSimpleOption .combinationOptionList .button {
+    background-position: -500px -70px
+}
+
+#dealSimpleOption .combinationOptionList .selectric-open .button {
+    background-position: -480px -70px
+}
+
+#dealSimpleOption .combinationOptionList .selectric-items {
+    bottom: auto;
+    top: auto
+}
+
+.selectric-reviewSelect {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+    padding-right: 20px
+}
+
+.selectric-reviewSelect .selectric, .selectric-reviewSelect .labelWrap, .selectric-reviewSelect .label {
+    height: 18px
+}
+
+.selectric-reviewSelect .label {
+    font-size: 11px;
+    line-height: 20px;
+    padding: 0 10px
+}
+
+.selectric-reviewSelect .button {
+    right: -18px;
+    top: -1px;
+    width: 19px;
+    height: 0;
+    padding-top: 20px;
+    background-position: -1000px -70px
+}
+
+.selectric-reviewSelect .selectric-items {
+    top: 19px
+}
+
+.selectric-reviewSelect .selectric-items li {
+    font-size: 11px;
+    line-height: 12px;
+    margin-bottom: 3px;
+    padding: 3px 10px 1px 10px
+}
+
+.selectric-reviewSelect .selectric-items li.last {
+    margin-bottom: 0
+}
+
+.selectric-reviewSelect.selectric-open .button {
+    background-position: -970px -70px
+}
+
+.dealDescription-cardBenefitBtn {
+    display: inline-block;
+    margin-top: 2px;
+    position: relative;
+    height: 25px;
+    cursor: pointer
+}
+
+.dealDescription-cardBenefitBtn:hover .dealDescription-cardBenefit {
+    display: block
+}
+
+.dealDescription-cardBenefitBtn .dealDescription-cardBenefit {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: -95px;
+    width: 501px;
+    background: #fff;
+    border: 1px solid #767676;
+    font-size: 11px;
+    z-index: 3
+}
+
+.dealDescription-cardBenefitBtn .dealDescription-cardBenefit .dealDescription-cardBenefit-scroll {
+    max-height: 346px;
+    overflow-y: scroll
+}
+
+.dealDescription-cardBenefitBtn .dealDescription-cardBenefit li {
+    float: left;
+    width: 48%;
+    margin: 0 1%
+}
+
+.dealDescription-cardBenefitBtn .dealDescription-cardBenefit:before {
+    position: absolute;
+    left: 120px;
+    top: -13px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: -6px;
+    border: 6px solid #555;
+    border-color: transparent transparent #555 transparent
+}
+
+.dealDescription-cardBenefitBtn .dealDescription-cardBenefit:after {
+    position: absolute;
+    left: 120px;
+    top: -12px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: -6px;
+    border: 6px solid #fff;
+    border-color: transparent transparent #fff transparent
+}
+
+.dealDescription-cardBenefitBtn .cardBenefit-info {
+    display: table;
+    border-bottom: 1px solid #d7d7d7
+}
+
+.dealDescription-cardBenefitBtn li.cardBenefit-last-list {
+    border-bottom: 0
+}
+
+.dealDescription-cardBenefitBtn .cardBenefit-notice {
+    padding: 10px 7px;
+    color: #888;
+    overflow: hidden;
+    background: #e6e6e6;
+    clear: both
+}
+
+.dealDescription-cardBenefitBtn .bankLogo {
+    margin: 5px 0;
+    display: block;
+    width: 85px;
+    height: 45px;
+    /*background: url("http://img2.memebox.com/static/contents/img/upload/contents_20160929121512_o5lt4rHAuM.png") no-repeat;*/
+    float: left
+}
+
+.dealDescription-cardBenefitBtn .benefitInfo {
+    display: table-cell;
+    width: 100%;
+    line-height: initial;
+    vertical-align: middle
+}
+
+.dealDescription-cardBenefitBtn .hyundai {
+    background-position: -740px -690px
+}
+
+.dealDescription-cardBenefitBtn .shinhan {
+    background-position: -650px -690px
+}
+
+.dealDescription-cardBenefitBtn .bc {
+    background-position: -470px -690px
+}
+
+.dealDescription-cardBenefitBtn .kb {
+    background-position: -290px -740px
+}
+
+.dealDescription-cardBenefitBtn .samsung {
+    background-position: -830px -680px
+}
+
+.dealDescription-cardBenefitBtn .lotte {
+    background-position: -560px -640px
+}
+
+.dealDescription-cardBenefitBtn .kebhana {
+    background-position: -290px -690px
+}
+
+.dealDescription-cardBenefitBtn .nh {
+    background-position: -380px -690px
+}
+
+.dealDescription-cardBenefitBtn .hana {
+    background-position: -290px -690px
+}
+
+.dealDescription-cardBenefitBtn .woori {
+    background-position: -380px -740px
+}
+
+.dealDescription-cardBenefitBtn .suhyup {
+    background-position: -560px -690px
+}
+
+.dealDescription-cardBenefitBtn .citi {
+    background-position: -470px -640px
+}
+
+.dealDescription-cardBenefitBtn .kj, .dealDescription-cardBenefitBtn .jb {
+    background-position: -740px -530px
+}
+
+.dealDescription-cardBenefitBtn .jeju {
+    background-position: -650px -690px
+}
+
+.dealDescription-cardBenefitBtn .shinhyup {
+    background-position: -650px -630px
+}
+
+.dealDescription-cardBenefitBtn .kpost {
+    background-position: -650px -530px
+}
+
+.dealDescription-cardBenefitBtn .mgSae {
+    background-position: -830px -580px
+}
+
+.dealDescription-cardBenefitBtn .sbi {
+    background-position: -830px -530px
+}
+
+.dealDescription-cardBenefitBtn .kdb {
+    background-position: -740px -580px
+}
+
+.dealDescription-cardBenefitBtn .unionPay {
+    background-position: -650px -580px
+}
+
+.dealDescription-cardBenefitBtn .ibk {
+    background-position: -830px -630px
+}
+
+.dealDescription-cardBenefitBtn .bnk {
+    background-position: -380px -640px
+}
+
+.dealDescription-cardBenefitBtn .dgb {
+    background-position: -290px -640px
+}
+
+.dealDescription-cardBenefitBtn li.cardBenefit-longText {
+    width: 98%
+}
+
+.dealDescription-cardBenefitBtn:after {
+    position: absolute;
+    right: -10px;
+    top: 11px;
+    display: block;
+    content: "";
+    width: 6px;
+    height: 3px;
+    /*background: url("/web/images/deal/cardBenefit_btn_open.png")*/
+}
+
+.dealDescription-cardBenefitBtn:hover:after {
+    /*background: url("/web/images/deal/cardBenefit_btn_close.png")*/
+}
+
+.couponDown-layerOpenBtn {
+    display: block;
+    margin-top: 2px;
+    padding-right: 20px;
+    width: 58px;
+    height: 19px;
+    color: #ff5073;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    /*background: url("/web/images/deal/couponDown-layerOpenBtn.png");*/
+    text-align: center;
+    cursor: pointer
+}
+
+.couponDown-layerOpenBtn:hover .couponDown-layer {
+    display: block
+}
+
+.couponDown-layer {
+    position: absolute;
+    top: 29px;
+    left: -95px;
+    width: 503px;
+    background: #fff;
+    border: 1px solid #767676;
+    font-size: 11px;
+    z-index: 3
+}
+
+.couponDown-layer .couponDown-layer-scroll {
+    max-height: 316px;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+.couponDown-layer:before {
+    position: absolute;
+    left: 120px;
+    top: -13px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: -6px;
+    border: 6px solid #555;
+    border-color: transparent transparent #555 transparent
+}
+
+.couponDown-layer:after {
+    position: absolute;
+    left: 120px;
+    top: -12px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: -6px;
+    border: 6px solid #fff;
+    border-color: transparent transparent #fff transparent
+}
+
+.couponDown-layer-title {
+    padding: 15px 0 0 14px;
+    margin-left: 7px;
+    width: 476px;
+    position: relative;
+    height: 27px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    color: #333;
+    border-bottom: 1px solid #b7b7b7
+}
+
+.couponDown-layer-closeBtn {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    width: 17px;
+    height: 17px;
+    text-indent: -9999em;
+    cursor: pointer;
+    /*background: url("/web/images/deal/couponDown-layer-closeBtn.png") no-repeat center*/
+}
+
+.couponDown-layer-notice {
+    padding: 10px 0 9px 22px;
+    overflow: hidden;
+    color: #8a8a8a;
+    font-size: 11px;
+    background-color: #e5e5e5;
+    line-height: 1.8
+}
+
+.couponDown-layer-notice ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.couponDown-layer-notice .coupon_breadcrumb {
+    text-decoration: underline;
+    color: #333
+}
+
+.couponDown-contents {
+    margin: -1px 0 0 7px;
+    width: 490px;
+    border-spacing: 0;
+    line-height: 1.8
+}
+
+.couponDown-contents tr {
+    display: block;
+    border-top: 1px solid #d7d7d7
+}
+
+.couponDown-contents th {
+    padding: 0 0 0 16px;
+    width: 298px;
+    text-align: left
+}
+
+.couponDown-contents td {
+    padding: 10px 0;
+    width: 176px
+}
+
+.couponDown-contents th, .couponDown-contents td {
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
+}
+
+.coupon-periodOfUse {
+    margin-top: 6px;
+    display: block;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 0
+}
+
+.couponDownload-btn {
+    margin: 0 15px 0 0;
+    padding: 0 47px 0 0;
+    position: relative;
+    display: block;
+    width: 114px;
+    height: 72px;
+    border: 0;
+    box-sizing: content-box;
+    cursor: pointer;
+    /*background: url("/web/images/deal/couponDownload-btn.png")*/
+}
+
+.deal-coupon-name, .coupon-serviceCondition {
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    color: #333;
+    line-height: 19px
+}
+
+.coupon-type {
+    display: block;
+    font-size: 12px;
+    color: #333;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    letter-spacing: -1px
+}
+
+.coupon-discount-percent {
+    margin-top: 4px;
+    display: inline-block;
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333
+}
+
+.coupon-discount-percent .coupon-discount-number {
+    display: inline-block;
+    float: left
+}
+
+.coupon-discount-percent .coupon-discount-percent-mark {
+    margin: 3px 0 0 1px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    float: left
+}
+
+.unusable-coupon .deal-coupon-name, .unusable-coupon .coupon-serviceCondition, .unusable-coupon .coupon-periodOfUse {
+    color: #e0e0e0
+}
+
+.unusable-coupon .couponDownload-btn {
+    /*background: url("/web/images/deal/couponDownload-unusable_btn.png")*/
+}
+
+.unusable-coupon .coupon-type, .unusable-coupon .coupon-discount-percent {
+    color: #aaa
+}
+
+.unusable-coupon .couponDown-issued {
+    display: block;
+    position: absolute;
+    top: 23px;
+    right: 12px;
+    color: #aaa;
+    font-size: 12px
+}
+
+.percentage_symbol{
+	position: relative;
+    font-size: 24px;
+    margin-left: -10px;
+}
+
+
+
+/** 옵션 선택 후 상품리스트  **/
+.infoItemOption {
+	margin-bottom: 20px;
+}
+
+
+
+#choiceItem {
+	height: 30px;
+    font-size: 12px;
+    width: 100%;
+    padding-left: 5px;
+}
+
+
+.selectedItemListBlock {
+	position: relative;
+    padding: 25px 0 0 0;
+    overflow: hidden;
+}
+
+#orders li{
+	position: relative;
+    display: block;
+    margin: -1px 0 0 0;
+    padding: 12px 12px 8px 14px;
+    border: 1px solid #e0e0e0;
+    border-width: 1px 0;
+    background: #f9f9fa;
+}
+
+.productOptionName{
+	margin: 0 16px 0 0;
+    position: relative;
+    top: -1px;
+    font-weight: normal;
+}
+
+.orderRemoveButton{
+	text-indent: -9999em;
+}
+
+.decreaseQuantity{
+	width: 20px;
+    height: 20px;
+    border: none;
+    background: url('itemQty_btn.png');
+    text-indent: -999em;
+    margin-top: -2px;
+}
+
+.changeNumber{
+	padding: 0.25em 20px 0.25em 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    margin-right: -3px;
+}
+
+.increaseQuantity{
+	width: 20px;
+    height: 20px;
+    border: none;
+    background: url('itemQty_btn.png');
+    text-indent: -999em;
+    background-position: -70px;
+    margin-top: -2px;
+}
+
+/**  옵션 후 총 가격 표시   **/
+.OptionTotalPrice{
+	text-align: right;
+    margin-top: 30px;
+}
+
+#SumProductP{
+	font-size: 40px;
+    letter-spacing: 0;
+    margin: 0 0 0 8px;
+    font-weight: 700;
+}
+
+#KR_won{
+	font-size: 16px;
+    font-weight: bold;
+}

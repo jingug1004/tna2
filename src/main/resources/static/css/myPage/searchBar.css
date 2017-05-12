@@ -1,0 +1,775 @@
+/* ################################################## searchBar begin */
+body .searchBar-wrap {
+    line-height: normal;
+    background: inherit; }
+
+.searchBar-wrap p,
+.searchBar-wrap i,
+.searchBar-wrap dd,
+.searchBar-wrap td {
+    line-height: normal;
+    font-size: inherit;
+    text-align: inherit; }
+
+div#header_v2 .searchBar-wrap h1,
+div#header_v2 .searchBar-wrap h3,
+div#header_v2 .searchBar-wrap h4 {
+    display: inherit; }
+
+div#header_v2 .searchBar-wrap h4 {
+    font-size: inherit;
+    font-weight: normal; }
+
+div#header_v2 .searchBar-wrap ul li {
+    float: inherit; }
+
+.searchBar-inputBox {
+    position: relative;
+    border: 2px solid #ff8fa7;
+    margin: 0; }
+
+.searchBar-inputBox-text {
+    display: none; }
+
+.searchBar-inputBox-input {
+    display: block;
+    width: 80%;
+    height: 38px;
+    text-indent: 20px;
+    padding-left: 0;
+    border: none;
+    line-height: 28px;
+    font-family: "\B098\B214\ACE0\B515\BCFC\B4DC", NanumGothicBold, "\B098\B214\ACE0\B515", NanumGothic, "\B3CB\C6C0", Dotum, AppleSDGothic, AppleGothic, "\AD74\B9BC", Gulim, sans-serif;
+    color: #1a1a1a;
+    outline: none; }
+
+input::-webkit-input-placeholder {
+    color: #1a1a1a; }
+
+input:-ms-input-placeholder {
+    color: #1a1a1a; }
+
+input::-moz-input-placeholder {
+    color: #1a1a1a; }
+
+input[type="text"]::-ms-clear {
+    display: none; }
+
+.searchBar-inputBox-reset {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 50px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("/package/components/search/bar/v.1.0.0/pc/_images/searchBar.png");
+    background-repeat: no-repeat;
+    background-position: 0 -35px;
+    cursor: pointer; }
+
+.searchBar-inputBox-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 38px;
+    text-indent: -99999px;
+    background-image: url("/package/components/search/bar/v.1.0.0/pc/_images/searchBar.png");
+    background-repeat: no-repeat;
+    background-position: 7px 7px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer; }
+
+.searchBar-relatedBox {
+    display: none;
+    padding-top: 10px;
+    color: #222;
+    font-size: 13px; }
+
+.searchBar-relatedBox-title {
+    font-family: "\B098\B214\ACE0\B515\BCFC\B4DC", NanumGothicBold, "\B098\B214\ACE0\B515", NanumGothic, "\B3CB\C6C0", Dotum, AppleSDGothic, AppleGothic, "\AD74\B9BC", Gulim, sans-serif; }
+
+.searchBar-relatedBox-keyword {
+    display: inline-block;
+    margin-left: 18px;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+    font-weight: normal; }
+
+.searchBar-result-recommendation-wrap {
+    width: 42%;
+    height: 295px;
+    float: right;
+    background: #fafafa;
+    color: #565656;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+    text-align: center; }
+
+.searchBar-result-recommendation-title {
+    display: block;
+    padding-top: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center; }
+
+.searchBar-keyword-wrap .keyword-ranking-realTime-list {
+    float: left;
+    width: 58%; }
+
+/* ################################################## searchBar end */
+
+/* ################################################## suggest begin */
+.suggest-layer {
+    position: relative;
+    border: 1px solid #e1e1e1;
+    border-top: none; }
+
+.suggest-recommendation-wrap,
+.suggest-result-wrap {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+    background-color: #fff;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif; }
+
+.suggest-selector {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #e1e1e1; }
+
+.suggest-selector-tab {
+    float: left;
+    width: 50%; }
+
+.suggest-selector-trigger {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer; }
+
+.suggest-selector-trigger.selected {
+    color: #ff5073; }
+
+.suggest-keyword-ranking,
+.suggest-keyword-recent {
+    position: relative;
+    height: 300px; }
+
+.suggest-result-wrap .exhibit,
+.suggest-keyword-ranking .exhibit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 42%;
+    height: 300px;
+    float: right;
+    background: #fafafa;
+    color: #565656;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+    text-align: center; }
+
+.suggest-keyword-ranking .exhibit .exhibit-keyWord,
+.suggest-result-wrap .exhibit .exhibit-keyWord {
+    display: block;
+    padding-top: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; }
+
+.suggest-keyword-ranking .exhibit .memebox-deal,
+.suggest-result-wrap .exhibit .memebox-deal {
+    margin: 10px 20px; }
+
+.suggest-result-wrap .keyword-autoComplete-wrap,
+.suggest-result-wrap .keyword-quickLink-wrap {
+    width: 58%; }
+
+.suggest-layer-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    text-align: right;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1; }
+
+.suggest-layer-menu-close {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: inline-block;
+    height: 20px;
+    margin-top: -10px;
+    padding: 0 5px;
+    line-height: 20px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #555555;
+    text-decoration: none; }
+
+/* ################################################## suggest end */
+
+/* ################################################## bestdeal begin */
+/* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
+.deal_type_vertical_square_4 {
+    position: relative;
+    margin: 10px; }
+
+/* �긽�뭹 �씠誘몄�, 踰녹� */
+.deal_type_vertical_square_4 .memebox-deal-image-wrap {
+    position: relative;
+    margin-bottom: 8px; }
+
+.deal_type_vertical_square_4 .memebox-deal-timer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block; }
+
+.deal_type_vertical_square_4 .memebox-deal-timer i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    -moz-opacity: 0.1;
+    -webkit-opacity: 0.1;
+    opacity: 0.1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=10)";
+    filter: alpha(opacity=10); }
+
+.deal_type_vertical_square_4 .memebox-deal-timer-value {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px gray;
+    color: #fff;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif; }
+
+.deal_type_vertical_square_4 .memebox-deal-ranking {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 22px;
+    height: 24px;
+    background-image: url("/package/components/deal/v.1.2.0/pc/_images/_ranking_bg@3x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff; }
+
+.deal_type_vertical_square_4 .memebox-deal-image {
+    width: 100%;
+    height: auto; }
+
+.deal_type_vertical_square_4 .memebox-deal-sticker {
+    display: none; }
+
+/* �긽�뭹�씠由� */
+.deal_type_vertical_square_4 .memebox-deal-name {
+    padding-bottom: 6px; }
+
+.deal_type_vertical_square_4 .memebox-deal-name-main {
+    display: block;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333; }
+
+.deal_type_vertical_square_4 .memebox-deal-name-sub {
+    font-style: normal;
+    font-size: 11px;
+    color: #666;
+    display: none; }
+
+/* �긽�뭹 �쁽�옱 �긽�깭 �몴�떆 */
+.deal_type_vertical_square_4 .memebox-deal-current-status {
+    display: none;
+    position: relative;
+    padding: 0 20px; }
+
+.deal_type_vertical_square_4 .memebox-deal-review-star {
+    display: inline-block;
+    overflow: hidden;
+    height: 14px;
+    width: 83px;
+    background-color: #fff;
+    background-image: url("/package/components/deal/v.1.2.0/pc/_images/_star_review.png");
+    background-repeat: no-repeat;
+    background-position: 0 -14px; }
+
+.deal_type_vertical_square_4 .memebox-deal-review-star-value {
+    display: inline-block;
+    overflow: hidden;
+    height: 14px;
+    width: 100%;
+    background-color: #fff;
+    background-image: url("/package/components/deal/v.1.2.0/pc/_images/_star_review.png");
+    background-repeat: no-repeat;
+    background-position: 0 0; }
+
+.deal_type_vertical_square_4 .memebox-deal-review-average {
+    font-family: tahoma, HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
+    font-weight: bold;
+    color: #555; }
+
+.deal_type_vertical_square_4 .memebox-deal-review-count {
+    font-style: normal;
+    margin-top: 1px;
+    text-align: right;
+    font-size: 12px;
+    color: #555; }
+
+.deal_type_vertical_square_4 .memebox-deal-sold-out {
+    display: none; }
+
+/* �긽�뭹 媛�寃� 愿��젴 �궡�슜 */
+.deal_type_vertical_square_4 .memebox-deal-price-wrap {
+    margin: 0 0 10px 0; }
+
+.deal_type_vertical_square_4 .memebox-deal-price-origin {
+    display: none; }
+
+.deal_type_vertical_square_4 .memebox-deal-price-discount {
+    padding-right: 3px;
+    font-size: 0; }
+
+.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-info {
+    display: none; }
+
+.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-value {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #ff5073; }
+
+.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-unit {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #ff5073; }
+
+.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-info {
+    display: none; }
+
+.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-value {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #333; }
+
+.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-unit {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #333;
+    font-style: normal; }
+
+/* �긽�뭹 諛곗넚�궡�슜 */
+.deal_type_vertical_square_4 .memebox-deal-delivery {
+    display: none; }
+
+.deal_type_vertical_square_4 .memebox-deal-info {
+    position: relative; }
+
+/* �긽�뭹 留곹겕 �� action */
+.deal_type_vertical_square_4 .memebox-deal-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    display: block;
+    margin: -1px;
+    border: none; }
+
+.deal_type_vertical_square_4:hover .memebox-deal-link {
+    border: none;
+    /*background-color: #fff;*/
+    /*opacity: .1;*/ }
+
+.deal_type_vertical_square_4:hover .memebox-deal-image {
+    opacity: 1; }
+
+/* 李쒗븯湲� */
+.deal_type_vertical_square_4 .memebox-deal-poke-wrap {
+    display: none; }
+
+.deal_type_vertical_square_4 .memebox-deal-sell-stop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: -1px;
+    border: 1px solid #f0f0f0;
+    background-color: #000;
+    opacity: .5;
+    z-index: 1; }
+
+.deal_type_vertical_square_4 .memebox-deal-poke {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    display: block;
+    overflow: hidden;
+    height: 50px;
+    width: 38px;
+    border: none;
+    text-indent: -99999px;
+    background-color: #fff;
+    background-image: url("/package/components/deal/v.1.2.0/pc/_images/_poke.png");
+    background-repeat: no-repeat; }
+
+.deal_type_vertical_square_4 .memebox-deal-poke:hover {
+    background-position: 0 -50px; }
+
+.deal_type_vertical_square_4 .memebox-deal-poke-checked {
+    display: none; }
+
+/* ################################################## bestdeal end */
+
+/* ################################################## autocomplete begin */
+.keyword-autoComplete-wrap {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+
+.keyword-autoComplete {
+    margin: 0 20px;
+    padding: 10px 0 0 0; }
+
+.keyword-autoComplete-trigger {
+    display: block;
+    padding: 1px 3px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    font-size: 0;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif; }
+
+.keyword-autoComplete-trigger:hover {
+    background-color: #f9f9fa; }
+
+.keyword-autoComplete-equal {
+    font-size: 12px;
+    color: #FF5073; }
+
+.keyword-autoComplete-side {
+    font-size: 12px; }
+
+/* ################################################## autocomplete end */
+
+/* ################################################## quickLink begin */
+.keyword-quickLink-wrap {
+    position: absolute;
+    bottom: 30px;
+    width: 100%; }
+
+.keyword-quickLink-info {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    display: block;
+    text-indent: -99999px;
+    width: 47px;
+    height: 21px;
+    background-image: url("/package/components/search/keyword/_quickLink/v.1.0.0/pc/_images/search_tag_quickview.png");
+    background-repeat: no-repeat;
+    background-position: 0; }
+
+.keyword-quickLink-content {
+    list-style: none;
+    margin: 0 20px;
+    padding: 28px 0 15px;
+    border-top: 1px solid #e1e1e1; }
+
+.keyword-quickLink-li-brand,
+.keyword-quickLink-li-category {
+    padding: 10px 0 0 0;
+    font-size: 12px; }
+
+.keyword-quickLink-content-title {
+    display: none; }
+
+.keyword-quickLink-trigger {
+    color: #666;
+    text-decoration: none; }
+
+.keyword-quickLink-trigger-matchUp {
+    color: #333;
+    text-decoration: none;
+    font-family: "\B098\B214\ACE0\B515\BCFC\B4DC", NanumGothicBold, "\B098\B214\ACE0\B515", NanumGothic, "\B3CB\C6C0", Dotum, AppleSDGothic, AppleGothic, "\AD74\B9BC", Gulim, sans-serif; }
+
+.keyword-quickLink-depth {
+    padding: 0 5px; }
+
+.keyword-quickLink-li-category .keyword-quickLink-depth:first-child {
+    display: none; }
+
+/* ################################################## quickLink end */
+
+/* ################################################## recent begin */
+.keyword-recent-title {
+    display: none; }
+
+.keyword-recent-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    overflow: auto; }
+
+.keyword-recent-li {
+    position: relative;
+    margin: 11px 0 0 20px;
+    padding-right: 55px; }
+
+.keyword-recent-trigger {
+    display: block;
+    overflow: hidden; }
+
+.keyword-recent-text {
+    float: left;
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif; }
+
+.keyword-recent-date {
+    float: right;
+    padding-right: 2px;
+    color: #666;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+    font-style: normal; }
+
+.keyword-recent-date-year,
+.keyword-recent-date-month,
+.keyword-recent-date-day {
+    font-size: 11px; }
+
+.keyword-recent-delete {
+    display: block;
+    width: 20px;
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: #a3a3a3;
+    text-indent: -9999px;
+    font-weight: bold;
+    font-family: "\B098\B214\ACE0\B515\BCFC\B4DC", NanumGothicBold, "\B098\B214\ACE0\B515", NanumGothic, "\B3CB\C6C0", Dotum, AppleSDGothic, AppleGothic, "\AD74\B9BC", Gulim, sans-serif;
+    background-image: url("/package/components/search/keyword/_recent/v.1.0.0/pc/_images/delete.png");
+    background-repeat: no-repeat;
+    background-position: 50%; }
+
+.recommendation-keyword-recent-menu {
+    position: absolute;
+    bottom: -22px;
+    display: inline-block;
+    z-index: 1;
+    left: 10px;
+    padding: 0;
+    margin: 0; }
+
+.recommendation-keyword-recent-delete {
+    display: inline-block;
+    font-size: 11px;
+    padding: 0 5px;
+    cursor: pointer;
+    color: #555555;
+    text-decoration: none; }
+
+.recommendation-keyword-recent-use-off,
+.recommendation-keyword-recent-use-on {
+    display: none;
+    font-size: 11px;
+    padding: 0 5px;
+    cursor: pointer;
+    color: #555555;
+    text-decoration: none; }
+
+.recommendation-keyword-recent-use-off.selected,
+.recommendation-keyword-recent-use-on.selected {
+    display: inline-block; }
+
+.recommendation-keyword-recent-keyword-trigger {
+    display: block;
+    margin-right: 25px;
+    padding: 1px 3px;
+    font-size: 12px;
+    cursor: pointer; }
+
+.recommendation-keyword-recent-noting {
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    padding: 120px 0; }
+
+.recommendation-keyword-recent-off {
+    text-align: center;
+    font-size: 12px;
+    padding: 120px 0; }
+
+.recommendation-keyword-recent-menu-split {
+    color: #555555; }
+
+/* ################################################## recent end */
+
+/* ################################################## ranking begin */
+.keyword-ranking-wrap {
+    position: relative;
+    float: left;
+    width: 58%;
+    height: 300px; }
+
+.keyword-ranking-date {
+    position: absolute;
+    left: 15px;
+    bottom: -22px;
+    z-index: 1; }
+
+.keyword-ranking-list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+
+.keyword-ranking-li {
+    margin: 0;
+    padding: 0;
+    white-space: normal; }
+
+.keyword-ranking-trigger {
+    position: relative;
+    padding: 11px 0 0 0;
+    display: block;
+    line-height: 17px;
+    white-space: normal;
+    color: #333;
+    text-decoration: none; }
+
+.keyword-ranking-value {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    color: #333; }
+
+.keyword-ranking-text {
+    display: block;
+    margin: 0 50px 0 35px;
+    overflow: hidden;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: normal; }
+
+.keyword-ranking-direction-NEW {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 24px;
+    text-indent: -9999px;
+    background-image: url("/package/components/search/keyword/_ranking/v.1.0.0/pc/_images/search_icon_new.png");
+    background-position: center;
+    background-repeat: no-repeat; }
+
+.keyword-ranking-direction-up,
+.keyword-ranking-direction-down {
+    position: absolute;
+    bottom: 3px;
+    right: 45px;
+    width: 8px;
+    height: 8px;
+    text-indent: -99999px; }
+
+.keyword-ranking-direction-up {
+    background: url("/package/components/search/keyword/_ranking/v.1.0.0/pc/_images/search_icon_rise.png") no-repeat; }
+
+.keyword-ranking-direction-down {
+    background: url("/package/components/search/keyword/_ranking/v.1.0.0/pc/_images/search_icon_drop.png") no-repeat; }
+
+.keyword-ranking-differ {
+    position: absolute;
+    bottom: 0;
+    right: 23px;
+    display: inline-block;
+    width: 20px;
+    font-size: 11px;
+    text-align: center;
+    color: #333; }
+
+/* ################################################## ranking end */
+
+/* custom */
+.keyword-ranking-trigger {
+    cursor: pointer;
+}
+
+.suggest-selector-trigger {
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+}
+
+.keyword-recent-trigger {
+    cursor: pointer;
+}
+
+.keyword-recent-delete {
+    cursor: pointer;
+}
+
+.keyword-ranking-date {
+    color: #555;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+.suggest-layer-menu-close {
+    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+}
+
+.keyword-quickLink-li-brand,
+.keyword-quickLink-li-category {
+    cursor: pointer;
+}

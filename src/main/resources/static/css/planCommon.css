@@ -1,0 +1,4278 @@
+div.topBanner {
+    position: relative
+}
+
+div.topBanner a img {
+    width: 1048px;
+    margin: auto;
+    display: block
+}
+
+div.topBanner .closeButton {
+    position: absolute;
+    top: 26%;
+    right: 50px;
+    cursor: pointer
+}
+
+div.lnb {
+    padding: 13px 0 20px 0;
+    *padding-bottom: 43px;
+    font-size: 13px;
+    color: #888;
+    z-index: 3
+}
+
+div.lnb .lnbBoxWrap:after {
+    clear: both;
+    display: block;
+    content: ""
+}
+
+div.lnb .homeLink {
+    position: relative;
+    padding-left: 20px;
+    white-space: nowrap;
+    line-height: 12px
+}
+
+div.lnb .homeIcon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 15px;
+    height: 14px;
+    margin: -6px 5px 0 0;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -60px -50px;
+    vertical-align: middle
+}
+
+div.lnb .menu_navi {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding-top: 6px;
+    color: #555;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 12px
+}
+
+div.lnb div.select {
+    position: relative;
+    cursor: pointer;
+    height: 18px;
+    font-size: 11px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    *z-index: 2
+}
+
+div.lnb div.select p {
+    padding: 1px 19px 0 10px
+}
+
+div.lnb div.select a {
+    color: #555
+}
+
+div.lnb div.select:hover .option {
+    display: block
+}
+
+div.lnb div.select:hover .grayArrow {
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -70px -170px
+}
+
+div.lnb .option {
+    position: absolute;
+    display: none;
+    top: 18px;
+    left: -1px;
+    padding: 7px 0;
+    max-height: 338px;
+    overflow: auto;
+    z-index: 3
+}
+
+div.lnb .option li {
+    margin-top: 3px
+}
+
+div.lnb .option li.fir {
+    margin-top: 0
+}
+
+div.lnb .option li:hover, div.lnb .option li.on {
+    background: #ffedf1
+}
+
+div.lnb .option a {
+    display: block;
+    padding: 3px 10px 1px 10px;
+    line-height: 12px
+}
+
+div.lnb .select, div.lnb .option {
+    width: 150px;
+    border: 1px solid #ccc;
+    background: #fff
+}
+
+div.lnb .grayArrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    width: 13px;
+    height: 9px;
+    margin-top: -4px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -50px -170px
+}
+
+div.lnb .subdivide {
+    width: 6px;
+    height: 9px;
+    margin: 6px 10px 0 10px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -20px -170px
+}
+
+div.lnb .lnbTextBox {
+    *clear: both;
+    margin-top: 18px;
+    padding: 15px 0 4px 0;
+    overflow: hidden;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background: #fafafa
+}
+
+div.lnb .lnbTextBox li {
+    width: 19.9%;
+    margin-bottom: 11px;
+    float: left;
+    font-size: 12px;
+    text-indent: 15px
+}
+
+div.lnb .lnbTextBox a:hover, div.lnb .lnbTextBox .on {
+    color: #ff5073
+}
+
+div.lnb .relatedResult {
+    padding-top: 10px;
+    color: #333;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
+    font-size: 13px
+}
+
+div.lnb .relatedResult span, div.lnb .relatedResult a {
+    margin-right: 18px
+}
+
+div.lnb .relatedResult .keywordTitle {
+    font-weight: bold
+}
+
+div.lnb .relatedResult .relatedKeyword {
+    font-weight: normal
+}
+
+div.noDepth {
+    padding-bottom: 18px
+}
+
+div.lnb:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+div#header_v2 {
+    position: relative;
+    margin-bottom: 7px;
+    z-index: 5
+}
+
+div#header_v2 h1, div#header_v2 h3, div#header_v2 h4 {
+    display: inline
+}
+
+div#header_v2 h4 {
+    font-size: .9em;
+    font-weight: normal
+}
+
+div#header_v2 ul li {
+    float: left
+}
+
+div#header_v2 div.gnbTop {
+    margin: 4px 0 10px 0;
+    width: 100%;
+    background: #fff;
+    color: #555;
+    font-size: 12px;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+}
+
+div#header_v2 div.gnbTopInner {
+    width: 1048px;
+    height: 36px
+}
+
+div#header_v2 div.gnbTopInner .count .pText {
+    margin: 1px 5px 0 0;
+    font-family: 'Tahoma';
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #ff5073
+}
+
+div#header_v2 div.gnbTopInner .count .text {
+    margin-top: 1px
+}
+
+div#header_v2 div.gnbTopInner .appText {
+    margin: 1px 0 0 5px;
+    display: block;
+    font-size: 12px
+}
+
+div#header_v2 div.gnbTopInner .link {
+    display: block;
+    cursor: pointer;
+    float: left
+}
+
+div#header_v2 div.gnbTopInner .bar {
+    display: block;
+    margin: 1px 10px 0 10px;
+    color: #e1e1e1;
+    float: left;
+    font-size: 15px
+}
+
+div#header_v2 div.gnbTopInner .bar_half {
+    display: block;
+    margin: 3px 5px 0 5px;
+    color: #e1e1e1;
+    float: left
+}
+
+div#header_v2 div.gnbTopInner .appDownIcon {
+    margin-top: 3px;
+    display: block;
+    width: 13px;
+    height: 16px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -230px -40px
+}
+
+div#header_v2 div.gnbTopInner ul.gnbTopRight .li {
+    position: absolute;
+    font-size: 11px;
+    z-index: 5
+}
+
+div#header_v2 div.gnbTopInner ul.gnbTopRight .navi {
+    margin-top: 1px;
+    display: block;
+    height: 27px;
+    color: #555;
+    float: left
+}
+
+div#header_v2 div.gnbTopInner ul.gnbTopRight .arrow {
+    display: block;
+    width: 6px;
+    height: 3px;
+    margin: 9px 0 0 3px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -210px -60px
+}
+
+div#header_v2 div.gnbTopInner ul.gnbTopRight .gnbTopRight_bar {
+    display: block;
+    margin: 1px 10px 0;
+    color: #e1e1e1;
+    float: left;
+    font-size: 15px
+}
+
+div#header_v2 div.gnbTopInner ul.gnbTopRight .top_cartIcon {
+    margin: 3px 2px 0 0;
+    width: 17px;
+    height: 14px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -250px -40px
+}
+
+div#header_v2 div.gnbTopInner ul.gnbTopRight .cart_count {
+    padding: 0 6px;
+    margin: 1px 0 0 4px;
+    display: inline-block;
+    zoom: 1;
+    height: 18px;
+    background: #ff5073;
+    color: #fff;
+    text-align: center;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    line-height: 18px
+}
+
+div#header_v2 div.gnbTopInner ul.gnbTopRight .loginBtn {
+    margin: 1px 10px 0 0;
+    width: 56px;
+    height: 19px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px
+}
+
+div#header_v2 div.gnbTopInner .hover:hover {
+    position: relative
+}
+
+div#header_v2 div.gnbTopInner .hover {
+    position: relative
+}
+
+div#header_v2 div.gnbTopInner .topMenu_over {
+    display: none;
+    position: absolute;
+    width: 105px;
+    top: 24px;
+    left: -9px;
+    z-index: 5
+}
+
+div#header_v2 div.gnbTopInner .topMenu_over .topMenu_over_inner {
+    width: 100px;
+    background: #fff;
+    border: 1px solid #f9f9fa
+}
+
+div#header_v2 div.gnbTopInner .topMenu_over ul {
+    display: block;
+    padding: 12px 10px
+}
+
+div#header_v2 div.gnbTopInner .topMenu_over li {
+    float: none;
+    margin-bottom: 8px
+}
+
+div#header_v2 div.gnbTopInner .topMenu_over a {
+    color: #555
+}
+
+div#header_v2 div.gnbTopInner .topMenu_over a:hover {
+    color: #ff5073
+}
+
+div#header_v2 div.gnbTopInner div.cs {
+    width: 96px
+}
+
+div#header_v2 div.gnbTopInner div.cs .topMenu_over_inner {
+    width: 91px
+}
+
+div#header_v2 div.gnbTopInner .hover:hover .topMenu_over {
+    display: block
+}
+
+div#header_v2 div.gnbLogoOuter {
+    width: 100%;
+    background: url("//img2.memebox.com/static/contents/img/upload/image_20160607105330_9hztwMIrVc.png") repeat-x
+}
+
+div#header_v2 div.gnbLogoOuter.fix {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 90px
+}
+
+div#header_v2 div.gnbLogo {
+    position: relative;
+    width: 1048px;
+    height: 72px;
+    z-index: 4
+}
+
+div#header_v2 div.gnbLogo a.memeLogo {
+    width: 174px;
+    height: 41px;
+    margin-top: 9px;
+    display: block;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -180px -180px no-repeat
+}
+
+div#header_v2 div.gnbLogo .topRollingBannerWrap .topRollingArrow {
+    position: absolute;
+    top: 9px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer
+}
+
+div#header_v2 div.gnbLogo .topRollingBannerWrap .pre {
+    right: 17px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -340px -40px
+}
+
+div#header_v2 div.gnbLogo .topRollingBannerWrap .next {
+    right: 0;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -360px -40px
+}
+
+div#header_v2 div.gnbLogo .topRollingBanner {
+    width: 240px;
+    height: 50px
+}
+
+div#header_v2 div.gnbLogo .topRollingBanner img {
+    width: 240px;
+    height: 50px
+}
+
+div#header_v2 div.gnbLogo .dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    margin: 8px 12px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -80px -60px
+}
+
+div#header_v2 div.gnbLogo .point_icon {
+    position: absolute;
+    top: -16px;
+    right: 28px;
+    display: block;
+    width: 50px;
+    height: 13px;
+    background: url('http://img2.memebox.com/static/contents/img/upload/content_20150803103040_5m871yWyAk.png')
+}
+
+div#header_v2 div.gnbLogo .newIcon {
+    position: absolute;
+    top: -9px;
+    display: block;
+    width: 31px;
+    height: 9px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -60px -40px
+}
+
+div#header_v2 div.gnbLogo .text3 {
+    left: 3px
+}
+
+div#header_v2 div.gnbLogo .text5 {
+    left: 14px
+}
+
+div#header_v2 div.gnbOuter {
+    z-index: 3;
+    width: 100%;
+    height: 42px;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪�▣ヂ냈셌モ�쑩�', NanumGothicBold, '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+}
+
+div#header_v2 div.newGnb {
+    position: relative;
+    width: 1048px
+}
+
+div#header_v2 div.newGnb .gnbUl {
+    padding-left: 14px
+}
+
+div#header_v2 div.newGnb .newGnbTab {
+    position: relative;
+    float: left
+}
+
+div#header_v2 .arrow {
+    display: block;
+    width: 7px;
+    height: 4px;
+    margin: 9px 0 0 5px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") 0 -40px
+}
+
+div#header_v2 .mainMenu {
+    position: relative;
+    display: block;
+    padding: 11px 15px 0;
+    height: 31px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+}
+
+div#header_v2 .mainMenu .newIcon {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") 0 -130px no-repeat
+}
+
+div#header_v2 .mainMenu .newIcon_circle2 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") 0 -150px
+}
+
+div#header_v2 .brand.over .lnbOver {
+    display: block
+}
+
+div#header_v2 .category {
+    position: relative;
+    display: block;
+    width: 174px;
+    height: 42px;
+    background: #f9f9fa;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
+    cursor: pointer
+}
+
+div#header_v2 .categoryText {
+    margin-top: 10px
+}
+
+div#header_v2 .categoryIcon_01 {
+    margin: 13px 7px 0 15px;
+    width: 20px;
+    height: 15px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -270px -40px
+}
+
+div#header_v2 .categoryIcon_02 {
+    margin: 13px 15px 0 0;
+    width: 15px;
+    height: 15px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -320px -40px
+}
+
+div#header_v2 .categoryIcon_02.wide {
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -300px -40px
+}
+
+div#header_v2 .categoryWrap {
+    position: relative
+}
+
+div#header_v2 .mainMenu.on, div#header_v2 .mainMenu:hover {
+    color: #ff5073
+}
+
+div#header_v2 .fixCategory {
+    position: absolute;
+    top: 42px;
+    padding: 15px 0 20px 15px;
+    width: 159px;
+    height: 444px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20160411152307_ceEubOv60n.png") repeat-x;
+    border-top: 1px solid #8b8b8b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0
+}
+
+div#header_v2 .fixCategory a {
+    display: block;
+    padding-left: 8px
+}
+
+div#header_v2 .fixCategory h3 {
+    display: block;
+    margin-top: 17px
+}
+
+div#header_v2 .fixCategory h3, div#header_v2 .fixCategory a {
+    color: #fff
+}
+
+div#header_v2 .fixCategory li {
+    padding-top: 11px;
+    float: none
+}
+
+div#header_v2 .fixCategory .bar {
+    width: 144px;
+    margin: 17px 0 6px;
+    border-top: 1px solid #b7b7b7
+}
+
+div#header_v2 .fixCategory:hover {
+    border-top: 1px solid #e0e0e0;
+    background: #f9f9f9
+}
+
+div#header_v2 .fixCategory:hover a, div#header_v2 .fixCategory:hover h3 {
+    color: #555
+}
+
+div#header_v2 .fixCategory:hover .bar {
+    border-top-color: #e0e0e0
+}
+
+div#header_v2 .fixCategory:hover a:hover {
+    color: #ff5073
+}
+
+div#header_v2 .fixCategory_side {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 174px;
+    width: 205px;
+    font-size: 12px
+}
+
+div#header_v2 .fixCategory_side a {
+    color: #555;
+    padding-left: 0
+}
+
+div#header_v2 .fixCategory_side li {
+    padding-top: 6px
+}
+
+div#header_v2 .fixCategory_side_inner {
+    padding: 30px 0 0 30px;
+    width: 170px;
+    height: 450px;
+    background: #fff
+}
+
+div#header_v2 .fix_li:hover .fixCategory_side {
+    display: block
+}
+
+div#header_v2 .lnbOver {
+    display: none;
+    position: absolute;
+    top: 42px;
+    width: 1046px;
+    border: 1px solid #e1e1e1;
+    font-size: 13px
+}
+
+div#header_v2 .lnbOver .theme {
+    height: 480px
+}
+
+div#header_v2 .lnbOver .theme td {
+    height: 100%
+}
+
+div#header_v2 .lnbOver .bg {
+    background: #fff
+}
+
+div#header_v2 .lnbOver a {
+    display: block
+}
+
+div#header_v2 .lnbOver .newIcon_circle {
+    display: block;
+    margin: 3px 0 0 10px;
+    width: 15px;
+    height: 15px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") 0 -150px
+}
+
+div#header_v2 .lnbOver.all .shadowBox {
+    right: -5px
+}
+
+div#header_v2 .shadowBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: #000;
+    opacity: .03;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=3);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=3)
+}
+
+div#header_v2 .categoryTitle {
+    padding: 7px 0 0 20px;
+    background: #f9f9fa;
+    height: 26px;
+    border-top: 1px solid #f9f9f9;
+    border-bottom: 1px solid #f2f2f2;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
+    font-size: 14px;
+    font-weight: bold
+}
+
+div#header_v2 .hr_right {
+    border-right: 1px solid #e7e7e7
+}
+
+div#header_v2 .newGnbTab:hover {
+    display: block
+}
+
+div#header_v2 .overBox {
+    padding: 11px 0
+}
+
+div#header_v2 .depth_3_box {
+    height: 224px
+}
+
+div#header_v2 .depth_3_box {
+    display: none;
+    position: absolute;
+    top: -1px;
+    left: 180px;
+    width: 296px;
+    background: #fff;
+    border: 1px solid #ff5073;
+    border-left: 1px solid #dbdbdb;
+    font-size: 13px;
+    overflow: hidden
+}
+
+div#header_v2 .depth_2_li:hover .depth_2, div#header_v2 .depth_3_li:hover .depth_3 {
+    background: #ff5073;
+    color: #fff
+}
+
+div#header_v2 .depth_2_li:hover .depth_3_box, div#header_v2 .depth_3_li:hover {
+    display: block
+}
+
+div#header_v2 .splitBox {
+    width: 148px;
+    float: left
+}
+
+div#header_v2 div.brandList {
+    width: 215px;
+    height: 480px;
+    left: 0
+}
+
+div#header_v2 div.brandList .tableWrap {
+    padding: 15px 0 0 25px;
+    width: 185px;
+    height: 455px;
+    overflow: auto;
+    border-bottom: 10px solid #fff
+}
+
+div#header_v2 div.brandList .brandTable {
+    width: 160px
+}
+
+div#header_v2 div.brandList li {
+    margin-bottom: 12px
+}
+
+div#header_v2 .categoryTable th {
+    width: 136px;
+    height: 39px;
+    background: #f9f9fa;
+    font-size: 13px;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪�▣ヂ냈셌モ�쑩�', NanumGothicBold, '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+}
+
+div#header_v2 .categoryTable th.h3 {
+    padding-left: 12px;
+    width: 77px;
+    border-left: 0
+}
+
+div#header_v2 .categoryTable th, div#header_v2 .categoryTable td {
+    border-left: 1px solid #f9f9fa
+}
+
+div#header_v2 .categoryTable td {
+    padding: 15px 0 20px 0;
+    height: 171px;
+    font-size: 12px;
+    vertical-align: top
+}
+
+div#header_v2 .categoryTable li {
+    margin-bottom: 1px
+}
+
+div#header_v2 .categoryTable a {
+    padding-left: 12px
+}
+
+div#header_v2 .categoryTable a:hover {
+    color: #ff5073
+}
+
+div#header_v2 .categoryTable, div#header_v2 .brandTable {
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+}
+
+div#header_v2 .categoryTable li, div#header_v2 .brandTable li {
+    float: none
+}
+
+div#header_v2 .categoryTable a, div#header_v2 .brandTable a {
+    color: #555
+}
+
+div#header_v2 .categoryTable .nIcon, div#header_v2 .brandTable .nIcon {
+    display: block;
+    float: left;
+    margin: 12px 0 0 5px;
+    width: 7px;
+    height: 7px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -10px -50px
+}
+
+div#header_v2 table.categoryTable_life td {
+    height: 161px
+}
+
+div#header_v2 .brandTable th {
+    padding: 0;
+    width: 25px;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 14px
+}
+
+div#header_v2 .brandTable td {
+    padding-top: 2px;
+    font-size: 13px
+}
+
+div#header_v2 .brandTable a:hover {
+    color: #ff5073
+}
+
+div#header_v2 .category-block .top, div#header_v2 .category-block-content .top {
+    height: 265px
+}
+
+div#header_v2 .category-block .bottom, div#header_v2 .category-block-content .bottom {
+    height: 215px
+}
+
+div#header_v2 .category-block {
+    position: relative;
+    padding-right: 174px;
+    overflow: hidden;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+}
+
+div#header_v2 .category-block a {
+    color: #333
+}
+
+div#header_v2 .category-block a:hover {
+    color: #ff5073
+}
+
+div#header_v2 .category-block-content {
+    float: left;
+    position: relative;
+    display: block;
+    width: 20%
+}
+
+div#header_v2 .category-content-tit {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 39px;
+    overflow: hidden;
+    padding: 0;
+    background: #f9f9fa;
+    font-size: 13px;
+    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪�▣ヂ냈셌モ�쑩�', NanumGothicBold, '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
+    font-weight: bold;
+    line-height: 1
+}
+
+div#header_v2 .category-tit-item {
+    display: block;
+    padding: 13px 25px
+}
+
+div#header_v2 .category-content-desc {
+    height: 100%;
+    padding: 49px 0 0 0;
+    border-right: 1px solid #f9f9fa
+}
+
+div#header_v2 .category-content-desc.top {
+    height: 216px
+}
+
+div#header_v2 .category-content-desc.bottom {
+    height: 165px
+}
+
+div#header_v2 .category-list-block {
+    float: none
+}
+
+div#header_v2 .category-list-item {
+    display: block;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.68
+}
+
+div#header_v2 .category-block.additional {
+    position: absolute;
+    width: 173px;
+    height: 100%;
+    padding-right: 0;
+    right: 0;
+    top: 0;
+    border-left: 1px solid #e1e1e1;
+    background: #fff
+}
+
+div#header_v2 .category-block.additional .category-block-content {
+    width: 100%
+}
+
+div#header_v2 .category-block.additional .category-content-desc {
+    border-right: 0
+}
+
+div#header_v2 .lnbClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -440px -40px;
+    cursor: pointer
+}
+
+.navigation-list-newSticker {
+    position: absolute;
+    top: 13px;
+    right: 1px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: url("//www.memebox.com/web/images/header/navigation-list-newSticker.png")
+}
+
+.lnbOver .navigation-list-newSticker {
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+    vertical-align: middle
+}
+
+.newSearchWrap {
+    position: absolute;
+    top: 9px;
+    left: 260px;
+    width: 460px;
+    z-index: 1
+}
+
+.imMeMe-stick-floating-banner {
+    display: block;
+    position: fixed;
+    bottom: 120px;
+    right: 20%;
+    width: 112px;
+    height: 147px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20161128141350_a0tDZl1TRr.png");
+    cursor: pointer
+}
+
+.imMeMe-stick-floating-banner-close {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: -1px;
+    width: 23px;
+    height: 23px;
+    text-indent: -9999em
+}
+
+@font-face {
+    font-family: 'NanumGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://img2.memebox.com/static/ui/font/NanumGothicCompact.eot);
+    src: local('창�궗쨩'), url(https://img2.memebox.com/static/ui/font/NanumGothicCompact.woff) format('woff')
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    letter-spacing: -1px
+}
+
+body, input, textarea, select, button, table {
+    font-family: '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
+    font-size: 14px;
+    color: #222
+}
+
+body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td {
+    margin: 0;
+    padding: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%
+}
+
+ul, ol {
+    list-style: none
+}
+
+fieldset, img {
+    border: 0;
+    vertical-align: top
+}
+
+address {
+    font-style: normal
+}
+
+p, i, dd, td {
+    line-height: 1.5em;
+    font-size: 1em;
+    text-align: justify
+}
+
+:focus {
+    outline: 0
+}
+
+body {
+    line-height: 20px;
+    background: white
+}
+
+input, select, button {
+    vertical-align: middle
+}
+
+input {
+    padding-left: 6px
+}
+
+table {
+    table-layout: fixed;
+    border-spacing: 0
+}
+
+caption, th, td {
+    font-weight: normal;
+    text-align: left
+}
+
+caption {
+    display: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: ""
+}
+
+blockquote, q {
+    quotes: "" ""
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px
+}
+
+a {
+    text-decoration: none;
+    color: #222
+}
+
+legend, caption {
+    display: none
+}
+
+input[disabled], button[disabled] {
+    cursor: not-allowed;
+    background-color: #eee
+}
+
+a[disabled] {
+    cursor: not-allowed
+}
+
+#wrap {
+    min-width: 1100px
+}
+
+#container {
+    width: 1080px;
+    position: relative
+}
+
+#container:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both
+}
+
+.dP {
+    display: block
+}
+
+.mA {
+    margin: auto
+}
+
+.fL {
+    float: left
+}
+
+.fR {
+    float: right
+}
+
+.cB {
+    clear: both
+}
+
+.fW {
+    font-weight: bold
+}
+
+.tI {
+    text-indent: -9999px
+}
+
+.oF {
+    overflow: hidden
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.hidden {
+    display: none
+}
+
+.pText {
+    color: #ff5073
+}
+
+.blackBtn {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(.05, #4a4a4a), color-stop(1, #2c2c2c));
+    background: -moz-linear-gradient(top, #4a4a4a 5%, #2c2c2c 100%);
+    background: -webkit-linear-gradient(top, #4a4a4a 5%, #2c2c2c 100%);
+    background: -o-linear-gradient(top, #4a4a4a 5%, #2c2c2c 100%);
+    background: -ms-linear-gradient(top, #4a4a4a 5%, #2c2c2c 100%);
+    background: linear-gradient(to bottom, #4a4a4a 5%, #2c2c2c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a4a4a', endColorstr='#2c2c2c', GradientType=0);
+    background-color: #4a4a4a;
+    -webkit-box-shadow: inset 0 1px 0 0 #6b6b6b;
+    -moz-box-shadow: inset 0 1px 0 0 #6b6b6b;
+    box-shadow: inset 0 1px 0 0 #6b6b6b;
+    border: 1px solid #2b2b2b;
+    color: #fff;
+    font-weight: bold
+}
+
+.pinkBtn {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(.05, #ff579a), color-stop(1, #fc4b92));
+    background: -moz-linear-gradient(top, #ff579a 5%, #fc4b92 100%);
+    background: -webkit-linear-gradient(top, #ff579a 5%, #fc4b92 100%);
+    background: -o-linear-gradient(top, #ff579a 5%, #fc4b92 100%);
+    background: -ms-linear-gradient(top, #ff579a 5%, #fc4b92 100%);
+    background: linear-gradient(to bottom, #ff579a 5%, #fc4b92 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff579a', endColorstr='#fc4b92', GradientType=0);
+    background-color: #ff579a;
+    -webkit-box-shadow: inset 0 1px 0 0 #ff7db1;
+    -moz-box-shadow: inset 0 1px 0 0 #ff7db1;
+    box-shadow: inset 0 1px 0 0 #ff7db1;
+    border: 1px solid #fd2c80;
+    color: #fff;
+    font-weight: bold
+}
+
+.grayBtn {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(.05, #fcfcfc), color-stop(1, #e7e7e7));
+    background: -moz-linear-gradient(top, #fcfcfc 5%, #e7e7e7 100%);
+    background: -webkit-linear-gradient(top, #fcfcfc 5%, #e7e7e7 100%);
+    background: -o-linear-gradient(top, #fcfcfc 5%, #e7e7e7 100%);
+    background: -ms-linear-gradient(top, #fcfcfc 5%, #e7e7e7 100%);
+    background: linear-gradient(to bottom, #fcfcfc 5%, #e7e7e7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e7e7e7', GradientType=0);
+    background-color: #fcfcfc;
+    -webkit-box-shadow: inset 0 1px 0 0 #fff;
+    -moz-box-shadow: inset 0 1px 0 0 #fff;
+    box-shadow: inset 0 1px 0 0 #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    font-weight: bold
+}
+
+div.mainVisual {
+    position: relative;
+    width: 1048px;
+    height: 477px;
+    margin: 0 auto 50px;
+    overflow: hidden
+}
+
+div.mainVisual img {
+    width: 1048px
+}
+
+div.mainVisual .arrow {
+    position: absolute;
+    top: 231px;
+    display: block;
+    width: 51px;
+    height: 62px
+}
+
+div.mainVisual .pre {
+    left: 0;
+    background: url("/web/images/home/homeSprite20160811.png") -290px -30px
+}
+
+div.mainVisual .pre:hover {
+    background: url("/web/images/home/homeSprite20160811.png") -410px -30px
+}
+
+div.mainVisual .next {
+    right: 0;
+    background: url("/web/images/home/homeSprite20160811.png") -350px -30px
+}
+
+div.mainVisual .next:hover {
+    background: url("/web/images/home/homeSprite20160811.png") -470px -30px
+}
+
+div.mainVisual .circleWrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center
+}
+
+div.mainVisual .circle {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center;
+    margin: 0
+}
+
+div.mainVisual li {
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin: 0 10px 3px 5px;
+    cursor: pointer;
+    list-style: none;
+    background: url("/web/images/home/homeSprite20160811.png") -230px -40px
+}
+
+div.mainVisual li:hover, div.mainVisual .on {
+    background: url("/web/images/home/homeSprite20160811.png") -250px -40px
+}
+
+div.sideBannerL {
+    position: absolute;
+    top: 0;
+    left: -123px
+}
+
+div.sideBannerL li {
+    margin-top: 10px
+}
+
+div.sideBannerR {
+    position: absolute;
+    top: 0;
+    right: -141px;
+    z-index: 3
+}
+
+div.sideBannerR li {
+    margin-bottom: 10px
+}
+
+#container.brand .sideBannerL {
+    top: 123px
+}
+
+#container.brand .sideBannerR {
+    top: 123px
+}
+
+div.topDownWrap {
+    width: 102px
+}
+
+div.topDownBtn {
+    background: url("/web/images/header/headerSprite20160921.png") -20px -70px
+}
+
+div.topDownBtn .top {
+    display: block;
+    width: 71px;
+    height: 32px;
+    text-indent: -9999px;
+    cursor: pointer
+}
+
+div.topDownBtn .down {
+    display: block;
+    width: 71px;
+    height: 33px;
+    text-indent: -9999px;
+    cursor: pointer
+}
+
+div.myView {
+    width: 110px;
+    height: 357px;
+    background: #fff
+}
+
+div.myView .viewCart, div.myView .view {
+    display: block;
+    padding: 4px 10px 0 10px;
+    color: #eee;
+    font-size: 11px;
+    overflow: hidden;
+    background: #262525
+}
+
+div.myView .viewCart {
+    height: 22px;
+    border: 1px solid #060606;
+    -webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0
+}
+
+div.myView .viewCart .arrow {
+    display: block;
+    width: 5px;
+    height: 8px;
+    margin: 6px;
+    background: url("/web/images/home/homeSprite20160811.png") -280px -20px
+}
+
+div.myView .view {
+    height: 23px;
+    cursor: text;
+    border-top: 1px solid #4b4b4b;
+    border-left: 1px solid #060606;
+    border-right: 1px solid #060606
+}
+
+div.myView strong {
+    float: left
+}
+
+div.myView .amount {
+    display: block;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ff5073
+}
+
+div.myView .viewList {
+    position: relative;
+    width: 74px;
+    height: 283px;
+    padding: 17px 17px 0 17px;
+    border: 1px solid #cfcfcf;
+    border-top: none;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px
+}
+
+div.myView .viewList .empty {
+    margin-top: 110px;
+    color: #b1b1b1;
+    text-align: center;
+    font-size: 12px
+}
+
+div.myView .viewList li {
+    float: none;
+    position: relative
+}
+
+div.myView .viewList li:hover .overImg {
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #fff
+}
+
+div.myView div.paging {
+    position: absolute;
+    width: 74px;
+    bottom: 5px;
+    overflow: hidden;
+    font-size: 12px
+}
+
+div.myView span.fL {
+    width: 33px
+}
+
+div.myView .on {
+    color: #ff5073
+}
+
+div.myView .pre, div.myView .next {
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url("/web/images/home/homeSprite20160811.png");
+    margin-top: 3px
+}
+
+div.myView .pre {
+    background-position: -300px 0;
+    margin-left: 12px
+}
+
+div.myView .pre:hover {
+    background-position: -260px 0
+}
+
+div.myView .next {
+    background-position: -320px 0
+}
+
+div.myView .next:hover {
+    background-position: -280px 0
+}
+
+div.myView .overImg {
+    position: relative;
+    width: 225px;
+    height: 74px;
+    border: 2px solid #404040
+}
+
+div.myView .textBox {
+    width: 141px;
+    height: 52px;
+    padding: 18px 0 0 10px
+}
+
+div.myView .title {
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    font-weight: bold
+}
+
+div.myView .price {
+    color: #ff5073;
+    font-weight: bold
+}
+
+div.myView .overClose {
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 15px;
+    height: 15px;
+    background: url("/web/images/home/homeSprite20160811.png") -260px -20px;
+    cursor: pointer
+}
+
+.fancybox-opened .fancybox-skin {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent
+}
+
+iframe[name='google_conversion_frame'] {
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    margin-top: -13px;
+    float: left
+}
+
+div#footer {
+    position: relative;
+    margin-top: 70px;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    font-family: '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
+    color: #555;
+    background: #f9f9fb;
+    letter-spacing: 0;
+    z-index: 0
+}
+
+div#footer .footerTopInner, div#footer .footerBottomInner {
+    margin: 0 auto;
+    width: 1048px
+}
+
+div#footer a {
+    color: #555
+}
+
+div#footer .textBox a:hover, div#footer dl a:hover {
+    text-decoration: underline
+}
+
+div#footer li {
+    float: left
+}
+
+div#footer .call {
+    display: block;
+    width: 176px;
+    height: 26px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") 0 0
+}
+
+div#footer dl {
+    padding-left: 20px;
+    width: 241px;
+    height: 114px;
+    float: left;
+    border-left: 1px solid #dfdfdf
+}
+
+div#footer dl a {
+    margin-top: 2px;
+    display: block
+}
+
+div#footer dl .mg_t {
+    margin-top: 4px
+}
+
+div#footer dt {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold
+}
+
+div#footer .recruit {
+    position: relative
+}
+
+div#footer .partner li {
+    position: relative;
+    float: none
+}
+
+div#footer .partner li:hover .copyBox {
+    display: block
+}
+
+div#footer .copyBox {
+    position: absolute;
+    top: -10px;
+    left: 130px;
+    display: none;
+    padding: 7px;
+    color: #747474;
+    font-size: 13px;
+    background: #fff;
+    border: 1px solid #767676
+}
+
+div#footer div.o2o {
+    font-size: 11px
+}
+
+div#footer .csCenter {
+    width: 221px
+}
+
+div#footer .csCenter span {
+    display: block;
+    font-size: 11px
+}
+
+div#footer .csCenter strong {
+    display: block;
+    margin-top: 28px
+}
+
+div#footer .csCenter strong:hover {
+    text-decoration: underline
+}
+
+div#footer .gText {
+    color: #a1a1a1;
+    line-height: 1.8em
+}
+
+div#footer .footerMiddle {
+    padding: 25px 0 30px;
+    font-size: 12px
+}
+
+div#footer .footerMiddle div.cB {
+    display: block;
+    content: "";
+    height: 0
+}
+
+div#footer .footerMiddle {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0
+}
+
+div#footer .icon {
+    display: block;
+    margin-right: 13px;
+    width: 40px;
+    height: 40px;
+    float: left
+}
+
+div#footer .icon_01 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") 0 -50px
+}
+
+div#footer .icon_02 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -50px -50px
+}
+
+div#footer .icon_03 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -100px -50px
+}
+
+div#footer .icon_04 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -150px -50px
+}
+
+div#footer .icon_05 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -200px -50px
+}
+
+div#footer .landing {
+    display: block;
+    padding: 20px 0
+}
+
+div#footer .landing li {
+    font-size: 12px;
+    font-weight: bold
+}
+
+div#footer .landing li:hover .icon_01 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -300px -50px
+}
+
+div#footer .landing li:hover .icon_02 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -350px -50px
+}
+
+div#footer .landing li:hover .icon_03 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -400px -50px
+}
+
+div#footer .landing li:hover .icon_04 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -450px -50px
+}
+
+div#footer .landing li:hover .icon_05 {
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -500px -50px
+}
+
+div#footer .landing li:hover a {
+    color: #ff5073
+}
+
+div#footer .footerList_01 {
+    width: 200px
+}
+
+div#footer .footerList_02 {
+    width: 210px
+}
+
+div#footer .footerList_03 {
+    width: 210px
+}
+
+div#footer .footerList_04 {
+    width: 219px
+}
+
+div#footer .footerList_05 {
+    width: 209px
+}
+
+div#footer .landingText {
+    display: block;
+    margin-top: 3px;
+    float: left;
+    line-height: 1.5em
+}
+
+div#footer .memeBoxInfo {
+    padding: 30px 0 28px
+}
+
+div#footer .footerLogo {
+    display: block;
+    width: 119px;
+    height: 16px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") 0 -30px
+}
+
+div#footer .textBox {
+    margin-left: 102px
+}
+
+div#footer .textBox li {
+    font-size: 12px
+}
+
+div#footer .textBox .bar {
+    color: #c0c0c0;
+    margin: 0 10px
+}
+
+div#footer .footerBottomOuter {
+    padding: 16px 0 8px;
+    background: #efefef
+}
+
+div#footer .mark {
+    margin-right: 7px;
+    display: block;
+    height: 42px;
+    float: left
+}
+
+div#footer .mark_01 {
+    width: 44px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") 0 -100px
+}
+
+div#footer .mark_02 {
+    width: 36px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -50px -100px
+}
+
+div#footer .mark_03 {
+    width: 40px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -90px -100px
+}
+
+div#footer .mark_04 {
+    width: 42px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -140px -100px
+}
+
+div#footer .mark_05 {
+    width: 41px;
+    height: 39px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -260px -100px
+}
+
+div#footer .mark_06 {
+    width: 40px;
+    height: 40px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -360px -100px
+}
+
+div#footer .mark_07 {
+    margin-top: 3px;
+    width: 42px;
+    height: 34px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -310px -100px
+}
+
+div#footer .mark_08 {
+    width: 41px;
+    height: 39px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -410px -100px
+}
+
+div#footer .mark_09 {
+    width: 39px;
+    height: 39px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -460px -100px
+}
+
+div#footer .kobacoMark {
+    display: block;
+    width: 65px;
+    height: 19px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -190px -100px
+}
+
+div#footer .footerBottomInner:after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both
+}
+
+div#footer .award {
+    position: relative;
+    width: 754px
+}
+
+div#footer .award div.bx-viewport {
+    left: 0;
+    background: none
+}
+
+div#footer .badge {
+    margin: 0 20px;
+    width: 714px;
+    height: 39px;
+    overflow: hidden
+}
+
+div#footer .badge li {
+    width: 178px;
+    font-size: 11px;
+    font-weight: bold
+}
+
+div#footer .badge .list5 {
+    padding-left: 10px;
+    width: 168px
+}
+
+div#footer .listText {
+    display: block;
+    margin-top: 6px;
+    line-height: 1.5em;
+    float: left
+}
+
+div#footer .kobacoText {
+    display: block;
+    margin-top: 4px
+}
+
+div#footer .list_arrow {
+    display: block;
+    position: absolute;
+    top: 8px;
+    width: 13px;
+    height: 21px;
+    cursor: pointer;
+    text-indent: -9999px
+}
+
+div#footer .award_next {
+    right: 0;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -210px 0
+}
+
+div#footer .award_prev {
+    left: 0;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -190px 0
+}
+
+div#footer .award_next_on {
+    right: 0;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -250px 0
+}
+
+div#footer .award_prev_on {
+    left: 0;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -230px 0
+}
+
+div#footer .snsNavi {
+    overflow: hidden
+}
+
+div#footer .snsNavi a {
+    display: block;
+    margin: 7px 0 0 5px;
+    float: left;
+    width: 25px;
+    height: 25px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png");
+    text-indent: -9999px
+}
+
+div#footer .snsNavi .insta {
+    margin-left: 0;
+    background-position: -30px -150px
+}
+
+div#footer .snsNavi .faceBook {
+    background-position: 0 -150px
+}
+
+div#footer .snsNavi .youtube {
+    background-position: -60px -150px
+}
+
+div#footer address {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #a1a1a1;
+    line-height: 1.7em
+}
+
+div#footer address a {
+    font-weight: bold
+}
+
+div#footer .e_text {
+    font-family: 'Verdana'
+}
+
+div#footer .lastLine {
+    display: block;
+    margin-top: 5px
+}
+
+div#footer .globalWrap {
+    margin: 0 16px 0 12px;
+    position: relative
+}
+
+div#footer .globalWrap:hover .globalSelect {
+    display: block
+}
+
+div#footer .globalWrap:hover span.arrow {
+    top: 10px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -290px 0
+}
+
+div#footer .global {
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    width: 178px;
+    height: 27px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    background: #fff;
+    cursor: pointer
+}
+
+div#footer .global .arrow {
+    position: absolute;
+    display: block;
+    top: 9px;
+    right: 7px;
+    width: 15px;
+    height: 10px;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") -270px 0
+}
+
+div#footer .global .text {
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 10px;
+    font-size: 12px
+}
+
+div#footer .globalSelect {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 27px;
+    width: 178px;
+    background: #fff;
+    border: 1px solid #ccc
+}
+
+div#footer .globalSelect li {
+    list-style: none
+}
+
+div#footer .globalSelect a {
+    display: block;
+    width: 178px;
+    height: 30px;
+    font-size: 11px;
+    cursor: pointer
+}
+
+div#footer .globalSelect a:hover {
+    color: #ff5073
+}
+
+div#footer .globalIcon {
+    display: block;
+    margin: 2px 8px;
+    width: 24px;
+    height: 24px;
+    float: left;
+    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png")
+}
+
+div#footer .memeStar {
+    background-position: -150px -150px
+}
+
+div#footer .usa {
+    background-position: -120px -150px
+}
+
+div#footer .china {
+    background-position: -90px -150px
+}
+
+div#footer .corp {
+    background-position: -240px -150px
+}
+
+div#footer .immeme {
+    background-position: -210px -150px
+}
+
+div#footer .ponyEffect {
+    background-position: -180px -150px
+}
+
+div#footer .shadeCode {
+    background-position: -270px -150px
+}
+
+div#footer .globalText {
+    display: block;
+    margin-top: 6px;
+    float: left
+}
+
+div.test1234 {
+    color: red
+}
+
+div.newSlideBanner {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    font-family: '챘혧�뮨р�뷜궗', Dotum, '챗쨉쨈챘짝쩌', Gulim, "AppleSDGothic neo", AppleGothic, sans-serif;
+    letter-spacing: 0
+}
+
+div.newSlideBanner .slideBannerWrap {
+    width: 993px;
+    padding: 0 27px 0 28px;
+    background: #fff
+}
+
+div.newSlideBanner .slideBannerList li {
+    float: left
+}
+
+div.newSlideBanner .slideBannerList a {
+    width: 220px;
+    display: block;
+    border-right: 1px solid #f0f0f0
+}
+
+div.newSlideBanner .slideBannerList .last {
+    padding-right: 0;
+    border-right: 0
+}
+
+div.newSlideBanner .slideBannerList .first {
+    padding-left: 0
+}
+
+div.newSlideBanner .homeSlideBanner a {
+    padding: 0 18px 0 18px;
+    height: 310px;
+    text-align: center
+}
+
+div.newSlideBanner .recommend {
+    margin-bottom: 15px;
+    width: 410px;
+    height: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713143802_5NO1mTXZLB.png")
+}
+
+div.newSlideBanner .page {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    display: block;
+    font-size: 12px;
+    font-weight: bold
+}
+
+div.newSlideBanner .v2 {
+    background-position: -90px -130px
+}
+
+div.newSlideBanner .subBannerLeftButton {
+    width: 23px;
+    height: 29px;
+    position: absolute;
+    top: 122px;
+    left: 0;
+    background: url("/web/images/home/homeSprite20160811.png") 0 0;
+    text-indent: -9999px
+}
+
+div.newSlideBanner .subBannerRightButton {
+    width: 23px;
+    height: 29px;
+    position: absolute;
+    top: 122px;
+    right: 0;
+    background: url("/web/images/home/homeSprite20160811.png") -30px 0;
+    text-indent: -9999px
+}
+
+div.newSlideBanner .home {
+    top: 173px
+}
+
+div.newSlideBanner img {
+    width: 203px;
+    height: 203px
+}
+
+div.newSlideBanner .title, div.newSlideBanner .subTitle {
+    color: #585858;
+    text-align: center
+}
+
+div.newSlideBanner .title {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold
+}
+
+div.newSlideBanner .subTitle {
+    margin-top: 5px;
+    width: 202px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px
+}
+
+div.newSlideBanner .price {
+    margin-top: 2px;
+    text-align: center;
+    font-size: 13px
+}
+
+div.newSlideBanner .price del {
+    margin-right: 5px;
+    color: #898989;
+    font-size: 15px
+}
+
+div.newSlideBanner .price span {
+    font-family: "tahoma";
+    color: #ff5073;
+    font-size: 15px;
+    font-weight: bold
+}
+
+div.newSlideBanner .price span .won {
+    font-size: 13px;
+    font-weight: normal
+}
+
+span.block {
+    display: block;
+    height: 10px
+}
+
+p.noResultTitle {
+    width: 410px;
+    height: 20px;
+    margin-bottom: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150728135929_tRw6Wmbf7J.png")
+}
+
+div.newDealContents:after {
+    content: '';
+    display: block;
+    height: 27px;
+    clear: both
+}
+
+div.newDealContents .dealList {
+    width: 1068px
+}
+
+div.newDealContents .dealList li {
+    width: 334px;
+    height: 478px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin: 0 20px 23px 0;
+    float: left
+}
+
+div.newDealContents .dealList li:hover {
+    border: 1px solid #ff5073
+}
+
+div.newDealContents .dealList .overBorder {
+    display: block;
+    position: relative
+}
+
+div.newDealContents .dealList li:hover .title {
+    text-decoration: underline
+}
+
+div.newDealContents .dealList li:hover .overBack {
+    display: block
+}
+
+div.newDealContents .dealList a {
+    display: block;
+    cursor: pointer
+}
+
+div.newDealContents .dealList .m_left {
+    margin-right: 0
+}
+
+div.newDealContents .dealList .dealThumb {
+    position: relative
+}
+
+div.newDealContents .dealList .dealThumb img {
+    width: 334px;
+    height: 334px
+}
+
+div.newDealContents .dealList .back {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 334px;
+    height: 65px;
+    background: #f00;
+    opacity: .7;
+    filter: alpha(opacity=70)
+}
+
+div.newDealContents .dealList .caption {
+    position: absolute;
+    bottom: 0;
+    width: 334px;
+    height: 40px;
+    padding-top: 25px;
+    text-align: center
+}
+
+div.newDealContents .dealList .caption strong {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em
+}
+
+div.newDealContents .dealList .badge {
+    position: absolute;
+    top: 9px;
+    right: 11px
+}
+
+div.newDealContents .dealList .badge span {
+    width: 46px;
+    height: 46px;
+    display: block
+}
+
+div.newDealContents .dealList .badge .hot {
+    background: url("/web/images/shopList/shopList_20170102.png") 0 -40px
+}
+
+div.newDealContents .dealList .badge .md {
+    background: url("/web/images/shopList/shopList_20170102.png") -50px -40px
+}
+
+div.newDealContents .dealList .badge .memebox {
+    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
+}
+
+div.newDealContents .dealList .badge .best {
+    background: url("/web/images/shopList/shopList_20170102.png") -150px -40px
+}
+
+div.newDealContents .dealList .badge .new {
+    background: url("/web/images/shopList/shopList_20170102.png") -200px -40px
+}
+
+div.newDealContents .dealList .badge .threeTime {
+    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
+}
+
+div.newDealContents .dealList .badge .lowest {
+    background: url("/web/images/shopList/shopList_20170102.png") -250px -40px
+}
+
+div.newDealContents .dealList .badge .freebie {
+    background: url("/web/images/shopList/shopList_20170102.png") -300px -40px
+}
+
+div.newDealContents .dealList .badge .refund90 {
+    background: url("/web/images/shopList/shopList_20170102.png") -350px -40px
+}
+
+div.newDealContents .dealList .badge .lowest90 {
+    background: url("/web/images/shopList/shopList_20170102.png") -400px -40px
+}
+
+div.newDealContents .dealList .badge .sale369 {
+    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
+}
+
+div.newDealContents .dealList .badge .promotion {
+    background: url("/web/images/shopList/shopList_20170102.png") -500px -40px
+}
+
+div.newDealContents .dealList .badge .soldOutSoon {
+    background: url("/web/images/shopList/shopList_20170102.png") -550px -40px
+}
+
+div.newDealContents .dealList .badge .deal_0 {
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -40px
+}
+
+div.newDealContents .dealList .badge .deal_100 {
+    background: url("/web/images/shopList/shopList_20170102.png") -650px -40px
+}
+
+div.newDealContents .dealList .badge .reservation {
+    background: url("/web/images/shopList/shopList_20170102.png") -700px -40px
+}
+
+div.newDealContents .dealList .bestTag {
+    width: 62px;
+    height: 62px;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: url("/web/images/shopList/shopList_20170102.png");
+    z-index: 1
+}
+
+div.newDealContents .dealList .best1 {
+    background-position: 0 -220px
+}
+
+div.newDealContents .dealList .best2 {
+    background-position: -70px -220px
+}
+
+div.newDealContents .dealList .best3 {
+    background-position: -140px -220px
+}
+
+div.newDealContents .dealList .best4 {
+    background-position: -210px -220px
+}
+
+div.newDealContents .dealList .best5 {
+    background-position: -280px -220px
+}
+
+div.newDealContents .dealList .best6 {
+    background-position: -350px -220px
+}
+
+div.newDealContents .dealList .best7 {
+    background-position: -420px -220px
+}
+
+div.newDealContents .dealList .best8 {
+    background-position: -490px -220px
+}
+
+div.newDealContents .dealList .best9 {
+    background-position: -560px -220px
+}
+
+div.newDealContents .dealList .overBack {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 334px;
+    height: 334px;
+    background: #fff;
+    opacity: .1;
+    filter: alpha(opacity=10);
+    z-index: 2
+}
+
+div.newDealContents .dealList .zzimBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 334px;
+    height: 334px;
+    background: #fff;
+    opacity: .69;
+    filter: alpha(opacity=70);
+    z-index: 0
+}
+
+div.newDealContents .dealList .zzimCheck {
+    position: absolute;
+    top: 103px;
+    left: 103px;
+    margin: 0 auto;
+    display: block;
+    width: 130px;
+    height: 130px;
+    background: url("/web/images/shopList/shopList_20170102.png") 0 -290px
+}
+
+div.newDealContents .dealBottom {
+    position: relative;
+    height: 91px;
+    padding: 20px 0 0 20px
+}
+
+div.newDealContents .dealhead .title {
+    width: 295px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    letter-spacing: -0.1em
+}
+
+div.newDealContents .dealhead .title strong {
+    margin-right: 10px
+}
+
+div.newDealContents .dealBody {
+    overflow: hidden;
+    position: absolute;
+    bottom: 9px
+}
+
+div.newDealContents .dealBody .discount {
+    margin: 0 8px 0 0;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5073;
+    line-height: 29px
+}
+
+div.newDealContents .dealBody .discount .percent {
+    display: inline-block;
+    float: left
+}
+
+div.newDealContents .dealBody .discount .dealList-MaximumDiscount {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 19px;
+    float: left
+}
+
+div.newDealContents .dealBody .discount .unit {
+    font-size: 19px
+}
+
+div.newDealContents .dealBody .discount .memePercent {
+    display: block;
+    width: 59px;
+    height: 16px;
+    margin-top: 7px;
+    background: url("/web/images/shopList/shopList_20170102.png") -370px -190px
+}
+
+div.newDealContents .dealPrice {
+    margin-top: 6px
+}
+
+div.newDealContents .dealPrice del {
+    margin: 0 8px 0 0;
+    font-family: tahoma;
+    font-size: 12px;
+    color: #898989
+}
+
+div.newDealContents .dealPrice .noDel {
+    margin-top: -2px
+}
+
+div.newDealContents .dealPrice .price .price_value {
+    display: inline-block;
+    float: left
+}
+
+div.newDealContents .dealPrice .price .unit, div.newDealContents .dealPrice .price .tilde {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    float: left
+}
+
+div.newDealContents .dealPrice .price .unit {
+    margin: 1px 0 0 2px
+}
+
+div.newDealContents .zzim {
+    display: block;
+    position: absolute;
+    bottom: 43px;
+    right: 13px;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -110px
+}
+
+div.newDealContents .openNew {
+    display: block;
+    position: absolute;
+    bottom: 43px;
+    right: 49px;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -170px
+}
+
+div.newDealContents .zzimTag {
+    display: none;
+    position: absolute;
+    top: -23px;
+    left: -6px;
+    width: 38px;
+    height: 19px;
+    background: url("/web/images/shopList/shopList_20170102.png") -630px -150px
+}
+
+div.newDealContents .openNewTag {
+    display: none;
+    position: absolute;
+    top: -23px;
+    left: -11px;
+    width: 47px;
+    height: 19px;
+    background: url("/web/images/shopList/shopList_20170102.png") -660px -170px
+}
+
+div.newDealContents .openNew:hover {
+    background: url("/web/images/shopList/shopList_20170102.png") -630px -170px
+}
+
+div.newDealContents .openNew:hover .openNewTag {
+    display: block
+}
+
+div.newDealContents .zzim:hover, div.newDealContents .zzimOn {
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -140px
+}
+
+div.newDealContents .zzim:hover .zzimTag {
+    display: block
+}
+
+div.newDealContents .price {
+    margin-top: -3px;
+    font-family: tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555
+}
+
+div.newDealContents .price .unit {
+    font-family: '챘혧�뮨р�뷜궗', Dotum;
+    font-size: 12px
+}
+
+div.newDealContents .dealFoot {
+    padding-left: 8px;
+    height: 33px;
+    background: #f0f0f0
+}
+
+div.newDealContents .dealFoot span {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 0 3px;
+    height: 15px;
+    margin: 9px 2px 0 0;
+    float: left;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    line-height: 17px;
+    *line-height: 14px
+}
+
+div.newDealContents .dealFoot .freeIcon {
+    background: #71a6e2
+}
+
+div.newDealContents .dealFoot .businessIcon {
+    background: #45c1a2
+}
+
+div.newDealContents .dealFoot .mdIcon {
+    background: #ff7ba3
+}
+
+div.newDealContents .dealFoot .priceIcon {
+    background: #ff7758
+}
+
+div.newDealContents .dealFoot .sampleIcon {
+    background: #ce68da
+}
+
+div.newDealContents .dealFoot .memedeliveryIcon {
+    background: #fd49ab
+}
+
+div.newDealContents .dealFoot .giftIcon {
+    background: #2fa6d8
+}
+
+div.newDealContents .dealFoot .overseasIcon {
+    background: #874cd0
+}
+
+div.newDealContents .dealFoot .payDeliveryIcon {
+    background: #707c94
+}
+
+div.newDealContents .dealFoot .overFreeIcon {
+    background: #71a6e2
+}
+
+div.newDealContents .dealFoot .codIcon {
+    background: #ac5bff
+}
+
+div.newDealContents .memeDelivery {
+    width: 65px;
+    height: 33px;
+    background: url("/web/images/shopList/shopList_20170102.png") -530px -110px
+}
+
+div.newDealContents .coDelivery {
+    width: 65px;
+    height: 33px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20160310150747_WoNfaf8Sok.png")
+}
+
+.newDealContents .starBox {
+    overflow: hidden;
+    margin-top: 6px
+}
+
+.newDealContents .starBox .amount {
+    display: block;
+    margin-top: 1px;
+    text-align: right;
+    font-size: 12px;
+    color: #555
+}
+
+.newDealContents .grade {
+    font-family: 'tahoma';
+    margin: -1px 6px 0 0;
+    font-weight: bold;
+    color: #555
+}
+
+.newDealContents .star {
+    width: 83px
+}
+
+.newDealContents .star, .newDealContents .star em {
+    display: inline-block;
+    overflow: hidden;
+    height: 17px;
+    background: url("/web/images/myPage/star_v2.png") no-repeat 0 -16px;
+    vertical-align: middle
+}
+
+.newDealContents .star em {
+    background-position: 0 0;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: top
+}
+
+.newDealContents .star {
+    margin-right: 6px
+}
+
+.newDealContents .star em.half {
+    width: 8px
+}
+
+.newDealContents .star em.one {
+    width: 17px
+}
+
+.newDealContents .star em.oneHalf {
+    width: 25px
+}
+
+.newDealContents .star em.two {
+    width: 34px
+}
+
+.newDealContents .star em.twoHalf {
+    width: 42px
+}
+
+.newDealContents .star em.three {
+    width: 51px
+}
+
+.newDealContents .star em.threeHalf {
+    width: 59px
+}
+
+.newDealContents .star em.four {
+    width: 68px
+}
+
+.newDealContents .star em.fourHalf {
+    width: 76px
+}
+
+.newDealContents .star em.five {
+    width: 83px
+}
+
+div.timerBanner {
+    height: 149px;
+    margin-bottom: 18px;
+    background: #fafafa;
+    border: 2px solid #f8f8f8;
+    overflow: hidden
+}
+
+div.timerBanner span {
+    display: block
+}
+
+div.timerBanner .leftWrap span {
+    margin: 47px 0 0 58px;
+    width: 347px;
+    height: 55px;
+    background: url("/web/images/shopList/shopList_20170102.png") -140px -290px
+}
+
+div.timerBanner .sticker span {
+    margin: 40px 0 5px 90px;
+    width: 63px;
+    height: 63px;
+    background: url("/web/images/shopList/shopList_20170102.png") -460px -150px
+}
+
+div.timerBanner .sticker .imminent {
+    background: url("/web/images/shopList/shopList_20170102.png") -530px -150px
+}
+
+div.timerBanner .rightWrap {
+    overflow: hidden
+}
+
+div.timerBanner .rightWrap .time {
+    margin-top: 36px;
+    width: 55px;
+    height: 73px;
+    background: url("/web/images/shopList/shopList_20170102.png")
+}
+
+div.timerBanner .rightWrap span.num0 {
+    background-position: -140px -360px
+}
+
+div.timerBanner .rightWrap span.num1 {
+    background-position: -200px -360px
+}
+
+div.timerBanner .rightWrap span.num2 {
+    background-position: -260px -360px
+}
+
+div.timerBanner .rightWrap span.num3 {
+    background-position: -320px -360px
+}
+
+div.timerBanner .rightWrap span.num4 {
+    background-position: -380px -360px
+}
+
+div.timerBanner .rightWrap span.num5 {
+    background-position: -440px -360px
+}
+
+div.timerBanner .rightWrap span.num6 {
+    background-position: -500px -360px
+}
+
+div.timerBanner .rightWrap span.num7 {
+    background-position: -560px -360px
+}
+
+div.timerBanner .rightWrap span.num8 {
+    background-position: -620px -360px
+}
+
+div.timerBanner .rightWrap span.num9 {
+    background-position: -680px -360px
+}
+
+div.timerBanner .rightWrap .colon {
+    margin: 75px 25px 0 25px;
+    width: 6px;
+    height: 34px;
+    background: url("/web/images/shopList/shopList_20170102.png") -40px -150px
+}
+
+div.timerBanner .rightWrap .sec {
+    margin-top: 65px;
+    width: 33px;
+    height: 44px;
+    background: url("/web/images/shopList/shopList_20170102.png")
+}
+
+div.timerBanner .rightWrap span.s_num0 {
+    background-position: -170px -100px
+}
+
+div.timerBanner .rightWrap span.s_num1 {
+    background-position: -210px -100px
+}
+
+div.timerBanner .rightWrap span.s_num2 {
+    background-position: -250px -100px
+}
+
+div.timerBanner .rightWrap span.s_num3 {
+    background-position: -290px -100px
+}
+
+div.timerBanner .rightWrap span.s_num4 {
+    background-position: -330px -100px
+}
+
+div.timerBanner .rightWrap span.s_num5 {
+    background-position: -370px -100px
+}
+
+div.timerBanner .rightWrap span.s_num6 {
+    background-position: -410px -100px
+}
+
+div.timerBanner .rightWrap span.s_num7 {
+    background-position: -450px -100px
+}
+
+div.timerBanner .rightWrap span.s_num8 {
+    background-position: -210px -150px
+}
+
+div.timerBanner .rightWrap span.s_num9 {
+    background-position: -250px -150px
+}
+
+div.arrayWrap {
+    padding: 11px 0 0 20px;
+    margin-bottom: 10px;
+    width: 1026px;
+    height: 27px;
+    background: #fbfbfb;
+    border: 1px solid #f1f1f1;
+    overflow: hidden
+}
+
+div.arrayWrap li {
+    float: left
+}
+
+div.arrayWrap a {
+    color: #434343;
+    font-size: 12px
+}
+
+div.arrayWrap .bar {
+    margin: 0 15px;
+    color: #c2c2c2
+}
+
+div.arrayWrap li.on a {
+    color: #ff5073;
+    font-weight: bold
+}
+
+div.arrayWrap li.on .arrow {
+    margin: 6px 5px 0 0;
+    display: block;
+    width: 7px;
+    height: 4px;
+    background: url("/web/images/shopList/shopList_20170102.png") 0 -100px no-repeat;
+    float: left
+}
+
+span.block {
+    display: block;
+    height: 10px
+}
+
+p.noResultTitle {
+    width: 410px;
+    height: 20px;
+    margin-bottom: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150728135929_tRw6Wmbf7J.png")
+}
+
+div.newDealContents:after {
+    content: '';
+    display: block;
+    height: 27px;
+    clear: both
+}
+
+div.newDealContents .dealList {
+    width: 1068px
+}
+
+div.newDealContents .dealList li {
+    width: 334px;
+    height: 478px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin: 0 20px 23px 0;
+    float: left
+}
+
+div.newDealContents .dealList li:hover {
+    border: 1px solid #ff5073
+}
+
+div.newDealContents .dealList .overBorder {
+    display: block;
+    position: relative
+}
+
+div.newDealContents .dealList li:hover .title {
+    text-decoration: underline
+}
+
+div.newDealContents .dealList li:hover .overBack {
+    display: block
+}
+
+div.newDealContents .dealList a {
+    display: block;
+    cursor: pointer
+}
+
+div.newDealContents .dealList .m_left {
+    margin-right: 0
+}
+
+div.newDealContents .dealList .dealThumb {
+    position: relative
+}
+
+div.newDealContents .dealList .dealThumb img {
+    width: 334px;
+    height: 334px
+}
+
+div.newDealContents .dealList .back {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 334px;
+    height: 65px;
+    background: #f00;
+    opacity: .7;
+    filter: alpha(opacity=70)
+}
+
+div.newDealContents .dealList .caption {
+    position: absolute;
+    bottom: 0;
+    width: 334px;
+    height: 40px;
+    padding-top: 25px;
+    text-align: center
+}
+
+div.newDealContents .dealList .caption strong {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em
+}
+
+div.newDealContents .dealList .badge {
+    position: absolute;
+    top: 9px;
+    right: 11px
+}
+
+div.newDealContents .dealList .badge span {
+    width: 46px;
+    height: 46px;
+    display: block
+}
+
+div.newDealContents .dealList .badge .hot {
+    background: url("/web/images/shopList/shopList_20170102.png") 0 -40px
+}
+
+div.newDealContents .dealList .badge .md {
+    background: url("/web/images/shopList/shopList_20170102.png") -50px -40px
+}
+
+div.newDealContents .dealList .badge .memebox {
+    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
+}
+
+div.newDealContents .dealList .badge .best {
+    background: url("/web/images/shopList/shopList_20170102.png") -150px -40px
+}
+
+div.newDealContents .dealList .badge .new {
+    background: url("/web/images/shopList/shopList_20170102.png") -200px -40px
+}
+
+div.newDealContents .dealList .badge .threeTime {
+    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
+}
+
+div.newDealContents .dealList .badge .lowest {
+    background: url("/web/images/shopList/shopList_20170102.png") -250px -40px
+}
+
+div.newDealContents .dealList .badge .freebie {
+    background: url("/web/images/shopList/shopList_20170102.png") -300px -40px
+}
+
+div.newDealContents .dealList .badge .refund90 {
+    background: url("/web/images/shopList/shopList_20170102.png") -350px -40px
+}
+
+div.newDealContents .dealList .badge .lowest90 {
+    background: url("/web/images/shopList/shopList_20170102.png") -400px -40px
+}
+
+div.newDealContents .dealList .badge .sale369 {
+    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
+}
+
+div.newDealContents .dealList .badge .promotion {
+    background: url("/web/images/shopList/shopList_20170102.png") -500px -40px
+}
+
+div.newDealContents .dealList .badge .soldOutSoon {
+    background: url("/web/images/shopList/shopList_20170102.png") -550px -40px
+}
+
+div.newDealContents .dealList .badge .deal_0 {
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -40px
+}
+
+div.newDealContents .dealList .badge .deal_100 {
+    background: url("/web/images/shopList/shopList_20170102.png") -650px -40px
+}
+
+div.newDealContents .dealList .badge .reservation {
+    background: url("/web/images/shopList/shopList_20170102.png") -700px -40px
+}
+
+div.newDealContents .dealList .bestTag {
+    width: 62px;
+    height: 62px;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: url("/web/images/shopList/shopList_20170102.png");
+    z-index: 1
+}
+
+div.newDealContents .dealList .best1 {
+    background-position: 0 -220px
+}
+
+div.newDealContents .dealList .best2 {
+    background-position: -70px -220px
+}
+
+div.newDealContents .dealList .best3 {
+    background-position: -140px -220px
+}
+
+div.newDealContents .dealList .best4 {
+    background-position: -210px -220px
+}
+
+div.newDealContents .dealList .best5 {
+    background-position: -280px -220px
+}
+
+div.newDealContents .dealList .best6 {
+    background-position: -350px -220px
+}
+
+div.newDealContents .dealList .best7 {
+    background-position: -420px -220px
+}
+
+div.newDealContents .dealList .best8 {
+    background-position: -490px -220px
+}
+
+div.newDealContents .dealList .best9 {
+    background-position: -560px -220px
+}
+
+div.newDealContents .dealList .overBack {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 334px;
+    height: 334px;
+    background: #fff;
+    opacity: .1;
+    filter: alpha(opacity=10);
+    z-index: 2
+}
+
+div.newDealContents .dealList .zzimBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 334px;
+    height: 334px;
+    background: #fff;
+    opacity: .69;
+    filter: alpha(opacity=70);
+    z-index: 0
+}
+
+div.newDealContents .dealList .zzimCheck {
+    position: absolute;
+    top: 103px;
+    left: 103px;
+    margin: 0 auto;
+    display: block;
+    width: 130px;
+    height: 130px;
+    background: url("/web/images/shopList/shopList_20170102.png") 0 -290px
+}
+
+div.newDealContents .dealBottom {
+    position: relative;
+    height: 91px;
+    padding: 20px 0 0 20px
+}
+
+div.newDealContents .dealhead .title {
+    width: 295px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    letter-spacing: -0.1em
+}
+
+div.newDealContents .dealhead .title strong {
+    margin-right: 10px
+}
+
+div.newDealContents .dealBody {
+    overflow: hidden;
+    position: absolute;
+    bottom: 9px
+}
+
+div.newDealContents .dealBody .discount {
+    margin: 0 8px 0 0;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5073;
+    line-height: 29px
+}
+
+div.newDealContents .dealBody .discount .percent {
+    display: inline-block;
+    float: left
+}
+
+div.newDealContents .dealBody .discount .dealList-MaximumDiscount {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 19px;
+    float: left
+}
+
+div.newDealContents .dealBody .discount .unit {
+    font-size: 19px
+}
+
+div.newDealContents .dealBody .discount .memePercent {
+    display: block;
+    width: 59px;
+    height: 16px;
+    margin-top: 7px;
+    background: url("/web/images/shopList/shopList_20170102.png") -370px -190px
+}
+
+div.newDealContents .dealPrice {
+    margin-top: 6px
+}
+
+div.newDealContents .dealPrice del {
+    margin: 0 8px 0 0;
+    font-family: tahoma;
+    font-size: 12px;
+    color: #898989
+}
+
+div.newDealContents .dealPrice .noDel {
+    margin-top: -2px
+}
+
+div.newDealContents .dealPrice .price .price_value {
+    display: inline-block;
+    float: left
+}
+
+div.newDealContents .dealPrice .price .unit, div.newDealContents .dealPrice .price .tilde {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    float: left
+}
+
+div.newDealContents .dealPrice .price .unit {
+    margin: 1px 0 0 2px
+}
+
+div.newDealContents .zzim {
+    display: block;
+    position: absolute;
+    bottom: 43px;
+    right: 13px;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -110px
+}
+
+div.newDealContents .openNew {
+    display: block;
+    position: absolute;
+    bottom: 43px;
+    right: 49px;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -170px
+}
+
+div.newDealContents .zzimTag {
+    display: none;
+    position: absolute;
+    top: -23px;
+    left: -6px;
+    width: 38px;
+    height: 19px;
+    background: url("/web/images/shopList/shopList_20170102.png") -630px -150px
+}
+
+div.newDealContents .openNewTag {
+    display: none;
+    position: absolute;
+    top: -23px;
+    left: -11px;
+    width: 47px;
+    height: 19px;
+    background: url("/web/images/shopList/shopList_20170102.png") -660px -170px
+}
+
+div.newDealContents .openNew:hover {
+    background: url("/web/images/shopList/shopList_20170102.png") -630px -170px
+}
+
+div.newDealContents .openNew:hover .openNewTag {
+    display: block
+}
+
+div.newDealContents .zzim:hover, div.newDealContents .zzimOn {
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -140px
+}
+
+div.newDealContents .zzim:hover .zzimTag {
+    display: block
+}
+
+div.newDealContents .price {
+    margin-top: -3px;
+    font-family: tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555
+}
+
+div.newDealContents .price .unit {
+    font-family: '챘혧�뮨р�뷜궗', Dotum;
+    font-size: 12px
+}
+
+div.newDealContents .dealFoot {
+    padding-left: 8px;
+    height: 33px;
+    background: #f0f0f0
+}
+
+div.newDealContents .dealFoot span {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 0 3px;
+    height: 15px;
+    margin: 9px 2px 0 0;
+    float: left;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    line-height: 17px;
+    *line-height: 14px
+}
+
+div.newDealContents .dealFoot .freeIcon {
+    background: #71a6e2
+}
+
+div.newDealContents .dealFoot .businessIcon {
+    background: #45c1a2
+}
+
+div.newDealContents .dealFoot .mdIcon {
+    background: #ff7ba3
+}
+
+div.newDealContents .dealFoot .priceIcon {
+    background: #ff7758
+}
+
+div.newDealContents .dealFoot .sampleIcon {
+    background: #ce68da
+}
+
+div.newDealContents .dealFoot .memedeliveryIcon {
+    background: #fd49ab
+}
+
+div.newDealContents .dealFoot .giftIcon {
+    background: #2fa6d8
+}
+
+div.newDealContents .dealFoot .overseasIcon {
+    background: #874cd0
+}
+
+div.newDealContents .dealFoot .payDeliveryIcon {
+    background: #707c94
+}
+
+div.newDealContents .dealFoot .overFreeIcon {
+    background: #71a6e2
+}
+
+div.newDealContents .dealFoot .codIcon {
+    background: #ac5bff
+}
+
+div.newDealContents .memeDelivery {
+    width: 65px;
+    height: 33px;
+    background: url("/web/images/shopList/shopList_20170102.png") -530px -110px
+}
+
+div.newDealContents .coDelivery {
+    width: 65px;
+    height: 33px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20160310150747_WoNfaf8Sok.png")
+}
+
+.newDealContents .starBox {
+    overflow: hidden;
+    margin-top: 6px
+}
+
+.newDealContents .starBox .amount {
+    display: block;
+    margin-top: 1px;
+    text-align: right;
+    font-size: 12px;
+    color: #555
+}
+
+.newDealContents .grade {
+    font-family: 'tahoma';
+    margin: -1px 6px 0 0;
+    font-weight: bold;
+    color: #555
+}
+
+.newDealContents .star {
+    width: 83px
+}
+
+.newDealContents .star, .newDealContents .star em {
+    display: inline-block;
+    overflow: hidden;
+    height: 17px;
+    background: url("/web/images/myPage/star_v2.png") no-repeat 0 -16px;
+    vertical-align: middle
+}
+
+.newDealContents .star em {
+    background-position: 0 0;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: top
+}
+
+.newDealContents .star {
+    margin-right: 6px
+}
+
+.newDealContents .star em.half {
+    width: 8px
+}
+
+.newDealContents .star em.one {
+    width: 17px
+}
+
+.newDealContents .star em.oneHalf {
+    width: 25px
+}
+
+.newDealContents .star em.two {
+    width: 34px
+}
+
+.newDealContents .star em.twoHalf {
+    width: 42px
+}
+
+.newDealContents .star em.three {
+    width: 51px
+}
+
+.newDealContents .star em.threeHalf {
+    width: 59px
+}
+
+.newDealContents .star em.four {
+    width: 68px
+}
+
+.newDealContents .star em.fourHalf {
+    width: 76px
+}
+
+.newDealContents .star em.five {
+    width: 83px
+}
+
+div.timerBanner {
+    height: 149px;
+    margin-bottom: 18px;
+    background: #fafafa;
+    border: 2px solid #f8f8f8;
+    overflow: hidden
+}
+
+div.timerBanner span {
+    display: block
+}
+
+div.timerBanner .leftWrap span {
+    margin: 47px 0 0 58px;
+    width: 347px;
+    height: 55px;
+    background: url("/web/images/shopList/shopList_20170102.png") -140px -290px
+}
+
+div.timerBanner .sticker span {
+    margin: 40px 0 5px 90px;
+    width: 63px;
+    height: 63px;
+    background: url("/web/images/shopList/shopList_20170102.png") -460px -150px
+}
+
+div.timerBanner .sticker .imminent {
+    background: url("/web/images/shopList/shopList_20170102.png") -530px -150px
+}
+
+div.timerBanner .rightWrap {
+    overflow: hidden
+}
+
+div.timerBanner .rightWrap .time {
+    margin-top: 36px;
+    width: 55px;
+    height: 73px;
+    background: url("/web/images/shopList/shopList_20170102.png")
+}
+
+div.timerBanner .rightWrap span.num0 {
+    background-position: -140px -360px
+}
+
+div.timerBanner .rightWrap span.num1 {
+    background-position: -200px -360px
+}
+
+div.timerBanner .rightWrap span.num2 {
+    background-position: -260px -360px
+}
+
+div.timerBanner .rightWrap span.num3 {
+    background-position: -320px -360px
+}
+
+div.timerBanner .rightWrap span.num4 {
+    background-position: -380px -360px
+}
+
+div.timerBanner .rightWrap span.num5 {
+    background-position: -440px -360px
+}
+
+div.timerBanner .rightWrap span.num6 {
+    background-position: -500px -360px
+}
+
+div.timerBanner .rightWrap span.num7 {
+    background-position: -560px -360px
+}
+
+div.timerBanner .rightWrap span.num8 {
+    background-position: -620px -360px
+}
+
+div.timerBanner .rightWrap span.num9 {
+    background-position: -680px -360px
+}
+
+div.timerBanner .rightWrap .colon {
+    margin: 75px 25px 0 25px;
+    width: 6px;
+    height: 34px;
+    background: url("/web/images/shopList/shopList_20170102.png") -40px -150px
+}
+
+div.timerBanner .rightWrap .sec {
+    margin-top: 65px;
+    width: 33px;
+    height: 44px;
+    background: url("/web/images/shopList/shopList_20170102.png")
+}
+
+div.timerBanner .rightWrap span.s_num0 {
+    background-position: -170px -100px
+}
+
+div.timerBanner .rightWrap span.s_num1 {
+    background-position: -210px -100px
+}
+
+div.timerBanner .rightWrap span.s_num2 {
+    background-position: -250px -100px
+}
+
+div.timerBanner .rightWrap span.s_num3 {
+    background-position: -290px -100px
+}
+
+div.timerBanner .rightWrap span.s_num4 {
+    background-position: -330px -100px
+}
+
+div.timerBanner .rightWrap span.s_num5 {
+    background-position: -370px -100px
+}
+
+div.timerBanner .rightWrap span.s_num6 {
+    background-position: -410px -100px
+}
+
+div.timerBanner .rightWrap span.s_num7 {
+    background-position: -450px -100px
+}
+
+div.timerBanner .rightWrap span.s_num8 {
+    background-position: -210px -150px
+}
+
+div.timerBanner .rightWrap span.s_num9 {
+    background-position: -250px -150px
+}
+
+div.arrayWrap {
+    padding: 11px 0 0 20px;
+    margin-bottom: 10px;
+    width: 1026px;
+    height: 27px;
+    background: #fbfbfb;
+    border: 1px solid #f1f1f1;
+    overflow: hidden
+}
+
+div.arrayWrap li {
+    float: left
+}
+
+div.arrayWrap a {
+    color: #434343;
+    font-size: 12px
+}
+
+div.arrayWrap .bar {
+    margin: 0 15px;
+    color: #c2c2c2
+}
+
+div.arrayWrap li.on a {
+    color: #ff5073;
+    font-weight: bold
+}
+
+div.arrayWrap li.on .arrow {
+    margin: 6px 5px 0 0;
+    display: block;
+    width: 7px;
+    height: 4px;
+    background: url("/web/images/shopList/shopList_20170102.png") 0 -100px no-repeat;
+    float: left
+}
+
+div.slideBanner p.todayHot {
+    width: 108px;
+    height: 21px;
+    margin: 0 0 7px 8px;
+    background: url("/web/images/home/homeSprite20160811.png") 0 0
+}
+
+div.slideBanner .slideBannerWrap {
+    width: 1036px;
+    height: 170px;
+    margin-bottom: 40px;
+    padding: 10px 0 10px 10px;
+    position: relative;
+    border: 1px #d6d6d6 solid
+}
+
+div.slideBanner .slideBannerList li {
+    float: left
+}
+
+div.slideBanner .slideBannerList a {
+    width: 247px;
+    height: 168px;
+    margin-right: 10px;
+    display: block;
+    border: 1px #d6d6d6 solid
+}
+
+div.slideBanner .page {
+    width: 23px;
+    height: 11px;
+    position: absolute;
+    top: -20px;
+    right: 8px;
+    background: url("/web/images/home/homeSprite20160811.png") -230px -20px;
+    display: block
+}
+
+div.slideBanner .v2 {
+    background-position: -230px 0
+}
+
+div.slideBanner .subBannerLeftButton {
+    width: 26px;
+    height: 31px;
+    display: block;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    background: url("/web/images/home/homeSprite20160811.png") -170px 0;
+    text-indent: -9999px
+}
+
+div.slideBanner .subBannerRightButton {
+    width: 26px;
+    height: 31px;
+    display: block;
+    position: absolute;
+    top: 82px;
+    right: 0;
+    background: url("/web/images/home/homeSprite20160811.png") -200px 0;
+    text-indent: -9999px
+}
+
+div.mdChoiceWrap {
+    margin-bottom: 40px
+}
+
+div.mdChoiceWrap .mdChoice {
+    width: 124px;
+    height: 19px;
+    margin: 0 0 15px 8px;
+    background: url("/web/images/home/homeSprite20160811.png") 0 -30px
+}
+
+div.mdChoiceWrap .mdChoicdBox {
+    width: 1048px;
+    height: 567px
+}
+
+div.bestDealWrap .bestDeal {
+    margin-bottom: 15px;
+    width: 410px;
+    height: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144033_WmhvSpwu0f.png")
+}
+
+div.dealContents .bestItem, div.newDealContents .bestItem, div.bestDealWrap .bestItem {
+    margin-bottom: 15px;
+    width: 410px;
+    height: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144131_GnsDCKgqol.png")
+}
+
+div.dealContents .memeBest, div.newDealContents .memeBest, div.bestDealWrap .memeBest {
+    margin-bottom: 15px;
+    width: 410px;
+    height: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144248_s7DNNuRBgR.png")
+}
+
+div.dealContents .memeBest_v2, div.newDealContents .memeBest_v2, div.bestDealWrap .memeBest_v2 {
+    margin-bottom: 15px;
+    width: 410px;
+    height: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144520_bxgRZ9y5HW.png")
+}
+
+div.dealContents .memeShippingCostItem, div.newDealContents .memeShippingCostItem, div.bestDealWrap .memeShippingCostItem {
+    margin-bottom: 15px;
+    width: 231px;
+    height: 19px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/content_20151013194004_O7kNKTLwiq.png") no-repeat
+}
+
+div.dealContents .clear_fl::after, div.newDealContents .clear_fl::after, div.bestDealWrap .clear_fl::after {
+    display: block;
+    content: "";
+    clear: both;
+    height: 0
+}
+
+div.homeBottom .memeOnAir {
+    width: 124px;
+    height: 19px;
+    margin: 0 0 15px 8px;
+    *margin-top: 40px;
+    background: url("/web/images/home/homeSprite20160811.png") 0 -90px
+}
+
+div.promotionBanner {
+    position: relative
+}
+
+div.promotionBanner .listWrap {
+    margin-bottom: 50px;
+    width: 1047px;
+    height: 175px;
+    border: 1px solid #f0f0f0;
+    overflow: hidden
+}
+
+div.promotionBanner p.promotion {
+    margin-bottom: 15px;
+    width: 410px;
+    height: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713143935_KIumZzSFEm.png")
+}
+
+div.promotionBanner li a, div.promotionBanner img {
+    display: block;
+    width: 348px;
+    height: 175px;
+    overflow: hidden
+}
+
+div.promotionBanner li a {
+    border-right: 1px solid #f0f0f0
+}
+
+div.promotionBanner a.last {
+    border-right: 0
+}
+
+div.promotionBanner .arrow {
+    position: absolute;
+    top: 105px;
+    width: 24px;
+    height: 34px;
+    text-indent: -9999px
+}
+
+div.promotionBanner a.preBtn {
+    left: 0;
+    background: url("/web/images/home/homeSprite20160811.png") 0 -30px no-repeat
+}
+
+div.promotionBanner a.preBtn:hover {
+    background: url("/web/images/home/homeSprite20160811.png") -60px -30px no-repeat
+}
+
+div.promotionBanner a.nextBtn {
+    right: 0;
+    background: url("/web/images/home/homeSprite20160811.png") -30px -30px no-repeat
+}
+
+div.promotionBanner a.nextBtn:hover {
+    background: url("/web/images/home/homeSprite20160811.png") -90px -30px no-repeat
+}
+
+div.promotionBanner .page {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    display: block;
+    font-size: 12px;
+    font-weight: bold
+}
+
+.promotionBanner:after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both
+}
+
+div.homeMainBannerWrap {
+    margin-bottom: 44px;
+    width: 100%;
+    background: #fff
+}
+
+div.homeMainBannerWrap .homeBannerLiner {
+    width: 100%;
+    background: #e1e1e1
+}
+
+div.homeMainBannerWrap .mA {
+    position: relative;
+    width: 1048px;
+    height: 4px
+}
+
+div.homeMainBannerWrap .bannerBarWrap {
+    position: absolute;
+    bottom: 0;
+    left: 174px;
+    width: 874px
+}
+
+div.homeMainBannerWrap .bannerBarWrap ul {
+    width: 100%
+}
+
+div.homeMainBannerWrap .bannerBarWrap li {
+    width: 20%;
+    float: left
+}
+
+div.homeMainBannerWrap .bannerBar {
+    display: block;
+    height: 4px;
+    background: #fe60a3
+}
+
+div.homeMainBanner {
+    position: relative;
+    margin: 0 auto;
+    width: 1048px;
+    height: 480px
+}
+
+div.homeMainBanner .bannerInner {
+    position: relative;
+    display: block;
+    height: 100%
+}
+
+div.homeMainBanner ul a {
+    height: 480px
+}
+
+div.homeMainBanner a {
+    display: block
+}
+
+div.homeMainBanner .leftBanner {
+    width: 808px
+}
+
+div.homeMainBanner .rightBanner {
+    width: 240px
+}
+
+div.homeMainBanner .arrow {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 29px;
+    height: 29px;
+    cursor: pointer
+}
+
+div.homeMainBanner .pre {
+    right: 30px;
+    background: url("/web/images/header/headerSprite20160921.png") -380px -40px
+}
+
+div.homeMainBanner .next {
+    right: 0;
+    background: url("/web/images/header/headerSprite20160921.png") -410px -40px
+}
+
+div.memePromotion {
+    width: 900px;
+    padding: 21px 0 10px 148px;
+    background: #303030 url('../img/eventmenu_v2.jpg') no-repeat;
+    font-size: 12px;
+    color: #f1f1f1
+}
+
+div.memePromotion div.promotionWrap {
+    position: relative;
+    display: inline
+}
+
+div.memePromotion a {
+    color: #f1f1f1
+}
+
+div.memePromotion a:hover {
+    text-decoration: underline
+}
+
+div.memePromotion a.on {
+    color: #ff4490;
+    font-weight: bold
+}
+
+div.memePromotion span.promotion {
+    width: 216px;
+    padding-bottom: 7px;
+    display: inline-block;
+    text-align: center
+}
+
+div.memePromotion span.bar {
+    position: absolute
+}
+
+div.memeCouponWrap li {
+    float: left
+}
+
+div.memeCouponWrap .memeCoupon_Top_outer {
+    width: 100%;
+    background: #f9f9fa
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner {
+    padding: 30px 0 39px;
+    width: 1048px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner h4 {
+    margin: 0 auto 12px;
+    width: 229px;
+    height: 62px;
+    background: url("/web/images/etc/etcSprite20160811.png") 0 -320px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner a {
+    width: 132px;
+    height: 153px;
+    background: url("/web/images/etc/etcSprite20160811.png");
+    text-indent: -9999px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner .bg01 {
+    background-position: 0 0
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner .bg02 {
+    margin: 0 20px 0 21px;
+    background-position: -140px 0
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner .bg03 {
+    background-position: -280px 0
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner .bg04 {
+    margin: 0 21px 0;
+    background-position: -420px 0
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner .bg05 {
+    background-position: -560px 0
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner .bg06 {
+    margin: 0 21px 0 20px;
+    background-position: -700px 0
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner .bg07 {
+    background-position: -840px 0
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner .bg08 {
+    background-position: -980px 0
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner li:hover .bg01 {
+    background-position: 0 -160px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner li:hover .bg02 {
+    background-position: -140px -160px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner li:hover .bg03 {
+    background-position: -280px -160px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner li:hover .bg04 {
+    background-position: -420px -160px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner li:hover .bg05 {
+    background-position: -560px -160px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner li:hover .bg06 {
+    background-position: -700px -160px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner li:hover .bg07 {
+    background-position: -840px -160px
+}
+
+div.memeCouponWrap .memeCoupon_Top_inner li:hover .bg08 {
+    background-position: -980px -160px
+}
+
+div.memeCouponWrap a {
+    display: block
+}
+
+div.memeCouponWrap .memeCoupon_list {
+    margin: 0 auto;
+    width: 1048px
+}
+
+div.memeCouponWrap .memeCoupon_list li:hover a {
+    border: 1px solid #ff5073
+}
+
+div.memeCouponWrap .memeCoupon_list li:hover .thumbCover, div.memeCouponWrap .memeCoupon_list li:hover .overBtn {
+    display: block
+}
+
+div.memeCouponWrap .memeCoupon_list h4 {
+    margin: 40px 0 20px;
+    width: 141px;
+    height: 22px;
+    background: url("/web/images/etc/etcSprite20160811.png") -230px -350px;
+    text-indent: -9999px
+}
+
+div.memeCouponWrap .eventBox {
+    margin-bottom: 40px
+}
+
+div.memeCouponWrap .eventBox a {
+    position: relative;
+    width: 333px;
+    height: 301px;
+    border: 1px solid #f2f2f2
+}
+
+div.memeCouponWrap .center {
+    margin: 0 22px 40px 21px
+}
+
+div.memeCouponWrap .imgBox {
+    position: relative
+}
+
+div.memeCouponWrap .imgBox img {
+    width: 333px;
+    height: 141px
+}
+
+div.memeCouponWrap .textBox {
+    position: relative;
+    padding: 23px 21px;
+    height: 114px;
+    background: #f9f9fa;
+    color: #555;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
+}
+
+div.memeCouponWrap .textBox .title {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: '�굹�닎怨좊뵓蹂쇰뱶', NanumGothicBold, '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    line-height: 26px;
+    ltter-spacing: 0
+}
+
+div.memeCouponWrap .textBox .subTitle {
+    font-size: 13px;
+    line-height: 17px
+}
+
+div.memeCouponWrap .textBox .date {
+    position: absolute;
+    bottom: 23px;
+    left: 21px;
+    font-size: 12px
+}
+
+div.memeCouponWrap .thumbCover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 334px;
+    height: 334px;
+    background: #fff;
+    opacity: .1;
+    filter: alpha(opacity=10);
+    z-index: 2
+}
+
+div.memeCouponWrap .overBtn {
+    display: none;
+    position: absolute;
+    bottom: 21px;
+    right: 21px;
+    width: 83px;
+    height: 21px;
+    background: url("/web/images/etc/etcSprite20160811.png") -230px -320px;
+    cursor: pointer
+}

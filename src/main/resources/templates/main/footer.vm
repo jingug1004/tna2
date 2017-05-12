@@ -1,0 +1,1226 @@
+    <link type="text/css" href="/package/components/layout/pc/footer/v.1.0.0/footer.css?v=1756Tu" rel="stylesheet"/>
+    <div id="footer" class="mA">
+        <div class="footerTopInner">
+            <ul class="oF landing">
+                <li class="footerList_01">
+                    <a href="https://memebox.recruiter.co.kr/" target="_blank">
+                        <span class="icon_05 icon"></span>
+                        <span class="landingText">세상을 바꾸는<br/>발그레 인재채용</span>
+                    </a>
+                </li>
+                <li class="footerList_02">
+                    <a href="/render/15939">
+                        <span class="icon_01 icon"></span>
+                        <span class="landingText">온라인 화장품 구매<br/>믿어도 될까요?</span>
+                    </a>
+                </li>
+                <li class="footerList_03">
+                    <a href="/render/16098">
+                        <span class="icon_02 icon"></span>
+                        <span class="landingText">발그레가 배송하는<br/>특별한 발그레배송!</span>
+                    </a>
+                </li>
+                <li class="footerList_04">
+                    <a href="/render/16089">
+                        <span class="icon_03 icon"></span>
+                        <span class="landingText">실패없는 쇼핑을 위한<br/>90일 환불 정책</span>
+                    </a>
+                </li>
+                <li class="footerList_05">
+                    <a href="/offlinestore/immeme">
+                        <span class="icon_04 icon"></span>
+                        <!--<span class="landingText">I'M MEME<br/>오프라인에서 만나보기</span>-->
+                        <span class="landingText">발그레<br/>오프라인 스토어</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="footerMiddle">
+                <p class="csCenter fL">
+                    <span class="call"></span>
+                    <strong><a href="/cs/faq">고객 감동 서비스센터 ></a></strong>
+                    <span>평일 9:00 - 18:00(주말/공휴일 제외)</span>
+                </p>
+                <dl>
+                    <dt class="recruit">기업 문화</dt>
+                    <dd>
+                        <a class="mg_t" href="http://blog.naver.com/memebox" target="_blank" ga-event="푸터,푸터_기업문화블로그">기업문화
+                            블로그 보기 > </a>
+                        <a class="mg_t" href="http://www.facebook.com/playmemebox" target="_blank">기업문화 페이스북 보기 > </a>
+                        <a class="mg_t"
+                           href="http://img2.memebox.com/static/contents/img/upload/contents_20160926141749_f3H73NLEoz.pdf"
+                           target="_blank" ga-event="푸터,푸터_플레이북">PLAYBOOK 2015 Ver DOWNLOAD > </a>
+                        <a class="mg_t"
+                           href="http://img2.memebox.com/static/contents/img/upload/contents_20160926141840_WKTIHpU6lD.pdf"
+                           target="_blank" ga-event="푸터,푸터_플레이북">PLAYBOOK 2016 Ver DOWNLOAD > </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>고객의 소리</dt>
+                    <dd>
+                        <span class="gText">고객님의 소리에<br/>더 다가가겠습니다.</span>
+                        <a href="/cs/inquiry/" ga-event="푸터,푸터_1:1문의">제안하러 가기 ></a>
+                    </dd>
+                </dl>
+                <dl class="partner">
+                    <dt>파트너 서비스</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <a href="mailto:partners@memebox.com">온라인 입점 문의 ></a>
+                                <div class="copyBox p_left">partners@memebox.com</div>
+
+                            </li>
+                            <li>
+                                <a class="mg_t" href="mailto:b2b@memebox.com">WHOLESALE 문의 ></a>
+                                <div class="copyBox">b2b@memebox.com</div>
+                            </li>
+                            <li>
+                                <a class="mg_t" href="mailto:partner_mkt@memebox.com">광고/프로모션 문의 ></a>
+                                <div class="copyBox">partner_mkt@memebox.com</div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="cB"></div>
+            </div>
+            <div class="memeBoxInfo oF">
+                <a class="footerLogo fL" href="/"></a>
+                <div class="textBox fL">
+                    <ul class="oF">
+                        <li>
+                            <a href="http://corp.memebox.com" target="_blank">회사소개</a>
+                            <span class="bar">|</span>
+                        </li>
+                        <li>
+                            <a href="/policy/agreement" ga-event="푸터,푸터_이용약관">이용약관</a>
+                            <span class="bar">|</span>
+                        </li>
+                        <li>
+                            <a href="/policy/privacy" ga-event="푸터,푸터_개인정처리급방침"><strong>개인 정보 처리 방침</strong></a>
+                            <span class="bar">|</span>
+                        </li>
+                        <li>
+                            <a href="/policy/youth">청소년 보호 정책</a>
+                            <span class="bar">|</span>
+                        </li>
+                        <li><a href="/policy/email">이메일 무단 수집 거부 방침</a></li>
+                    </ul>
+                    <address>
+                        주식회사 숨크리에이티브 | 대표자 : 채경민 | 개인 정보 보호 책임자 : 채경민 | 사업자등록번호 484-88-00453 <a
+                            href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2118847525"
+                            target="_blank" ga-event="푸터,푸터_사업자정보확인">사업자 정보 확인 ></a><br/>
+                        통신판매 신고번호 : 2016-서울금천-1048 | <br/>
+                        본사 : 서울특별시 금천구 가산디지털1로 149, 802호 | <a
+                            href="/render/8386" target="_parent" ga-event="푸터,푸터_오시는길">발그레 오시는길 ></a><br/>
+                        <span class="e_text">Copyright ﻿ⓒ 발그레-주식회사 숨크리에이티브 2017. All rights reserved.</span><br/>
+                        <span class="lastLine"><strong>LG U+ 구매 안전 서비스</strong> : 고객님의 안전거래를 위해 현금 등으로 결제 시, 저희 사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다. <a
+                                onclick="goValidEscrow('memebox_mobile');" style="cursor:pointer;"
+                                ga-event="푸터,푸터_구매안전서비스">서비스 가입 확인 ></a></span>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottomOuter">
+            <div class="footerBottomInner">
+
+                <div class="award fL">
+                    <ul id="awardList" class="badge fL">
+                        <li class="list10">
+                            <span class="mark_09 mark"></span>
+                            <span class="listText">앱어워드코리아 2016<br/>뷰티부문 대상수상</span>
+                        </li>
+                        <li class="list1">
+                            <span class="mark_08 mark"></span>
+                            <span class="listText">여성가족부 주관<br/>가족친화 우수기업</span>
+                        </li>
+                        <li class="list2">
+                            <span class="mark_06 mark"></span>
+                            <span class="listText">스마트앱어워드 2015<br/>전문쇼핑부문 대상</span>
+                        </li>
+                        <li class="list3">
+                            <span class="mark_07 mark"></span>
+                            <span class="listText">HWB Award 2015<br/>BEST New Brand</span>
+                        </li>
+                        <li class="list4">
+                            <span class="mark_05 mark"></span>
+                            <span class="listText">대한민국 리딩기업<br/>2015 대상</span>
+                        </li>
+                        <li class="list5">
+                            <span class="kobacoMark"></span>
+                            <span class="kobacoText">혁신형중소기업 선정</span>
+                        </li>
+                        <li class="list6">
+                            <span class="mark_01 mark"></span>
+                            <span class="listText">2015 한국소비자<br/>만족지수 1위</span>
+                        </li>
+                        <li class="list7">
+                            <span class="mark_04 mark"></span>
+                            <span class="listText">여성친화<br/>일촌기업 협약</span>
+                        </li>
+                        <li class="list8">
+                            <span class="mark_02 mark"></span>
+                            <span class="listText">나는 글로벌 벤처다<br/>2013 대상</span>
+                        </li>
+                        <li class="list9">
+                            <span class="mark_03 mark"></span>
+                            <span class="listText">제 7회 대한민국<br/>인터넷 대상 특별상</span>
+                        </li>
+                    </ul>
+                    <span id="award_arrow_prev" class="award_prev list_arrow tI" data-action="prev">이전 수상내역</span>
+                    <span id="award_arrow_next" class="award_next_on list_arrow tI" data-action="next">다음 수상내역</span>
+                </div>
+                <div class="snsNavi fR">
+                    <a class="insta" href="http://instagram.com/memebox_korea" target="_blank" ga-event="푸터,푸터_인스타그램">인스타그램
+                        바로가기</a>
+                    <a class="faceBook" href="http://www.facebook.com/memebox" target="_blank" ga-event="푸터,푸터_페이스북">페이스북
+                        바로가기</a>
+                    <a class="youtube" href="https://www.youtube.com/user/memeboxseoul" target="_blank"
+                       ga-event="푸터,푸터_유투브">유뷰트 바로가기</a>
+                </div>
+                <div class="globalWrap fR">
+                    <a class="global">
+                        <span class="arrow"></span>
+                        <span class="text fW">FAMILY SITE</span>
+                    </a>
+                    <div class="globalSelect">
+                        <ul>
+                            <li>
+                                <a href="http://corp.memebox.com" target="_blank">
+                                    <span class="globalIcon corp"></span>
+                                    <span class="globalText">발그레 기업사이트</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://​iammeme.com" target="_blank">
+                                    <span class="globalIcon immeme"></span>
+                                    <span class="globalText">I'M MEME 아임발그레</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://ponyeffect.com" target="_blank">
+                                    <span class="globalIcon ponyEffect"></span>
+                                    <span class="globalText">Pony Effect 포니이펙트</span>
+                                </a>
+                            </li>
+                            <!--
+                        <li>
+                            <a href="http://star.memebox.com" target="_blank">
+                                <span class="globalIcon memeStar"></span>
+                                <span class="globalText">발그레스타</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.shadecode.co.kr/" target="_blank">
+                                <span class="globalIcon shadeCode"></span>
+                                <span class="globalText">셰이드코드</span>
+                            </a>
+                        </li>
+                        -->
+                            <li>
+                                <a id="linkToUS" ga-event="푸터,푸터_미국">
+                                    <span class="globalIcon usa"></span>
+                                    <span class="globalText">MEMEBOX USA</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="linkToCN" ga-event="푸터,푸터_중국">
+                                    <span class="globalIcon china"></span>
+                                    <span class="globalText">MEMEBOX CHINA</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 배송정보 -->
+
+
+</div>
+<div id="fb-root"></div>
+<div style="display:none;">졸업 선물, 크리스마스. 여자, 여자친구, 크리스마스 선물, 연말, 크리스마스 선물 추천, 발그레, 발그레, 화장품, 뷰티, 아임발그레, 발그레딜, 스킨케어, 메이크업,
+    헤어, 세일,바디, 향수, 도구, 기기, 한정특가, 베스트, best, 신상품, new, 기획전, 브랜드, 할인,럭키박스, 응모, 무료, 무료배송, 쿠폰, 포인트, 리뷰, 후기, 팁, 발그레배송, 누니,
+    아임발그레90일 환불, 환불, 소비자 만족, 대상, 여성친화, 혁신, 인스타그램, 페이스북, 유튜브, 본비반트, 포니이펙트, 아임멀티스틱그리니프, 네이처리퍼블릭, 뉴스킨, 니베아, 닥터브로너스, 닥터자르트,
+    더샘, 마몽드더스킨하우스, 더페이스샵, 데메테르, 듀이트리, 라라, 라벨영, 로레알, 루나, 맥퀸,메이블린, 미슬린, 밀키드레스, 바닐라코, 베네피트, 비쉬, 시세이도, 시크릿키, 아르데코, 아리따움,
+    아모레퍼시픽, 아벤트, 아이오페, 애경, 어퓨, 에뛰드, 에스쁘아,에스쁘아, 에스테틱하우스, 엘리카, 오리지날 로우, 오리진스, 이니스프리, 입큰, 잇츠스킨, 제스파, 캐트리스, 캔메이크, 크리니크, 클리오,
+    키스미, 토니모리, 페리페라피지오겔, 홀리카홀리카, MAC, 생활건강, 틴트, BB, 파우더, 립스틱, 파운데이션,립글로즈, 마스카라, 아이라이너, 메니큐어, 리무버, 클리너, 폼클렌징, 수분크림,아이크림,
+    수면팩, 팩, 수분, 썬크림, 향수, 에센스, 토너, 미스트, 로션, 스킨,핸드크림, 클렌징오일, 클렌징크림, 클렌징워터, 바디로션, 오일, 샴푸, 바디샴푸,바디미스트, 컨실러, 속눈썹, 마스크팩, 메이크업,
+    필링, 필러, 바디워시, 세럼, 아이섀도우, 선물, 세트, 팩트, 크림, 브러쉬, 아이브로우, 비누, 쿠션, 모공, 추천, 화장법, 화장품
+</div>
+<script type="text/javascript">
+    if (typeof String.prototype.trim !== 'function') {
+        String.prototype.trim = function () {
+            return this.replace(/^\s+|\s+$/g, '');
+        }
+    }
+</script>
+<script type="text/javascript" src="/web/js/vendor/jquery-1.9.1.min.js?v=1zg6-1wlu1iw"></script>
+<script type="text/javascript" src="/web/js/vendor/store.min.js?v=1z4-ow7o7u"></script>
+<script type="text/javascript" src="/web/js/optimize/jquery.cookie.js?v=155-sc6413"></script>
+<script type="text/javascript" src="/web/js/vendor/bootstrap.carousel.min.js?v=2so-9297jl"></script>
+<script type="text/javascript" src="/web/js/optimize/moment.js?v=u3g-hcxoym"></script>
+<script type="text/javascript" src="/web/vendor/fancybox/jquery.fancybox.pack.js?v=hw3-pwygo5"></script>
+<script type="text/javascript" src="/web/js/vendor/jquery.number.min.js?v=45v-7x98ds"></script>
+<script type="text/javascript" src="/web/js/vendor/swag.min.js?v=e5m-13mr93z"></script>
+<script type="text/javascript" src="/web/js/vendor/url.min.js?v=1g5-tp5fnq"></script>
+<script type="text/javascript">
+
+    !function () {
+        var analytics = window.analytics = window.analytics || [];
+        if (!analytics.initialize)if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+            analytics.invoked = !0;
+            analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "page", "once", "off", "on"];
+            analytics.factory = function (t) {
+                return function () {
+                    var e = Array.prototype.slice.call(arguments);
+                    e.unshift(t);
+                    analytics.push(e);
+                    return analytics
+                }
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+                var e = analytics.methods[t];
+                analytics[e] = analytics.factory(e)
+            }
+            analytics.load = function (t) {
+                var e = document.createElement("script");
+                e.type = "text/javascript";
+                e.async = !0;
+                e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+                var n = document.getElementsByTagName("script")[0];
+                n.parentNode.insertBefore(e, n)
+            };
+            analytics.SNIPPET_VERSION = "3.1.0";
+            analytics.load("9tsiYz7B0EtNE4w16UG9Kvz00Yf5yvdQ");
+
+            analytics.page({
+                path: window.location.pathname,
+                url: window.location.href,
+                platform: "pc"
+            });
+
+        }
+    }();
+
+    // Code from http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+    function isElementInViewport(el) {
+
+        //special bonus for those using jQuery
+        if (typeof jQuery === "function" || el instanceof jQuery) {
+            el = el[0];
+        }
+
+        var rect = el.getBoundingClientRect();
+
+        return (
+                (rect.bottom > 0 && rect.bottom < (window.innerHeight || document.documentElement.clientHeight)) ||
+                (rect.top > 0 && rect.top < (window.innerHeight || document.documentElement.clientHeight))
+        );
+    }
+
+    // Called when a link to a product is clicked.
+    function onProductClick(el) {
+        var ret = {
+            path: window.location.pathname,
+            url: window.location.href,
+            platform: "pc",
+            id: $(el).data("product-id"),                               // Product ID
+            name: $(el).data("product-name"),                           // Product Name
+            brand: $(el).data("product-brand"),                         // Product Brand
+            position: $(el).data("product-position") || $(el).index(),  // Product Position
+            list: $(el).parent().data("productlist-name"),              // Product List
+            currency: 'KRW',                                            // Currency: Korean Won
+            price: $(el).data("product-price"),                         // Product Price
+            label: $(el).data("product-name")                           // Product Name
+        };
+        // GTM tracking
+        if (!!dataLayer) {
+            dataLayer.push({
+                'event': 'productClick',
+                'ecommerce': {
+                    'click': {
+                        'actionField': {'list': ret.list},      // Optional list property.
+                        'products': [{
+                            'name': ret.name,                      // Name or ID is required.
+                            'id': ret.id,
+                            'brand': ret.brand,
+                            'category': ret.list,
+                            'variant': '',
+                            'position': ret.position
+                        }]
+                    }
+                }
+            });
+        }
+        analytics.track("Product Clicked", ret, function () {
+            window.location.href = '/product/' + $(el).data("product-id") + "?list=" + $(el).parent().data("productlist-name")
+        });
+    }
+
+
+    $(function () {
+
+        var productClickProperties = function (el) {
+            var ret = {
+                id: $(el).data("product-id"),                               // Product ID
+                name: $(el).data("product-name"),                           // Product Name
+                list_id: $(el).parent().data("productlist-id"),             // Product List id
+                list_name: $(el).parent().data("productlist-name"),         // Product List name
+                position: $(el).data("product-position") || $(el).index()   // Product Position
+            };
+            //  var ret = {
+            //      path: window.location.pathname,
+            //      url: window.location.href,
+            //      platform: "pc",
+            //      id: $(el).data("product-id"),                               // Product ID
+            //      name: $(el).data("product-name"),                           // Product Name
+            //      brand: $(el).data("product-brand"),                         // Product Brand
+            //      position: $(el).data("product-position") || $(el).index(),  // Product Position
+            //      list: $(el).parent().data("productlist-name"),              // Product List
+            //      currency: 'KRW',                                            // Currency: Korean Won
+            //      price: $(el).data("product-price"),                         // Product Price
+            //      label: $(el).data("product-name")                           // Product Name
+            //  };
+
+            // GTM tracking
+            if (!!dataLayer) {
+                dataLayer.push({
+                    'event': 'productClick',
+                    'ecommerce': {
+                        'click': {
+                            'actionField': {'list': ret.list},      // Optional list property.
+                            'products': [{
+                                'name': ret.name,                      // Name or ID is required.
+                                'id': ret.id,
+                                'brand': ret.brand,
+                                'category': ret.list,
+                                'variant': '',
+                                'position': ret.position
+                            }]
+                        }
+                    }
+                });
+            }
+
+            return ret;
+        };
+        analytics.trackLink($("[segment-event='Product Clicked']"), "Product Clicked", productClickProperties);
+    });
+</script>
+<script type="text/javascript">
+    function checkPromotionInViewport() {
+        $(".segment_promotion_item").each(function () {
+            if (isElementInViewport($(this)) && $(this).is(":visible")) {
+                var promotion_id = $(this).data("promotion-id");
+                var promotion_name = $(this).data("promotion-name");
+                var promotion_creative = $(this).data("promotion-creative");
+                var promotion_link = $(this).data("promotion-link");
+                var promotion_position = $(this).data("promotion-position");
+//                analytics.track("Promotion Viewed", {
+//                    promotion_id: promotion_id,                         // Promotion ID
+//                    name: promotion_name,                               // Promotion Name
+//                    link: promotion_link,                               // Promotion Link
+//                    creative: promotion_creative,                       // Promotion Creative
+//                    position: promotion_position,                       // Promotion Position
+//                    label: promotion_name                               // Label for GA
+//                });
+
+                //Segment Analytics for Promotion Viewed v2.0
+                analytics.track("Promotion Impression", {
+                    id: promotion_id,                                   // v2.0
+                    value1: promotion_link,                             // v2.0
+                    promotion_id: promotion_id,                         // Promotion ID (Name for now since ID is not useful)
+                    name: promotion_name,                               // Promotion Name
+                    position: promotion_position                       // Promotion Position
+                });
+                $(this).removeClass('segment_promotion_item');
+            }
+        });
+    }
+
+    var timer_promotion;
+
+    // When scrolling, track promotion impressions
+    $(window).scroll(function () {
+        if (timer_promotion) {
+            window.clearTimeout(timer_promotion);
+        }
+        timer_promotion = window.setTimeout(function () {
+            checkPromotionInViewport();
+        }, 10);
+    });
+
+    $(document).ready(function () {
+        checkPromotionInViewport();
+    });
+</script>
+
+
+<script type="text/javascript">
+    // Console.log Fallback (IE)
+    if (!window.console) {
+        window.console = new function () {
+            this.log = function (str) {
+            };
+            this.dir = function (str) {
+            };
+        };
+    }
+    ;
+
+    /**
+     * 특정상품 썸네일 변경에 대한 A/B 테스트( 재요청 가능성 때문에 주석처리 )
+     * memeWeb-1882 상품 썸네일 A/B 테스트
+     *
+     */
+
+    /*
+
+    thumnailImageTest();
+
+// 상품 썸네일 변경
+function thumnailImageTest(){
+
+    // 썸네일 이미지 존재 확인
+    var isDeal = $('a[href*="/page/11310"]>div>img');
+    if( !!isDeal ){
+        // 썸네일 변경
+        isDeal.attr('src','//img2.memebox.com/static/contents/img/upload/banner_20150727153343_4vp4TsvXfk.jpg' );
+    }
+
+    // path name 추출
+    var url = window.location.pathname.split("/");
+    // 11310의 경우 썸네일 변경
+    if( url.pop() === "11310" ){
+        // 썸네일 이미지 존재 확인
+        var isThumnailImage = $('div[class="dealTopLeft fL"]>img');
+        if( !!isThumnailImage ){
+            // 썸네일 변경
+            isThumnailImage.attr('src','//img2.memebox.com/static/contents/img/upload/banner_20150727153343_4vp4TsvXfk.jpg' );
+        }
+    }
+}
+*/
+
+
+    $(function () {
+
+
+        // Top Banner > Close 버튼
+        $("#closeTopBanner").click(function () {
+            var cookieKey = 'topBanner';
+            $("#topBanner").hide();
+            $.cookie(cookieKey, '52127', {expires: 365, path: '/'});
+        });
+
+        $('.sideBannerR').on("click", '.fixed .topDownWrap .topDownBtn .top', function (e) {
+            e.preventDefault();
+            var $d =
+            $(document);
+                $d.scrollTop(0);
+        });
+
+        $('.sideBannerR').on("click", '.fixed .topDownWrap .topDownBtn .down', function (e) {
+            e.preventDefault();
+            var $d =
+            $(document);
+                $d.scrollTop(300000);
+        });
+
+        /* Removed Legacy GA Property UA-27822703-2 (Kevin 21/22/16)
+    $("a[ga-event],button[ga-event],area[ga-event]").on('click', function(e){
+        var data = $(this).attr('ga-event');
+        if(ga && data) {
+            var items = data.split(',');
+            if(items.length >= 2) {
+               ga('oldGA.send', 'event', items[0], items[1], {page: windowUrl('path',location.href)});
+            }
+        }
+    });
+    */
+
+        // Sidebar Modal Popup
+        /* -- 추석 연휴 사용
+    $(".sideBannerPopUp")
+            .click(function(e) {
+                e.preventDefault();
+
+                $.fancybox.open({
+                    type:'ajax',
+                    href: '/api/v1/getModal.php?title=deliveryDelay',
+                    padding: 0,
+                    maxWidth: 564,
+                    maxHeight: 564,
+                    minWidth: 564,
+                    minHeight: 564,
+                    autoSize: false,
+                    fitToView: false,
+                    scrolling: false,
+                    openEffect: 'none',
+                    closeBtn: false,
+                    closeClick: true,
+                    closeEffect: 'none',
+                    transitionIn: 'none',
+                    transitionOut: 'none',
+                    autoResize: false,
+                    scrollOutside: 'no',
+                    locked: true,
+                    beforeShow: function(){
+                        $(".fancybox-skin").css("box-shadow","none");
+                    }
+                });
+            });
+    */
+
+        // Modal Popup
+//    if((/www.memebox.com\/?$/g).test(document.location.href) && $.cookie('csGuide') != 1) {
+//        $.fancybox.open({
+//            type:'ajax',
+//            href: '/api/v1/getModal.php?title=csGuide',
+//            padding: 0,
+//            maxWidth: 564,
+//            maxHeight: 374,
+//            minWidth: 564,
+//            minHeight: 374,
+//            autoSize: false,
+//            fitToView: false,
+//            scrolling: false,
+//            openEffect: 'none',
+//            closeBtn: false,
+//            closeClick: true,
+//            closeEffect: 'none',
+//            transitionIn: 'none',
+//            transitionOut: 'none',
+//            autoResize: false,
+//            scrollOutside: 'no',
+//            locked: true,
+//            afterLoad : function() {
+//                $.cookie('csGuide', '1', { expires: 1, path: '/' });
+//            }
+//        });
+//    }
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=1463989610483291";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    });
+
+    $("#linkToUS").click(function () {
+        $.cookie('countryCode', 'US', {expires: 365, path: '/'});
+//    window.location = "http://us.memebox.com/?referrer=" + document.referrer;  //
+        window.open("http://us.memebox.com/?referrer=" + document.referrer, '_blank');
+    });
+    $("#linkToCN").click(function () {
+        $.cookie('countryCode', 'CN', {expires: 365, path: '/'});
+//    window.location = "http://cn.memebox.com/?referrer=" + document.referrer;  //
+        window.open("http://cn.memebox.com/?referrer=" + document.referrer, '_blank');
+    });
+
+    $('#addFavorite').click(function () {
+        var title = '발그레';
+        var url = 'http://www.memebox.com';
+
+        if (window.sidebar && window.sidebar.addPanel) {
+            window.sidebar.addPanel(title, url, "");
+        } else if (document.all) {
+            window.external.AddFavorite(url, title);
+        } else { // 그외
+            alert('Ctrl + D 를 누르면 발그레를 북마크에 추가하실 수 있습니다.');
+        }
+    });
+    function goValidEscrow(service) {
+        if (service == 'memebox_mobile') {
+            window.open('https://pgweb.uplus.co.kr/pg/wmp/mertadmin/jsp/mertservice/s_escrowYn.jsp?mertid=memebox_mobile', '', 'width=340px, height=262px');
+        }
+    }
+
+    /**
+     * limitDate를 오픈날짜로 변경해주세요.
+     */
+    var limitDate = moment().format('2045-02-06 00:00:00');
+    var nowDate = moment().format('YYYY-MM-DD HH:mm:ss');
+    var type = Math.floor(Math.random() * 2) + 1;
+    var uid = "";
+    if (limitDate <= nowDate) {
+        if ((/.memebox.com\/(.*)/g).test(document.location.href) && ( !uid) && ( !$.cookie('subscribersEmail'))) {
+            $.get('/api/v4/subscribers/view?type=' + type, function (res) {
+                if (res.data != '') {
+                    $('body').append(res.data);
+                }
+            });
+        }
+    }
+
+    var disableZzim = false;
+    $('.newDealContents').delegate('.zzim', 'click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        if (disableZzim === true) {
+            return false;
+        }
+
+        var pageId = $(this).attr('data-pageId');
+        var pageTitle = $(this).attr('data-title');
+
+        if (!uid) {
+            alert('찜하기는 로그인 후 사용 가능합니다.');
+            return false;
+        } else {
+            if ($(this).hasClass('zzimOn') === false) {
+                $(this).addClass('zzimOn');
+                $(this).children('span').remove();
+                var zzimApiUrl = '/api/rest/v4/wishList/addToWishList';
+                var apiData = {pageId: pageId};
+
+                $.ajax({
+                    type: 'post',
+                    url: zzimApiUrl,
+                    data: apiData,
+                    dataType: 'json',
+                    cache: false
+                }).done(function (jqXHR) {
+                    // Segment Analytics: Tracks when user adds product to wishlist
+                    analytics.track('Wishlist Added', {
+                        id: pageId,
+                        name: pageTitle
+                    });
+
+                    $('#zzimCheck' + pageId).show();
+                    disableZzim = true;
+                    setTimeout(function () {
+                        $('#zzimCheck' + pageId).hide();
+                        disableZzim = false;
+                    }, 1000);
+                    return false;
+                }).fail(function (jqXHR) {
+                    return false;
+                }).always(function () {
+                    return false;
+                });
+            } else {
+                $(this).removeClass('zzimOn');
+                $(this).append('<span class="zzimTag"></span>');
+                var zzimApiUrl = '/api/rest/v4/wishList/removeWishListItemByUser';
+                var apiData = {pageId: pageId};
+
+                $.ajax({
+                    type: 'post',
+                    url: zzimApiUrl,
+                    data: apiData,
+                    dataType: 'json',
+                    cache: false
+                }).done(function (jqXHR) {
+                    // Segment Analytics: Tracks when user adds product to wishlist
+                    analytics.track('Wishlist Removed', {
+                        id: pageId,
+                        name: pageTitle
+                    });
+                    return false;
+                }).fail(function (jqXHR) {
+                    return false;
+                }).always(function () {
+                    return false;
+                });
+            }
+        }
+
+        return false;
+    });
+
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "MEMEBOX",
+    "url" : "http://www.memebox.com",
+    "logo" : "http://s1cdn.memebox.com/web/images/logo_1024.png",
+    "sameAs" : [
+        "http://www.facebook.com/memebox",
+        "http://instagram.com/memebox_korea",
+        "https://www.youtube.com/user/memeboxseoul"
+    ]
+}
+
+
+</script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "SoftwareApplication",
+    "name": "memebox",
+    "operatingSystem": "ANDROID,IOS",
+    "applicationCategory": "http://schema.org/ShoppingApplication",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "ratingCount": "8864"
+    },
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+    }
+}
+
+
+</script>
+
+<script type="text/javascript">
+
+    $(function () {
+        $('#promotion2').carousel({
+            pause: true,
+            interval: false
+        });
+
+        function promotionPaging() {
+            var currentPage = parseInt($(".slideBannerList .active").data('index')) + 1;
+
+            $("#promotionPage").html('<span class="pText">' + currentPage + '</span>/' + $('.slide3 .item').length);
+
+            checkPromotionInViewport();
+        }
+
+        promotionPaging();
+        $('#promotion2').on('slid.bs.carousel', function () {
+            promotionPaging();
+        });
+    });
+
+</script>
+
+
+<script type="text/javascript" src="/web/js/optimize/mainDealLoader.js?v=11x-1kwsln0"></script>
+<script type="text/javascript">
+    var userId = '';
+    new MEMEBOX.DealLoader({
+        dealArea: $('#memeBestItemList'),
+        pageCount: 54,
+        url: '/main/moreDeal.html'
+    });
+</script>
+<script type="text/javascript">
+    function checkProductsInViewport() {
+        $(".segment_product_item").each(function () {
+            if (isElementInViewport($(this))) {
+                var totalCount = $('#viewDeals').find('li').length || 0;
+                var product_id = $(this).data("product-id");
+                var product_name = $(this).data("product-name");
+                var product_list_id = $(this).parent().data("productlist-id");
+                var product_list_name = $(this).parent().data("productlist-name");
+                var product_position = $(this).data("product-position") || ($(this).index() + (totalCount > 0 ? '_' + totalCount : ''));
+//                var product_list  = $(this).parent().data("productlist-name");
+//                var themeType     = $(this).data('recommend-type') || '';
+//                var segThemeCount = $(this).data('theme-count') || '';
+//                var label         = $(this).data('current-productid') || '';
+
+
+                analytics.track("Product Impression", {
+                    id: product_id,                                     // Product ID
+                    name: product_name,                                 // Product Name
+                    list_id: product_list_id,                           // Product List
+                    list_name: product_list_name,                       // Product List
+                    position: product_position                          // Product Position
+                });
+
+                $(this).removeClass('segment_product_item');
+
+                if (!$(this).parent().data("productlist-viewed")) {
+                    var product_list_name = $(this).parent().data("productlist-name");
+                    var product_list_id = $(this).parent().data("productlist-id");
+
+                    analytics.track("Product List Impression", {
+                        list_id: product_list_id,                           // Product List ID
+                        list_name: product_list_name                            // Product List Name
+
+                    });
+
+                    $(this).parent().data("productlist-viewed", true);
+                }
+            }
+        });
+    }
+
+    // When Scrolling, track product impressions
+    var timer_products;
+    $(window).scroll(function () {
+        if (timer_products) {
+            window.clearTimeout(timer_products);
+        }
+        timer_products = window.setTimeout(function () {
+            checkProductsInViewport();
+        }, 10);
+    });
+
+    // On page load, track product impressions
+    $(document).ready(function () {
+        checkProductsInViewport();
+    });
+
+</script>
+
+
+<script type="text/javascript">
+    (function () {
+        var T = 3000;
+        var mainBannerLength = "9";
+        var mainBannerInterval = null;
+        var bgColor = $('#bgColor0').val();
+        var TargetBgColor = '';
+        var bannerBarWidth = 100 / mainBannerLength;
+
+        $('div.homeMainBannerWrap .bannerBarWrap li').css('width', bannerBarWidth + '%');
+
+        $('#homeMainBannerWrap').css('backgroundColor', bgColor);
+
+        // Helper function for determining promotion impression based on banner ID
+        function homeBannerImpression(bannerId) {
+
+            // Get banner element
+            var bannerElement = $("#" + bannerId);
+
+            // Check if promotion already viewed
+            var promotion_viewed = bannerElement.parent().data("promotion-viewed");
+
+            // If not viewed and is visible in viewport
+            if (!promotion_viewed && isElementInViewport(bannerElement)) {
+                // Not viewed yet, gather metadata and send to segment analytics
+                var promotion_name = bannerElement.parent().data("promotion-name");
+                var promotion_id = bannerElement.parent().data("promotion-id");
+                var promotion_creative = bannerElement.parent().data("promotion-creative");
+                var promotion_link = bannerElement.parent().data("promotion-link");
+                var promotion_position = bannerElement.parent().data("promotion-position");
+
+                //Segment Analytics for Promotion Viewed
+//                    analytics.track("Promotion Viewed", {
+//                        label: promotion_name,                              // Label for GA
+//                        promotion_id: promotion_id,                         // Promotion ID (Name for now since ID is not useful)
+//                        creative: promotion_creative,                       // Promotion Creative
+//                        name: promotion_name,                               // Promotion Name
+//                        position: promotion_position,                       // Promotion Position
+//                        link: promotion_link                                // Promotion Link
+//                    });
+
+                //Segment Analytics for Promotion Viewed v2.0
+                analytics.track("Promotion Impression", {
+                    id: promotion_id,                                   // v2.0
+                    value1: promotion_link,                             // v2.0
+                    promotion_id: promotion_id,                         // Promotion ID (Name for now since ID is not useful)
+                    name: promotion_name,                               // Promotion Name
+                    position: promotion_position                       // Promotion Position
+                });
+
+                // Set promotion viewed flag to true
+                bannerElement.parent().data("promotion-viewed", true);
+            }
+        }
+
+        function onOffMainVisual(index) {
+            var mainBannerId = 'mainBanner' + index.toString();
+            var subBannerId = 'subBanner' + index.toString();
+            var bannerBarId = 'bannerBar' + index.toString();
+            var offTargetBanner = $('.mainVisualOn');
+            var offTargetBannerBar = $('.on');
+            var onTargetMainBanner = $('#' + mainBannerId);
+            var onTargetSubBanner = $('#' + subBannerId);
+            var onTargetBannerBar = $('#' + bannerBarId);
+
+            bgColor = 'bgColor' + index.toString();
+            TargetBgColor = $('#' + bgColor).val();
+            $('#homeMainBannerWrap').css('backgroundColor', TargetBgColor);
+
+            offTargetBanner.removeClass('mainVisualOn');
+            offTargetBanner.addClass('mainVisualOff');
+            offTargetBannerBar.removeClass('on');
+            offTargetBannerBar.addClass('off');
+            onTargetMainBanner.removeClass('mainVisualOff');
+            onTargetMainBanner.addClass('mainVisualOn');
+            onTargetSubBanner.removeClass('mainVisualOff');
+            onTargetSubBanner.addClass('mainVisualOn');
+            onTargetBannerBar.removeClass('off');
+            onTargetBannerBar.addClass('on');
+
+            $('.arrow.pre.tI').data('index', index - 1);
+            $('.arrow.next.tI').data('index', index + 1);
+
+            homeBannerImpression(mainBannerId);
+            homeBannerImpression(subBannerId);
+        }
+
+        $('.arrow.pre.tI').click(function () {
+            var index = Number($(this).data('index'));
+
+            if (index >= 0) {
+                onOffMainVisual(index);
+            } else {
+                onOffMainVisual(mainBannerLength - 1);
+            }
+        });
+
+        $('.arrow.next.tI').click(function () {
+            var index = Number($(this).data('index'));
+
+            if (index < mainBannerLength) {
+                onOffMainVisual(index);
+            } else {
+                onOffMainVisual(0)
+            }
+        });
+
+        $('.mainVisualItem').bind('mouseover', function () {
+            resetMainBannerTimer();
+        }).bind('mouseout', function () {
+            setMainBannerTimer();
+        });
+
+        $('.arrow').bind('mouseover', function () {
+            resetMainBannerTimer();
+        }).bind('mouseout', function () {
+            setMainBannerTimer();
+        });
+
+        var rollingBanner = function () {
+            var index = $('.arrow.next.tI').data('index');
+
+            if (index < mainBannerLength) {
+                bgColor = 'bgColor' + index.toString();
+                onOffMainVisual(index);
+            } else {
+                bgColor = 'bgColor0';
+                onOffMainVisual(0)
+            }
+            TargetBgColor = $('#' + bgColor).val();
+            $('#homeMainBannerWrap').css('backgroundColor', TargetBgColor);
+        };
+
+        function setMainBannerTimer() {
+            if (mainBannerInterval === null) {
+                mainBannerInterval = setInterval(rollingBanner, T);
+            }
+        }
+
+        function resetMainBannerTimer() {
+            clearInterval(mainBannerInterval);
+            mainBannerInterval = null;
+        }
+
+        // Track promotion impression for initial banners on page load
+        homeBannerImpression("mainBanner0");
+        homeBannerImpression("subBanner0");
+
+        if (mainBannerLength > 1) {
+            setMainBannerTimer();
+        } else {
+            $('.arrow.pre.tI, .arrow.next.tI').hide();
+        }
+    }());
+</script>
+
+
+<script src="//ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script type="text/javascript" src="/web/js/vendor/jquery.json-2.3.min.js?v=1oh-qv8one"></script>
+<script type="text/javascript" src="/web/js/vendor/jquery.number.min.js?v=45v-7x98ds"></script>
+<script type="text/javascript" src="/web/js/vendor/handlebars.runtime.min.js?v=5j8-tnhhik"></script>
+<script type="text/javascript" src="/web/js/optimize/hbsRegister.js?v=6p-jl17un"></script>
+<script type="text/javascript" src="/web/js/inc.js?v=vub-erkr8m"></script>
+<script type="text/javascript" src="/web/js/productViewLog.js?v=h1-c1iguh"></script>
+<script>
+    (function () {
+        $('.fixed').css({display: ''});
+        $(window).bind('scroll resize', ProductViewLog.viewBanner);
+        ProductViewLog.viewBanner();
+    })();
+</script>
+
+
+<script type="text/javascript" src="/web/js/jquery.bxslider.min.js?v=exr-124op81"></script>
+<script type="text/javascript">
+    var awardList = $('#awardList').bxSlider({
+        slideWidth: 178, // 310
+        minSlides: 4,
+        maxSlides: 4,
+        moveSlides: 1,
+        slideMargin: 0,
+        nextSelector: '#btn_award_prev',
+        prevSelector: '#btn_award_next',
+        nextText: '',
+        prevText: '',
+        pager: false
+    });
+
+    $('#award_arrow_next').click(function (event) {
+        var currentTarget = $(event.currentTarget);
+        if (currentTarget.hasClass('award_next_on')) {
+            awardList.goToNextSlide();
+        }
+
+        if (awardList.getSlideCount() - awardList.getCurrentSlide() == 4) {
+            currentTarget.removeClass('award_next_on').addClass('award_next');
+        } else if (currentTarget.hasClass('award_next')) {
+            currentTarget.removeClass('award_next').addClass('award_next_on');
+        }
+
+        if (awardList.getCurrentSlide() != 0) {
+            currentTarget.parents().find('#award_arrow_prev').removeClass('award_prev').addClass('award_prev_on');
+        }
+    });
+
+    $('#award_arrow_prev').click(function (event) {
+        var currentTarget = $(event.currentTarget);
+        if (awardList.getCurrentSlide() != 0 && $('#award_arrow_prev').hasClass('award_prev_on')) {
+            awardList.goToPrevSlide();
+        }
+
+        if (awardList.getCurrentSlide() == 0) {
+            currentTarget.removeClass('award_prev_on').addClass('award_prev');
+        } else {
+            currentTarget.removeClass('award_prev').addClass('award_prev_on');
+        }
+
+        if (awardList.getSlideCount() - awardList.getCurrentSlide() != 4) {
+            currentTarget.parents().find('#award_arrow_next').removeClass('award_next').addClass('award_next_on');
+        }
+    });
+
+</script>
+
+<script type="text/javascript" src="/web/js/utils/scriptLoader.js?v=1mq-7ptbr5"></script>
+<!------------- 여기부터 복사 ------------------------>
+<!-- DTSI SCRIPT -->
+<script type="text/javascript" src="/web/js/optimize/adiz_sv110.js?v=8kw-g747c6"></script>
+<!--// DTSI SCRIPT -->
+<!------------- 여기 까지 복사 ------------------------>
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script>
+
+    if (!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "s_1f26e67e5df";
+    if (!_nasa) var _nasa = {};
+    wcs.inflow("memebox.com");
+
+    wcs_do(_nasa);
+
+
+    /* Removed Legacy GA Property UA-27822703-2 (Kevin 21/22/16)
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    // Cast GA Tracker Name to 'oldGA' to prevent clash with Segment Analytics
+    ga('create', 'UA-27822703-2', 'auto', 'oldGA');
+    ga('oldGA.require', 'ec');
+    ga('oldGA.require', 'displayfeatures');
+    ga('oldGA.require', 'linkid', 'linkid.js');
+
+    var productPatt = /\/(product|page)\/([0-9])\d+/g
+
+    if (!productPatt.test(window.location.path)) {
+        ga('oldGA.send', 'pageview');
+    }
+    */
+
+
+    try {
+
+        var _setlefttime = '360';
+        var _FST_DOMAIN = location.protocol == "https:" ? "https://log.grucompany.co.kr" : "http://log.grucompany.co.kr";
+        document.write(unescape("%3Cscript src='" + _FST_DOMAIN + "/adjs/kcadchk.js' type='text/javascript'%3E%3C/script%3E"));
+    } catch (e) {
+    }
+
+    try {
+
+        var _setlefttime = '1';
+        var _FST_DOMAIN = location.protocol == "https:" ? "https://log.grucompany.co.kr" : "http://log.grucompany.co.kr";
+        document.write(unescape("%3Cscript src='" + _FST_DOMAIN + "/adjs/kcadchk_drt.js' type='text/javascript'%3E%3C/script%3E"));
+    } catch (e) {
+    }
+
+
+    try {
+        var _beshow = document.createElement("script");
+        _beshow.type = "text/javascript";
+        _beshow.onload = function () {
+            strack.execute('setDomain', 'memebox.com');
+            strack.trackView();
+        };
+        _beshow.src = "//be.show/plugins/strack/strack.min.js?time=" + (new Date).getTime();
+        document.head.appendChild(_beshow);
+    } catch (e) {
+    }
+
+// 메인 메뉴의 배너 효과
+</script>
+
+
+    <script src="/js/main/accordly.js"></script>
+    <script src="/js/main/slidy.js"></script>
+
+    <script>
+        $('.slidyContainer').slidy({
+        });
+
+        $('.accordion').accordy({
+        });
+
+    </script>
+
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        try {
+            if ($.cookie('showBanner') == 'done') {
+                $('#floatingBannerBody').hide();
+            } else {
+                $('#floatingBannerBody').show();
+            }
+
+            // 00:00 시 기준 쿠키 설정하기
+            // expiredays 의 새벽  00:00:00 까지 쿠키 설정
+            function setCookie(name, value, expiredays) {
+                var todayDate = new Date();
+                todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);
+                if (todayDate > new Date()) {
+                    expiredays = expiredays - 1;
+                }
+                todayDate.setDate(todayDate.getDate() + expiredays);
+                document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+            }
+
+            $('#floatingCloseBtn').click(function (event) {
+                event.stopPropagation();
+                event.preventDefault();
+
+                setCookie('showBanner', 'done', 1);
+                $('#floatingBannerBody').hide();
+                analytics.track("Button Clicked", {
+                    category: 'Floating Banner',
+                    label: 'Closed Floating Banner'
+                })
+            });
+
+            $('#floatingBannerBody').click(function () {
+                var url = '';
+                $(location).attr('href', url);
+                $('#floatingBannerBody').hide();
+            });
+        } catch (e) {
+        };
+    });
+</script>
+
+</script>

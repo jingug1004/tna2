@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <table>
+      <tbody>
+         <tr>
+            <th>Q. 문의내용</th>
+         </tr>
+         <tr>
+            <td>문의유형</td>
+            <td>$res.qnaClass1</td>
+         </tr>
+         <tr>
+            <td>상품명</td>
+            <td>$res.orderId</td>
+         </tr>
+         <tr>
+            <td>제목</td>
+            <td>$res.subject</td>
+         </tr>
+         <tr>
+            <td>내용</td>
+            <td>$res.content</td>
+         </tr>
+      </tbody>
+   </table>
+   <table>
+      <tbody>
+         <tr>
+            <th>A. 답변내용</th>
+         </tr>
+         <tr>
+            <td>답변</td>
+            <td>안녕하세요. 발그레입니다.</td>
+         </tr>
+      </tbody>
+   </table>
+</body>
+</html>

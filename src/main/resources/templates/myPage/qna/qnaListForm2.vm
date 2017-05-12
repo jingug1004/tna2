@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var url = "bbslist.php";
+    $.get(url, {page:1}, function(args) {
+        $("#bbslist").html(args);
+    });
+});
+function get_page(no) {
+	$("#bbslist").html("<img src='indicator.gif'>");
+    var url = "bbslist.php";
+    $.get(url, {page:no}, function(args) {
+        $("#bbslist").html(args);
+    });	
+}
+function get_content(no) {
+	$("#bbsview").html("<img src='indicator.gif'>");
+    var url = "bbsview.php";
+    $.get(url, {no:no}, function(args) {
+        $("#bbsview").html(args);
+    });	
+}
+</script>
+
+<style>
+body, td, table {
+   font-size:9pt;
+   font-family:나눔고딕,맑은 고딕,고딕,돋움,굴림;
+}
+</style>
+
+</head>
+<body>
+   <table width="800" border="0">
+      <tbody>
+         <tr bgcolor="white">
+            <td valign="top" width="400">
+               <div id="bbsview">
+                  <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+                  <title>Untitled Document</title>
+                  <script type="text/javascript" src="jquery.js"></script>
+                  <script type="text/javascript">
+                     function update_chu(gbn, no) {
+	                    //$("#div_chu").html("<img src='indicator.gif'>");
+                        var url = "bbschu.php";
+                        $.get(url, {gbn:gbn, no:no}, function(args) {
+                           $("#div_chu").html(args);
+                        });	
+                     }
+                  </script>
+                  <div id="div_body">
+                     <table width="300" border="0" cellspacing="1" bgcolor="#999999">
+                        <tbody>
+                           <tr bgcolor="white">
+                              <th>답변 제목</th>
+                              <td>title</td>
+                           </tr>
+                           <tr bgcolor="white">
+                              <th>문의내용</th>
+                              <td>content</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </td>
+            <td valign="top" width="400">
+               <div id="bbslist">
+                  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                  <title>Untitled Document</title>
+               </div>
+            </td>
+      </tbody>
+   </table>
+</body>
+</html>
