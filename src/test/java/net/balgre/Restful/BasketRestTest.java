@@ -64,7 +64,7 @@ public class BasketRestTest {
 //        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwMTAxMTExMTExMSIsInNjb3BlcyI6WyJST0xFX01FTUJFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0IiwiaWF0IjoxNDkzNTQ0MTQ0LCJleHAiOjE0OTM2MzA1NDR9.li52vR0dyWNYE7iI6pTl0D7yddkaHtrX-a8PtYBQYxYC5j9Lquc7ppq69yhK-eVvOqjSPZmlgHD29A3VZY4WYQ";
         String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwMTAxMTExMTExMSIsInNjb3BlcyI6WyJST0xFX1JFRlJFU0hfVE9LRU4iXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdCIsImp0aSI6IjkwMGVhYWU5LTA0YjctNDc5ZC1hNDdmLWY5OTNlN2U5YjRkZiIsImlhdCI6MTQ5MzU0NDE0NCwiZXhwIjoxNDkzNjMwNTQ0fQ.SlRPjx0NsyiEvDYXJxd5YzCK2EPGDJ4O3MrlAt2EHg1uA01xusPzq3hFyPGrD7LaFR35KadEL2S2RU3F-mnWYA";
 
-        BasketResponse response = basketRetroImpl.basketGET(token);
+        BasketResponse response = basketRetroImpl.basketListGET(token);
 
         assertNotNull(response);
         assertNotNull(response.toString());

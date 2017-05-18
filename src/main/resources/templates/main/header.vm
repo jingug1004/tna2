@@ -76,6 +76,10 @@
     <link type="text/css" href="/css/product/lightbox.css" rel="stylesheet"/>
     <link type="text/css" href="/css/product/bootstrap.carousel.css" rel="stylesheet"/>
 
+    ## productDetail Modal popup
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script defer async src="//cdn.optimizely.com/js/537732300.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -133,6 +137,9 @@
     <script src="/js/header/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="/js/header/function.js" type="text/javascript"></script>
     <script src="/js/header/jquery.cookie.js" type="text/javascript"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 
 </head>
 
@@ -314,7 +321,7 @@
                         ##                            <a class="navi" href="https://order.memebox.com/cart" ga-event="gnb,gnb_cart">
                             <a #*class="navi"*# href="/cart" ga-event="gnb,gnb_cart">
                                 <span class="top_cartIcon dP fL"></span>
-                                <span class="dP fL">장바구니</span>
+                                <span class="dP fL"><a href="/basketList">장바구니</a></span>
                             </a>
                         </li>
                     </ul>

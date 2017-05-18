@@ -30,7 +30,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -66,9 +65,19 @@ public class BasketController {
     BasketService basketService;
 
     @RequestMapping(value = "/basketList", method = RequestMethod.GET)
-    public String basketGET() throws Exception {
+    public String basketListGET(HttpSession session,
+                            HttpServletRequest request,
+                            Model model,
+                            BasketResponse basketResponse) throws Exception {
 
-        logger.info("lll~~~ 장바구니 리스트 접속 GET 1 . lll~~~");
+        logger.info("lll~~~ Connect basketList GET 1 . lll~~~");
+
+        LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
+
+        model.addAttribute("basketListGET", basketService.basketListGET(login.getToken()));
+
+        logger.info("lll~~~ model : " + model + " 2 .. lll~~~");
+//        logger.info("lll~~~ model : " + model.toString() + " 2 .. lll~~~");
 
         return "/basket/basket";
 
@@ -92,44 +101,40 @@ public class BasketController {
 
     @RequestMapping(value = "/basketAdd", method = RequestMethod.POST)
     @ResponseBody
-    public String basketPOST(HttpSession session,
+    public String basketAddPOST(HttpSession session,
                              HttpServletRequest request,
-                             @RequestParam("items[]")  String[] itemsVm,
                              Model model,
                              BasketResponse basketResponse) throws Exception {
 
         LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
 
-        logger.info("lll~~~ " + itemsVm[0] + " 1 . lll~~~");
+//        logger.info("lll~~~ " + itemsVm[0] + " 1 . lll~~~");
 
         Map<String, String[]> param = request.getParameterMap();
+        String[] itemsVm = request.getParameterValues("items[]");
 
         System.out.println("lll~~~ Request? " + param + " 2 .. lll~~~");
-
-//        logger.info(param);
-        System.out.println("lll~~~ " + param + " 2 .. lll~~~");
 
         for (String item:itemsVm) {
 
             param.get("items[" + item + "].price");
 
             logger.info("lll~~~ " + param + " 3-a ... lll~~~");
-
             logger.info("lll~~~ " + item + " 3 ... lll~~~");
             logger.info("lll~~~ " + param.get("items[" + item + "].price")[0] + " 4 .... lll~~~");
-            logger.info("lll~~~ " + param.get("upDown[" + item + "].cnt")[0] + " 4 카운트 .... lll~~~");
+            logger.info("lll~~~ " + param.get("upDown[" + item + "].cnt")[0] + " 4 count .... lll~~~");
 
-            int curPage = Integer.parseInt(param.get("items[" + item + "].price")[0].toString());
-            long nextPage = Long.parseLong(param.get("upDown[" + item + "].cnt")[0].toString());
+            int itemPrice = Integer.parseInt(param.get("items[" + item + "].price")[0].toString());
+            long itemEach = Long.parseLong(param.get("upDown[" + item + "].cnt")[0].toString());
 
 //            model.addAttribute("basketListModel", basketService.basketPOST(login.getToken(), curPage, nextPage));
 
-            basketService.basketPOST(login.getToken(), curPage, nextPage);
+            basketService.basketAddPOST(login.getToken(), itemPrice, itemEach);
 
 //            basketService.basketPOST();
 
-            logger.info("lll~~~ " + curPage + " 5  커 페이지 변환 ..... lll~~~");
-            logger.info("lll~~~ " + nextPage + " 5 넥스트 페이지 변환 ..... lll~~~");
+            logger.info("lll~~~ " + itemPrice + " 5 price ..... lll~~~");
+            logger.info("lll~~~ " + itemEach + " 5 each ..... lll~~~");
 
         }
 

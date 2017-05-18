@@ -33,7 +33,7 @@
     </script>
 </head>
 
-<body data-deployversion="1494985500000">
+<body data-deployversion="1493534700000">
 
 
 <h1 class="cartLogo"><a href="http://memebox.com" class="tI">발그레박스 내 삶을 아름답게!</a></h1>
@@ -45,24 +45,34 @@
 
     </div>
 
-
     <div class="pointCoouponWrap">
         <div class="pointCoupon">
             <table cellpadding="0" cellspacing="0">
                 <tr>
-                    <th>로그인 후, 보유 포인트 및 쿠폰 수량을 확인하실 수 있습니다.</th>
+                    <th class="member"><span class="username">Emiya Mulzomdao</span>님의 구매 혜택</th>
+                    <td>
+                        <span class="bar">|&nbsp;&nbsp;&nbsp;</span>
+                        <span class="infoTitle">포인트 : </span><span class="pText pointText">P</span><span
+                            class="infoTitle">발그레쿠폰 : </span><span class="pText couponText">장</span>
+                        <table summary="쿠폰 내역" cellspacing="0" cellpadding="0"
+                               style="display:none;background-color: #ffffff;border: 1px solid #bcbcbc;">
+                            <caption class="hidden">쿠폰 내역</caption>
+                            <colgroup>
+                                <col style="width:350px;">
+                            </colgroup>
+                            <tbody id="usableCouponTableBody">
+                            </tbody>
+                        </table>
+                    </td>
                 </tr>
             </table>
         </div>
     </div>
 
-
 </div>
 
 
 <div class="cartPage">
-
-
     <div class="cartWrap">
         <div class="cartItemList">
             <table class="cartListHeader">
@@ -102,7 +112,7 @@
             <!-- ko if: memeBundles().length  -->
             <table class="cartList bundles" cellspacing="0" cellpadding="0" summary="장바구니 목록"
                    data-bind="visible: isInit()" style="display: none;">
-                <caption>발그레배송 장바구니 상품 리스트 11</caption>
+                <caption>발그레배송 장바구니 상품 리스트</caption>
                 <colgroup>
                     <col style="width:37px;">
                     <col style="width:670px;">
@@ -120,22 +130,29 @@
                 <!-- ko foreach: memeBundles() -->
 
                 <!-- ko foreach: products() -->
+                ##                체크박스
                 <tr>
                     <td class="check">
                         <input type="checkbox"
-                               data-bind="checked: checked, click: function() {#*$parent.eventHandler.productClick(this);*# return true; }"/>
+                               data-bind="checked: checked, click: function() {$parent.eventHandler.productClick(this); return true; }"/>
                     </td>
                     <td class="itemInfo">
                         <div>
                             <a data-bind="attr:{href: productUrl}">
-                                <img src="" data-bind="attr:{src: thumbnailUrl }"></a>
+                                <img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
+                                     data-bind="attr:{src: thumbnailUrl }"></a>
                         </div>
-                        <div #*class="textArea fL"*#>
+                        <div class="textArea fL">
                             <p class="productName fW">
                                 <a data-bind="attr:{href: productUrl}"><!--ko text: productTitle--><!--/ko--></a>
                             </p>
-                            <div #*class="option"*#>
-                                <table #*class="optionSelect"*# cellpadding="0" cellspacing="0">
+                            <div id="listBasket">
+
+
+                            </div>
+
+                            <div class="option">
+                                <table class="optionSelect" cellpadding="0" cellspacing="0">
                                     <colgroup>
                                         <col style="width:235px;">
                                         <col style="width:90px;">
@@ -145,83 +162,6 @@
                                     </colgroup>
                                     <tbody data-bind="foreach:items">
                                     <!-- ko if: itemType != '10010604' -->
-
-
-                                    <tr #*class="itemList"*#
-                                    ##                                        data-bind="attr: {'class': isLastCart  ? 'itemList last' : 'itemList', 'data-cartId': cartId, 'data-itemId': itemId, 'data-itemCount': itemCount(), 'data-productId': productId, 'data-price': price, 'data-checked': checked()}"
-                                    >
-                                        <th class="optionTitle">
-                                            <!-- ko if: itemType == '10010604' -->
-                                            <span class="addArrow"></span>
-                                            <!-- /ko -->
-                                            <strong class="deal-item-type-title"><!--ko text: title-->
-                                                <!--/ko--></strong>
-                                            <!--ko if:isBest -->
-                                            <span class="conversion-popularity-notice">인기급상승</span>
-                                            <!--/ko-->
-                                            <p class="alertNotice" style="color: red;"
-                                               data-bind="visible: isOutOfRange">
-                                                [품절임박] 재고 <!-- ko text: quantity.max --><!-- /ko -->
-                                                <!-- ko text: self.isOutOfRange --><!-- /ko -->개
-                                            </p>
-                                            <p class="alertNotice" style="color: red; display: none;"
-                                               data-bind="visible: ui.itemCountAlert.visible">
-                                                * <!-- ko text: ui.itemCountAlert.text --><!-- /ko --> 구매 가능한 수량으로
-                                                변경되었습니다.
-                                            </p>
-                                        </th>
-                                        <td class="selectPrice each"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(price)*#"></span>원
-                                        </td>
-                                        <td class="option_cnt" data-bind="visible: ui.itemCountSelect.visible()">
-                                            <input type="hidden" data-bind="value: originalItemCount()">
-                                            <select data-bind="options: ui.itemCountSelect.options,
-                                                                    optionsText: 'text',
-                                                                    optionsValue: 'value',
-                                                                    style: ui.itemCountSelect.style,
-                                                                    optionsAfterRender: setOptionDisable,
-                                                                     attr:{'class': ui.itemCountSelect.cssClass},
-                                                                    value: itemCount() <= 10 && ui.itemCountSelect.visible() ? itemCount : ui.itemCountSelect.value,
-                                                                    event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) {#* $parents[1].eventHandler.changeItemCount(this);*#} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
-                                            </select>
-                                        </td>
-
-                                        <td class="option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
-                                            <label for="massQuantity">수량</label>
-                                            <input type="number" class="massQty" data-bind="textInput: ui.itemCountInput.value,
-                                                                event: {click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() {ui.itemCountInput.change(this); return true;} },
-                                                                style: ui.itemCountInput.style ">
-                                            <button type="button" class="changeQty" data-bind="event:{
-                                                                click: function() {ui.itemCountChangeButton.event.click(this, $parents[1].eventHandler.changeItemCount); return true;} },
-                                                                visible: ui.itemCountChangeButton.visible">수량변경
-                                            </button>
-
-                                        </td>
-                                        <td class="selectPrice"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(itemCount() * price)*# "></span>원
-                                        </td>
-                                        <td class="delete">
-                                            <button class="tI" type="button"
-                                                    data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
-                                                삭제
-                                            </button>
-                                        </td>
-                                    </tr>
-
-                                    <!-- /ko -->
-                                    </tbody>
-                                </table>
-                                <!-- ko if: hasAdditionalItem -->
-                                <table class="optionAddSelect" cellpadding="0" cellspacing="0">
-                                    <colgroup>
-                                        <col style="width:230px;">
-                                        <col style="width:90px;">
-                                        <col style="width:80px;">
-                                        <col style="width:82px;">
-                                        <col style="width:33px;">
-                                    </colgroup>
-                                    <tbody data-bind="foreach:items">
-                                    <!-- ko if: itemType == '10010604' -->
 
                                     <tr class="itemList"
                                         data-bind="attr: {'class': isLastCart  ? 'itemList last' : 'itemList', 'data-cartId': cartId, 'data-itemId': itemId, 'data-itemCount': itemCount(), 'data-productId': productId, 'data-price': price, 'data-checked': checked()}">
@@ -237,7 +177,8 @@
                                             <p class="alertNotice" style="color: red;"
                                                data-bind="visible: isOutOfRange">
                                                 [품절임박] 재고 <!-- ko text: quantity.max --><!-- /ko -->
-                                                <!-- ko text: self.isOutOfRange --><!-- /ko -->개
+                                                <!-- ko text: self.isOutOfRange -->
+                                                <!-- /ko -->개
                                             </p>
                                             <p class="alertNotice" style="color: red; display: none;"
                                                data-bind="visible: ui.itemCountAlert.visible">
@@ -245,9 +186,7 @@
                                                 변경되었습니다.
                                             </p>
                                         </th>
-                                        <td class="selectPrice each"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(price)*#"></span>원
-                                        </td>
+                                    ##                                        <td class="selectPrice each"><span data-bind="text: $parents[2].formatCurrency(price)"></span>원</td>
                                         <td class="option_cnt" data-bind="visible: ui.itemCountSelect.visible()">
                                             <input type="hidden" data-bind="value: originalItemCount()">
                                             <select data-bind="options: ui.itemCountSelect.options,
@@ -257,11 +196,11 @@
                                                                     optionsAfterRender: setOptionDisable,
                                                                      attr:{'class': ui.itemCountSelect.cssClass},
                                                                     value: itemCount() <= 10 && ui.itemCountSelect.visible() ? itemCount : ui.itemCountSelect.value,
-                                                                    event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) { #*$parents[1].eventHandler.changeItemCount(this);*#} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
+##                                                                    event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) { $parents[1].eventHandler.changeItemCount(this);} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
                                             </select>
                                         </td>
 
-                                        <td class="option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
+                                        <td class=" option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
                                             <label for="massQuantity">수량</label>
                                             <input type="number" class="massQty" data-bind="textInput: ui.itemCountInput.value,
                                                                 event: {click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() {ui.itemCountInput.change(this); return true;} },
@@ -272,9 +211,7 @@
                                             </button>
 
                                         </td>
-                                        <td class="selectPrice"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(itemCount() * price)*# "></span>원
-                                        </td>
+                                    ##                                        <td class="selectPrice"><span data-bind="text: $parents[2].formatCurrency(itemCount() * price) "></span>원</td>
                                         <td class="delete">
                                             <button class="tI" type="button"
                                                     data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
@@ -286,18 +223,17 @@
                                     <!-- /ko -->
                                     </tbody>
                                 </table>
-                                <!-- /ko -->
                             </div>
                         </div>
                     </td>
-                    <td class="price"><b data-bind="text: #*$parents[1].formatCurrency(productItemCost())*#"></b><span
-                            class="unit">원</span></td>
+
+                    <!-- /ko -->
+                ##                    <td class="price"><b data-bind="text: $parents[1].formatCurrency(productItemCost())"></b><span class="unit">원</span></td>
                     <!-- ko ifnot: $index -->
                     <td class="price last"
                         data-bind="attr: {rowspan: $parent.products().length, rowSpan: $parent.products().length}">
                         <!-- ko foreach: $parents[0].tags() -->
-                        <span data-bind="{attr:{'class': color}}"><!--ko text: #*$parents[2].formatCurrency(text) *#-->
-                            <!--/ko--><!-- ko if: type =='charge' && value == 3 -->원 이상<br> 무료배송<!-- /ko --></span>
+                    ##                        <span data-bind="{attr:{'class': color}}"><!--ko text: $parents[2].formatCurrency(text) --><!--/ko--><!-- ko if: type =='charge' && value == 3 -->원 이상<br> 무료배송<!-- /ko --></span>
                         <!-- /ko -->
 
                         <!-- ko if: $parent.bundleCost().deliveryCharge() > 0 -->
@@ -316,15 +252,13 @@
                                 <span class="pText"><!-- ko text: $parents[1].formatCurrency($parent.shortfallPriceForFreeDelivery())-->
                                     <!-- /ko -->원 이상 추가</span>하시면<br>
                                 <span class="pText">무료배송</span> 가능합니다!
+
                             </p>
                         </div>
                         <!-- /ko -->
 
                         <!-- 배송비 절약상품 -->
-                        <button type="button" class="btn-save-shipping"
-                                data-bind="visible: $parent.deliveryPartnerId != 16 && $parent.bundleCost().deliveryCharge() > 0, click: function(data, event) { #*$parents[2].saveDeliveryChargeVM.eventHandler.open(event, $parent);*#}">
-                            배송비 절약상품
-                        </button>
+                    ##                        <button type="button" class="btn-save-shipping" data-bind="visible: $parent.deliveryPartnerId != 16 && $parent.bundleCost().deliveryCharge() > 0, click: function(data, event) { $parents[2].saveDeliveryChargeVM.eventHandler.open(event, $parent);}">배송비 절약상품</button>
                     </td>
                     <!-- /ko -->
                 </tr>
@@ -335,32 +269,6 @@
                 </tbody>
             </table>
 
-##            #foreach($item in $basketListGET.basketResponse)
-                <div class="cB">
-                    <div class="priceWrap v1 fL">
-                        <table class="paymentTable" cellspacing="0" cellpadding="0" summary="결제예정금액">
-                            <caption>각 상품 금액 및 업체배송 금액0</caption>
-                            <tbody>
-                            <tr>
-                                <td class="price"><span class="priceText">발그레배송 상품금액0</span>
-                                    <!-- ko text: formatCurrency(memeCost.itemCost()) --><!-- /ko --><span
-                                            class="unit">$item.message / $item.resultCode / $item.timestamp 테스트 원</span></td>
-                                <td class="deliveryCharge"><span class="priceText">배송비0</span>
-                                    <!-- ko text: formatCurrency(memeCost.deliveryCharge()) --><!-- /ko --><span
-                                            class="unit">$!{basketListGET.BasketResponse.resultCode} / ${basketListGET.message} / ${basketListGET.resultCode}  원</span></td>
-                                <td class="totalPrice last"><span class="priceText">결제 예정금액0</span>
-                                    <!-- ko text: formatCurrency(memeCost.totalCost()) --><!-- /ko --><span
-                                            class="unit">원</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <span class="plus"></span>
-                        <span class="equal"></span>
-                    </div>
-                </div>
-##            #end
-
-
             <div class="cB">
                 <div class="priceWrap v1 fL">
                     <table class="paymentTable" cellspacing="0" cellpadding="0" summary="결제예정금액">
@@ -369,13 +277,15 @@
                         <tr>
                             <td class="price"><span class="priceText">발그레배송 상품금액</span>
                                 <!-- ko text: formatCurrency(memeCost.itemCost()) --><!-- /ko --><span
-                                        class="unit">원</span></td>
+                                        class="unit">원</span>
+                            </td>
                             <td class="deliveryCharge"><span class="priceText">배송비</span>
                                 <!-- ko text: formatCurrency(memeCost.deliveryCharge()) --><!-- /ko --><span
                                         class="unit">원</span></td>
-                            <td class="totalPrice last"><span class="priceText">결제 예정금액11</span>
+                            <td class="totalPrice last"><span class="priceText">결제 예정금액</span>
                                 <!-- ko text: formatCurrency(memeCost.totalCost()) --><!-- /ko --><span
-                                        class="unit">원</span></td>
+                                        class="unit">원</span>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -392,7 +302,8 @@
             <!-- ko with: bundleVM -->
             <!--  ko if: partnerBundles().length -->
             <table class="cartList bundles" cellspacing="0" cellpadding="0" summary="장바구니 목록"
-                   data-bind="visible: isInit()" style="display: none;">
+                   data-bind="visible: isInit()"
+                   style="display: none;">
                 <caption>업체배송 장바구니 상품 리스트</caption>
                 <colgroup>
                     <col style="width:37px;">
@@ -413,13 +324,12 @@
                 <!-- ko foreach: products() -->
                 <tr>
                     <td class="check">
-                        <input type="checkbox"
-                               data-bind="checked: checked, click: function() {#*$parent.eventHandler.productClick(this);*# return true; }"/>
+                    ##                        <input type="checkbox" data-bind="checked: checked, click: function() {$parent.eventHandler.productClick(this); return true; }"/>
                     </td>
                     <td class="itemInfo">
                         <div>
-                            <a data-bind="attr:{href: productUrl}"><img src=""
-                                                                        data-bind="attr:{src: thumbnailUrl }"></a>
+                            <a data-bind="attr:{href: productUrl}">
+                                <img src="" data-bind="attr:{src: thumbnailUrl }"></a>
                         </div>
                         <div class="textArea fL">
                             <p class="productName fW">
@@ -448,6 +358,8 @@
                                             <!--ko if:isBest -->
                                             <span class="conversion-popularity-notice">인기급상승</span>
                                             <!--/ko-->
+
+                                            dd
                                             <p class="alertNotice" style="color: red;"
                                                data-bind="visible: isOutOfRange">
                                                 [품절임박] 재고 <!-- ko text: quantity.max --><!-- /ko -->
@@ -459,9 +371,7 @@
                                                 변경되었습니다.
                                             </p>
                                         </th>
-                                        <td class="selectPrice each"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(price)*#"></span>원
-                                        </td>
+                                    ##                                        <td class="selectPrice each"><span data-bind="text: $parents[2].formatCurrency(price)"></span>원</td>
                                         <td class="option_cnt" data-bind="visible: ui.itemCountSelect.visible()">
                                             <input type="hidden" data-bind="value: originalItemCount()">
                                             <select data-bind="options: ui.itemCountSelect.options,
@@ -471,11 +381,11 @@
                                                                     optionsAfterRender: setOptionDisable,
                                                                      attr:{'class': ui.itemCountSelect.cssClass},
                                                                     value: itemCount() <= 10 && ui.itemCountSelect.visible() ? itemCount : ui.itemCountSelect.value,
-                                                                    event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) { #*$parents[1].eventHandler.changeItemCount(this);*#} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
+##                                                                    event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) { $parents[1].eventHandler.changeItemCount(this);} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
                                             </select>
                                         </td>
 
-                                        <td class="option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
+                                        <td class=" option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
                                             <label for="massQuantity">수량</label>
                                             <input type="number" class="massQty" data-bind="textInput: ui.itemCountInput.value,
                                                                 event: {click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() {ui.itemCountInput.change(this); return true;} },
@@ -486,9 +396,7 @@
                                             </button>
 
                                         </td>
-                                        <td class="selectPrice"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(itemCount() * price)*# "></span>원
-                                        </td>
+                                    ##                                        <td class="selectPrice"><span data-bind="text: $parents[2].formatCurrency(itemCount() * price) "></span>원</td>
                                         <td class="delete">
                                             <button class="tI" type="button"
                                                     data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
@@ -534,9 +442,7 @@
                                                 변경되었습니다.
                                             </p>
                                         </th>
-                                        <td class="selectPrice each"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(price)*#"></span>원
-                                        </td>
+                                    ##                                        <td class="selectPrice each"><span data-bind="text: $parents[2].formatCurrency(price)"></span>원</td>
                                         <td class="option_cnt" data-bind="visible: ui.itemCountSelect.visible()">
                                             <input type="hidden" data-bind="value: originalItemCount()">
                                             <select data-bind="options: ui.itemCountSelect.options,
@@ -546,11 +452,11 @@
                                                                     optionsAfterRender: setOptionDisable,
                                                                      attr:{'class': ui.itemCountSelect.cssClass},
                                                                     value: itemCount() <= 10 && ui.itemCountSelect.visible() ? itemCount : ui.itemCountSelect.value,
-                                                                    event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) { #*$parents[1].eventHandler.changeItemCount(this);*#} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
+##                                                                    event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) { $parents[1].eventHandler.changeItemCount(this);} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
                                             </select>
                                         </td>
 
-                                        <td class="option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
+                                        <td class=" option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
                                             <label for="massQuantity">수량</label>
                                             <input type="number" class="massQty" data-bind="textInput: ui.itemCountInput.value,
                                                                 event: {click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() {ui.itemCountInput.change(this); return true;} },
@@ -561,9 +467,7 @@
                                             </button>
 
                                         </td>
-                                        <td class="selectPrice"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(itemCount() * price)*# "></span>원
-                                        </td>
+                                    ##                                        <td class="selectPrice"><span data-bind="text: $parents[2].formatCurrency(itemCount() * price) "></span>원</td>
                                         <td class="delete">
                                             <button class="tI" type="button"
                                                     data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
@@ -579,14 +483,12 @@
                             </div>
                         </div>
                     </td>
-                    <td class="price"><b data-bind="text: #*$parents[1].formatCurrency(productItemCost())*#"></b><span
-                            class="unit">원</span></td>
+                ##                    <td class="price"><b data-bind="text: $parents[1].formatCurrency(productItemCost())"></b><span class="unit">원</span></td>
                     <!-- ko ifnot: $index -->
                     <td class="price last"
                         data-bind="attr: {rowspan: $parent.products().length, rowSpan: $parent.products().length}">
                         <!-- ko foreach: $parents[0].tags() -->
-                        <span data-bind="{attr:{'class': color}}"><!--ko text: #*$parents[2].formatCurrency(text)*# -->
-                            <!--/ko--><!-- ko if: type =='charge' && value == 3 -->원 이상<br> 무료배송<!-- /ko --></span>
+                    ##                        <span data-bind="{attr:{'class': color}}"><!--ko text: $parents[2].formatCurrency(text) --><!--/ko--><!-- ko if: type =='charge' && value == 3 -->원 이상<br> 무료배송<!-- /ko --></span>
                         <!-- /ko -->
 
                         <!-- ko if: $parent.bundleCost().deliveryCharge() > 0 -->
@@ -610,10 +512,7 @@
                         <!-- /ko -->
 
                         <!-- 배송비 절약상품 -->
-                        <button type="button" class="btn-save-shipping"
-                                data-bind="visible: $parent.deliveryPartnerId != 16 && $parent.bundleCost().deliveryCharge() > 0, click: function(data, event) { #*$parents[2].saveDeliveryChargeVM.eventHandler.open(event, $parent);*#}">
-                            배송비 절약상품
-                        </button>
+                    ##                        <button type="button" class="btn-save-shipping" data-bind="visible: $parent.deliveryPartnerId != 16 && $parent.bundleCost().deliveryCharge() > 0, click: function(data, event) { $parents[2].saveDeliveryChargeVM.eventHandler.open(event, $parent);}">배송비 절약상품</button>
                     </td>
                     <!-- /ko -->
                 </tr>
@@ -631,7 +530,8 @@
                         <tr>
                             <td class="price"><span class="priceText">업체배송 상품금액</span>
                                 <!-- ko text: formatCurrency(partnerCost.itemCost()) --><!-- /ko --><span
-                                        class="unit">원</span></td>
+                                        class="unit">원</span>
+                            </td>
                             <td class="deliveryCharge"><span class="priceText">배송비</span>
                                 <!-- ko text: formatCurrency(partnerCost.deliveryCharge()) --><!-- /ko --><span
                                         class="unit">원</span></td>
@@ -658,8 +558,9 @@
                     <p class="productText"><strong>
                         <!-- ko text: title --><!-- /ko -->에 대한 묶음상품</strong></p>
                     <p class="productText" data-bind="visible: parseInt(formattedShortfallPriceForFreeDelivery()) > 0">
-                        <strong>부족한 금액 : <strong class="number"><!-- ko text: formattedShortfallPriceForFreeDelivery -->
-                            <!-- /ko --></strong><span class="unit">원</span></strong></p>
+                        <strong>부족한
+                            금액 : <strong class="number"><!-- ko text: formattedShortfallPriceForFreeDelivery -->
+                                <!-- /ko --></strong><span class="unit">원</span></strong></p>
                     <div class="cartList">
                         <!-- ko foreach: items() -->
                         <div class="shippingRow">
@@ -678,10 +579,7 @@
                                         <span class="number"><!-- ko text: formattedPrice --><!-- /ko --></span>
                                         <span class="unit">원</span>
                                     </strong>
-                                    <button type="button" class="btnCart"
-                                            data-bind="click: function(data, event) { #*$parent.eventHandler.addCart(data, event);*# }">
-                                        담기
-                                    </button>
+                                ##                                    <button type="button" class="btnCart" data-bind="click: function(data, event) { $parent.eventHandler.addCart(data, event); }">담기</button>
                                 </div>
                             </div>
                         </div>
@@ -723,7 +621,8 @@
                         </td>
                         <td class="deliveryCharge"><span class="priceText">배송비</span>
                             <!-- ko text: formatCurrency(costInfo.deliveryCharge()) --><!-- /ko --><span
-                                    class="unit">원</span></td>
+                                    class="unit">원</span>
+                        </td>
                         <td class="totalPrice last"><span class="priceText">결제 예정금액</span>
                             <!-- ko text: formatCurrency(costInfo.totalCost()) --><!-- /ko --><span
                                     class="unit">원</span></td>
@@ -737,16 +636,18 @@
 
         <div class="btnWrap mA cB"
              data-bind="with: bundleVM, visible: bundleVM.memeBundles().length > 0 || bundleVM.partnerBundles().length > 0">
-            <button data-returnurl="http://www.memebox.com/product/514490?list=%EB%B2%A0%EC%8A%A4%ED%8A%B8%20VS%20List"
+            <button data-returnurl="https://www.memebox.com/product/24459?listId=recommendedProducts514236TopLeft&amp;listName=%EB%8B%A4%EB%A5%B8%20%EA%B3%A0%EA%B0%9D%EB%8B%98%EC%9D%B4%20%ED%95%A8%EA%BB%98%20%EB%B3%B4%EC%8B%A0%20%EC%83%81%ED%92%88"
                     type="button" class="shoppingBtn tI">쇼핑 계속하기
             </button>
 
-            <a href="https://memebox.com/login?returnUrl=https://order.memebox.com/cart">
-                <button type="button" class="buyBtn tI">결제하기</button>
-            </a>
+            <button type="button" class="buyBtn tI"
+                    data-bind="click: function() { eventHandler.checkout(this); return true;}">
+                결제하기
+            </button>
 
             <div class="pointSave"><span class="point"><!-- ko text: formatCurrency(costInfo.savingPoint()) -->
-                <!-- /ko -->&nbsp;P</span> 가 적립될 예정입니다.
+                <!-- /ko -->&nbsp;P</span>
+                가 적립될 예정입니다.
             </div>
         </div>
     </div>
@@ -755,13 +656,13 @@
 
 <input type="hidden" id="agent"
        value="{&#34;platform&#34;:&#34;web&#34;,&#34;os&#34;:&#34;Windows 10&#34;,&#34;browser&#34;:&#34;Chrome&#34;,&#34;version&#34;:&#34;58&#34;,&#34;terminalId&#34;:10001001,&#34;anonymousId&#34;:&#34;&#34;}">
-<script type="text/javascript" src="js/cart/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="js/cart/knockout-latest.js"></script>
-<script type="text/javascript" src="js/json2.min.js"></script>
+##<script type="text/javascript" src="js/cart/jquery-1.12.4.min.js"></script>
+##<script type="text/javascript" src="js/cart/knockout-latest.js"></script>
+##<script type="text/javascript" src="js/cart/js/json2.min.js"></script>
 
 
 <!--<script type="text/javascript" src="//s1cdn.memebox.com/web/js/optimize/jquery.cookie.js?v=155-sc6413"></script>-->
-<script type="text/javascript" src="//s1cdn.memebox.com/web/js/optimize/jquery.cookie.js"></script>
+##<script type="text/javascript" src="//s1cdn.memebox.com/web/js/optimize/jquery.cookie.js"></script>
 <div id="footer" class="mA">
     <div class="footerTopInner">
         <ul class="oF landing">
@@ -831,7 +732,6 @@
                         <li>
                             <a href="mailto:partners@memebox.com">온라인 입점 문의 &gt;</a>
                             <div class="copyBox p_left">partners@memebox.com</div>
-
                         </li>
                         <li>
                             <a class="mg_t" href="mailto:b2b@memebox.com">WHOLESALE 문의 &gt;</a>
@@ -870,14 +770,15 @@
                     <li><a href="http://memebox.com/policy/email">이메일 무단 수집 거부 방침</a></li>
                 </ul>
                 <address>
-                    (주)발그레박스 | 대표자 : | 개인 정보 보호 책임자 : | 사업자등록번호 111-11-11111 <a
-                        href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2118847525"
+                    (주) | 대표자 : | 개인 정보 보호 책임자 : | 사업자등록번호 111-11-11111 <a
+                ##                        href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2118847525"
                         target="_blank" ga-event="푸터,푸터_사업자정보확인">사업자 정보 확인 &gt;</a><br>
-                    통신판매 신고번호 : 제 호 | <br>
-                    본사 : <a href="http://memebox.com/page/8386" target="_parent" ga-event="푸터,푸터_오시는길">발그레박스 오시는길
-                    &gt;</a>
+                    통신판매 신고번호 : 제 --호 | 건강기능식품판매 : 제 호 | <br>
+                    본사 : Office H 10층 <a href="http://memebox.com/page/8386"
+                                         target="_parent" ga-event="푸터,푸터_오시는길">발그레박스
+                    오시는길 &gt;</a>
                     <br>
-                    물류센터 :
+                    ~
                     <br>
                     <span class="e_text">Copyright ﻿ⓒ 2017 balgre Inc. All rights reserved.</span><br>
                     <span class="lastLine"><strong>LG U+ 구매 안전 서비스</strong> : 고객님의 안전거래를 위해 현금 등으로 결제 시, 저희 사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다. <a
@@ -1029,7 +930,7 @@
 </div>
 <!-- ##need jqeury library first##-->
 <script src="/js/jquery.bxslider.min.js"></script>
-<script src="/js/footer/web/memebox.js?v=1494985500000"></script>
+<script src="/js/footer/web/memebox.js?v=1493534700000"></script>
 
 <!-- 그루솔루션 공통 스크립트 -->
 
@@ -1065,7 +966,7 @@
 </script>
 
 
-<script data-main="/js/app.js?v=1494985500000" src="/js/require.js"></script>
+##<script data-main="js/cart/js/app.js?v=1493534700000" src="js/cart/js/require.js"></script>
 <script>
     $('.ico').mouseover(function () {
         $('.popupDeliv').show()
@@ -1114,6 +1015,7 @@
     window.onerror = ErrorCheck;
 </script>
 
+##<script type="text/javascript" src="js/memeboxHeader.js?v=1493534700000"></script>
 
 <!-- Google Tag Manager -->
 <noscript>
@@ -1195,6 +1097,8 @@
             analytics.SNIPPET_VERSION = "3.1.0";
             analytics.load("9tsiYz7B0EtNE4w16UG9Kvz00Yf5yvdQ");
 
+            analytics.identify(3135985);
+
         }
     }();
 
@@ -1215,6 +1119,28 @@
 
 <
 script
-src = "js/common/cartSendSegment.js?v=1494985500000" ></script>
+src = "js/cart/common/cartSendSegment.js?v=1493534700000" ></script>
+
+<script>
+    //    $(document).ready(function () {
+
+    $.getJson("/basket", function (list) {
+        $(list).each(function () {
+
+            $("#listBasket").append(#addBasket
+            )
+            ;
+
+        })
+
+    })
+
+
+    //    })
+
+
+</script>
+
+
 </body>
 </html>

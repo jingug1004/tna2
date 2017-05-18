@@ -58,7 +58,6 @@ public class BasketRetroImpl {
 
     private static final Logger logger = LoggerFactory.getLogger(BasketRetroImpl.class);
 
-
     private static final String API_URL = "http://digiserver.cafe24.com:10000";
     private BasketRetro basketRetro = null;
 
@@ -66,23 +65,23 @@ public class BasketRetroImpl {
         this.basketRetro = this.create();
     }
 
-    public BasketResponse basketGET(String token) {
+    public BasketResponse basketListGET(String token) {
 
-        logger.info("retroImpl Token ? : " + token);
+        logger.info("retroImpl Token : " + token);
 
         Call<BasketResponse> call = this.basketRetro.basketGET(token,
                 "application/x-www-form-urlencoded");
 
-        logger.info("response ? : " + token);
+        logger.info("token : " + token);
 
         try {
             Response<BasketResponse> response = call.execute();
 
-            logger.info("try response " + response);
+            logger.info("response : " + response);
 
             if (response.isSuccessful()) {
 
-                logger.info(String.valueOf(response.toString()));
+                logger.info("response.toString() : " + response.toString());
 //                System.out.println(response.body());
 
                 return response.body();
@@ -94,25 +93,25 @@ public class BasketRetroImpl {
         return null;
     }
 
-    public BasketResponse basketPOST(String token3, int itemCount, long itemId) {
+    public BasketResponse basketAddPOST(String token3, int itemCount, long itemId) {
 
-        Call<BasketResponse> call = this.basketRetro.basketPOST
+        Call<BasketResponse> call = this.basketRetro.basketAddPOST
                 (token3, "application/x-www-form-urlencoded", itemCount, itemId);
 
-            try {
-                Response<BasketResponse> response = call.execute();
+        try {
+            Response<BasketResponse> response = call.execute();
 
-                if (response.isSuccessful()) {
+            if (response.isSuccessful()) {
 
-                    logger.info(response.toString());
+                logger.info("lll~~~ @BasketRetroImpl " + response.toString() + " @BasketRetroImpl lll~~~");
 
-                    return response.body();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+                return response.body();
             }
-            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return null;
+    }
 
 
     protected BasketRetro create() {

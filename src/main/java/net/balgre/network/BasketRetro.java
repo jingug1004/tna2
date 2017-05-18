@@ -58,7 +58,7 @@ public interface BasketRetro {
     );
 
     @POST("/api/v1/basket/add")
-    Call<BasketResponse> basketPOST(
+    Call<BasketResponse> basketAddPOST(
             @Header("X-Authorization") String token,
             @Header("Content-Type") String contentType,
             @Query("item_id") int item_id2,

@@ -63,7 +63,7 @@ public class ProductController {
     @RequestMapping(value = "/product", method = RequestMethod.GET)
     public String productGET () throws Exception {
 
-        logger.info("lll~~~ 전체 상품 메뉴로 1 . lll~~~");
+        logger.info("lll~~~ To all products menu 1 . lll~~~");
 
         return "/product/product";
 
@@ -72,13 +72,13 @@ public class ProductController {
     @RequestMapping(value = "/bestProduct", method = RequestMethod.GET)
     public String bestProductGET (Model model) throws Exception {
 
-        logger.info("lll~~~ 베스트 상품 메뉴로 2 .. lll~~~");
+        logger.info("lll~~~ To best products menu 2 .. lll~~~");
 
         model.addAttribute("showBestProduct", service.bestResponseGET());
 
         logger.info("lll~~~ " + model.toString() + " lll~~~");
 
-        logger.info("lll~~~ 모델 베스트 상품 메뉴로 2 .. lll~~~");
+        logger.info("lll~~~ To model products menu 2 .. lll~~~");
 
         return "/product/bestProduct";
 
@@ -88,13 +88,13 @@ public class ProductController {
     @RequestMapping(value = "/boxProduct", method = RequestMethod.GET)
     public String boxProductGET (Model model) throws Exception {
 
-        logger.info("lll~~~ 박스 상품 메뉴로 3 ... lll~~~");
+        logger.info("lll~~~ To all products menu 3 ... lll~~~");
 
         model.addAttribute("showBoxProduct", service.boxGET());
 
         logger.info(model.toString());
 
-        logger.info("lll~~~ 박스 상품 메뉴로 3 ... lll~~~");
+        logger.info("lll~~~ To all products menu 3 ... lll~~~");
 
         return "/product/boxProduct";
 
@@ -104,13 +104,13 @@ public class ProductController {
     @RequestMapping(value = "/categoryProduct", method = RequestMethod.GET)
     public void categoryProductGET (Model model) throws Exception {
 
-        logger.info("lll~~~ 카테고리 정렬 기능으로 4 .... lll~~~");
+        logger.info("lll~~~ To category sort function 4 .... lll~~~");
 
         model.addAttribute("showCategoryProduct", service.boxGET());
 
         logger.info(model.toString());
 
-        logger.info("lll~~~ 카테고리 정렬 기능으로 4 .... lll~~~");
+        logger.info("lll~~~ To category sort function 4 .... lll~~~");
 
 //        return "/product/categoryProduct";
     }
@@ -118,13 +118,13 @@ public class ProductController {
     @RequestMapping(value = "/category2Product", method = RequestMethod.GET)
     public void category2ProductGET (Model model) throws Exception {
 
-        logger.info("lll~~~ 카테고리2 정렬 기능으로 5 ..... lll~~~");
+        logger.info("lll~~~ To category sort2 function 5 ..... lll~~~");
 
         model.addAttribute("showCategory2Product", service.boxGET());
 
         logger.info(model.toString());
 
-        logger.info("lll~~~ 카테고리2 정렬 기능으로 5 ..... lll~~~");
+        logger.info("lll~~~ To category sort2 function 5 ..... lll~~~");
 
 //        return "/product/categoryProduct";
     }
@@ -133,13 +133,13 @@ public class ProductController {
     public String detailProductGET (@RequestParam("product_id") long product_id1,
                                   Model model) throws Exception {
 
-        logger.info("lll~~~ 상품 상세 페이지로 6 ...... lll~~~");
+        logger.info("lll~~~ To product detail page 6 ...... lll~~~");
 
         model.addAttribute("choiceDetailProduct", service.productDetailGET(product_id1));
 
         logger.info(model.toString());
 
-        logger.info("lll~~~ 상품 상세 페이지로 6 ...... lll~~~");
+        logger.info("lll~~~ To product detail page 6 ...... lll~~~");
 
         return "/product/productDetail";
 

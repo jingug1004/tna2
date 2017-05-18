@@ -47,6 +47,8 @@ import net.balgre.domain.BasketResponse;
 
 public interface BasketService {
 
-    public BasketResponse basketPOST(String token, int itemCount, long itemId) throws Exception;
+    public BasketResponse basketListGET(String token) throws Exception;
+
+    public BasketResponse basketAddPOST(String token, int itemCount, long itemId) throws Exception;
 
 }

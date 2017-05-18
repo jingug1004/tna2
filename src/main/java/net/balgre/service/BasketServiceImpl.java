@@ -35,9 +35,10 @@ import org.springframework.stereotype.Service;
  * How :
  *
  * @author  숨 크리에이티브 개발팀 김진국
- * @since   2017/04/10
  * @version 1.0
  * @see
+ * @since   2017/04/10
+ *
  *
  * <pre>
  * << 개정이력(Modification Information) >>
@@ -45,7 +46,7 @@ import org.springframework.stereotype.Service;
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
  *  2017/05/01  김진국          최초 생성
- *  </pre>
+ * </pre>
  */
 
 @Service
@@ -53,27 +54,54 @@ public class BasketServiceImpl implements BasketService {
 
     private static final Logger logger = LoggerFactory.getLogger(BasketServiceImpl.class);
 
-
     @Override
-    public BasketResponse basketPOST(String token, int itemCount, long itemId) throws Exception {
+    public BasketResponse basketListGET(String token) throws Exception {
 
         BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
 
-        BasketResponse response = basketRetroImpl.basketPOST("Bearer " + token, itemCount, itemId);
+        BasketResponse response = basketRetroImpl.basketListGET("Bearer " + token);
 
         if (response == null) {
             return null;
         }
 
         if (response.getResultCode().equals("200")) {
-            logger.info("lll~~~ 성공: " + response.getMessage() + "and " + response.getTimestamp() + " lll~~~");
+//        if (response.getResultCode() == "200") {
+            logger.info("lll~~~ ListGET 성공: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
 
             return response;
+
         } else {
-            logger.info("lll~~~ 실패: " + response.getMessage());
+            logger.info("lll~~~ ListGET 실패: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
             return null;
         }
 
     }
+
+
+    @Override
+    public BasketResponse basketAddPOST(String token, int itemCount, long itemId) throws Exception {
+
+        BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
+
+        BasketResponse response = basketRetroImpl.basketAddPOST("Bearer " + token, itemCount, itemId);
+
+        if (response == null) {
+            return null;
+        }
+
+//        if (response.getResultCode().equals("200")) {
+        if (response.getResultCode() == "200") {
+            logger.info("lll~~~ AddPOST 성공: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
+
+            return response;
+
+        } else {
+            logger.info("lll~~~ AddPOST 실패: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
+            return null;
+        }
+
+    }
+
 
 }

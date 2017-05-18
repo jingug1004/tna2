@@ -355,17 +355,17 @@
             <div class="infoTop">
                 <div class="tag">
 
-                    ## <span class="freeIcon">무료배송</span>
-                    ## #foreach($item in $choiceDetailProduct.product)
+                ## <span class="freeIcon">무료배송</span>
+                ## #foreach($item in $choiceDetailProduct.product)
                     #if(${choiceDetailProduct.product.productDelivery.freeDelivery} != 0)
-                    <span class="freeIcon">배송비 $number.format(${choiceDetailProduct.product.productDelivery.deliveryPrice})
+                        <span class="freeIcon">배송비 $number.format(${choiceDetailProduct.product.productDelivery.deliveryPrice})
                                 원</span> &nbsp;&nbsp;
                     #end
 
                     #if(${choiceDetailProduct.product.productDelivery.freeDelivery} == 0)
-                    <span class="freeIcon">무료배송</span>
+                        <span class="freeIcon">무료배송</span>
                     #elseif(${choiceDetailProduct.product.productDelivery.freeDelivery} >= 1)
-                    <span class="freeIcon">$number.format(${choiceDetailProduct.product.productDelivery.freeDelivery})
+                        <span class="freeIcon">$number.format(${choiceDetailProduct.product.productDelivery.freeDelivery})
                             원 이상 무료배송</span>
                     #end
 
@@ -425,7 +425,6 @@
                     <dt class="additionalTit">배송비</dt>
                     <dd class="additionalDesc">
 
-
                         #if(${choiceDetailProduct.product.productDelivery.freeDelivery} != 0)
                             <span class="freeIcon">배송비 $number.format(${choiceDetailProduct.product.productDelivery.deliveryPrice})
                                 원</span> &nbsp;&nbsp;
@@ -437,7 +436,6 @@
                             <span class="freeIcon">$number.format(${choiceDetailProduct.product.productDelivery.freeDelivery})
                                 원 이상 무료배송</span>
                         #end
-
                     </dd>
 
                     <dt class="additionalTit">고객리뷰</dt>
@@ -479,32 +477,26 @@
                 <div class="infoItemOption ">
                     <div class="singleItem itemOptionBox fir" id="plusBasket">
                         <select #*class="dealSelect" data-required="true"*# class="choiceItem">
-                            <option value="" option="">상품을 선택해주세요.</option>
+                            <option value="" class="selectedChoiceP" #*selected="selected"*#>상품을 선택해주세요.</option>
                             #foreach($item in $choiceDetailProduct.productItem)
-                                <option value="$item.itemId|$item.price|$item.maxItemCnt|$item.itemName"
-                                #*value="$!{item.itemName}"
-                                        id="$!{item.itemName}"
-                                        data-price="9900"
-                                        data-limit="5"
-                                        data-min="1"
-                                        data-soldout="2"
-                                        data-stock="82"
-                                        data-nearly-soldout="2"
-                                        class="itemListOption"*#>$!{item.itemName} / 남은 수량 $!{item.maxItemCnt}
+                                <option value="$item.itemId|$item.price|$item.maxItemCnt|$item.itemName">
+                                    $!{item.itemName} / 남은 수량 $!{item.maxItemCnt}
                                 </option>
                             #end
                         </select>
                     </div>
                 </div>
                 <input id="quantity" type="hidden" value="1"/>
-                <form action="/basketAdd" method="post">
+
+            ##                ----- 장바구니 폼 태그 <form> 시작 -----
+                <form action="" method="post" id="ReadingInfoSelectForm">
                 ##                    <ul id="orders1"></ul>
                 ##                    밑의 박민아 실장님 <form class="ListOption"> 추가 - 이것 사용 안 해도 됨.
-                    <button type="submit" #*id="beforeSubmitBasket"*#>장바구니07</button>
+                ##                    <button #*type="submit"*# id="beforeSubmitBasket">장바구니07</button>
+                ##                    <button type="button" data-toggle="modal" data-target="#cartPopupwrap">장바구니modify</button>
 
                     <div class="selectedItemListBlock">
                         <div class="inner">
-
                             <form class="ListOption" #*action="/basketAdd" method="post" *#>
                                 <ul id="orders1"></ul>
                             </form>
@@ -514,7 +506,7 @@
                     <div class="OptionTotalPrice">
                         <div id="cartItem1"></div>
                     </div>
-                </form>
+                ##                </form>
             </div>
 
             <div class="descInfoBtn">
@@ -522,22 +514,20 @@
                     <form name="cart" action="/checkout/withoutCart" method="post"></form>
 
                     <span class="infoBtnCell purchaseBlock" data-test="true">
-                    <button type="submit" class="btnDeal btnMeme purchaseBtn" ga-event="view,view_buy"><span
-                            class="btnTxt btnTxtPurchase">즉시구매</span></button>
-                </span>
+                    <button type="submit" class="btnDeal btnMeme purchaseBtn" ga-event="view,view_buy">
+                        <span class="btnTxt btnTxtPurchase">즉시구매</span></button></span>
+
                     <span class="infoBtnCell cartBlock">
-
-                    <button type="submit" class="btnDeal btnWhite cart" ga-event="view,view_cart" id="buttonCartAddBtn"><span
-                            class="btnTxt btnTxtCart" href="/cart">장바구니</span></button>
-                    ##                                            <a class="memebox-deal" id="basketList"
-                                                                 href="javascript:;">장바구니03</a>
-                    ##                <a href="javascript:;" onclick="javascript:showPopup()">장바구니04</a>
-
-                </span>
+                    <button class="btnDeal btnWhite cart" ga-event="view,view_cart" #*id="buttonCartAddBtn"*#
+                            id="beforeSubmitBasket"><span class="btnTxt btnTxtCart" href="/cart">장바구니</span></button>
+                    </span>
+                ##                    <input type="button" id="beforeSubmitBasket" name="ReadingInfoSelectBtn" value="장바구니 전송7"/>
+                    </form>
+                ##                ----- 장바구니 폼 태그 <form> 끝 -----
 
                     <span class="infoBtnCell last">
                     <button type="button" class="btnWish btnDeal btnWhite" id="wishBtn"><span class="btnTxt btnTxtLike">찜</span></button>
-                </span>
+                    </span>
 
                     <input type="hidden" id="isNewMember" value=""/>
                     <input type="hidden" id="isNewMemberDeal" value=""/>
@@ -1996,79 +1986,79 @@
                     <table cellpadding="0" cellspacing="0" style="" id="information_195855" class="information">
                         <tbody>
 
-                        #foreach($item in $choiceDetailProduct.productItem)
-                        ## <img src="http://sumcrimage.cafe24.com/$!{item.productId}"/>
-                        ## $!{item.productId}
+                            #foreach($item in $choiceDetailProduct.productItem)
+                            ## <img src="http://sumcrimage.cafe24.com/$!{item.productId}"/>
+                            ## $!{item.productId}
 
 
-                        <tr>
-                            <th>사이즈 / 용량 / 중량</th>
-                            <td>$!{item.info1}</td>
-                        </tr>
+                            <tr>
+                                <th>사이즈 / 용량 / 중량</th>
+                                <td>$!{item.info1}</td>
+                            </tr>
 
-                        <tr>
-                            <th>제품주요사양</th>
-                            <td>$!{item.info2}</td>
-                        </tr>
+                            <tr>
+                                <th>제품주요사양</th>
+                                <td>$!{item.info2}</td>
+                            </tr>
 
-                        <tr>
-                            <th>사용기한/개봉 후 사용시간</th>
-                            <td>$!{item.info3}</td>
-                        </tr>
+                            <tr>
+                                <th>사용기한/개봉 후 사용시간</th>
+                                <td>$!{item.info3}</td>
+                            </tr>
 
-                        <tr>
-                            <th>제조/생산일자</th>
-                            <td>$!{item.info4}</td>
-                        </tr>
+                            <tr>
+                                <th>제조/생산일자</th>
+                                <td>$!{item.info4}</td>
+                            </tr>
 
-                        <tr>
-                            <th>사용방법</th>
-                            <td>$!{item.info5}</td>
-                        </tr>
+                            <tr>
+                                <th>사용방법</th>
+                                <td>$!{item.info5}</td>
+                            </tr>
 
-                        <tr>
-                            <th>제조자</th>
-                            <td>$!{item.info6}</td>
-                        </tr>
+                            <tr>
+                                <th>제조자</th>
+                                <td>$!{item.info6}</td>
+                            </tr>
 
-                        <tr>
-                            <th>제조판매업자</th>
-                            <td>$!{item.info7}</td>
-                        </tr>
+                            <tr>
+                                <th>제조판매업자</th>
+                                <td>$!{item.info7}</td>
+                            </tr>
 
-                        <tr>
-                            <th>제조국</th>
-                            <td>$!{item.info8}</td>
-                        </tr>
+                            <tr>
+                                <th>제조국</th>
+                                <td>$!{item.info8}</td>
+                            </tr>
 
-                        <tr>
-                            <th>주요 성분</th>
-                            <td>$!{item.info9}
-                            </td>
-                        </tr>
+                            <tr>
+                                <th>주요 성분</th>
+                                <td>$!{item.info9}
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <th>식품의약품 안전청 심사필 유무</th>
-                            <td>$!{item.info10}</td>
-                        </tr>
+                            <tr>
+                                <th>식품의약품 안전청 심사필 유무</th>
+                                <td>$!{item.info10}</td>
+                            </tr>
 
-                        <tr>
-                            <th>사용시 주의사항</th>
-                            <td>$!{item.info11}
-                            </td>
-                        </tr>
+                            <tr>
+                                <th>사용시 주의사항</th>
+                                <td>$!{item.info11}
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <th>품질보증기준</th>
-                            <td>$!{item.info12}</td>
-                        </tr>
+                            <tr>
+                                <th>품질보증기준</th>
+                                <td>$!{item.info12}</td>
+                            </tr>
 
-                        <tr>
-                            <th>소비자 상담관련 전화번호
-                            </th>
-                            <td>$!{item.info13}</td>
-                        </tr>
-                        #end
+                            <tr>
+                                <th>소비자 상담관련 전화번호
+                                </th>
+                                <td>$!{item.info13}</td>
+                            </tr>
+                            #end
 
                         </tbody>
                     </table>
@@ -2077,7 +2067,7 @@
                 <!-- E : 상품안내 -->
 
             </div>
-            ## 배송/교환/반품정보
+        ## 배송/교환/반품정보
             <div id="content_Deli" class="contentsDetail">
 
                 <h2 class="hidden">배송/교환/반품 정보</h2>
@@ -2111,17 +2101,18 @@
                         ##                        #end
 
                             #if($!{choiceDetailProduct.product.productDelivery.freeDelivery} != 0)
-                            <td>$number.format($!{choiceDetailProduct.product.productDelivery.deliveryPrice})원 (일부지역 제외)
-                                <span class="txtGray">주문 시 상품금액과 함께 배송비를 결제하셔야 합니다.</span>
-                            </td> &nbsp;&nbsp;
+                                <td>$number.format($!{choiceDetailProduct.product.productDelivery.deliveryPrice})원 (일부지역
+                                    제외)
+                                    <span class="txtGray">주문 시 상품금액과 함께 배송비를 결제하셔야 합니다.</span>
+                                </td> &nbsp;&nbsp;
                             #end
 
                             #if($!{choiceDetailProduct.product.productDelivery.freeDelivery} == 0)
-                            <td>무료배송</td>
+                                <td>무료배송</td>
                             #elseif($!{choiceDetailProduct.product.productDelivery.freeDelivery} >= 1)
-                            <td>$number.format($!{choiceDetailProduct.product.productDelivery.freeDelivery})
-                                원 이상 무료배송
-                            </td>
+                                <td>$number.format($!{choiceDetailProduct.product.productDelivery.freeDelivery})
+                                    원 이상 무료배송
+                                </td>
                             #end
                         </tr>
                         <tr>
@@ -2199,23 +2190,21 @@
                                 <div class="infoItemOption ">
                                     <div class="singleItem itemOptionBox fir">
                                         <select #*class="dealSelect"*# #*data-required="true"*# class="choiceItem2">
-                                            <option value="" option="">상품을 선택해주세요.</option>
+                                            <option value="" class="selectedChoiceP2">상품을 선택해주세요.</option>
                                             #foreach($item in $choiceDetailProduct.productItem)
-                                                <option value="$item.itemId|$item.price|$item.maxItemCnt|$item.itemName">
-                                                    $!{item.itemName} / 남은 수량 $!{item.maxItemCnt}
+
+                                                <option value="$item.itemId|$item.price|$item.maxItemCnt|$item.itemName">$!{item.itemName}
+                                                    / 남은 수량 $!{item.maxItemCnt}
                                                 </option>
                                             #end
                                         </select>
-
                                     </div>
-
-
                                 </div>
-                            ##                                <div class="cartItem"></div>
+
                                 <input id="quantity" type="hidden" value="1"/>
+
+                            ##                ----- 장바구니 폼 태그 <form> 시작 -----
                                 <form action="/basketAdd" method="post">
-                                ##                                    <ul id="orders2"></ul>
-                                    <button type="submit" #*id="beforeSubmitBasket"*#>장바구니08</button>
 
                                     <div class="selectedItemListBlock">
                                         <div class="inner">
@@ -2229,7 +2218,7 @@
                                     <div class="OptionTotalPrice">
                                     </div>
                                     <div id="cartItem2"></div>
-                                </form>
+                                ##                                </form>
                             </div>
 
                             <div class="descInfoBtn">
@@ -2243,11 +2232,12 @@
                                 </span>
 
                                     <span class="infoBtnCell cartBlock">
-                                    <button type="submit" class="btnDeal btnWhite cart" ga-event="view,view_cart"
-                                            id="buttomCartAddBtn">
-                                <span class="btnTxt btnTxtCart">장바구니</span></button>
-                                    <a class="box" href="/cart">장바구니</a>
+                                    <button #*type="submit"*# class="btnDeal btnWhite cart" ga-event="view,view_cart"
+                                    #*id="buttomCartAddBtn"*# id="beforeSubmitBasket2">
+                                <span class="btnTxt btnTxtCart" href="/cart">장바구니</span></button>
                                 </span>
+                                    </form>
+                                ##                ----- 장바구니 폼 태그 <form> 끝 -----
 
                                     <span class="infoBtnCell last">
                                     <button type="button" class="btnWish btnDeal btnWhite" id="wishBtn">
@@ -2826,13 +2816,14 @@
     <div class="popupContents">
         <p class="subTitle tI">상품이 장바구니에 담겼습니다</p>
         <div class="cartList">
-            <p class="dealTitle">[에뛰드] ★무료배송★ 4월 클리어런스</p>
+            <p class="dealTitle">
+                [${choiceDetailProduct.product.brand.brandName}] ${choiceDetailProduct.product.prodName}</p>
             <span class="itemShow"></span>
         </div>
         <div class="oF">
-            <a class="fL btn cart" id="goCartBtn" href="https://order.memebox.com/cart" ga-event="장바구니 팝업_장바구니">장바구니로
+            <a class="fL btn cart" id="goCartBtn" href="/basketList" ga-event="장바구니 팝업_장바구니">장바구니로
                 이동</a>
-            <button class="fR btn back" id="shoppingBtn" ga-event="장바구니 팝업_계속 쇼핑">계속 쇼핑하기</button>
+            <button class="fR btn back" id="shoppingBtn" ga-event="장바구니 팝업_계속 쇼핑" data-dismiss="modal">계속 쇼핑하기</button>
         </div>
     </div>
 </div>
@@ -2964,13 +2955,12 @@
                     <li><a href="/policy/email">이메일 무단 수집 거부 방침</a></li>
                 </ul>
                 <address>
-                    (주)발그레박스 | 대표자 : 채경민 | 개인 정보 보호 책임자 :  | 사업자등록번호  <a
+                    (주)발그레박스 | 대표자 : 채경민 | 개인 정보 보호 책임자 : | 사업자등록번호 <a
                         href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2118847525"
                         target="_blank" ga-event="푸터,푸터_사업자정보확인">사업자 정보 확인 ></a><br/>
-                    통신판매 신고번호 : 제 호 | 건강기능식품판매 : 제  호 | 의료기기판매 : 제 호<br/>
-                    본사 :  | 물류센터 :
-                    <a
-                            href="/render/8386" target="_parent" ga-event="푸터,푸터_오시는길">발그레박스 오시는길
+                    통신판매 신고번호 : 제 호 | 건강기능식품판매 : 제 호 | 의료기기판매 : 제 호<br/>
+                    본사 : | 물류센터 :
+                    <a href="/render/8386" target="_parent" ga-event="푸터,푸터_오시는길">발그레박스 오시는길
                         ></a><br/>
                     <span class="e_text">Copyright ﻿ⓒ 2012 memebox Inc. All rights reserved.</span><br/>
                     <span class="lastLine"><strong>LG U+ 구매 안전 서비스</strong> : 고객님의 안전거래를 위해 현금 등으로 결제 시, 저희 사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다. <a
@@ -3245,7 +3235,21 @@
     ##
     ##
     ##            var allData = {"product_id": product_id, "photo": photoValues, "sort": sortValues};
+    function wrapEntirePage() {
+        //            $('html').css({width:'100%'});
+        $('body').css('position', 'relative');
+        $('body').css('overflow-y', 'hidden');
+        $('body').css('overflow-x', 'hidden');
+        $('.cover').css('display', 'block');
+    }
 
+    function unwrapEntirePage() {
+        //            $('html').css({width:'100%', position:''});
+        $('body').css('position', '');
+        $('body').css('overflow-y', '');
+        $('body').css('overflow-x', '');
+        $('.cover').css('display', 'none');
+    }
 
     ##    리뷰 댓글 밑으로 출력
     console.log("ready!");
@@ -3290,30 +3294,109 @@
     //    })
 
     //    $(document).ready(function () {
-    $("#beforeSubmitBasket2").on("click", function () {
+    $("#beforeSubmitBasket").on("click", function () {
+
+        //        $('#basketList').click(function () {
+    ##        var result = confirm('${choiceDetailProduct.product.prodName} 상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?');
+    ##        var productData = "${choiceDetailProduct.product}";
+
+//        var productCode = $('#choiceItem option:selected').val();
+//
+////        var itemCount = $("#itemCount").val();
+//        var itemCount = 1;
+//        var itemId = 118;
+////        var itemId = (productCode.split("|")[0]);
+
+//        var formData = new FormData();
+//        formData.append("itemId", itemId);
+//        formData.append("itemCount", itemCount);
+//        formData.append("itemPrice", productItemCost);
+
+//        console.log(itemCount + ", " + itemId)
+
+        var formData = $("#ReadingInfoSelectForm").serialize();
+
+        console.log("lll~~~~ " + formData + " + formData, this success! lll~~~");
 
         $.ajax({
             type: 'post',
-            url: '/basketAdd2',
-            contentType: false,
+            url: '/basketAdd',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
             processData: false,
+//            data: JSON.stringify(formData),
             data: formData,
-            dataType: 'text',
-            success: function (data, responseData, textStatus, jqXHR) {
+            success: function (data) {
 
-                console.log("성공! data : " + data + "responseData : " + responseData + "textStatus : " + textStatus + "jqXHR : " + jqXHR);
+                console.log(data + "Succ 01!");
 
-                if (data.resultCode == 200) {
-                    if (confirm('${choiceDetailProduct.product.prodName} 상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?') == true) {
-                        location.replace('/basketList');
+                if (data == "basketSucc") {
+                    console.log(data + "Succ 02!!");
+//                    alert("등록 되었습니다.");
 
-                    } else {
-                        return false;
-                    }
-                };
+//                    $(".cartPopupWrap").show();
+//                    $(".cartPopupWrap").center();
+//
+//                    $(".cartPopupWrap").append();
+
+                    wrapEntirePage();
+                    $('.cartPopupWrap').show();
+
+                    $('#shoppingBtn').on('click', function (e) {
+                        unwrapEntirePage();
+
+                        // Segment Analytics: Button Behaviour
+//                        analytics.track('Button Clicked', {
+//                            category: 'Product Page',
+//                            label: 'Popup > Continue Shopping'
+//                        });
+                        $('.cartPopupWrap').hide();
+                    });
+
+                    $('#cartClose').on('click', function (e) {
+                        unwrapEntirePage();
+                        // Segment Analytics: Button Behaviour
+//                        analytics.track('Button Clicked', {
+//                            category: 'Product Page',
+//                            label: 'Popup > Close Popup'
+//                        });
+//                        $('.cartPopupWrap').hide();
+                        $('.cartPopupWrap').close();
+                    });
+
+                    $('#goCartBtn').click(function () {
+                        // Segment Analytics: Button Behaviour
+                        analytics.track('Button Clicked', {
+                            category: 'Product Page',
+                            label: 'Popup > Go To Cart'
+                        });
+                        window.location.href = "https://order.memebox.com/cart";
+                    });
+
+                }
             },
+
+//            success: function (data, responseData, textStatus, jqXHR) {
+//
+//                console.log("성공! data : " + data + "responseData : " + responseData + "textStatus : " + textStatus + "jqXHR : " + jqXHR);
+//
+//                if (data == "basketSucc") {
+////                    모달 팝업(쇼)
+////                    cartPopupWrap
+//
+////                    $('div.cartPopupWrap').modal({
+//////                        remote : 'layer.html'
+////                    });
+//                    console.log(data + "this success!");
+////                    $('#cartPopupWrap').dialog(
+////                            {modal: true, show: 'slide', title: 'Create a Popup', width: 400, height: 300}
+////                    );
+//
+//                }
+////                getPage()
+//            },
             error: function (data, textStatus, errorThrown) {
-                alert("에러! \n" + data + "\n" + textStatus + "\n" + errorThrown);
+                alert("로그인 하신 후 옵션을 선택해주세요.");
+//                alert("error! data? \n" + data + "textStatus? \n" + textStatus + "errorThrown? \n" + errorThrown);
             }
         });
 //            location.replace('/basketList');
@@ -3331,124 +3414,16 @@
     $(document).ready(function () {
 //        $("#basketList").on("click", function (event) {
 //        $('#choiceItem').click(function (e) {
-        $('.choiceItem2').on("change", function () {
 
+        $('.choiceItem').on("change", function (event) {
 
-//            var productCode = $('.choiceItem option:selected').val();
-//            var productText = $('.choiceItem option:selected').html();
-
-            var productCode = $('.choiceItem2 option:selected').val();
-##            var productText = $!{item.itemName}
-            var productText = productCode.split("|")[3]
-
-            var itemId = (productCode.split("|")[0]);
-            var productPrice = (productCode.split("|")[1]);
-            var maxItemCnt = productCode.split("|")[2];
-
-//            var itemId2 = (productCode2.split("|")[0]);
-//            var productPrice2 = (productCode2.split("|")[1]);
-//            var maxItemCnt2 = productCode2.split("|")[2];
-
-            var quantity = $('#quantity').val();
-
-            var num = 1;
-
-            var multiplePrice = productPrice * num;
-//            var multiplePrice2 = productPrice2 * num;
-
-            totalPrice += multiplePrice;
-//            totalPrice2 += multiplePrice2;
-
-//            var index = $('#orders li').size();
-
-            if (checkDupl(itemId)) {
-
-                var orderHtml = productText + '<input type="hidden" name="items[]" value="' + itemId + '" /> ';
-
-                orderHtml += '<div class="number"> ';
-
-                orderHtml += '<input type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
-                orderHtml += 'class="decreaseQuantity" value="' + itemId + '">수량 내림</input> ';
-
-                orderHtml += '<input class="upDown' + itemId + '" type="hidden" name="upDown[' + itemId + '].cnt" ';
-                orderHtml += 'value="1"><span class="changeNumber" id="numberUpDown' + itemId + '" value="1">1</span></input> ';
-
-                orderHtml += '<input type="button" ';
-                orderHtml += 'onclick="increaseQuantity(' + itemId + ',' + maxItemCnt + ',' + productPrice + ');" ';
-                orderHtml += 'class="increaseQuantity" value="' + itemId + '">수량 올림</input> ';
-
-                orderHtml += productPrice + '원      //';
-
-                orderHtml += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
-
-                orderHtml += '부분합<span name="getSum" id="sum' + itemId + '">' + multiplePrice + '</span> 원     //';
-
-                orderHtml += '<input type="button" class="orderRemoveButton" value="취소" /> </div> ';
-            }
-
-
-            if (checkDupl(itemId)) {
-
-                var orderHtml2 = productText + '<input type="hidden" name="items2[]" value="' + itemId + '" /> ';
-
-                orderHtml2 += '<div class="number"> ';
-
-                orderHtml2 += '<input type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
-                orderHtml2 += 'class="decreaseQuantity" value="' + itemId + '">수량 내림</input> ';
-
-                orderHtml2 += '<input class="upDown2' + itemId + '" type="hidden" name="upDown[' + itemId + '].cnt" ';
-                orderHtml2 += 'value="1"><span class="changeNumber" id="numberUpDown2' + itemId + '" value="1">1</span></input> ';
-
-                orderHtml2 += '<input type="button" ';
-                orderHtml2 += 'onclick="increaseQuantity(' + itemId + ',' + maxItemCnt + ',' + productPrice + ');" ';
-                orderHtml2 += 'class="increaseQuantity" value="' + itemId + '">수량 올림</input> ';
-
-                orderHtml2 += productPrice + '원      //';
-
-                orderHtml2 += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
-
-                orderHtml2 += '부분합<span name="getSum" id="sum2' + itemId + '">' + multiplePrice + '</span> 원     //';
-
-                orderHtml2 += '<input type="button" class="orderRemoveButton" value="취소" /> </div> ';
-            }
-
-            var liEl = $('<li/>').html(orderHtml).appendTo('#orders1');
-
-
-            var liEl2 = $('<li/>').html(orderHtml2).appendTo('#orders2');
-
-
-            liEl.find('.orderRemoveButton').on("click", function () {
-//                totalPrice -= multiplePrice;
-                liEl.remove();
-                liEl2.remove();
-
-                sumBasket(itemId, productPrice, num);
-//                sumBasket2(itemId2, productPrice2, num);
-//              $('#cartItem').html("<span id="total_txt">총 가격 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
-            });
-
-            liEl2.find('.orderRemoveButton').on("click", function () {
-//                totalPrice -= multiplePrice;
-                liEl2.remove();
-                liEl.remove();
-
-                sumBasket(itemId, productPrice, num);
-//                sumBasket2(itemId2, productPrice2, num);
-//              $('#cartItem').html("<span id="total_txt">총 가격 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
-            });
-
-            sumBasket(itemId, productPrice, num);
-//            sumBasket2(itemId2, productPrice2, num);
-//              $('#cartItem').html("<span id="total_txt">총 가격 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
-        });
-
-        $('.choiceItem').on("change", function () {
 
             var productCode = $('.choiceItem2 option:selected').val();
             var productText = productCode.split("|")[3];
 
+//            var selected = $('.choiceItem option:selected').var("choice0").attr("selected", "selected");
             var productCode = $('.choiceItem option:selected').val();
+            var selected = $('.selectedChoiceP').prop("selected", "selected");
             var productText = productCode.split("|")[3];
 
             var itemId = (productCode.split("|")[0]);
@@ -3470,7 +3445,6 @@
             console.log(productCode.split("|")[1] + " 1 . itemPrice lll~~~");
             console.log(productCode.split("|")[2] + " 1 . maxItemCnt lll~~~");
 
-
             totalPrice += multiplePrice;
 //            totalPrice2 += multiplePrice2;
 
@@ -3481,55 +3455,55 @@
 
             if (checkDupl(itemId)) {
 
-                var orderHtml2 = productText + '<input type="hidden" name="items2[]" value="' + itemId + '" /> ';
+                var orderHtml2 = '<span class="productOptionName">' + productText + '</span>' + '<input type="hidden" name="items2[]" value="' + itemId + '">';
 
-                orderHtml2 += '<div class="number"> ';
+                orderHtml2 += '<input type="hidden" name="selected" value="' + selected + '"> ';
+                orderHtml2 += '<span class="numberQty"> ';
 
-                orderHtml2 += '<input type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
-                orderHtml2 += 'class="decreaseQuantity" value="' + itemId + '">수량 내림</input> ';
+                orderHtml2 += '<button type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
+                orderHtml2 += 'class="decreaseQuantity" value="' + itemId + '"></button> ';
 
-                orderHtml2 += '<input class="upDown2' + itemId + '" type="hidden" name="upDown[' + itemId + '].cnt" ';
-                orderHtml2 += 'value="1"><span class="changeNumber" id="numberUpDown2' + itemId + '" value="1">1</span></input> ';
+                orderHtml2 += '<input id ="putinQty" class="upDown2' + itemId + '" type="text" name="upDown[' + itemId + '].cnt" ';
+                orderHtml2 += 'value="1" data-min="1"><span class="changeNumber" id="numberUpDown2' + itemId + '" value="1">1</span></input> ';
 
-                orderHtml2 += '<input type="button" ';
+                orderHtml2 += '<button type="button" ';
                 orderHtml2 += 'onclick="increaseQuantity(' + itemId + ',' + maxItemCnt + ',' + productPrice + ');" ';
-                orderHtml2 += 'class="increaseQuantity" value="' + itemId + '">수량 올림</input> ';
-
-                orderHtml2 += productPrice + '원      //';
+                orderHtml2 += 'class="increaseQuantity" value="' + itemId + '"></button></span>';
 
                 orderHtml2 += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
 
-                orderHtml2 += '부분합<span name="getSum" id="sum2' + itemId + '">' + multiplePrice + '</span> 원     //';
+                orderHtml2 += '<span name="getSum" id="sum2' + itemId + '">' + multiplePrice + '</span> 원';
 
-                orderHtml2 += '<input type="button" class="orderRemoveButton" value="취소" /> </div> ';
+                orderHtml2 += '<input type="button" class="orderRemoveButton" value="취소" />';
+
             }
 
 
             if (checkDupl(itemId)) {
 
-                var orderHtml = productText + '<input type="hidden" name="items[]" value="' + itemId + '" /> ';
+                var orderHtml = '<span class="productOptionName">' + productText + '</span>' + '<input type="hidden" name="items[]" value="' + itemId + '">';
 
-                orderHtml += '<div class="number"> ';
 
-                orderHtml += '<input type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
-                orderHtml += 'class="decreaseQuantity" value="' + itemId + '">수량 내림</input> ';
+                orderHtml += '<input type="hidden" name="selected" value="' + selected + '"> ';
+                orderHtml += '<span class="numberQty"> ';
 
-                orderHtml += '<input class="upDown' + itemId + '" type="hidden" name="upDown[' + itemId + '].cnt" ';
-                orderHtml += 'value="1"><span class="changeNumber" id="numberUpDown' + itemId + '" value="1">1</span></input> ';
+                orderHtml += '<button type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
+                orderHtml += 'class="decreaseQuantity" value="' + itemId + '"></button> ';
+
+                orderHtml += '<input id ="putinQty" class="upDown' + itemId + '" type="text" name="upDown[' + itemId + '].cnt" ';
+                orderHtml += 'value="1" data-min="1"><span class="changeNumber" id="numberUpDown' + itemId + '" value="1">1</span></input> ';
 
                 orderHtml += '<input type="button" ';
                 orderHtml += 'onclick="increaseQuantity(' + itemId + ',' + maxItemCnt + ',' + productPrice + ');" ';
-                orderHtml += 'class="increaseQuantity" value="' + itemId + '">수량 올림</input> ';
-
-                orderHtml += productPrice + '원      //';
+                orderHtml += 'class="increaseQuantity" value="' + itemId + '"></input></span>';
 
                 orderHtml += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
 
-                orderHtml += '부분합<span name="getSum" id="sum' + itemId + '">' + multiplePrice + '</span> 원     //';
+                orderHtml += '<span name="getSum" id="sum' + itemId + '">' + multiplePrice + '</span> 원';
 
-                orderHtml += '<input type="button" class="orderRemoveButton" value="취소" /> </div> ';
+                orderHtml += '<input type="button" class="orderRemoveButton" value="취소" />';
+
             }
-
             var liEl2 = $('<li/>').html(orderHtml2).appendTo('#orders2');
 
             var liEl = $('<li/>').html(orderHtml).appendTo('#orders1');
@@ -3541,18 +3515,6 @@
             console.log("lll~~~ " + maxItemCnt + " 2-b-ㅁ .. third lll~~~");
             console.log("lll~~~ " + multiplePrice + " 2-b-ㅂ .. third lll~~~");
 
-
-//                var liEl = $('<li/>').html(orderHtml).appendTo('#orders2');
-
-//                var orderHtml = productText + '<input type="hidden" name="items[]" value="' + itemId + '" /> / ';
-//                orderHtml += '<div class="number">';
-//                orderHtml += '<input type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" class="decreaseQuantity" value="' + itemId + '">수량 내림</input><input class="upDown' + itemId + '" type="hidden" name="upDown[' + itemId + '].cnt" value="1"><span id="numberUpDown' + itemId + '" value="1">1</span></input> ';
-//                orderHtml += '<input type="button" onclick="increaseQuantity(' + itemId + ',' + maxItemCnt + ', ' + productPrice + ');" class="increaseQuantity" value="' + itemId + '">수량 올림</input> ';
-//                orderHtml += productPrice + '원      //' + '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
-//                orderHtml += '합 <span name="getSum" id="sum' + itemId + '">' + multiplePrice + '</span> 원       ';
-//                orderHtml += '<input type="button" class="orderRemoveButton" value="취소" /> </div> ';
-
-
             liEl.find('.orderRemoveButton').on("click", function () {
 //                totalPrice -= multiplePrice;
                 liEl.remove();
@@ -3560,8 +3522,18 @@
 
                 sumBasket(itemId, productPrice, num);
 //                sumBasket2(itemId2, productPrice2, num);
-//              $('#cartItem').html("<span id="total_txt">총 가격 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
-                console.log(totalPrice + " 3-a ... lll~~~");
+//              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
+                event.preventDefault();
+
+
+
+//                $('.choiceItem').toggle();
+//                $('.choiceItem2').toggle();
+
+//                location.reload();
+
+                console.log(totalPrice + " 3-a ... sumBasket del 1button lll~~~");
+
             });
 
             liEl2.find('.orderRemoveButton').on("click", function () {
@@ -3571,14 +3543,154 @@
 
                 sumBasket(itemId, productPrice, num);
 //                sumBasket2(itemId2, productPrice2, num);
-//              $('#cartItem').html("<span id="total_txt">총 가격 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
-                console.log(totalPrice2 + " 3-b ... lll~~~");
+//              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
+
+//                $('.choiceItem').toggle();
+//                $('.choiceItem2').toggle();
+
+                event.preventDefault();
+
+//                location.reload();
+
+                console.log(totalPrice2 + " 3-b ... sumBasket del 1button lll~~~");
             });
 
             sumBasket(itemId, productPrice, num);
 //            sumBasket2(itemId2, productPrice2, num);
-//              $('#cartItem').html("<span id="total_txt">총 가격 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
-            console.log(totalPrice + " 4 .... lll~~~");
+//              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
+            console.log(totalPrice + " 4 .... Final sumBasket totalPrice 1button lll~~~");
+            console.log(totalPrice2 + " 4 .... Final sumBasket totalPrice2 1button lll~~~");
+
+//            $('.choiceItem').trigger("change", function(event) {
+//                event.stopPropagation();
+//            });
+
+            event.preventDefault();
+        });
+
+        $('.choiceItem2').on("change", function (event) {
+
+            event.preventDefault();
+//            var productCode = $('.choiceItem option:selected').val();
+//            var productText = $('.choiceItem option:selected').html();
+
+            var productCode = $('.choiceItem option:selected').val();
+            var productText = productCode.split("|")[3];
+
+            var productCode = $('.choiceItem2 option:selected').val();
+            var selected = $('.selectedChoiceP2').prop("selected", "selected");
+            var productText = productCode.split("|")[3];
+//            var productText = $('.choiceItem2 option:selected').html();
+
+            var itemId = (productCode.split("|")[0]);
+            var productPrice = (productCode.split("|")[1]);
+            var maxItemCnt = productCode.split("|")[2];
+
+            var selected = $('.selectedChoiceP2').attr("selected", "selected");
+
+
+//            var itemId2 = (productCode2.split("|")[0]);
+//            var productPrice2 = (productCode2.split("|")[1]);
+//            var maxItemCnt2 = productCode2.split("|")[2];
+            var quantity = $('#quantity').val();
+
+            var num = 1;
+
+            var multiplePrice = productPrice * num;
+//            var multiplePrice2 = productPrice2 * num;
+
+            totalPrice += multiplePrice;
+//            totalPrice2 += multiplePrice2;
+
+//            var index = $('#orders li').size();
+
+
+            if (checkDupl(itemId)) {
+
+                var orderHtml = '<span class="productOptionName">' + productText + '</span>' + '<input type="hidden" name="items[]" value="' + itemId + '" /> ';
+
+                orderHtml += '<span class="numberQty"> ';
+
+                orderHtml += '<button type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
+                orderHtml += 'class="decreaseQuantity" value="' + itemId + '"></button> ';
+
+                orderHtml += '<input id ="putinQty" class="upDown' + itemId + '" type="text" name="upDown[' + itemId + '].cnt" ';
+                orderHtml += 'value="1" data-min="1"><span class="changeNumber" id="numberUpDown' + itemId + '" value="1">1</span></input> ';
+
+                orderHtml += '<button type="button" ';
+                orderHtml += 'onclick="increaseQuantity(' + itemId + ',' + maxItemCnt + ',' + productPrice + ');" ';
+                orderHtml += 'class="increaseQuantity" value="' + itemId + '"></button></span> ';
+
+                orderHtml += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
+
+                orderHtml += '<span name="getSum" id="sum' + itemId + '">' + multiplePrice + '</span> 원 ';
+
+                orderHtml += '<input type="button" class="orderRemoveButton" value="취소" />';
+
+            }
+
+
+            if (checkDupl(itemId)) {
+
+                var orderHtml2 = '<span class="productOptionName">' + productText + '</span>' + '<input type="hidden" name="items2[]" value="' + itemId + '">';
+
+                orderHtml2 += '<span class="numberQty"> ';
+
+                orderHtml2 += '<button type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
+                orderHtml2 += 'class="decreaseQuantity" value="' + itemId + '"></button> ';
+
+                orderHtml2 += '<input id ="putinQty" class="upDown2' + itemId + '" type="text" name="upDown[' + itemId + '].cnt" ';
+                orderHtml2 += 'value="1" data-min="1"><span class="changeNumber" id="numberUpDown2' + itemId + '" value="1">1</span></input> ';
+
+                orderHtml2 += '<button type="button" ';
+                orderHtml2 += 'onclick="increaseQuantity(' + itemId + ',' + maxItemCnt + ',' + productPrice + ');" ';
+                orderHtml2 += 'class="increaseQuantity" value="' + itemId + '"></button></span>';
+
+                orderHtml2 += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
+
+                orderHtml2 += '<span name="getSum" id="sum2' + itemId + '">' + multiplePrice + '</span> 원';
+
+                orderHtml2 += '<input type="button" class="orderRemoveButton" value="취소" />';
+
+            }
+
+            var liEl = $('<li/>').html(orderHtml).appendTo('#orders1');
+
+            var liEl2 = $('<li/>').html(orderHtml2).appendTo('#orders2');
+
+
+            liEl.find('.orderRemoveButton').on("click", function () {
+//                totalPrice -= multiplePrice;
+                liEl.remove();
+                liEl2.remove();
+
+                sumBasket(itemId, productPrice, num);
+//                sumBasket2(itemId2, productPrice2, num);
+//              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
+
+
+                console.log(totalPrice + " 3-a ... sumBasket del 2button lll~~~");
+            });
+
+            liEl2.find('.orderRemoveButton').on("click", function () {
+//                totalPrice -= multiplePrice;
+                liEl2.remove();
+                liEl.remove();
+
+                sumBasket(itemId, productPrice, num);
+//                sumBasket2(itemId2, productPrice2, num);
+//              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
+
+
+                console.log(totalPrice + " 3-b ... sumBasket del 2button lll~~~");
+
+            });
+
+            sumBasket(itemId, productPrice, num);
+//            sumBasket2(itemId2, productPrice2, num);
+//              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
+            console.log(totalPrice + " 4 .... Final sumBasket totalPrice 2button lll~~~");
+            console.log(totalPrice2 + " 4 .... Final sumBasket totalPrice2 2button lll~~~");
         });
 
     });
@@ -3604,7 +3716,6 @@
         $('.upDown' + itemId).val(num);
         $('.upDown2' + itemId).val(num);
         sumBasket(itemId, productPrice, num);
-        sumBasket2(itemId, productPrice, num);
     }
 
     function decreaseQuantity(itemId, productPrice) {
@@ -3624,7 +3735,6 @@
         $('.upDown' + itemId).val(num);
         $('.upDown2' + itemId).val(num);
         sumBasket(itemId, productPrice, num);
-        sumBasket2(itemId, productPrice, num);
     }
 
     //    상품 단가의 구입 개수를 곱한 부분합
@@ -3641,61 +3751,53 @@
             totalSum += parseInt($(this).text());
         });
 
-        $('span[name=getSum2]').each(function () {
-            totalSum += parseInt($(this).text());
-        });
-
-        $('#cartItem1').text(totalSum / 2);
-        $('#cartItem2').text(totalSum / 2);
+        $('#cartItem1').html("<span id=\"total_txt\">총 상품금액 : </span><span id=\"SumProductP\"> " + totalSum / 2 + "</span><span id=\"KR_won\">원</span>");
+        $('#cartItem2').html("<span id=\"total_txt\">총 상품금액 : </span><span id=\"SumProductP\"> " + totalSum / 2 + "</span><span id=\"KR_won\">원</span>");
 
     }
 
-    //    상품 단가의 구입 개수를 곱한 부분합
-    function sumBasket2(itemId, productPrice, num) {
-
-        var toSum = productPrice * num;
-
-        $('#sum' + itemId).text(toSum);
-        $('#sum2' + itemId).text(toSum);
-
-        var totalSum = 0;
-
-        $('span[name=getSum]').each(function () {
-            totalSum += parseInt($(this).text());
-        });
-
-        $('span[name=getSum2]').each(function () {
-            totalSum += parseInt($(this).text());
-        });
-
-        $('#cartItem1').text(totalSum / 2);
-        $('#cartItem2').text(totalSum / 2);
-
-    }
 
     //    옵션 같은 상품 선택 중복 체크 - 중복이라면 아무런 작동 안 되게!
     function checkDupl(itemId) {
 
         var valId = "sum" + itemId;
+        var valId2 = "sum2" + itemId;
+
         var valAttr = true;
 
         $('span[name=getSum]').each(function () {
 
-            console.log($(this).attr("id") + "중복 아이디 확인00");
-            console.log(valId + "중복 아이디 확인01");
+            console.log($(this).attr("id") + "$(this).attr(id) 00");
+            console.log(valId + "valId 01");
+            console.log(valAttr + "valId 01-a");
 
             var attrId = $(this).attr("id");
 
-            if (valId == attrId) {
-                console.log(valId + "중복 아이디 확인02");
+            if (valId == attrId || valId2 == attrId || valId == valId2) {
+                console.log(valId + "valId 02");
                 valAttr = false;
                 return;
             }
+
         });
 
-        console.log(valId + "중복 아이디 확인03");
+        console.log(valId + "valId 03 - 아무것도 안 누르고 처음 눌렀을 때");
+
+//        $('.choiceItem').toggle();
+//        $('.choiceItem2').toggle();
 
         return valAttr;
+
+//        $('.choiceItem').on("toggleRecentSave", function (event) {
+//            event.preventDefault();
+//        }
+//        $('.choiceItem2').on("toggleRecentSave", function (event) {
+//            event.preventDefault();
+//        }
+
+        console.log(valAttr + "valAttr 03");
+
+
     }
     ## ----- 상품 장바구니 이동 전 아이템(옵션) 선택 끝 -----
 
@@ -3738,7 +3840,8 @@
         } else {
             $('.memeTab').removeClass('fixed');
             $('#dealSimpleOption').addClass('bottom');
-            //$simpleOption.hide();
+            //$simpleOption.hide()
+            ;
         }
     }
 
@@ -3789,5 +3892,6 @@
 </script>
 
 </body>
+
 
 </html>

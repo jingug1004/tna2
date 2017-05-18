@@ -1,5 +1,5 @@
 a.dealLink:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .btn {
@@ -35,14 +35,14 @@ a.dealLink:hover {
 
 .btnMeme {
     color: #fff;
-    background-color: #ff5073;
+    background-color: #ff8fa7;
     -webkit-box-shadow: 0 2px 0 0 rgba(196, 51, 80, 0.95);
     -moz-box-shadow: 0 2px 0 0 rgba(196, 51, 80, 0.95);
     box-shadow: 0 2px 0 0 rgba(196, 51, 80, 0.95)
 }
 
 .btnWhite {
-    color: #ff5073;
+    color: #ff8fa7;
     background-color: #fff;
     -webkit-box-shadow: 0 2px 0 0 rgba(255, 148, 169, 0.95);
     -moz-box-shadow: 0 2px 0 0 rgba(255, 148, 169, 0.95);
@@ -67,7 +67,8 @@ a.dealLink:hover {
 .memeTab {
     position: relative;
     background: #f9f9fa;
-    *zoom: 1
+    *zoom: 1;
+    height: 45px;
 }
 
 .memeTab:before, .memeTab:after {
@@ -83,7 +84,7 @@ a.dealLink:hover {
 .memeTab .memeTabInner {
     position: relative;
     width: 1080px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .memeTab li {
@@ -105,7 +106,8 @@ a.dealLink:hover {
     font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
     line-height: 1.5;
     text-align: center;
-    letter-spacing: 0
+    letter-spacing: 0;
+    cursor: pointer;
 }
 
 .memeTab .tabArr {
@@ -121,7 +123,8 @@ a.dealLink:hover {
 
 .memeTab .on {
     color: #fff;
-    background-color: #ff839c
+    background-color: #ff8fa7;
+    height: 21px;
 }
 
 .memeTab .on .tabArr {
@@ -1250,7 +1253,8 @@ dd.cardBenefitWrap {
     width: 1080px;
     background: #f9f9fa;
     margin: 0 auto;
-    *zoom: 1
+    *zoom: 1;
+    height: 45px;
 }
 
 .dealContents .fixed ul:before, .dealContents .fixed ul:after {
@@ -1433,7 +1437,7 @@ dd.cardBenefitWrap {
 
 #dealSimpleOption .simpleOptionInner {
     position: relative;
-    width: 1048px;
+    width: 1080px;
     margin: 0 auto
 }
 
@@ -1571,8 +1575,6 @@ dd.cardBenefitWrap {
     position: relative;
     margin: 13px 0 0 0;
     padding: 0;
-    border: 1px solid #e0e0e0;
-    border-width: 1px 0
 }
 
 #dealSimpleOption.open .selectedItemListBlock .inner {
@@ -3312,15 +3314,16 @@ a.starScore button.overR {
     overflow: hidden;
 }
 
-#orders li{
+
+#orders1 li, #orders2 li{
 	position: relative;
     display: block;
-    margin: -1px 0 0 0;
     padding: 12px 12px 8px 14px;
     border: 1px solid #e0e0e0;
-    border-width: 1px 0;
+    border-width: 1px 0 0;
     background: #f9f9fa;
 }
+
 
 .productOptionName{
 	margin: 0 16px 0 0;
@@ -3343,12 +3346,7 @@ a.starScore button.overR {
 }
 
 .changeNumber{
-	padding: 0.25em 20px 0.25em 16px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-left: none;
-    border-right: none;
-    margin-right: -3px;
+    display: none;
 }
 
 .increaseQuantity{
@@ -3364,7 +3362,7 @@ a.starScore button.overR {
 /**  옵션 후 총 가격 표시   **/
 .OptionTotalPrice{
 	text-align: right;
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 #SumProductP{
