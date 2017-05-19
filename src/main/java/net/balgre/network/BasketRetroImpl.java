@@ -93,10 +93,10 @@ public class BasketRetroImpl {
         return null;
     }
 
-    public BasketResponse basketAddPOST(String token3, int itemCount, long itemId) {
+    public BasketResponse basketAddPOST(String token3,  long itemId, int itemCount) {
 
         Call<BasketResponse> call = this.basketRetro.basketAddPOST
-                (token3, "application/x-www-form-urlencoded", itemCount, itemId);
+                (token3, "application/x-www-form-urlencoded", itemId, itemCount);
 
         try {
             Response<BasketResponse> response = call.execute();

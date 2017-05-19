@@ -21,9 +21,14 @@
 
 package net.balgre.service;
 
-import net.balgre.domain.*;
-
 import java.util.List;
+
+import net.balgre.domain.BestResponse;
+import net.balgre.domain.CategoryResponse;
+import net.balgre.domain.CategoryResponse2;
+import net.balgre.domain.Product;
+import net.balgre.domain.ProductResponse;
+import net.balgre.domain.ProductTimeSale;
 
 /**
  * Created by user on 2017-04-21 오전 9:30
@@ -52,13 +57,21 @@ public interface ProductService {
 
     public BestResponse bestResponseGET() throws Exception;
 
-    public List<Product> boxGET() throws Exception;
-
     public CategoryResponse categoryResponseGET() throws Exception;
 
-    public CategoryResponse2 categoryResponse2GET() throws Exception;
-
     public ProductResponse productDetailGET(long product_id1) throws Exception;
+    
+    /*time sale list by minho*/
+    public List<ProductTimeSale> timeSaleList2();
+    
+    /*balgeure box by minho*/
+    public List<Product> balgeureBox2();
+    
+    /*new product by minho*/
+    public BestResponse newProduct2();
+    
+    /*category list by minho*/
+    public CategoryResponse2 categoryList2();
 
 
 }

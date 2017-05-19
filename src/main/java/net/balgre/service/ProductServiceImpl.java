@@ -22,6 +22,9 @@ package net.balgre.service;
 
 import net.balgre.domain.*;
 import net.balgre.network.ProductRetroImpl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -50,7 +53,8 @@ import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
 
     @Override
     public BestResponse bestResponseGET() throws Exception {
@@ -64,16 +68,6 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> boxGET() throws Exception {
-
-        ProductRetroImpl client = new ProductRetroImpl();
-
-        List<Product> box = client.boxGET();
-
-        return box;
-    }
-
-    @Override
     public CategoryResponse categoryResponseGET() throws Exception {
 
         ProductRetroImpl client = new ProductRetroImpl();
@@ -81,17 +75,6 @@ public class ProductServiceImpl implements ProductService {
         CategoryResponse categoryResponse = client.categoryResponseGET();
 
         return categoryResponse;
-
-    }
-
-    @Override
-    public CategoryResponse2 categoryResponse2GET() throws Exception {
-
-        ProductRetroImpl client = new ProductRetroImpl();
-
-        CategoryResponse2 categoryResponse2 = client.categoryResponse2GET();
-
-        return categoryResponse2;
     }
 
     @Override
@@ -103,5 +86,65 @@ public class ProductServiceImpl implements ProductService {
 
         return response;
     }
+
+    
+    /*time sale list by minho*/
+	@Override
+	public List<ProductTimeSale> timeSaleList2() {
+		// TODO Auto-generated method stub
+		
+		ProductRetroImpl PRI = new ProductRetroImpl();
+		
+		List<ProductTimeSale> res = PRI.timeSaleList();
+		
+		logger.info("[ProductServiceImpl] 레트로에서 받은 res : " + res);
+		
+		return res;
+	}
+
+	
+	/*balgeure box by minho*/
+	@Override
+	public List<Product> balgeureBox2() {
+		// TODO Auto-generated method stub
+		
+		ProductRetroImpl PRI = new ProductRetroImpl();
+		
+		List<Product> res = PRI.balgeureBox();
+		
+		logger.info("[ProductServiceImpl] 레트로에서 받은 res : " + res);
+		
+		return res;
+	}
+
+	
+	/*new product by minho*/
+	@Override
+	public BestResponse newProduct2() {
+		// TODO Auto-generated method stub
+		
+		ProductRetroImpl PRI = new ProductRetroImpl();
+		
+		BestResponse res = PRI.newProduct();
+		
+		logger.info("[ProductServiceImpl] 레트로에서 받은 res : " + res);
+		
+		return res;
+	}
+
+	
+	/*category list by minho*/
+	@Override
+	public CategoryResponse2 categoryList2() {
+		// TODO Auto-generated method stub
+		
+		ProductRetroImpl PRI = new ProductRetroImpl();
+		
+		CategoryResponse2 res = PRI.categoryList();
+		
+		logger.info("[CategoryServiceImpl] 레트로에서 받은 res : " + res);
+		
+		return res;
+	}
 
 }

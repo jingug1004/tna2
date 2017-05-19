@@ -15,22 +15,13 @@ public interface ProductRetro {
     @GET("/api/product/best")
     Call<BestResponse> bestResponseGET();
 
-    @GET("/api/product/box")
-    Call<List<Product>> boxGET();
-
     @GET("/api/product/category")
     Call<CategoryResponse> categoryResponseGET();
-
-    @GET("/api/product/category2")
-    Call<CategoryResponse2> categoryResponse2GET();
 
     @GET("/api/product/detail")
     Call<ProductResponse> detailGET(
             @Query("product_id") long product_id2
     );
-
-    @GET("/api/product/list")
-    Call<BestResponse> listGET();
 
     @GET("/api/product/list/{page}")
     Call<HashMap<String, Object>> listPageGET(
@@ -57,8 +48,29 @@ public interface ProductRetro {
             @Query("menu_id") String sub_category2
     );
 
+    
+    /*time sale list by minho*/
     @GET("/api/product/time")
-    Call<List<ProductTimeSale>> timeGET();
+    Call<List<ProductTimeSale>> timeSaleList(
+    );
+    
+    
+    /*balgeure box by minho*/
+    @GET("/api/product/box")
+    Call<List<Product>> balgeureBox(
+    );
+    
+    
+    /*new product by minho*/
+    @GET("/api/product/list")
+    Call<BestResponse> newProduct(
+    );
+    
+    
+    /*category list by minho*/
+    @GET("/api/product/category2")
+    Call<CategoryResponse2> categoryList(
+    );
 
 
 }

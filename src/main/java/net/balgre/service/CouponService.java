@@ -1,14 +1,12 @@
 package net.balgre.service;
 
-import net.balgre.domain.Coupon;
-import net.balgre.domain.EventCouponResponse;
+import net.balgre.domain.CouponUserResponse;
 
 public interface CouponService {
 
-    /*event coupon list*/
-    public EventCouponResponse eventCoupon(Long e_id);
-
-    /*coupon*/
-    public Coupon coupon(Long e_id);
-
+    /*coupon list*/
+	public CouponUserResponse myCouponList2(String token);
+	
+	/*coupon insert*/
+	public CouponUserResponse myCouponInsert2(String token, String c_id);
 }

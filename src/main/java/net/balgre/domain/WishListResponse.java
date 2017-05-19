@@ -19,7 +19,7 @@ public class WishListResponse {
     private String message;
     private String resultCode;
     private String timestamp;
-    private List<Wishlist> wishlist;
+    private List<Wishlist> wishList;
 
 
 }

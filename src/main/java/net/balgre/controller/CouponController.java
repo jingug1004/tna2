@@ -1,13 +1,20 @@
 package net.balgre.controller;
 
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import net.balgre.domain.EventCouponResponse;
+import net.balgre.domain.CouponUser;
+import net.balgre.domain.CouponUserResponse;
+import net.balgre.dto.LoginDTO02;
 import net.balgre.service.CouponService;
 
 @Controller
@@ -18,19 +25,35 @@ public class CouponController {
 	@Autowired
 	private CouponService couponService;
 	
-	/*event coupon list*/
-	@RequestMapping("/eventCoupon")
-	public String eventCouponList(Model model, long e_id) {
+	
+	/*coupon list*/
+	@RequestMapping(value = "/my/coupon")
+	public String myCouponList(Model model, HttpSession session, String token) throws Exception {
 		
-		logger.info("e_id : " + e_id);
+		LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
 		
-		EventCouponResponse ecr = couponService.eventCoupon(e_id);
+		CouponUserResponse res = couponService.myCouponList2(login.getToken());
+
+		List<CouponUser> couponUser = res.getCouponUserList();
+		logger.info("[Controller] 서비스에서 받은 CouponUserResponse 값 : " + couponUser);
 		
-		logger.info("ecr : " + ecr);
+		model.addAttribute("CouponUser", couponUser);
 		
-		model.addAttribute("couponList", ecr);
+		return "myPage/myCoupon/myCouponList";
+	}
+	
+	
+	/*coupon insert*/
+	@RequestMapping(value = "/my/couponInsert", method = RequestMethod.POST)
+	public String myCouponInsert(Model model, HttpSession session, String token, String c_id) throws Exception {
 		
-		return "";
+		LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
+		
+		CouponUserResponse res = couponService.myCouponInsert2(login.getToken(), c_id);
+		
+		logger.info("[Controller] 서비스에서 받은 CouponResponse 값 : " + res);
+		
+		return "myPage/myCoupon/myCouponList";
 		
 	}
 	

@@ -2,7 +2,7 @@
 <html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
 
-<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/js/common/jquery-1.10.2.min.js"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <link rel="stylesheet"type="text/css" href="/css/member_css.css">
@@ -43,7 +43,7 @@
   });
 </script>
 
-<script type="text/javascript" src="/js/screenfull.js"></script>
+<script type="text/javascript" src="/js/common/screenfull.js"></script>
 
 </head>
 
@@ -153,6 +153,30 @@ input{
                     <td class="lable">이름</td>
                     <td colspan="2" class="rightpadding">
                         <input class="form-control" id="name" type="text"  name="name" value="" placeholder="이름을 등록해주세요" style="width:100%;float:left">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lable">아이디(이메일)</td>
+                    <td class="rightpadding" style="padding-right:0px;">
+                       <input class="form-control" id="email" type="text"  name="email" value="" placeholder="이메일 주소" style="ime-mode:disabled;box-shadow: none; border:0px;">
+                    </td>
+                    <td class="select_box right" style="padding:0 15px 0 30px;" width="20px">
+                        <select style="height:42px;width:100%;background:#fff;border:0px;box-shadow:none;" id="email_add" name="email_add">
+                            <option class="email_option" value="">직접입력</option>
+                            <option class="email_option">naver.com</option>
+                            <option class="email_option">daum.net</option>
+                            <option class="email_option">hotmail.com</option>
+                            <option class="email_option">nate.com</option>
+                            <option class="email_option">yahoo.co.kr</option>
+                            <option class="email_option">paran.com</option>
+                            <option class="email_option">empas.com</option>
+                            <option class="email_option">dreamwiz.com</option>
+                            <option class="email_option">freechal.com</option>
+                            <option class="email_option">lycos.co.kr</option>
+                            <option class="email_option">korea.com</option>
+                            <option class="email_option">gmail.com</option>
+                            <option class="email_option">hanmir.com</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -315,16 +339,21 @@ input{
                     </td>
                 </tr>
                 <tr>
-                    <td class="lable">성별</td>
-                    <td >
-                        <input type="radio" class="checkbox" name="gender" id="gender1" value="F" checked><label for="gender1" class="input-label first radio">여자</label>                    
-                        <input type="radio" class="checkbox" name="gender" id="gender2" value="M"><label for="gender2" class="input-label radio">남자</label>
+                    <td class="lable">비밀번호</td>
+                    <td>
+                        <input type="password" class="form-control" id="password1" name="password1" placeholder="비밀번호">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lable">비밀번호 확인</td>
+                    <td>
+                        <input type="password" class="form-control" id="password2" name="password2" placeholder="비밀번호 확인">
                     </td>
                 </tr>
                 <tr>
                     <td class="lable">휴대폰번호</td>
                     <td class="rightpadding">
-                      <input onkeydown='mykeydown()' class="form-control" id="phone" type="tel"  name="phone" value="" placeholder="전화번호(─없이 입력)" style='width:100%; float:left'>
+                      <input onkeydown='mykeydown()' class="form-control" id="phone" type="tel" name="phone" value="" placeholder="전화번호(─없이 입력)" style='width:100%; float:left'>
                     </td>
                     <td  style="padding:0 15px 0 0 ;">
                         <p onclick="phone_check()" id="phone_check_btn" style="background:#ff8fa7;color:#fff;text-align:center;height:30px;line-height:30px;">인증받기</p>
@@ -341,30 +370,6 @@ input{
                         <p onclick="phone_check2()" style="background:#ff8fa7;color:#fff;text-align:center;height:30px;line-height:30px;">인증하기</p>
                     </td>
                 </tr>
-                <tr>
-                    <td class="lable">이메일주소</td>
-                    <td class="rightpadding" style="padding-right:0px;">
-                       <input class="form-control" id="email" type="text"  name="email" value="" placeholder="이메일 주소" style="ime-mode:disabled;box-shadow: none; border:0px;">
-                    </td>
-                    <td class="select_box right" style="padding:0 15px 0 30px;" width="20px">
-                        <select style="height:42px;width:100%;background:#fff;border:0px;box-shadow:none;" id="email_add" name="email_add">
-                            <option class="email_option" value="">직접입력</option>
-                            <option class="email_option">naver.com</option>
-                            <option class="email_option">daum.net</option>
-                            <option class="email_option">hotmail.com</option>
-                            <option class="email_option">nate.com</option>
-                            <option class="email_option">yahoo.co.kr</option>
-                            <option class="email_option">paran.com</option>
-                            <option class="email_option">empas.com</option>
-                            <option class="email_option">dreamwiz.com</option>
-                            <option class="email_option">freechal.com</option>
-                            <option class="email_option">lycos.co.kr</option>
-                            <option class="email_option">korea.com</option>
-                            <option class="email_option">gmail.com</option>
-                            <option class="email_option">hanmir.com</option>
-                        </select>
-                    </td>
-                </tr>
                    <input class="form-control" id="id" type="hidden" placeholder="아이디"  name="id" value=""/><input class="form-control" id="password" type="hidden" placeholder="비밀번호"  name="password" value=""/>            </table>
         <div class="page-header">
     	    <h1 class="main_color_text">부가정보(선택)</h1>
@@ -372,14 +377,14 @@ input{
             <table class="table table-condensed">
                 <tr>
                     <td class="lable">마케팅수신동의</td>
-                    <td >
+                    <td>
                     <input type="checkbox" class="checkbox" name="smsAgree" id="marketing1" value="Y"><label for="marketing1" class="input-label first radio">SMS</lable>
                     <input type="checkbox" class="checkbox" name="emailaAree" id="marketing2" value="Y"><label for="marketing2" class="input-label radio">이메일</lable>
                     </td>
                 </tr>
                 <tr>
                     <td class="lable">피부타입</td>
-                    <td >
+                    <td>
                         <input type="radio" class="checkbox" name="skinType" id="skin1" value="0" checked><label for="skin1" class="input-label first radio">건성</label>                    
                         <input type="radio" class="checkbox" name="skinType" id="skin2" value="1"><label for="skin2" class="input-label radio">중성</label>
                         <input type="radio" class="checkbox" name="skinType" id="skin3" value="2"><label for="skin3" class="input-label radio">지성</label>

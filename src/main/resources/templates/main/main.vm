@@ -215,7 +215,7 @@
 ##                                        <li><a href="/my/order" ga-event="gnb,gnb_mypage_구매정보">구매정보</a></li>
 ##                                        <li><a href="/my/wishList" ga-event="gnb,gnb_mypage_찜한상품">찜한상품</a></li>
 ##                                        <li><a href="/my/point" ga-event="gnb,gnb_mypage_혜택정보">혜택정보</a></li>
-##                                        <li><a href="/my/privacy/password" ga-event="gnb,gnb_mypage_개인정보">개인정보</a></li>
+##                                        <li><a href="/my/privacy" ga-event="gnb,gnb_mypage_개인정보">개인정보</a></li>
 ##                                        <li><a href="/my/review" ga-event="gnb,gnb_mypage_나의리뷰">나의리뷰</a></li>
 ##                                        <li><a href="/my/qna" ga-event="gnb,gnb_mypage_1:1문의">1:1문의</a></li>
 ##                                        <!--<li><a href="/my/freeEvent" ga-event="gnb,gnb_mypage_이벤트 응모내역">이벤트 응모내역</a></li>-->
@@ -265,9 +265,8 @@
 ##
 ##                        <div class="searchBar-wrap">
 ##                            <div class="searchBar-inputBox-wrap">
-##                                <form id="searchForm" class="searchBar-inputBox" method="GET"
-##                                      action="//search.memebox.com/memebox/search"
-##                                      enctype="application/x-www-form-urlencoded" onsubmit="return SPexecuteSearch();">
+##                                <form id="searchForm" class="searchBar-inputBox" method="GET" action="//search.memebox.com/memebox/search" 
+##                                  enctype="application/x-www-form-urlencoded" onsubmit="return SPexecuteSearch();">
 ##                                    <label class="searchBar-inputBox-label"> <span class="searchBar-inputBox-text">search bar</span>
 ##                                        <input id="search"
 ##                                               class="searchBox ui-autocomplete-input searchBar-inputBox-input"
@@ -1084,7 +1083,7 @@
 ##                                            <ul>
 ##
 ##                                                <li>
-##                                                    <a href="/vs/specialPrice" ga-event="menu_total,menu_한정특가"
+##                                                    <a href="/bg/timeSale" ga-event="menu_total,menu_한정특가"
 ##                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
 ##                                                        한정특가
 ##                                                    </a>
@@ -2065,7 +2064,7 @@
 ##                                            <ul class="category-desc-list">
 ##
 ##                                                <li class="category-list-block">
-##                                                    <a href="/vs/specialPrice"
+##                                                    <a href="/bg/timeSale"
 ##                                                       class="category-list-item"
 ##                                                       ga-event="menu_total,menu_한정특가"
 ##                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
@@ -2242,7 +2241,7 @@
 ##                        <li class="newGnbTab">
 ##                            <h3>
 ##                                <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-##                                   href="/vs/specialPrice" ga-event="menu,menu_memedeal"
+##                                   href="/bg/timeSale" ga-event="menu,menu_memedeal"
 ##                                   data-nav-type="Global Navigation">
 ##                                    한정특가
 ##
@@ -2318,18 +2317,6 @@
 ##                                <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
 ##                                   href="/vs/new/newest" ga-event="menu,menu_new" data-nav-type="Global Navigation">
 ##                                    NEW
-##
-##
-##                                </a>
-##                            </h3>
-##                        </li>
-##
-##
-##                        <li class="newGnbTab">
-##                            <h3>
-##                                <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-##                                   href="/memeCoupon" ga-event="menu,menu_coupon" data-nav-type="Global Navigation">
-##                                    이벤트&amp;쿠폰
 ##
 ##
 ##                                </a>

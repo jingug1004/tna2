@@ -65,8 +65,8 @@ public class BasketServiceImpl implements BasketService {
             return null;
         }
 
-        if (response.getResultCode().equals("200")) {
-//        if (response.getResultCode() == "200") {
+//        if (response.getResultCode().equals("200")) {
+        if (response.getResultCode() == "200") {
             logger.info("lll~~~ ListGET 성공: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
 
             return response;
@@ -80,11 +80,11 @@ public class BasketServiceImpl implements BasketService {
 
 
     @Override
-    public BasketResponse basketAddPOST(String token, int itemCount, long itemId) throws Exception {
+    public BasketResponse basketAddPOST(String token, long itemId, int itemCount) throws Exception {
 
         BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
 
-        BasketResponse response = basketRetroImpl.basketAddPOST("Bearer " + token, itemCount, itemId);
+        BasketResponse response = basketRetroImpl.basketAddPOST("Bearer " + token, itemId, itemCount);
 
         if (response == null) {
             return null;

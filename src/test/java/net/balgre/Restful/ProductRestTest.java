@@ -33,7 +33,7 @@ public class ProductRestTest {
 
     @Test
     public void boxGET() {
-        List<Product> response = productRetroImpl.boxGET();
+        List<Product> response = productRetroImpl.balgeureBox();
 
         assertNotNull(response);
         assertNotNull(response.size());
@@ -49,7 +49,7 @@ public class ProductRestTest {
 
     @Test
     public void categoryResponse2GET() {
-        CategoryResponse2 response = productRetroImpl.categoryResponse2GET();
+        CategoryResponse2 response = productRetroImpl.categoryList();
 
         assertNotNull(response);
         assertNotNull(response.getMessage());
@@ -67,7 +67,7 @@ public class ProductRestTest {
 
     @Test
     public void listGET() {
-        BestResponse response = productRetroImpl.listGET();
+        BestResponse response = productRetroImpl.newProduct();
 
         assertNotNull(response);
         assertNotNull(response.getFirstBanner());
@@ -120,7 +120,7 @@ public class ProductRestTest {
     @Test
     public void timeGet() {
 
-        List<ProductTimeSale> response = productRetroImpl.timeGET();
+        List<ProductTimeSale> response = productRetroImpl.timeSaleList();
 
         assertNotNull(response);
         assertNotNull(response.toString());

@@ -273,7 +273,7 @@ div#header_v2 div.gnbTopInner .appDownIcon {
     display: block;
     width: 13px;
     height: 16px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -230px -40px
+    background: url("/img/balgeure_icons.png") no-repeat -179px -4px;
 }
 
 div#header_v2 div.gnbTopInner ul.gnbTopRight .li {
@@ -4044,7 +4044,7 @@ div.homeMainBanner .next {
 }
 
 div.memePromotion {
-    width: 900px;
+    width: 1080px;
     padding: 21px 0 10px 148px;
     background: #303030 url('../img/eventmenu_v2.jpg') no-repeat;
     font-size: 12px;

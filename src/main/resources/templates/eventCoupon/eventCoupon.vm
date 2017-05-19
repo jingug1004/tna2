@@ -1,14 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-   <form action="goEvent" method="POST">
-      <input type="text" name="e_id" id="e_id">
-      
-      <input type="submit" value="gogo"/>
-   </form>
+#parse("/main/header.vm")
+
+<div class="memeCoupon_list">
+	<h4>진행중인 이벤트</h4>
+	<div class="">
+	    #foreach($EventCoupon in $eventCoupon)
+		<ul>
+			<li class="eventBox">
+			    <a class="image" href="http://www.memebox.com/render/600093">
+					<div class="imgBox">
+						<img src="http://sumcrimage.cafe24.com/$!{EventCoupon.event.thumbnail}">
+						<div class="thumbCover"></div>
+					</div>
+					<div class="textBox">
+						<p class="title">MEME LUCKY DAY</p>
+						<p class="subTitle">매주 화요일, 금요일 오전10시! 엄청난 럭키박스를 만나고 추가 선물도
+							받아요♥</p>
+						<p class="date">2017-05-16 ~ 2017-05-18</p>
+					</div> <span class="overBtn tI dP">자세히 보기</span>
+			    </a>
+			</li>
+		</ul>
+		#end
+	</div>
+</div>
 </body>
 </html>

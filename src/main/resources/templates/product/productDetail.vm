@@ -2,6 +2,10 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 
+## jquery number formatting
+<script src="/js/product/jquery.number.min.js" type="text/javascript"></script>
+
+
 
 ##<script>
 ##    try {
@@ -13,11 +17,11 @@
 ##    ;
 ##</script>
 
-##<script type="text/javascript" src="/package/components/layout/pc/gnb/v.1.0.0/gnb.js?v=1748Tu"></script>
-##<script type="text/javascript"
-##        src="/package/components/layout/pc/headerRollingBanner/v.1.0.0/headerRollingBanner.js?v=1748Tu"></script>
-##<script type="text/javascript" src="/package/components/layout/pc/userArea/v.1.0.0/userArea.js?v=1748Tu"></script>
-##<script type="text/javascript" src="/package/components/layout/pc/header/v.1.0.0/brandAll.js?v=1748Tu"></script>
+<script type="text/javascript" src="/package/components/layout/pc/gnb/v.1.0.0/gnb.js?v=1748Tu"></script>
+<script type="text/javascript"
+        src="/package/components/layout/pc/headerRollingBanner/v.1.0.0/headerRollingBanner.js?v=1748Tu"></script>
+<script type="text/javascript" src="/package/components/layout/pc/userArea/v.1.0.0/userArea.js?v=1748Tu"></script>
+<script type="text/javascript" src="/package/components/layout/pc/header/v.1.0.0/brandAll.js?v=1748Tu"></script>
 
 <script>
     $(document).ready(function () {
@@ -27,6 +31,7 @@
 
 
 <!-- container -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <div id="container" class="mA ">
     <div class="sideBannerR">
         <ul>
@@ -37,9 +42,9 @@
                 data-promotion-id="rightBanner0"
                 data-promotion-name=""
                 data-promotion-position="Right Banner 0">
-                <a href="http://www.memebox.com/product/503838" ga-event="right_side,right_sidebanner0"><img
-                        src="//img2.memebox.com/static/contents/img/upload/banner_20170217115823_2kMQ5fWL8z.jpg"
-                        alt=""></a>
+                <a href="http://www.memebox.com/product/503838" ga-event="right_side,right_sidebanner0">
+                    <img src="//img2.memebox.com/static/contents/img/upload/banner_20170217115823_2kMQ5fWL8z.jpg"
+                         alt=""></a>
             </li>
 
             <li class="rightBannerList segment_promotion_item"
@@ -569,11 +574,9 @@
                                 data-product-price="16000"
                                 data-recommend-type="RDD"
                                 data-current-productid="514398"
-                                data-theme-count="1_2"
-                            >
+                                data-theme-count="1_2">
                                 <div id="result_505378" class="memebox-deal deal_type_thumbnail_4">
-                                    <a href="/product/505378"
-                                       onclick="onRecommendProductClick('505378', '[에뛰드] 글로우 온 베이스 2종', $(this).parent().parent().parent().data('productlist-id')
+                                    <a href="/product/505378" onclick="onRecommendProductClick('505378', '[에뛰드] 글로우 온 베이스 2종', $(this).parent().parent().parent().data('productlist-id')
                                                        ,$(this).parent().parent().parent().data('productlist-name'),'347','42265','RDD', '0', 'top'); return false;">
                                         <div class="memebox-deal-info">
 
@@ -640,8 +643,7 @@
                                 data-product-price="15300"
                                 data-recommend-type="RDD"
                                 data-current-productid="514398"
-                                data-theme-count="1_2"
-                            >
+                                data-theme-count="1_2">
                                 <div id="result_11454" class="memebox-deal deal_type_thumbnail_4">
                                     <a href="/product/11454"
                                        onclick="onRecommendProductClick('11454', '[로레알파리] 베이스 매직 프라이머', $(this).parent().parent().parent().data('productlist-id')
@@ -1036,11 +1038,14 @@
                                 <i class="tabArr"></i>
                             </li>
 
+                        ##                            박민아 실장님~ contents_In 을 contents_Info 로 바꾸면 하단 간편옵선 선택 박스가 나오지 않습니다.
+                        ##                            그래서 수정 안 합니다.
                             <li onclick="openCity(event, 'contents_In')" class="tabItem" id="ProductInfo"
                                 data-tabname="Info Tab">
                                 <span class="tabTitle_on_ProdDetail">상품정보</span><i class="tabArr"></i>
 
                             </li>
+                        ##                            바로 위와 이하동문 입니다.
                             <li onclick="openCity(event, 'content_Deli')" class="tabItem" id="ProductDelivery"
                                 data-tabname="Delivery Tab">
                                 <span class="tabTitle_on_ProdDetail">배송/교환/반품정보</span><i
@@ -1102,858 +1107,9 @@
                 </div>
                 <img src="http://img2.memebox.com/static/contents/img/upload/banner_20151218103913_2ni7UXJiJP.jpg"
                      alt="리뷰왕 이벤트">
-                <form method="post" action="">
-                    <div class="viewSelect">
-                        <span class="starBig"><em class="fourHalf"></em></span>
-                        <p class="viewSelectText"> :
-
-                            총 <span class="pText">${choiceDetailProduct.product.reviewCount}개</span>의 리뷰가 작성되어 있습니다.
-
-                            <button type="button" id="listButton" value="리스트출력">리스트출력</button>
-                            <br/>
-                        <div id="listDiv"></div>
-                        </p>
-
-                    ## #foreach($item in $list.Review)
-                    ##
-                        <div>
-                        ## $!{item.content}
-                            ##
-                        </div>
-                    ## #end
-
-                        <div class="viewSelectOption">
-                            <div class="selectric-wrapper selectric-reviewSelect">
-                                <div #*class="selectric-hide-select" *#>
-                                    <select name="photo" id="photo" onchange="getReviewList();"
-                                            class="reviewSelect" tabindex="0">
-                                        <option value="0" selected="selected">전체</option>
-                                        <option value="1">포토리뷰만</option>
-                                    </select>
-                                ##                                <select name="fluit">
-                                ##                                    <option value="바나나">바나나</option>
-                                ##                                    <option value="사과">사과</option>
-                                ##                                    <option value="파인애플" selected="selected">파인애플</option>
-                                ##                                    <optgroup label="그외) 음료">
-                                ##                                        <option value="사이다">사이다</option>
-                                ##                                        <option value="콜라">콜라</option>
-                                ##                                    </optgroup>
-                                ##                                </select>
-                                </div>
-                            ##                            <div class="selectric"><span class="labelWrap"><span class="label">최신순11</span></span><b
-                            ##                                    class="button">▾</b></div>
-                            ##                            <div class="selectric-items" tabindex="-1">
-                            ##                                <div class="selectric-scroll">
-                            ##                                    <ul>
-                            ##                                        <li data-index="0" class="selected">최신순</li>
-                            ##                                        <li data-index="1" class="">추천순</li>
-                            ##                                        <li data-index="2" class="last">평점순</li>
-                            ##                                    </ul>
-                            ##                                </div>
-                            ##                            </div>
-                            ##                            <input class="selectric-input" tabindex="0">
-                            </div>
-                            <div class="selectric-wrapper selectric-reviewSelect">
-                                <div #*class="selectric-hide-select"*#>
-                                    <select name="sort" id="sort"
-                                            onchange="getReviewList();"
-                                            class="reviewSelect" tabindex="0">
-                                        <option value="0" selected="selected">등록순</option>
-                                        <option value="1">추천순</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="view" data-review-id="1323951" data-page="1"
-                         data-creator="2051104"
-                         data-product-id="28440 ">
-                        <div class="imgBox great fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                김**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="optionType">/ 중성</span>
-
-
-                                <span class="date fR">2017-04-25</span>
-                            </div>
-                            <span class="star"><em class="five"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>파랑색 진짜 핵좋아옼ㅋㅋㅋㅋㅋ 그린은 아직 안써봤는데 파랑색 쿨링감 갑입ㄴ다ㅜㅜ</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                        <li>
-                                            <a class="imgView"
-                                               href="http://img1.memebox.com/thumb/origin/http://img1.memebox.com/pj1q9u81/contents/img/review/20170425115455_faa09c17f15ff46c03634730954f8643.jpg"
-                                               rel="lightBox[best_1323951]">
-                                                <img src="http://img1.memebox.com/thumb/whigh/http://img1.memebox.com/pj1q9u81/contents/img/review/20170425115455_faa09c17f15ff46c03634730954f8643.jpg"
-                                                     alt="">
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1323951">1</span>
-                                <input type="hidden" id="rId" value="1323951">
-                                <input type="hidden" id="rWriterId" value="2051104">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view" data-review-id="1319673" data-page="1" data-creator="3143236"
-                         data-product-id="28440 ">
-                        <div class="imgBox great fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                단**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="date fR">2017-04-22</span>
-                            </div>
-                            <span class="star"><em class="five"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>빠른 배송 감동입니다. 수분크림 촉촉한 느낌 너므너므 좋아요. 토너도 깨끗하게 피부결을 정리해 주어서 좋아여.</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1319673">1</span>
-                                <input type="hidden" id="rId" value="1319673">
-                                <input type="hidden" id="rWriterId" value="3143236">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view segment_review_item" data-review-id="1315003" data-page="1" data-creator="2210752"
-                         data-product-id="28440 ">
-                        <div class="imgBox great fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                오**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="date fR">2017-04-20</span>
-                            </div>
-                            <span class="star"><em class="five"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>냉장고에 넣어두고 차갑게 쓰면 더 좋은거 같아요! 촉촉하고 열 식힐 때 좋아요!</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                        <li>
-                                            <a class="imgView"
-                                               href="http://img1.memebox.com/thumb/origin/http://img1.memebox.com/5b8xkl22/contents/img/review/20170420122835_a64f1528b5334411294e3cbc72c2e4e4.jpg"
-                                               rel="lightBox[best_1315003]">
-                                                <img src="http://img1.memebox.com/thumb/whigh/http://img1.memebox.com/5b8xkl22/contents/img/review/20170420122835_a64f1528b5334411294e3cbc72c2e4e4.jpg"
-                                                     alt="">
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1315003">2</span>
-                                <input type="hidden" id="rId" value="1315003">
-                                <input type="hidden" id="rWriterId" value="2210752">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view segment_review_item" data-review-id="1311861" data-page="1" data-creator="3070244"
-                         data-product-id="28440 ">
-                        <div class="imgBox soso fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                박**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="optionType">/ 지성</span>
-
-
-                                <span class="date fR">2017-04-18</span>
-                            </div>
-                            <span class="star"><em class="twoHalf"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>보통 스킨에서 마는 알콜향 같은게<br>없어서 좋앗어요 ㅋㅋㅋ<br>그냥 진짜 가볍게 쓸 수 잇는 거 같아요~~~<br>전 두번째 구매하러갑니다~</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                        <li>
-                                            <a class="imgView"
-                                               href="http://img1.memebox.com/thumb/origin/http://img1.memebox.com/1hj4e088/contents/img/review/20170418051944_c6b94de6e88f0c02be9b4e03ad6f6161.jpg"
-                                               rel="lightBox[best_1311861]">
-                                                <img src="http://img1.memebox.com/thumb/whigh/http://img1.memebox.com/1hj4e088/contents/img/review/20170418051944_c6b94de6e88f0c02be9b4e03ad6f6161.jpg"
-                                                     alt="">
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1311861">1</span>
-                                <input type="hidden" id="rId" value="1311861">
-                                <input type="hidden" id="rWriterId" value="3070244">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view segment_review_item" data-review-id="1309102" data-page="1" data-creator="29338"
-                         data-product-id="28440 ">
-                        <div class="imgBox great fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                이**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="optionType">/ 건성</span>
-
-
-                                <span class="date fR">2017-04-16</span>
-                            </div>
-                            <span class="star"><em class="five"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>클렌징워터랑 스킨 구매했어요<br>그냥 가볍게 쓰기에 좋아요</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1309102">1</span>
-                                <input type="hidden" id="rId" value="1309102">
-                                <input type="hidden" id="rWriterId" value="29338">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view segment_review_item" data-review-id="1307564" data-page="1" data-creator="1695962"
-                         data-product-id="28440 ">
-                        <div class="imgBox good fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                문**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="optionType">/ 지성</span>
-
-
-                                <span class="date fR">2017-04-15</span>
-                            </div>
-                            <span class="star"><em class="threeHalf"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>수딩젤같은 제형인데 촉촉하고 유분기없어서 지성쓰기에 매우좋음 다만 흡수는빠르나 흡수의 약간의끈적임있고 티트리라해서 큰진정력은 없음 가격대비 무난함
-                                    향은진짜딱티트리냄새.</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                        <li>
-                                            <a class="imgView"
-                                               href="http://img1.memebox.com/thumb/origin/http://img1.memebox.com/1b7jwcgj/contents/img/review/20170415103243_37e2e4a43d30eb2a48e7a126417518f1.jpg"
-                                               rel="lightBox[best_1307564]">
-                                                <img src="http://img1.memebox.com/thumb/whigh/http://img1.memebox.com/1b7jwcgj/contents/img/review/20170415103243_37e2e4a43d30eb2a48e7a126417518f1.jpg"
-                                                     alt="">
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a class="imgView"
-                                               href="http://img1.memebox.com/thumb/origin/http://img1.memebox.com/hxsbpmlw/contents/img/review/20170415103244_684f9371699d3498676bd6397e454d02.jpg"
-                                               rel="lightBox[best_1307564]">
-                                                <img src="http://img1.memebox.com/thumb/whigh/http://img1.memebox.com/hxsbpmlw/contents/img/review/20170415103244_684f9371699d3498676bd6397e454d02.jpg"
-                                                     alt="">
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1307564">1</span>
-                                <input type="hidden" id="rId" value="1307564">
-                                <input type="hidden" id="rWriterId" value="1695962">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view segment_review_item" data-review-id="1305419" data-page="1" data-creator="688085"
-                         data-product-id="28440 ">
-                        <div class="imgBox great fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                권**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="optionType">/ 지성</span>
-
-
-                                <span class="date fR">2017-04-14</span>
-                            </div>
-                            <span class="star"><em class="five"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>호기심에 사봤는데 진짜 좋아여 토너도 닦아내는 타입이라 너무 좋고 엄청 촉촉하고 진정되는
-                                    느낌이랄까요?? 크림도 가벼우면서 촉촉해서 좋았어요 여름에 쓰면 특히
-                                    더 좋을것같아요 ㅎㅎㅎ</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                        <li>
-                                            <a class="imgView"
-                                               href="http://img1.memebox.com/thumb/origin/http://img1.memebox.com/x6nnpjhl/contents/img/review/20170414094819_e0a479ca503e632749816e2844b0c607.jpg"
-                                               rel="lightBox[best_1305419]">
-                                                <img src="http://img1.memebox.com/thumb/whigh/http://img1.memebox.com/x6nnpjhl/contents/img/review/20170414094819_e0a479ca503e632749816e2844b0c607.jpg"
-                                                     alt="">
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1305419">1</span>
-                                <input type="hidden" id="rId" value="1305419">
-                                <input type="hidden" id="rWriterId" value="688085">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view segment_review_item" data-review-id="1290783" data-page="1" data-creator="1651212"
-                         data-product-id="28440 ">
-                        <div class="imgBox great fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                장**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="optionType">/ 건성</span>
-
-
-                                <span class="date fR">2017-04-03</span>
-                            </div>
-                            <span class="star"><em class="five"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>순한 느낌정도 크림은 쫀쫀한 제형인데 무난한거 같아염</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1290783">2</span>
-                                <input type="hidden" id="rId" value="1290783">
-                                <input type="hidden" id="rWriterId" value="1651212">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view segment_review_item" data-review-id="1289624" data-page="1" data-creator="2869711"
-                         data-product-id="28440 ">
-                        <div class="imgBox great fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                이**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="optionType">/ 복합성</span>
-
-
-                                <span class="date fR">2017-04-02</span>
-                            </div>
-                            <span class="star"><em class="five"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>전 시크릿스킨만 사용하는데 피부상태에따라<br>써서 세가지모두 쓰고있어여<br>피부에자극도없고 순해서 정말좋아여<br>앞으로도 계속 요
-                                    아이만쓸거같네여<br>재구매
-                                    의사있어여~~</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1289624">1</span>
-                                <input type="hidden" id="rId" value="1289624">
-                                <input type="hidden" id="rWriterId" value="2869711">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-                    <div class="view segment_review_item" data-review-id="1284598" data-page="1" data-creator="2658204"
-                         data-product-id="28440 ">
-                        <div class="imgBox great fL">
-                            <!--<span></span>-->
-                        </div>
-                        <div class="reviewContents fL">
-                            <div class="info">
-                                <div class="type fL">
-                                    <!--<p>구매자</p><p>비구매자</p>-->
-                                </div>
-
-
-                                김**&nbsp;&nbsp;&nbsp;
-
-
-                                <span class="date fR">2017-03-29</span>
-                            </div>
-                            <span class="star"><em class="five"></em></span>
-                            <!-- 리뷰 제목 title -->
-                            <p class="title"></p>
-                            <!--title 클릭했을때 보여지는 답변-->
-                            <div class="textArea">
-                                <p>조금 건조해요 여름에 바르면 굉장히 좋고 순수한 제품이에요!</p>
-                                <div class="img lightBox">
-                                    <ul>
-
-                                    </ul>
-                                </div>
-
-                                <div class="commentBox">
-                                    <div class="commentTop">
-                                        <!--<a href="#">답글 개 ﻿▲ </a>-->
-                                        <!--<a class="commentWrite">답글쓰기</a>-->
-                                        <!--<a class="rule">! 게시물 운영 원칙</a>-->
-                                    </div>
-                                    <div class="commentBottom" style="display:none;">
-                                        <textarea class="fL" name="" id=""
-                                                  placeholder="리뷰에 대한 의견들을 달아주세요 ^^"></textarea>
-                                        <button type="button"></button>
-                                    </div>
-                                    <div class="commentView">
-                                        <!--comment 여러개일 때 div.commentWrap 반복-->
-
-                                    </div>
-                                    <!--commentView-->
-                                </div>
-
-                                <!--commentBox-->
-                            </div>
-                            <!--textArea-->
-                        </div>
-                        <!--reviewContents-->
-                        <div class="btnGroup fR">
-                            <button class="like" type="button">
-                                <span class="heart"></span><span class="recomCnt" id="r1284598">1</span>
-                                <input type="hidden" id="rId" value="1284598">
-                                <input type="hidden" id="rWriterId" value="2658204">
-                            </button>
-
-                            <!--<button class="faceBook" type="button">페이스북</button>-->
-                            <!--<button class="twitter" type="button">트위터</button>-->
-                        </div>
-                    </div>
-                    <!--view-->
-                    <!--view-->
-                    <input type="hidden" id="recomIndex" value="">
-
-
-                </form>
-
-                <div class="mypaging" style="">
-
-                    <a class="unusable arrow first" href="#">◀◀</a>
-                    <a class="unusable arrow" href="#">◀</a>
-
-
-                    <!--<a class="on" href="?page=1&amp;productId=28440&amp;contentViewPickOption=2&amp;_=1493193623282">1</a>-->
-                    <a class="on" onclick="getReviewPage('1');">1</a>
-
-                    <!--<a  href="?page=2&amp;productId=28440&amp;contentViewPickOption=2&amp;_=1493193623282">2</a>-->
-                    <a onclick="getReviewPage('2');">2</a>
-
-                    <!--<a  href="?page=3&amp;productId=28440&amp;contentViewPickOption=2&amp;_=1493193623282">3</a>-->
-                    <a onclick="getReviewPage('3');">3</a>
-
-                    <!--<a  href="?page=4&amp;productId=28440&amp;contentViewPickOption=2&amp;_=1493193623282">4</a>-->
-                    <a onclick="getReviewPage('4');">4</a>
-
-                    <!--<a  href="?page=5&amp;productId=28440&amp;contentViewPickOption=2&amp;_=1493193623282">5</a>-->
-                    <a onclick="getReviewPage('5');">5</a>
-
-
-                    <a class="arrow" onclick="getReviewPage('2');">▶</a>
-                    <a class="arrow last" onclick="getReviewPage('5');">▶▶</a>
-
-
-                </div>
-
-
             </div>
-        ## 상품정보
 
-            <div id="contents_In" class="contentsDetail">
+            <div id="contents_Info" class="contentsDetail">
 
                 <h2 class="hidden">상품정보</h2>
                 <!-- S : 상품안내 -->
@@ -2226,7 +1382,7 @@
                                     <form name="cart" action="/checkout/withoutCart" method="post"></form>
 
                                     <span class="infoBtnCell purchaseBlock" data-test="true">
-                                  <button type="submit" class="btnDeal btnMeme purchaseBtn" ga-event="view,view_buy">
+                                  <button #*type="submit"*# id="directBasket" class="btnDeal btnMeme purchaseBtn" ga-event="view,view_buy">
                                       <span class="btnTxt btnTxtPurchase">즉시구매</span>
                                   </button>
                                 </span>
@@ -2234,7 +1390,7 @@
                                     <span class="infoBtnCell cartBlock">
                                     <button #*type="submit"*# class="btnDeal btnWhite cart" ga-event="view,view_cart"
                                     #*id="buttomCartAddBtn"*# id="beforeSubmitBasket2">
-                                <span class="btnTxt btnTxtCart" href="/cart">장바구니</span></button>
+                                <span class="btnTxt btnTxtCart" href="/cart">장바구니2</span></button>
                                 </span>
                                     </form>
                                 ##                ----- 장바구니 폼 태그 <form> 끝 -----
@@ -3280,25 +2436,13 @@
             }
         });
     });
-    //    }
-
-    //    $("#basketList").on("click", function () {
-    //
-    //        window.open("", "popup_window", "width=500, height=300, scrollbars=no");
-    //
-    ////        $("#cartPopupWrap").show();
-    ////        $("#cartPopupWrap").center();
-    //
-    //        $("#cartPopupWrap").append();
-    //
-    //    })
 
     //    $(document).ready(function () {
     $("#beforeSubmitBasket").on("click", function () {
 
-        //        $('#basketList').click(function () {
-    ##        var result = confirm('${choiceDetailProduct.product.prodName} 상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?');
-    ##        var productData = "${choiceDetailProduct.product}";
+//        $('#basketList').click(function () {
+##        var result = confirm('${choiceDetailProduct.product.prodName} 상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?');
+##        var productData = "${choiceDetailProduct.product}";
 
 //        var productCode = $('#choiceItem option:selected').val();
 //
@@ -3402,9 +2546,77 @@
 //            location.replace('/basketList');
     });
     //    });
+    //    $(document).ready(function () {
+    $("#beforeSubmitBasket2").on("click", function () {
+
+        //        $('#basketList').click(function () {
+    ##        var result = confirm('${choiceDetailProduct.product.prodName} 상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?');
+    ##        var productData = "${choiceDetailProduct.product}";
+
+//        var productCode = $('#choiceItem option:selected').val();
+//
+////        var itemCount = $("#itemCount").val();
+//        var itemCount = 1;
+//        var itemId = 118;
+////        var itemId = (productCode.split("|")[0]);
+
+//        var formData = new FormData();
+//        formData.append("itemId", itemId);
+//        formData.append("itemCount", itemCount);
+//        formData.append("itemPrice", productItemCost);
+
+//        console.log(itemCount + ", " + itemId)
+
+        var formData = $("#ReadingInfoSelectForm").serialize();
+
+        console.log("lll~~~~ " + formData + " + formData, this success! lll~~~");
+
+        $.ajax({
+            type: 'post',
+            url: '/basketAdd',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            processData: false,
+//            data: JSON.stringify(formData),
+            data: formData,
+            success: function (data) {
+
+                console.log(data + "Succ 01!");
+
+                if (data == "basketSucc") {
+                    console.log(data + "Succ 02!!");
+
+                    wrapEntirePage();
+                    $('.cartPopupWrap').show();
+
+                    $('#shoppingBtn').on('click', function (e) {
+                        unwrapEntirePage();
+
+                        $('.cartPopupWrap').hide();
+                    });
+
+                    $('#cartClose').on('click', function (e) {
+                        unwrapEntirePage();
+                        $('.cartPopupWrap').close();
+                    });
+
+                    $('#goCartBtn').click(function () {
+                        analytics.track('Button Clicked', {
+                            category: 'Product Page',
+                            label: 'Popup > Go To Cart'
+                        });
+                        window.location.href = "https://order.memebox.com/cart";
+                    });
+
+                }
+            },
+
+            error: function (data, textStatus, errorThrown) {
+                alert("로그인 하신 후 옵션을 선택해주세요.");
+            }
+        });
+    });
 </script>
 
-##<input id="numberUpDown" type="hidden" value="1">1</input>
 
 <script>
     ## ----- 상품 장바구니 이동 전 아이템(옵션) 선택 시작 -----
@@ -3448,16 +2660,12 @@
             totalPrice += multiplePrice;
 //            totalPrice2 += multiplePrice2;
 
-            console.log(totalPrice + " 2 .. lll~~~");
-            console.log(totalPrice2 + " 2 .. second lll~~~");
-
 //            var index = $('#orders li').size();
 
             if (checkDupl(itemId)) {
 
                 var orderHtml2 = '<span class="productOptionName">' + productText + '</span>' + '<input type="hidden" name="items2[]" value="' + itemId + '">';
 
-                orderHtml2 += '<input type="hidden" name="selected" value="' + selected + '"> ';
                 orderHtml2 += '<span class="numberQty"> ';
 
                 orderHtml2 += '<button type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
@@ -3472,10 +2680,12 @@
 
                 orderHtml2 += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
 
-                orderHtml2 += '<span name="getSum" id="sum2' + itemId + '">' + multiplePrice + '</span> 원';
+                orderHtml2 += '<span class="sum_Price_each"  name="getSum" id="sum2' + itemId + '">' + multiplePrice + '</span><span class="Price_KR_dollar">원</span>';
 
                 orderHtml2 += '<input type="button" class="orderRemoveButton" value="취소" />';
 
+            } else {
+                return;
             }
 
 
@@ -3483,8 +2693,6 @@
 
                 var orderHtml = '<span class="productOptionName">' + productText + '</span>' + '<input type="hidden" name="items[]" value="' + itemId + '">';
 
-
-                orderHtml += '<input type="hidden" name="selected" value="' + selected + '"> ';
                 orderHtml += '<span class="numberQty"> ';
 
                 orderHtml += '<button type="button" onclick="decreaseQuantity(' + itemId + ',' + productPrice + ');" ';
@@ -3499,21 +2707,18 @@
 
                 orderHtml += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
 
-                orderHtml += '<span name="getSum" id="sum' + itemId + '">' + multiplePrice + '</span> 원';
+                orderHtml += '<span class="sum_Price_each" name="getSum" id="sum' + itemId + '"> ' + multiplePrice + '</span><span class="Price_KR_dollar">원</span>';
 
                 orderHtml += '<input type="button" class="orderRemoveButton" value="취소" />';
 
+            } else {
+                return;
             }
+
+
             var liEl2 = $('<li/>').html(orderHtml2).appendTo('#orders2');
 
             var liEl = $('<li/>').html(orderHtml).appendTo('#orders1');
-
-            console.log("lll~~~ " + orderHtml2 + " 2-b-ㄱ .. third lll~~~");
-            console.log("lll~~~ " + itemId + " 2-b-ㄴ .. third lll~~~");
-            console.log("lll~~~ " + productText + " 2-b-ㄷ .. third lll~~~");
-            console.log("lll~~~ " + productPrice + " 2-b-ㄹ .. third lll~~~");
-            console.log("lll~~~ " + maxItemCnt + " 2-b-ㅁ .. third lll~~~");
-            console.log("lll~~~ " + multiplePrice + " 2-b-ㅂ .. third lll~~~");
 
             liEl.find('.orderRemoveButton').on("click", function () {
 //                totalPrice -= multiplePrice;
@@ -3526,13 +2731,10 @@
                 event.preventDefault();
 
 
-
 //                $('.choiceItem').toggle();
 //                $('.choiceItem2').toggle();
 
 //                location.reload();
-
-                console.log(totalPrice + " 3-a ... sumBasket del 1button lll~~~");
 
             });
 
@@ -3552,14 +2754,11 @@
 
 //                location.reload();
 
-                console.log(totalPrice2 + " 3-b ... sumBasket del 1button lll~~~");
             });
 
             sumBasket(itemId, productPrice, num);
 //            sumBasket2(itemId2, productPrice2, num);
 //              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
-            console.log(totalPrice + " 4 .... Final sumBasket totalPrice 1button lll~~~");
-            console.log(totalPrice2 + " 4 .... Final sumBasket totalPrice2 1button lll~~~");
 
 //            $('.choiceItem').trigger("change", function(event) {
 //                event.stopPropagation();
@@ -3586,8 +2785,7 @@
             var productPrice = (productCode.split("|")[1]);
             var maxItemCnt = productCode.split("|")[2];
 
-            var selected = $('.selectedChoiceP2').attr("selected", "selected");
-
+            var selected = $('.selectedChoiceP2').prop("selected", "selected");
 
 //            var itemId2 = (productCode2.split("|")[0]);
 //            var productPrice2 = (productCode2.split("|")[1]);
@@ -3623,10 +2821,12 @@
 
                 orderHtml += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
 
-                orderHtml += '<span name="getSum" id="sum' + itemId + '">' + multiplePrice + '</span> 원 ';
+                orderHtml += '<span class="sum_Price_each" name="getSum" id="sum' + itemId + '"> ' + multiplePrice + '</span><span class="Price_KR_dollar">원</span>';
 
                 orderHtml += '<input type="button" class="orderRemoveButton" value="취소" />';
 
+            } else {
+                return;
             }
 
 
@@ -3648,10 +2848,12 @@
 
                 orderHtml2 += '<input type="hidden" name="items[' + itemId + '].price" value="' + productPrice + '" /> ';
 
-                orderHtml2 += '<span name="getSum" id="sum2' + itemId + '">' + multiplePrice + '</span> 원';
+                orderHtml2 += '<span class="sum_Price_each"  name="getSum" id="sum2' + itemId + '">' + multiplePrice + '</span><span class="Price_KR_dollar">원</span>';
 
                 orderHtml2 += '<input type="button" class="orderRemoveButton" value="취소" />';
 
+            } else {
+                return;
             }
 
             var liEl = $('<li/>').html(orderHtml).appendTo('#orders1');
@@ -3669,7 +2871,6 @@
 //              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
 
 
-                console.log(totalPrice + " 3-a ... sumBasket del 2button lll~~~");
             });
 
             liEl2.find('.orderRemoveButton').on("click", function () {
@@ -3682,15 +2883,11 @@
 //              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
 
 
-                console.log(totalPrice + " 3-b ... sumBasket del 2button lll~~~");
-
             });
 
             sumBasket(itemId, productPrice, num);
 //            sumBasket2(itemId2, productPrice2, num);
 //              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
-            console.log(totalPrice + " 4 .... Final sumBasket totalPrice 2button lll~~~");
-            console.log(totalPrice2 + " 4 .... Final sumBasket totalPrice2 2button lll~~~");
         });
 
     });
@@ -3742,8 +2939,8 @@
 
         var toSum = productPrice * num;
 
-        $('#sum' + itemId).text(toSum);
-        $('#sum2' + itemId).text(toSum);
+        $('#sum' + itemId).text((toSum));
+        $('#sum2' + itemId).text((toSum));
 
         var totalSum = 0;
 
@@ -3751,8 +2948,11 @@
             totalSum += parseInt($(this).text());
         });
 
-        $('#cartItem1').html("<span id=\"total_txt\">총 상품금액 : </span><span id=\"SumProductP\"> " + totalSum / 2 + "</span><span id=\"KR_won\">원</span>");
-        $('#cartItem2').html("<span id=\"total_txt\">총 상품금액 : </span><span id=\"SumProductP\"> " + totalSum / 2 + "</span><span id=\"KR_won\">원</span>");
+        $('#sum' + itemId).text($.number(toSum));
+        $('#sum2' + itemId).text($.number(toSum));
+
+        $('#cartItem1').html("<span id=\"total_txt\">총 상품금액 : </span><span id=\"SumProductP\"> " + $.number(totalSum / 2) + "</span><span id=\"KR_won\">원</span>");
+        $('#cartItem2').html("<span id=\"total_txt\">총 상품금액 : </span><span id=\"SumProductP\"> " + $.number(totalSum / 2) + "</span><span id=\"KR_won\">원</span>");
 
     }
 
@@ -3767,39 +2967,92 @@
 
         $('span[name=getSum]').each(function () {
 
-            console.log($(this).attr("id") + "$(this).attr(id) 00");
-            console.log(valId + "valId 01");
-            console.log(valAttr + "valId 01-a");
+            console.log($(this).attr("id") + " $(this).attr(id) 00");
+            console.log(valId + " valId 01");
+            console.log(valAttr + " valId 01-a");
 
             var attrId = $(this).attr("id");
 
             if (valId == attrId || valId2 == attrId || valId == valId2) {
-                console.log(valId + "valId 02");
+                console.log(valId + " valId 02");
                 valAttr = false;
-                return;
+                return valAttr;
             }
 
         });
 
-        console.log(valId + "valId 03 - 아무것도 안 누르고 처음 눌렀을 때");
-
-//        $('.choiceItem').toggle();
-//        $('.choiceItem2').toggle();
+        console.log(valId + " valId 03 - 아무것도 안 누르고 처음 눌렀을 때");
 
         return valAttr;
 
-//        $('.choiceItem').on("toggleRecentSave", function (event) {
-//            event.preventDefault();
-//        }
-//        $('.choiceItem2').on("toggleRecentSave", function (event) {
-//            event.preventDefault();
-//        }
-
-        console.log(valAttr + "valAttr 03");
-
+        console.log(valAttr + " valAttr 03");
 
     }
     ## ----- 상품 장바구니 이동 전 아이템(옵션) 선택 끝 -----
+
+
+## ------ 상품 상세 페이지에서 즉시구매 시작 -----
+    $("#directBasket").on("click", function (event) {
+        event.preventDefault();
+
+        var formData = $("#ReadingInfoSelectForm").serialize();
+
+        console.log("lll~~~~ " + formData + " + formData, this success! lll~~~");
+
+        $.ajax({
+            type: 'post',
+            url: '/basketDirectPayPage',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            processData: false,
+            data: formData,
+            success: function (data) {
+
+                console.log(data + "Succ 01!");
+
+                if (data == "basketSucc") {
+                    console.log(data + "Succ 02!!");
+
+                    wrapEntirePage();
+                    $('.cartPopupWrap').show();
+
+                    $('#shoppingBtn').on('click', function (e) {
+                        unwrapEntirePage();
+                        $('.cartPopupWrap').hide();
+                    });
+
+                    $('#cartClose').on('click', function (e) {
+                        unwrapEntirePage();
+                        // Segment Analytics: Button Behaviour
+//                        analytics.track('Button Clicked', {
+//                            category: 'Product Page',
+//                            label: 'Popup > Close Popup'
+//                        });
+//                        $('.cartPopupWrap').hide();
+                        $('.cartPopupWrap').close();
+                    });
+
+                    $('#goCartBtn').click(function () {
+                        analytics.track('Button Clicked', {
+                            category: 'Product Page',
+                            label: 'Popup > Go To Cart'
+                        });
+                        window.location.href = "https://order.memebox.com/cart";
+                    });
+
+                }
+            },
+
+            error: function (data, textStatus, errorThrown) {
+                alert("로그인 하신 후 옵션을 선택해주세요.");
+//                alert("error! data? \n" + data + "textStatus? \n" + textStatus + "errorThrown? \n" + errorThrown);
+            }
+        });
+
+
+
+    })
+## ------ 상품 상세 페이지에서 즉시구매 끝 -----
+
 
 </script>
 
@@ -3888,6 +3141,28 @@
         }
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " on";
+    }
+</script>
+
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 </script>
 

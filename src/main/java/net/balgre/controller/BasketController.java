@@ -44,16 +44,19 @@ import java.util.Map;
  * Why :
  * How :
  *
- * @author 숨 크리에이티브 개발팀 김진국
+ * @author  숨 크리에이티브 개발팀 김진국
  * @version 1.0
- * @see <pre>
+ * @see
+ * @since   2017/04/10
+ *
+ * <pre>
  * << 개정이력(Modification Information) >>
  *
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
  *  2017/04/19  김진국          최초 생성
- *  </pre>
- * @since 2017/04/10
+ * </pre>
+ *
  */
 
 @Controller
@@ -124,17 +127,17 @@ public class BasketController {
             logger.info("lll~~~ " + param.get("items[" + item + "].price")[0] + " 4 .... lll~~~");
             logger.info("lll~~~ " + param.get("upDown[" + item + "].cnt")[0] + " 4 count .... lll~~~");
 
-            int itemPrice = Integer.parseInt(param.get("items[" + item + "].price")[0].toString());
-            long itemEach = Long.parseLong(param.get("upDown[" + item + "].cnt")[0].toString());
+//            int itemPrice = Integer.parseInt(param.get("items[" + item + "].price")[0].toString());
 
-//            model.addAttribute("basketListModel", basketService.basketPOST(login.getToken(), curPage, nextPage));
+            int itemEach = Integer.parseInt(param.get("upDown[" + item + "].cnt")[0].toString());
+            long itemId = Long.parseLong(item.toString());
 
-            basketService.basketAddPOST(login.getToken(), itemPrice, itemEach);
+            basketService.basketAddPOST(login.getToken(), /*itemPrice, */ itemId, itemEach);
 
 //            basketService.basketPOST();
 
-            logger.info("lll~~~ " + itemPrice + " 5 price ..... lll~~~");
             logger.info("lll~~~ " + itemEach + " 5 each ..... lll~~~");
+            logger.info("lll~~~ " + itemId + " 5 price ..... lll~~~");
 
         }
 
@@ -144,6 +147,27 @@ public class BasketController {
 
 //        return "redirect:/basket/basket";
         return "basketSucc";
+    }
+
+    @RequestMapping(value = "/basketDirectPayPage", method = {RequestMethod.GET, RequestMethod.POST})
+    public String basketPayPageGETPOST() {
+
+        return "/basket/basketPay";
+
+    }
+
+    @RequestMapping(value = "/basketDelete", method = RequestMethod.DELETE)
+    public String basketDelete() {
+
+        return null;
+
+    }
+
+    @RequestMapping(value = "/basketUpdate", method = RequestMethod.PUT)
+    public String basketUpdate() {
+
+        return null;
+
     }
 
 }

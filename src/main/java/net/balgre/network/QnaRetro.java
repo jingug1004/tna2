@@ -5,6 +5,7 @@ import net.balgre.domain.Qna;
 import net.balgre.domain.QnaListResponse;
 import net.balgre.domain.QnaPhoto;
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.PUT;
@@ -26,6 +27,7 @@ public interface QnaRetro {
 	    @Header("Content-Type") String contentType
 	);
 	
+	
 	@GET("/api/v1/mypage/qna/list")
 	Call<QnaListResponse> qnaList(
 	    @Header("X-Authorization") String token,
@@ -37,4 +39,12 @@ public interface QnaRetro {
 		@Header("X-Authorization") String token,
 		@Header("Content-Type") String contentType
 	);
+	
+	@DELETE("/api/v1/mypage/qna/delete")
+	Call<QnaListResponse> qnaDelete(
+		@Header("X-Authorization") String token,
+		@Header("Content-Type") String contentType,
+		@Query("qnaId") long qnaId
+	);
+	
 }

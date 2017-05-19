@@ -1,5 +1,7 @@
 package net.balgre.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,8 @@ import net.balgre.service.UserJoinService;
 
 @Controller
 public class UserJoinController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(UserJoinController.class);
 
     @Autowired
     // 의존 주입 설정
@@ -32,18 +36,18 @@ public class UserJoinController {
 
         User resUser = userJoinService.userJoin1(user);
         // service의 userJoin1 메서드 호출하면서 파라미터 전달
-        System.out.println("CTRL : " + resUser);
+        logger.info("CTRL : " + resUser);
 
         return "회원가입이 완료 되었습니다.";
     }
 
 
     /*send sms*/
-    @RequestMapping(value="phone_check_data", method = RequestMethod.GET)
+    @RequestMapping(value="phone_check_data", method = RequestMethod.POST)
     @ResponseBody
     public CommonResponse phone_check(@RequestParam(value="phone") String phone) throws Exception {
 
-        System.out.println(phone);
+        logger.info(phone);
 
         return userJoinService.phone_check(phone);
     }
@@ -53,8 +57,8 @@ public class UserJoinController {
     @ResponseBody
     public CommonResponse phone_check2(@RequestParam(value="phone") String phone, @RequestParam(value="cert") String cert) throws Exception {
 
-        System.out.println(phone);
-        System.out.println(cert);
+        logger.info(phone);
+        logger.info(cert);
 
         return userJoinService.phone_check2(phone, cert);
     }

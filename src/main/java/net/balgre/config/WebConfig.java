@@ -162,9 +162,20 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 .excludePathPatterns();
         
         registry.addInterceptor(authInter)
+                .addPathPatterns("/input_form")
+                .excludePathPatterns();
+        
+        registry.addInterceptor(authInter)
                 .addPathPatterns("/my/qnaList")
                 .excludePathPatterns();
-
+        
+        registry.addInterceptor(authInter)
+                .addPathPatterns("/qna/delete")
+                .excludePathPatterns();
+        
+        registry.addInterceptor(authInter)
+                .addPathPatterns("/my/privacy")
+                .excludePathPatterns();
     }
 
 }

@@ -61,8 +61,8 @@ public interface BasketRetro {
     Call<BasketResponse> basketAddPOST(
             @Header("X-Authorization") String token,
             @Header("Content-Type") String contentType,
-            @Query("item_id") int item_id2,
-            @Query("item_count") long item_count2
+            @Query("item_id") long item_id2,
+            @Query("item_count") int item_count2
 
     );
 

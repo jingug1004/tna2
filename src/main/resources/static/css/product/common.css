@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 400;
     src: url(https://img2.memebox.com/static/ui/font/NanumGothicCompact.eot);
-    src: local('â€»'), url(https://img2.memebox.com/static/ui/font/NanumGothicCompact.woff) format('woff')
+    src: local('창�궗쨩'), url(https://img2.memebox.com/static/ui/font/NanumGothicCompact.woff) format('woff')
 }
 
 html, body {
@@ -13,7 +13,7 @@ html, body {
 }
 
 body, input, textarea, select, button, table {
-    font-family: 'ë‹ì›€', Dotum, AppleSDGothic, AppleGothic, 'êµ´ë¦¼', Gulim, sans-serif;
+    font-family: '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
     font-size: 14px;
     color: #222
 }
@@ -700,7 +700,7 @@ div.lnb .lnbTextBox a:hover, div.lnb .lnbTextBox .on {
 div.lnb .relatedResult {
     padding-top: 10px;
     color: #333;
-    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
     font-size: 13px
 }
 
@@ -751,7 +751,7 @@ div#header_v2 div.gnbTop {
     background: #fff;
     color: #555;
     font-size: 12px;
-    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
 }
 
 div#header_v2 div.gnbTopInner {
@@ -1020,7 +1020,7 @@ div#header_v2 div.gnbOuter {
     height: 42px;
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
-    font-family: '나눔고딕볼드', NanumGothicBold, '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
+    font-family: '�굹�닎怨좊뵓蹂쇰뱶', NanumGothicBold, '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
 }
 
 div#header_v2 div.newGnb {
@@ -1054,7 +1054,7 @@ div#header_v2 .mainMenu {
     font-size: 14px;
     text-align: center;
     font-weight: bold;
-    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
 }
 
 div#header_v2 .mainMenu .newIcon {
@@ -1091,7 +1091,7 @@ div#header_v2 .category {
     font-size: 14px;
     text-align: center;
     font-weight: bold;
-    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
     cursor: pointer
 }
 
@@ -1264,7 +1264,7 @@ div#header_v2 .categoryTitle {
     height: 26px;
     border-top: 1px solid #f9f9f9;
     border-bottom: 1px solid #f2f2f2;
-    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
     font-size: 14px;
     font-weight: bold
 }
@@ -1339,7 +1339,7 @@ div#header_v2 .categoryTable th {
     height: 39px;
     background: #f9f9fa;
     font-size: 13px;
-    font-family: '나눔고딕볼드', NanumGothicBold, '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
+    font-family: '�굹�닎怨좊뵓蹂쇰뱶', NanumGothicBold, '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
 }
 
 div#header_v2 .categoryTable th.h3 {
@@ -1372,7 +1372,7 @@ div#header_v2 .categoryTable a:hover {
 }
 
 div#header_v2 .categoryTable, div#header_v2 .brandTable {
-    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
 }
 
 div#header_v2 .categoryTable li, div#header_v2 .brandTable li {
@@ -1425,7 +1425,7 @@ div#header_v2 .category-block {
     position: relative;
     padding-right: 174px;
     overflow: hidden;
-    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif
 }
 
 div#header_v2 .category-block a {
@@ -1454,7 +1454,7 @@ div#header_v2 .category-content-tit {
     padding: 0;
     background: #f9f9fa;
     font-size: 13px;
-    font-family: '나눔고딕볼드', NanumGothicBold, '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
+    font-family: '�굹�닎怨좊뵓蹂쇰뱶', NanumGothicBold, '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
     font-weight: bold;
     line-height: 1
 }
@@ -1578,7 +1578,7 @@ div#header_v2 span.brand-all-nav_list-item, div#header_v2 a.brand-all-nav_list-i
     padding: 3px 0;
     color: #555;
     font-size: 16px;
-    font-family: '나눔고딕볼드', NanumGothicBold, '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
+    font-family: '�굹�닎怨좊뵓蹂쇰뱶', NanumGothicBold, '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
     font-weight: bold;
     text-decoration: none;
     text-align: center
@@ -1603,7 +1603,7 @@ div#header_v2 a.brand-all-nav_list-item.morpheme {
 div#header_v2 .brand-all-block {
     position: relative;
     padding: 14px 0 3px 0;
-    font-family: '나눔고딕', NanumGothic, '맑은고딕', Malgun Gothic, '돋움', Dotum, Helvetica, 'Apple SD Gothic Neo', Sans-serif
+    font-family: '�굹�닎怨좊뵓', NanumGothic, '留묒�怨좊뵓', Malgun Gothic, '�룍��', Dotum, Helvetica, 'Apple SD Gothic Neo', Sans-serif
 }
 
 div#header_v2 .brand-all-head {
@@ -1686,3 +1686,23 @@ div#header_v2 li.brand-list-block {
     text-indent: -9999em
 }
 
+
+
+/** Go to Top button CSS  **/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  background: url('/img/balgeure_icons.png') no-repeat -1px -1px;
+  width:71px;
+  height:35px;
+  cursor: pointer;
+  text-indent: -9999em;
+}
+
+#myBtn:hover {
+  background: url('/img/balgeure_icons.png') no-repeat -1px -1px;
+}

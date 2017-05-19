@@ -3,6 +3,8 @@ package net.balgre.network;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.balgre.domain.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
@@ -13,6 +15,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ProductRetroImpl {
+	
+	private static final Logger logger = LoggerFactory.getLogger(ProductRetroImpl.class);
 
     private static final String API_URL = "http://digiserver.cafe24.com:10000";
     private ProductRetro productRetro = null;
@@ -35,20 +39,6 @@ public class ProductRetroImpl {
         return null;
     }
 
-    public List<Product> boxGET() {
-        Call<List<Product>> call = this.productRetro.boxGET();
-        try {
-            Response<List<Product>> response = call.execute();
-            if (response.isSuccessful()) {
-                System.out.println(response.body().size());
-                return response.body();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     public CategoryResponse categoryResponseGET() {
         Call<CategoryResponse> call = this.productRetro.categoryResponseGET();
         try {
@@ -63,38 +53,10 @@ public class ProductRetroImpl {
         return null;
     }
 
-    public CategoryResponse2 categoryResponse2GET() {
-        Call<CategoryResponse2> call = this.productRetro.categoryResponse2GET();
-        try {
-            Response<CategoryResponse2> response = call.execute();
-            if (response.isSuccessful()) {
-                System.out.println(response.body().getResultCode());
-                return response.body();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     public ProductResponse detailGET(long product_id3) {
         Call<ProductResponse> call = this.productRetro.detailGET(product_id3);
         try {
             Response<ProductResponse> response = call.execute();
-            if (response.isSuccessful()) {
-                System.out.println(response.body());
-                return response.body();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    public BestResponse listGET() {
-        Call<BestResponse> call = this.productRetro.listGET();
-        try {
-            Response<BestResponse> response = call.execute();
             if (response.isSuccessful()) {
                 System.out.println(response.body());
                 return response.body();
@@ -164,19 +126,84 @@ public class ProductRetroImpl {
         return null;
     }
 
-        public List<ProductTimeSale> timeGET() {
-            Call<List<ProductTimeSale>> call = this.productRetro.timeGET();
-            try {
-                Response<List<ProductTimeSale>> response = call.execute();
-                if (response.isSuccessful()) {
-                    System.out.println(response.body().toString());
-                    System.out.println(response.body().toString());
-                    return response.body();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+    
+    /*time sale list by minho*/
+    public List<ProductTimeSale> timeSaleList() {
+            
+    	Call<List<ProductTimeSale>> call = this.productRetro.timeSaleList();
+            
+    	try {
+            Response<List<ProductTimeSale>> response = call.execute();
+            logger.info("response : " + response);
+            if (response.isSuccessful()) {
+                logger.info("response.body : " + response.body());
+                    
+                return response.body();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return null;
+    }
+    
+    
+    /*balgeure box by minho*/
+    public List<Product> balgeureBox() {
+    	
+    	Call<List<Product>> call = this.productRetro.balgeureBox();
+    	
+    	try {
+    		Response<List<Product>> response = call.execute();
+    		logger.info("response : " + response);
+    		if (response.isSuccessful()) {
+    			logger.info("response.body : " + response.body());
+    			
+    			return response.body();
+    		}
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
+    	return null;
+    }
+    
+    
+    /*new product by minho*/
+    public BestResponse newProduct() {
+    	
+    	Call<BestResponse> call = this.productRetro.newProduct();
+    	
+    	try {
+    		Response<BestResponse> response = call.execute();
+    		logger.info("response : " + response);
+    		if (response.isSuccessful()) {
+    			logger.info("response.body : " + response.body());
+    			
+    			return response.body();
+    		}
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
+    	return null;
+    }
+    
+    
+    /*category list by minho*/
+    public CategoryResponse2 categoryList() {
+    	
+    	Call<CategoryResponse2> call = this.productRetro.categoryList();
+    	
+    	try {
+    		Response<CategoryResponse2> response = call.execute();
+    		logger.info("response : " + response);
+    		if (response.isSuccessful()) {
+    			logger.info("response.body : " + response.body());
+    			
+    			return response.body();
+    		}
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
+    	return null;
     }
 
 //    public ProductRetro getProduct(Long productId) {

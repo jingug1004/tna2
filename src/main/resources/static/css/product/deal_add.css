@@ -118,7 +118,7 @@ a.dealLink:hover {
     width: 10px;
     height: 5px;
     margin: 0 0 0 -5px;
-    /*background: url("/web/images/deal/deal_20161125.png") no-repeat -1170px -20px*/
+    background: url("/img/balgeure_icons.png") no-repeat -815px -112px;
 }
 
 .memeTab .on {
@@ -262,7 +262,7 @@ a.dealLink:hover {
     width: 60px;
     height: 60px;
     display: block;
-    /*background: url("/web/images/deal/deal_20161125.png")*/
+    background: url("/img/balgeure_icons.png") no-repeat;
 }
 
 .dealDescription .badge .none {
@@ -279,15 +279,15 @@ a.dealLink:hover {
 }
 
 .dealDescription .badge .memebox {
-    background-position: -140px 0
+    background-position: -1px -43px;
 }
 
 .dealDescription .badge .best {
-    background-position: -210px 0
+    background-position: -100px -43px;
 }
 
 .dealDescription .badge .new {
-    background-position: -280px 0
+    background-position: -71px -43px;
 }
 
 .dealDescription .badge .threeTime {
@@ -319,7 +319,7 @@ a.dealLink:hover {
 }
 
 .dealDescription .badge .soldOutSoon {
-    background-position: -770px 0
+    background-position: -1px -43px;
 }
 
 .dealDescription .badge .deal_0 {
@@ -698,7 +698,7 @@ dd.cardBenefitWrap {
     width: 15px;
     height: 15px;
     margin: -8px 0 0 0;
-    /*background: url("/web/images/deal/deal_20161125.png") -1170px top;*/
+    background: url("/img/balgeure_icons.png") no-repeat -789px -106px;
     vertical-align: middle
 }
 
@@ -1443,10 +1443,10 @@ dd.cardBenefitWrap {
 
 #dealSimpleOption .btnSimpleOption {
     position: absolute;
-    top: -84px;
+    top: -85px;
     right: 30px;
     display: block;
-    width: 108px;
+    width: 110px;
     height: 85px;
     padding: 0 0 0 10px;
     border: 1px solid #ff5073;
@@ -1480,15 +1480,15 @@ dd.cardBenefitWrap {
     display: inline-block;
     *display: inline;
     *zoom: 1;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 #dealSimpleOption .btnSimpleOption .btnSimpleArr {
-    width: 17px;
+    width: 18px;
     height: 0;
     margin-right: 4px;
     padding-top: 10px;
-    /*background: url("/web/images/deal/deal_20161125.png") no-repeat -540px -70px;*/
+    background: url("/img/balgeure_icons.png") no-repeat -869px -107px;
     overflow: hidden
 }
 
@@ -1528,7 +1528,7 @@ dd.cardBenefitWrap {
 }
 
 #dealSimpleOption.open .btnSimpleOption .btnSimpleArr {
-    background-position: -520px -70px
+    background-position: -845px -109px;
 }
 
 #dealSimpleOption.open .descInfoOption {
@@ -3300,9 +3300,9 @@ a.starScore button.overR {
 
 
 
-#choiceItem {
+.choiceItem {
 	height: 30px;
-    font-size: 12px;
+    font-size: 13px;
     width: 100%;
     padding-left: 5px;
 }
@@ -3332,17 +3332,43 @@ a.starScore button.overR {
     font-weight: normal;
 }
 
+
+.numberQty{
+	position: absolute;
+    float: right;
+    right: 127px;
+}
+
+.sum_Price_each{
+	position: absolute;
+    float: right;
+    right: 94px;}
+
+.Price_KR_dollar{
+	position: absolute;
+    float: right;
+    right: 80px;
+}
+
 .orderRemoveButton{
 	text-indent: -9999em;
+	background: url(/img/balgeure_icons.png) no-repeat -965px -104px;
+    width: 35px;
+    height: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    float: right;
+    right: 20px;
+    position: absolute;
 }
 
 .decreaseQuantity{
 	width: 20px;
     height: 20px;
     border: none;
-    background: url('itemQty_btn.png');
+    background: url('/img/balgeure_icons.png') no-repeat -915px -103px;
     text-indent: -999em;
-    margin-top: -2px;
 }
 
 .changeNumber{
@@ -3353,11 +3379,21 @@ a.starScore button.overR {
 	width: 20px;
     height: 20px;
     border: none;
-    background: url('itemQty_btn.png');
+    background: url('/img/balgeure_icons.png') no-repeat -940px -103px;
     text-indent: -999em;
-    background-position: -70px;
-    margin-top: -2px;
+    margin-right: 15px;
 }
+
+#putinQty{
+	height: 18px;
+    width: 47px;
+    text-align: center;
+    padding: 0;
+    margin: 0 -4px;
+}
+
+
+
 
 /**  옵션 후 총 가격 표시   **/
 .OptionTotalPrice{
@@ -3375,4 +3411,39 @@ a.starScore button.overR {
 #KR_won{
 	font-size: 16px;
     font-weight: bold;
+}
+
+
+/**  간편옵션  **/
+
+.choiceItem2{
+	height: 30px;
+    font-size: 13px;
+    width: 100%;
+    padding-left: 5px;
+}
+
+#cartItem2{
+	text-align: right;
+}
+
+
+
+/** Go to Top button CSS  **/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  background: url('/img/balgeure_icons.png') no-repeat -1px -1px;
+  width:71px;
+  height:35px;
+  cursor: pointer;
+  text-indent: -9999em;
+}
+
+#myBtn:hover {
+  background: url('/img/balgeure_icons.png') no-repeat -1px -1px;
 }

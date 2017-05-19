@@ -771,10 +771,10 @@ transform
 											<li><a href="/my/wishList"
 												ga-event="gnb,gnb_mypage_찜한상품">찜한상품</a></li>
 											<li><a href="/my/point" ga-event="gnb,gnb_mypage_혜택정보">혜택정보</a></li>
-											<li><a href="/my/privacy/password"
+											<li><a href="/my/privacy"
 												ga-event="gnb,gnb_mypage_개인정보">개인정보</a></li>
 											<li><a href="/my/review" ga-event="gnb,gnb_mypage_나의리뷰">나의리뷰</a></li>
-											<li><a href="/my/inquiry"
+											<li><a href="/my/qna"
 												ga-event="gnb,gnb_mypage_1:1문의">1:1문의</a></li>
 											<!--<li><a href="/my/freeEvent" ga-event="gnb,gnb_mypage_이벤트 응모내역">이벤트 응모내역</a></li>-->
 										</ul>
@@ -794,7 +794,7 @@ transform
 												ga-event="gnb,gnb_cscenter_배송안내">배송안내</a></li>
 											<li><a href="/cs/point"
 												ga-event="gnb,gnb_cscenter_포인트쿠폰">포인트·쿠폰</a></li>
-											<li><a href="/my/inquiry"
+											<li><a href="/my/qna"
 												ga-event="gnb,gnb_cscenter_1_1문의">1:1문의</a></li>
 										</ul>
 									</div>
@@ -813,7 +813,7 @@ transform
 				<div class="gnbLogoOuter">
 					<div class="gnbLogo mA">
 
-						<a class="memeLogo tI fL" href="http://www.memebox.com/"
+						<a class="memeLogo tI fL" href="http://localhost:8088/main"
 							ga-event="gnb,gnb_logo"><h1>미미박스</h1></a>
 
 						<div class="newSearchWrap" id="searchInputBox">

@@ -151,7 +151,7 @@ div.lnb .lnbTextBox {
     overflow: hidden;
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
-    background: #fafafa
+    background: #fafafa;
 }
 
 div.lnb .lnbTextBox li {
@@ -163,7 +163,7 @@ div.lnb .lnbTextBox li {
 }
 
 div.lnb .lnbTextBox a:hover, div.lnb .lnbTextBox .on {
-    color: #ff5073
+    color: #ff8fa7;
 }
 
 div.lnb .relatedResult {
@@ -274,7 +274,7 @@ div#header_v2 div.gnbTopInner .appDownIcon {
     display: block;
     width: 13px;
     height: 16px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -230px -40px
+    background: url("/img/balgeure_icons.png") no-repeat -179px -4px;
 }
 
 div#header_v2 div.gnbTopInner ul.gnbTopRight .li {
@@ -311,7 +311,7 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .top_cartIcon {
     margin: 3px 2px 0 0;
     width: 17px;
     height: 14px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -250px -40px
+    background: url("/img/balgeure_icons.png") -196px -4px
 }
 
 div#header_v2 div.gnbTopInner ul.gnbTopRight .cart_count {
@@ -431,12 +431,12 @@ div#header_v2 div.gnbLogo .topRollingBannerWrap .topRollingArrow {
 
 div#header_v2 div.gnbLogo .topRollingBannerWrap .pre {
     right: 17px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -340px -40px
+    background: url("/img/balgeure_icons.png") -249px -3px;
 }
 
 div#header_v2 div.gnbLogo .topRollingBannerWrap .next {
     right: 0;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -360px -40px
+    background: url("/img/balgeure_icons.png") -268px -3px;
 }
 
 div#header_v2 div.gnbLogo .topRollingBanner {
@@ -594,7 +594,7 @@ div#header_v2 .categoryWrap {
 }
 
 div#header_v2 .mainMenu.on, div#header_v2 .mainMenu:hover {
-    color: #ff5073
+    color: #ff8fa7;
 }
 
 div#header_v2 .fixCategory {
@@ -649,7 +649,7 @@ div#header_v2 .fixCategory:hover .bar {
 }
 
 div#header_v2 .fixCategory:hover a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .fixCategory_side {
@@ -685,7 +685,7 @@ div#header_v2 .lnbOver {
     display: none;
     position: absolute;
     top: 42px;
-    width: 1046px;
+    width: 1080px;
     border: 1px solid #e1e1e1;
     font-size: 13px
 }
@@ -765,14 +765,14 @@ div#header_v2 .depth_3_box {
     left: 180px;
     width: 296px;
     background: #fff;
-    border: 1px solid #ff5073;
+    border: 1px solid #ff8fa7;
     border-left: 1px solid #dbdbdb;
     font-size: 13px;
     overflow: hidden
 }
 
 div#header_v2 .depth_2_li:hover .depth_2, div#header_v2 .depth_3_li:hover .depth_3 {
-    background: #ff5073;
+    background: #ff8fa7;
     color: #fff
 }
 
@@ -841,7 +841,7 @@ div#header_v2 .categoryTable a {
 }
 
 div#header_v2 .categoryTable a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .categoryTable, div#header_v2 .brandTable {
@@ -883,7 +883,7 @@ div#header_v2 .brandTable td {
 }
 
 div#header_v2 .brandTable a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .category-block .top, div#header_v2 .category-block-content .top {
@@ -906,7 +906,7 @@ div#header_v2 .category-block a {
 }
 
 div#header_v2 .category-block a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .category-block-content {
@@ -989,7 +989,7 @@ div#header_v2 .lnbClose {
     display: block;
     width: 29px;
     height: 29px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -440px -40px;
+    background: url("/img/balgeure_icons.png") -76px -1px;
     cursor: pointer
 }
 
@@ -1217,7 +1217,7 @@ a[disabled] {
 }
 
 .pText {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 .blackBtn {
@@ -1445,7 +1445,7 @@ div.myView .amount {
     float: right;
     font-size: 13px;
     font-weight: bold;
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div.myView .viewList {
@@ -2377,7 +2377,9 @@ div.newDealContents .dealList .badge .md {
 }
 
 div.newDealContents .dealList .badge .memebox {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -100px -40px*/
+    background: url("/img/balgeure_icons.png") -1px -43px;
+    height: 60px;
+    width:60px;
 }
 
 div.newDealContents .dealList .badge .best {
@@ -2417,7 +2419,7 @@ div.newDealContents .dealList .badge .promotion {
 }
 
 div.newDealContents .dealList .badge .soldOutSoon {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -550px -40px*/
+    background: url("/img/balgeure_icons.png") -43px -1px;
 }
 
 div.newDealContents .dealList .badge .deal_0 {
@@ -3125,16 +3127,18 @@ div.newDealContents .dealList .badge .md {
     /*background: url("/web/images/shopList/shopList_20170102.png") -50px -40px*/
 }
 
-div.newDealContents .dealList .badge .memebox {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -100px -40px*/
+3div.newDealContents .dealList .badge .memebox {
+    background: url("/img/balgeure_icons.png") -43px -1px;
 }
 
 div.newDealContents .dealList .badge .best {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -150px -40px*/
+    background: url("/img/balgeure_icons.png") -93px -1px;
 }
 
 div.newDealContents .dealList .badge .new {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -200px -40px*/
+    background: url("/img/balgeure_icons.png") -65px -43px;
+    width: 60px;
+    height:60px;
 }
 
 div.newDealContents .dealList .badge .threeTime {
@@ -3166,7 +3170,7 @@ div.newDealContents .dealList .badge .promotion {
 }
 
 div.newDealContents .dealList .badge .soldOutSoon {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -550px -40px*/
+    background: url("/img/balgeure_icons.png") -43px -1px;
 }
 
 div.newDealContents .dealList .badge .deal_0 {

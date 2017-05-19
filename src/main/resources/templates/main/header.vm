@@ -289,7 +289,7 @@
                                         <li><a href="/my/order" ga-event="gnb,gnb_mypage_구매정보">구매정보</a></li>
                                         <li><a href="/my/wishList" ga-event="gnb,gnb_mypage_찜한상품">찜한상품</a></li>
                                         <li><a href="/my/point" ga-event="gnb,gnb_mypage_혜택정보">혜택정보</a></li>
-                                        <li><a href="/my/privacy/password" ga-event="gnb,gnb_mypage_개인정보">개인정보</a></li>
+                                        <li><a href="/my/privacy" ga-event="gnb,gnb_mypage_개인정보">개인정보</a></li>
                                         <li><a href="/my/review" ga-event="gnb,gnb_mypage_나의리뷰">나의리뷰</a></li>
                                         <li><a href="/my/qna" ga-event="gnb,gnb_mypage_1:1문의">1:1문의</a></li>
                                         <!--<li><a href="/my/freeEvent" ga-event="gnb,gnb_mypage_이벤트 응모내역">이벤트 응모내역</a></li>-->
@@ -309,7 +309,6 @@
                                     <ul>
                                         <li><a href="/cs/faq" ga-event="gnb,gnb_cscenter_자주묻는질문">자주 묻는 질문</a></li>
                                         <li><a href="/cs/delivery" ga-event="gnb,gnb_cscenter_배송안내">배송안내</a></li>
-                                        <li><a href="/cs/point" ga-event="gnb,gnb_cscenter_포인트쿠폰">포인트·쿠폰</a></li>
                                         <li><a href="/my/qna" ga-event="gnb,gnb_cscenter_1_1문의">1:1문의</a></li>
                                     </ul>
                                 </div>
@@ -339,32 +338,16 @@
 
                         <div class="searchBar-wrap">
                             <div class="searchBar-inputBox-wrap">
-                                <form id="searchForm" class="searchBar-inputBox" method="GET"
-                                      action="#"
-                                      enctype="application/x-www-form-urlencoded" onsubmit="return SPexecuteSearch();">
+                            
+                                <form type="submit" id="searchForm" class="searchBar-inputBox" method="get" action="/product/search">
                                     <label class="searchBar-inputBox-label"> <span class="searchBar-inputBox-text">search bar</span>
-                                        <input id="search"
-                                               class="searchBox ui-autocomplete-input searchBar-inputBox-input"
-                                               type="text" name="q" autocomplete="off" placeholder="아이섀도우는 이거 하나면 끝!"
-                                               searchbartype="searchKeyword" landingparameter="섀도우팔레트"> <span
-                                                class="searchBar-inputBox-reset" id="sb-q-rm"
-                                                style="display: block;"></span> </label>
-                                    <button class="iconSearch searchBar-inputBox-submit" id="executeSearchButton"
-                                            type="submit"
-                                            onclick="SPsearchbarQueryLog('searchKeyword', '아이섀도우는 이거 하나면 끝!', '섀도우팔레트', q.value);">
-                                        검색하기
-                                    </button>
-                                    <a class="iconSearch searchBar-inputBox-submit" id="landingPageButton"
-                                       style="display:none;"> 검색하기 </a> <input type="hidden" name="ab" value=""> <input
-                                        type="hidden" name="qt" value="box"> <input type="hidden" name="at" value="1">
-                                    <input type="hidden" name="cat1" value="">
-                                    <input type="hidden" name="cat2" value="">
-                                    <input type="hidden" name="cat3" value="">
-                                    <input type="hidden" name="brd" value="">
-                                    <input type="hidden" name="enq" value="">
-                                    <input type="hidden" name="door" value="pc_main">
-                                    <input type="hidden" name="recombar" value="1">
-                                </form>
+                                        <input id="search" class="searchBox ui-autocomplete-input searchBar-inputBox-input"
+                                           type="text" name="search" placeholder="ㅇㅇ?!">
+                                    </label>
+                                    <input type="submit" class="iconSearch searchBar-inputBox-submit" id="searchBtn" value="검색">
+                                 </form>
+
+
                             </div>
                             <div id="tabs" class="suggest-layer" style="display: none;">
                                 <div id="sb-tab-selector" class="suggest-selector-wrap">
@@ -556,6 +539,7 @@
 
 
                         <!--고정 카테고리-->
+
                                             <div class="fixCategory">
                     
                     
@@ -865,7 +849,7 @@
                                                                 <ul>
                     
                                                                     <li>
-                                                                        <a href="/vs/specialPrice" ga-event="menu_total,menu_한정특가"
+                                                                        <a href="/bg/timeSale" ga-event="menu_total,menu_한정특가"
                                                                            segment-event="Nav Clicked" data-nav-type="Global Navigation">
                                                                             한정특가
                                                                         </a>
@@ -947,10 +931,7 @@
                                                             <div class="shadowBox"></div>
                                                         </div>
                                                     </li>
-                    
                                                 </ul>
-                    
-                    
                                             </div>
 
 
@@ -1393,7 +1374,7 @@
                                             <ul class="category-desc-list">
 
                                                 <li class="category-list-block">
-                                                    <a href="/vs/specialPrice"
+                                                    <a href="/bg/timeSale"
                                                        class="category-list-item"
                                                        ga-event="menu_total,menu_한정특가"
                                                        segment-event="Nav Clicked" data-nav-type="Global Navigation">
@@ -1508,7 +1489,99 @@
                                     </div>
 
                                 </div>
+                                <div class="category-block additional">
 
+                                    <div class="category-block-content">
+                                        <strong class="category-content-tit">
+                                            <a href="/vs/theme"
+                                               class="category-tit-item"
+                                               ga-event="menu_total,menu_서비스 &amp; 테마"
+                                               segment-event="Nav Clicked"
+                                               data-nav-type="Global Navigation">
+                                                서비스 &amp; 테마
+
+                                            </a>
+                                        </strong>
+                                        <div class="category-content-desc top">
+
+                                            <ul class="category-desc-list">
+
+                                                <li class="category-list-block">
+                                                    <a href="/bg/timeSale"
+                                                       class="category-list-item"
+                                                       ga-event="menu_total,menu_한정특가"
+                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                                        <span class="category-list-text">한정특가</span>
+
+                                                    </a>
+                                                </li>
+
+                                                <li class="category-list-block">
+                                                    <a href="/vs/memeDelivery"
+                                                       class="category-list-item"
+                                                       ga-event="menu_total,menu_발그레배송"
+                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                                        <span class="category-list-text">발그레배송</span>
+
+                                                    </a>
+                                                </li>
+
+                                                <li class="category-list-block">
+                                                    <a href="/vs/freebie"
+                                                       class="category-list-item"
+                                                       ga-event="menu_total,menu_사은 증정 상품"
+                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                                        <span class="category-list-text">사은 증정 상품</span>
+
+                                                    </a>
+                                                </li>
+
+                                                <li class="category-list-block">
+                                                    <a href="/vs/priceBelow9900"
+                                                       class="category-list-item"
+                                                       ga-event="menu_total,menu_9,900원 이하 상품"
+                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                                        <span class="category-list-text">9,900원 이하 상품</span>
+
+                                                    </a>
+                                                </li>
+
+                                                <li class="category-list-block">
+                                                    <a href="/vs/discount50"
+                                                       class="category-list-item"
+                                                       ga-event="menu_total,menu_할인율 50% 이상 상품"
+                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                                        <span class="category-list-text">할인율 50% 이상 상품</span>
+
+                                                    </a>
+                                                </li>
+
+                                                <li class="category-list-block">
+                                                    <a href="/vs/review90"
+                                                       class="category-list-item"
+                                                       ga-event="menu_total,menu_별점 90점 이상 상품"
+                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                                        <span class="category-list-text">별점 90점 이상 상품</span>
+
+                                                    </a>
+                                                </li>
+
+                                                <li class="category-list-block">
+                                                    <a href="/vs/specialPromo"
+                                                       class="category-list-item"
+                                                       ga-event="menu_total,menu_특가상품"
+                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                                        <span class="category-list-text">특가상품</span>
+
+                                                    </a>
+                                                </li>
+
+                                                <li class="category-list-block">
+                                                    <a href="/vs/newmember/newest"
+                                                       class="category-list-item"
+                                                       ga-event="menu_total,menu_웰컴특가"
+                                                       segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                                        <span class="category-list-text">웰컴특가</span>
                             </div>
                             <span class="lnbClose"></span>
 
@@ -1519,7 +1592,7 @@
                         <li class="newGnbTab">
                             <h3>
                                 <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-                                   href="/vs/specialPrice" ga-event="menu,menu_memedeal"
+                                   href="/bg/timeSale" ga-event="menu,menu_memedeal"
                                    data-nav-type="Global Navigation">
                                     한정특가
                                 </a>
@@ -1548,25 +1621,24 @@
                         <li class="newGnbTab">
                             <h3>
                                 <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-                                   href="/vs/memeDelivery" ga-event="menu,menu_special"
+                                   href="/bg/box" ga-event="menu,menu_special"
                                    data-nav-type="Global Navigation">
                                     발그레박스
                                 </a>
                             </h3>
                         </li>
 
-                        <!--
+                        
+
+
                         <li class="newGnbTab">
                             <h3>
                                 <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-                                   href="/vs/box" ga-event="menu,menu_box" data-nav-type="Global Navigation">
-                                    온리발그레
-
-
+                                   href="/bg/new" ga-event="menu,menu_new" data-nav-type="Global Navigation">
+                                    NEW
                                 </a>
                             </h3>
                         </li>
-
 
                         <li class="newGnbTab">
                             <h3>
@@ -1578,331 +1650,7 @@
                                 </a>
                             </h3>
                         </li>
-                        -->
 
-
-                        <li class="newGnbTab">
-                            <h3>
-                                <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-                                   href="/vs/new/newest" ga-event="menu,menu_new" data-nav-type="Global Navigation">
-                                    NEW
-                                </a>
-                            </h3>
-                        </li>
-
-
-                        <li class="newGnbTab">
-                            <h3>
-                                <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-                                   href="/memeCoupon" ga-event="menu,menu_coupon" data-nav-type="Global Navigation">
-                                    이벤트&amp;쿠폰
-                                </a>
-                            </h3>
-                        </li>
-
-                        <!--
-                            <li class="newGnbTab brand">
-                                <h3>
-                                    <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-                                       href="/brand/all" ga-event="menu,menu_brand" data-nav-type="Global Navigation">
-                                        브랜드관
-                                    </a>
-                                    <div class="lnbOver brandList">
-                                        <div class="tableWrap bg">
-                                            <table class="brandTable" cellpadding="0" cellspacing="0">
-                                                <caption>브랜드 하위 분류</caption>
-
-                                                <tr>
-                                                    <th>ㄱ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/44491" ga-event="menu_brand,menu_44491"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">가온</a></li>
-
-                                                            <li><a href="/brand/44693" ga-event="menu_brand,menu_44693"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">경남제약</a></li>
-
-                                                            <li><a href="/brand/42628" ga-event="menu_brand,menu_42628"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">고운머리</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㄲ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/44200" ga-event="menu_brand,menu_44200"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">꽃을든남자</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㄴ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/41820" ga-event="menu_brand,menu_41820"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">나스</a></li>
-
-                                                            <li><a href="/brand/41628" ga-event="menu_brand,menu_41628"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">뉴트로지나</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㄷ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/32322" ga-event="menu_brand,menu_32322"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">닥터브로너스</a></li>
-
-                                                            <li><a href="/brand/42820" ga-event="menu_brand,menu_42820"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">닥터영</a></li>
-
-                                                            <li><a href="/brand/49591" ga-event="menu_brand,menu_49591"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">닥터웰</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㄹ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/41937" ga-event="menu_brand,menu_41937"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">라끄베르</a></li>
-
-                                                            <li><a href="/brand/41688" ga-event="menu_brand,menu_41688"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">라네즈</a></li>
-
-                                                            <li><a href="/brand/43986" ga-event="menu_brand,menu_43986"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">릴리안</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅁ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/49139" ga-event="menu_brand,menu_49139"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">마더네스트</a></li>
-
-                                                            <li><a href="/brand/317" ga-event="menu_brand,menu_317"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">마루빌츠</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅂ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/215" ga-event="menu_brand,menu_215"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">바닐라코</a></li>
-
-                                                            <li><a href="/brand/48768" ga-event="menu_brand,menu_48768"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">빌리프</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅃ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/46077" ga-event="menu_brand,menu_46077"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">쁘띠보떼</a></li>
-
-                                                            <li><a href="/brand/44660" ga-event="menu_brand,menu_44660"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">쁘띠페</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅅ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/44271" ga-event="menu_brand,menu_44271"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">샐리한센</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅆ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/44274" ga-event="menu_brand,menu_44274"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">싸이닉</a></li>
-
-                                                            <li><a href="/brand/200" ga-event="menu_brand,menu_200"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">씨라클</a></li>
-
-                                                            <li><a href="/brand/49140" ga-event="menu_brand,menu_49140"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">씨앤트리</a></li>
-
-                                                            <li><a href="/brand/47256" ga-event="menu_brand,menu_47256"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">씨앤트리</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅇ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/46823" ga-event="menu_brand,menu_46823"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">아로마틱</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅋ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/41335" ga-event="menu_brand,menu_41335"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">카라디움</a></li>
-
-                                                            <li><a href="/brand/45754" ga-event="menu_brand,menu_45754"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">키초</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅌ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/49735" ga-event="menu_brand,menu_49735"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">터치뷰티</a></li>
-
-                                                            <li><a href="/brand/44566" ga-event="menu_brand,menu_44566"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">트릴로지</a></li>
-
-                                                            <li><a href="/brand/45076" ga-event="menu_brand,menu_45076"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">틴버블</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅍ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/42754" ga-event="menu_brand,menu_42754"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">파나소닉</a></li>
-
-                                                            <li><a href="/brand/49390" ga-event="menu_brand,menu_49390"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">플로르마</a></li>
-
-                                                            <li><a href="/brand/44165" ga-event="menu_brand,menu_44165"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">피카소</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>ㅎ</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/41516" ga-event="menu_brand,menu_41516"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">하다라보</a></li>
-
-                                                            <li><a href="/brand/41684" ga-event="menu_brand,menu_41684"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">히말라야</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>S</th>
-                                                    <td>
-                                                        <ul>
-
-                                                            <li><a href="/brand/42767" ga-event="menu_brand,menu_42767"
-                                                                   segment-event="Nav Clicked"
-                                                                   data-nav-type="Global Navigation">SK2</a></li>
-
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-
-                                            </table>
-                                        </div>
-                                        <div class="shadowBox"></div>
-                                    </div>
-                                </h3>
-                        </li>
-                        -->
 
                     </ul>
 

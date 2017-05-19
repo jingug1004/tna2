@@ -26,7 +26,7 @@ public class Product {
     private String prodDesc;
     private String prodName;
     private ProductDelivery productDelivery;
-    private Integer productId;
+    private long productId;
     private String regDate;
     private Integer reviewCount;
     private Number reviewStar;

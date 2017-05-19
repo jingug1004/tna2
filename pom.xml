@@ -108,7 +108,11 @@
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-facebook</artifactId>
-            <version>1.1.0.RELEASE</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-social-facebook</artifactId>
         </dependency>
 
         <dependency>
@@ -120,13 +124,6 @@
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-twitter</artifactId>
-            <version>1.1.0.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
         </dependency>
 
         <dependency>
@@ -143,8 +140,10 @@
         <!-- json 사용하기 위한 dependecy -->
 
 
-
-
+        <dependency>
+        	<groupId>org.springframework.data</groupId>
+        	<artifactId>spring-data-commons</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

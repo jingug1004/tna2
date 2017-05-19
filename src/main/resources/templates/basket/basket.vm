@@ -100,82 +100,94 @@
 
             <!-- ko with: bundleVM -->
             <!-- ko if: memeBundles().length  -->
+
+
             <table class="cartList bundles" cellspacing="0" cellpadding="0" summary="장바구니 목록"
-                   data-bind="visible: isInit()" style="display: none;">
-                <caption>발그레배송 장바구니 상품 리스트 11</caption>
-                <colgroup>
-                    <col style="width:37px;">
-                    <col style="width:670px;">
-                    <col style="width:138px;">
-                    <col style="width:139px;">
-                </colgroup>
-                <thead class="memeHeadWrap">
-                <tr class="memeHead">
-                    <th class="tI" colspan="4">
-                        <h3 class="tI">발그레배송</h3>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <!-- ko foreach: memeBundles() -->
+                   data-bind="visible: isInit()" #*style="display: none;*#
+            ">
+            <caption>발그레배송 장바구니 상품 리스트</caption>
+            <colgroup>
+                <col style="width:37px;">
+                <col style="width:670px;">
+                <col style="width:138px;">
+                <col style="width:139px;">
+            </colgroup>
+            <thead class="memeHeadWrap">
+            <tr class="memeHead">
+                <th class="tI" colspan="4">
+                    <h3 class="tI">발그레배송</h3>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- ko foreach: memeBundles() -->
 
-                <!-- ko foreach: products() -->
-                <tr>
-                    <td class="check">
-                        <input type="checkbox"
-                               data-bind="checked: checked, click: function() {#*$parent.eventHandler.productClick(this);*# return true; }"/>
-                    </td>
-                    <td class="itemInfo">
-                        <div>
-                            <a data-bind="attr:{href: productUrl}">
-                                <img src="" data-bind="attr:{src: thumbnailUrl }"></a>
-                        </div>
-                        <div #*class="textArea fL"*#>
-                            <p class="productName fW">
-                                <a data-bind="attr:{href: productUrl}"><!--ko text: productTitle--><!--/ko--></a>
-                            </p>
-                            <div #*class="option"*#>
-                                <table #*class="optionSelect"*# cellpadding="0" cellspacing="0">
-                                    <colgroup>
-                                        <col style="width:235px;">
-                                        <col style="width:90px;">
-                                        <col style="width:80px;">
-                                        <col style="width:82px;">
-                                        <col style="width:38px;">
-                                    </colgroup>
-                                    <tbody data-bind="foreach:items">
-                                    <!-- ko if: itemType != '10010604' -->
+            <!-- ko foreach: products() -->
+                #foreach($item in $basketListGET.basketList)
+                    #foreach($item2 in $item)
+                        #foreach($item3 in $item2)
+                        <tr>
+                            <td class="check">
+                                <input type="checkbox"
+                                       data-bind="checked: checked, click: function() {#*$parent.eventHandler.productClick(this);*# return true; }"/>
+                            </td>
+                            <td class="itemInfo">
+                                <div>
+                                    <a data-bind="attr:{href: productUrl}">
+                                        <img src="http://sumcrimage.cafe24.com/${item3.thumbUrl}" data-bind="attr:{src: thumbnailUrl }"></a>
+                                </div>
+                                <div #*class="textArea fL"*#>
+                                    <p class="productName fW">
+                                        <a data-bind="attr:{href: productUrl}"><!--ko text: productTitle-->
+                                            [${item3.brand.brandName}] ${item3.prodName}
+                                            <!--/ko--></a>
+                                    </p>
+                                    <div #*class="option"*#>
+                                        <table #*class="optionSelect"*# cellpadding="0" cellspacing="0">
+                                            <colgroup>
+                                                <col style="width:235px;">
+                                                <col style="width:90px;">
+                                                <col style="width:80px;">
+                                                <col style="width:82px;">
+                                                <col style="width:38px;">
+                                            </colgroup>
 
 
-                                    <tr #*class="itemList"*#
-                                    ##                                        data-bind="attr: {'class': isLastCart  ? 'itemList last' : 'itemList', 'data-cartId': cartId, 'data-itemId': itemId, 'data-itemCount': itemCount(), 'data-productId': productId, 'data-price': price, 'data-checked': checked()}"
-                                    >
-                                        <th class="optionTitle">
-                                            <!-- ko if: itemType == '10010604' -->
-                                            <span class="addArrow"></span>
-                                            <!-- /ko -->
-                                            <strong class="deal-item-type-title"><!--ko text: title-->
-                                                <!--/ko--></strong>
-                                            <!--ko if:isBest -->
-                                            <span class="conversion-popularity-notice">인기급상승</span>
-                                            <!--/ko-->
-                                            <p class="alertNotice" style="color: red;"
-                                               data-bind="visible: isOutOfRange">
-                                                [품절임박] 재고 <!-- ko text: quantity.max --><!-- /ko -->
-                                                <!-- ko text: self.isOutOfRange --><!-- /ko -->개
-                                            </p>
-                                            <p class="alertNotice" style="color: red; display: none;"
-                                               data-bind="visible: ui.itemCountAlert.visible">
-                                                * <!-- ko text: ui.itemCountAlert.text --><!-- /ko --> 구매 가능한 수량으로
-                                                변경되었습니다.
-                                            </p>
-                                        </th>
-                                        <td class="selectPrice each"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(price)*#"></span>원
-                                        </td>
-                                        <td class="option_cnt" data-bind="visible: ui.itemCountSelect.visible()">
-                                            <input type="hidden" data-bind="value: originalItemCount()">
-                                            <select data-bind="options: ui.itemCountSelect.options,
+                                            <tbody data-bind="foreach:items">
+                                            <!-- ko if: itemType != '10010604' -->
+
+                                            <tr #*class="itemList"*#
+                                            ## data-bind="attr: {'class': isLastCart  ? 'itemList last' : 'itemList', 'data-cartId': cartId, 'data-itemId': itemId, 'data-itemCount': itemCount(), 'data-productId': productId, 'data-price': price, 'data-checked': checked()}"
+                                            >
+                                                <th class="optionTitle">
+                                                    <!-- ko if: itemType == '10010604' -->
+                                                    <span class="addArrow"></span>
+                                                    <!-- /ko -->
+                                                    <strong class="deal-item-type-title"><!--ko text: title-->
+                                                        ${item3.itemName}
+                                                        <!--/ko--></strong>
+                                                    <!--ko if:isBest -->
+##                                                    <span class="conversion-popularity-notice">인기급상승</span>
+                                                    <!--/ko-->
+##                                                    <p class="alertNotice" style="color: red;"
+##                                                       data-bind="visible: isOutOfRange">
+##                                                        [품절임박] 재고 <!-- ko text: quantity.max --><!-- /ko -->
+##                                                        <!-- ko text: self.isOutOfRange --><!-- /ko -->개
+##                                                    </p>
+##                                                    <p class="alertNotice" style="color: red; /*display: none;*/"
+##                                                       data-bind="visible: ui.itemCountAlert.visible">
+##                                                        * <!-- ko text: ui.itemCountAlert.text --><!-- /ko --> 구매 가능한
+##                                                        수량으로
+##                                                        변경되었습니다.
+##                                                    </p>
+                                                </th>
+                                                <td class="selectPrice each"><span
+                                                        #*data-bind="text: $parents[2].formatCurrency(price)*#">$number.format(${item3.price})</span>원
+                                                </td>
+                                                <td class="option_cnt"
+                                                    data-bind="visible: ui.itemCountSelect.visible()">
+                                                    <input type="hidden" data-bind="value: originalItemCount()">
+                                                    <select data-bind="options: ui.itemCountSelect.options,
                                                                     optionsText: 'text',
                                                                     optionsValue: 'value',
                                                                     style: ui.itemCountSelect.style,
@@ -183,211 +195,129 @@
                                                                      attr:{'class': ui.itemCountSelect.cssClass},
                                                                     value: itemCount() <= 10 && ui.itemCountSelect.visible() ? itemCount : ui.itemCountSelect.value,
                                                                     event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) {#* $parents[1].eventHandler.changeItemCount(this);*#} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
-                                            </select>
-                                        </td>
+                                                    </select>
+                                                </td>
 
-                                        <td class="option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
-                                            <label for="massQuantity">수량</label>
-                                            <input type="number" class="massQty" data-bind="textInput: ui.itemCountInput.value,
-                                                                event: {click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() {ui.itemCountInput.change(this); return true;} },
-                                                                style: ui.itemCountInput.style ">
-                                            <button type="button" class="changeQty" data-bind="event:{
-                                                                click: function() {ui.itemCountChangeButton.event.click(this, $parents[1].eventHandler.changeItemCount); return true;} },
-                                                                visible: ui.itemCountChangeButton.visible">수량변경
-                                            </button>
+##                                                <td class="option_cnt"
+##                                                    data-bind="visible: !ui.itemCountSelect.visible()">
+##                                                    <label for="massQuantity">수량</label>
+##                                                    <input type="number" class="massQty" data-bind="textInput: ui.itemCountInput.value,
+##                                                                event: {click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() {ui.itemCountInput.change(this); return true;} },
+##                                                                style: ui.itemCountInput.style ">
+##                                                    <button type="button" class="changeQty" data-bind="event:{
+##                                                                click: function() {ui.itemCountChangeButton.event.click(this, $parents[1].eventHandler.changeItemCount); return true;} },
+##                                                                visible: ui.itemCountChangeButton.visible">수량변경
+##                                                    </button>
+##
+##                                                </td>
+                                                <td class="selectPrice"><span data-bind="text: #*$parents[2].formatCurrency(itemCount() * price)*# "></span>원
+                                                </td>
+                                                <td class="delete">
+                                                    <button #*class="tI"*# type="button"
+                                                            data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
+                                                        삭제
+                                                    </button>
+                                                </td>
+                                            </tr>
 
-                                        </td>
-                                        <td class="selectPrice"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(itemCount() * price)*# "></span>원
-                                        </td>
-                                        <td class="delete">
-                                            <button class="tI" type="button"
-                                                    data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
-                                                삭제
-                                            </button>
-                                        </td>
-                                    </tr>
-
-                                    <!-- /ko -->
-                                    </tbody>
-                                </table>
-                                <!-- ko if: hasAdditionalItem -->
-                                <table class="optionAddSelect" cellpadding="0" cellspacing="0">
-                                    <colgroup>
-                                        <col style="width:230px;">
-                                        <col style="width:90px;">
-                                        <col style="width:80px;">
-                                        <col style="width:82px;">
-                                        <col style="width:33px;">
-                                    </colgroup>
-                                    <tbody data-bind="foreach:items">
-                                    <!-- ko if: itemType == '10010604' -->
-
-                                    <tr class="itemList"
-                                        data-bind="attr: {'class': isLastCart  ? 'itemList last' : 'itemList', 'data-cartId': cartId, 'data-itemId': itemId, 'data-itemCount': itemCount(), 'data-productId': productId, 'data-price': price, 'data-checked': checked()}">
-                                        <th class="optionTitle">
-                                            <!-- ko if: itemType == '10010604' -->
-                                            <span class="addArrow"></span>
                                             <!-- /ko -->
-                                            <strong class="deal-item-type-title"><!--ko text: title-->
-                                                <!--/ko--></strong>
-                                            <!--ko if:isBest -->
-                                            <span class="conversion-popularity-notice">인기급상승</span>
-                                            <!--/ko-->
-                                            <p class="alertNotice" style="color: red;"
-                                               data-bind="visible: isOutOfRange">
-                                                [품절임박] 재고 <!-- ko text: quantity.max --><!-- /ko -->
-                                                <!-- ko text: self.isOutOfRange --><!-- /ko -->개
-                                            </p>
-                                            <p class="alertNotice" style="color: red; display: none;"
-                                               data-bind="visible: ui.itemCountAlert.visible">
-                                                * <!-- ko text: ui.itemCountAlert.text --><!-- /ko --> 구매 가능한 수량으로
-                                                변경되었습니다.
-                                            </p>
-                                        </th>
-                                        <td class="selectPrice each"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(price)*#"></span>원
-                                        </td>
-                                        <td class="option_cnt" data-bind="visible: ui.itemCountSelect.visible()">
-                                            <input type="hidden" data-bind="value: originalItemCount()">
-                                            <select data-bind="options: ui.itemCountSelect.options,
-                                                                    optionsText: 'text',
-                                                                    optionsValue: 'value',
-                                                                    style: ui.itemCountSelect.style,
-                                                                    optionsAfterRender: setOptionDisable,
-                                                                     attr:{'class': ui.itemCountSelect.cssClass},
-                                                                    value: itemCount() <= 10 && ui.itemCountSelect.visible() ? itemCount : ui.itemCountSelect.value,
-                                                                    event:{click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() { if (isInit() && itemCount() <= 10) { #*$parents[1].eventHandler.changeItemCount(this);*#} else if (isInit() && itemCount() > 10) {ui.itemCountChangeButton.event.show();}   return true;}}">
-                                            </select>
-                                        </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
 
-                                        <td class="option_cnt" data-bind="visible: !ui.itemCountSelect.visible()">
-                                            <label for="massQuantity">수량</label>
-                                            <input type="number" class="massQty" data-bind="textInput: ui.itemCountInput.value,
-                                                                event: {click: function() {ui.itemCountSelect.event.click(itemCount()); return true;}, change: function() {ui.itemCountInput.change(this); return true;} },
-                                                                style: ui.itemCountInput.style ">
-                                            <button type="button" class="changeQty" data-bind="event:{
-                                                                click: function() {ui.itemCountChangeButton.event.click(this, $parents[1].eventHandler.changeItemCount); return true;} },
-                                                                visible: ui.itemCountChangeButton.visible">수량변경
-                                            </button>
 
-                                        </td>
-                                        <td class="selectPrice"><span
-                                                data-bind="text: #*$parents[2].formatCurrency(itemCount() * price)*# "></span>원
-                                        </td>
-                                        <td class="delete">
-                                            <button class="tI" type="button"
-                                                    data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
-                                                삭제
-                                            </button>
-                                        </td>
-                                    </tr>
-
-                                    <!-- /ko -->
-                                    </tbody>
-                                </table>
+                            <td class="price">
+                                <b data-bind="text: #*$parents[1].formatCurrency(productItemCost())*#"></b><span
+                                    class="unit">원</span></td>
+                            <!-- ko ifnot: $index -->
+                            <td class="price last"
+                                data-bind="attr: {rowspan: $parent.products().length, rowSpan: $parent.products().length}">
+                                <!-- ko foreach: $parents[0].tags() -->
+                                <span data-bind="{attr:{'class': color}}"><!--ko text: #*$parents[2].formatCurrency(text) *#-->
+                                    <!--/ko--><!-- ko if: type =='charge' && value == 3 -->원 이상<br> 무료배송
+                                    <!-- /ko --></span>
                                 <!-- /ko -->
-                            </div>
-                        </div>
-                    </td>
-                    <td class="price"><b data-bind="text: #*$parents[1].formatCurrency(productItemCost())*#"></b><span
-                            class="unit">원</span></td>
-                    <!-- ko ifnot: $index -->
-                    <td class="price last"
-                        data-bind="attr: {rowspan: $parent.products().length, rowSpan: $parent.products().length}">
-                        <!-- ko foreach: $parents[0].tags() -->
-                        <span data-bind="{attr:{'class': color}}"><!--ko text: #*$parents[2].formatCurrency(text) *#-->
-                            <!--/ko--><!-- ko if: type =='charge' && value == 3 -->원 이상<br> 무료배송<!-- /ko --></span>
-                        <!-- /ko -->
 
-                        <!-- ko if: $parent.bundleCost().deliveryCharge() > 0 -->
-                        <b data-bind="visible: $parent.bundleCost().deliveryCharge() > 0, text: $parents[1].formatCurrency($parent.bundleCost().deliveryCharge())"></b><span
-                            class="unit" data-bind="visible: $parent.bundleCost().deliveryCharge() > 0">원</span>
-                        <!-- /ko -->
+                                <!-- ko if: $parent.bundleCost().deliveryCharge() > 0 -->
+                                <b data-bind="visible: $parent.bundleCost().deliveryCharge() > 0, text: $parents[1].formatCurrency($parent.bundleCost().deliveryCharge())"></b><span
+                                    class="unit" data-bind="visible: $parent.bundleCost().deliveryCharge() > 0">원</span>
+                                <!-- /ko -->
 
-                        <!-- ko if: $parent.bundleCost().deliveryCharge() == 0 && $parent.bundleCost().itemCost() == 0  -->
-                        <span class="unit">-</span>
-                        <!-- /ko -->
+                                <!-- ko if: $parent.bundleCost().deliveryCharge() == 0 && $parent.bundleCost().itemCost() == 0  -->
+                                <span class="unit">-</span>
+                                <!-- /ko -->
 
-                        <!-- ko if: $parents[0].deliveryBundleType != 1  -->
-                        <div class="popupFree" data-bind="visible: $parent.shortfallPriceForFreeDelivery() > 0 ">
-                            <p class="text">
-                                묶음상품을<br>
-                                <span class="pText"><!-- ko text: $parents[1].formatCurrency($parent.shortfallPriceForFreeDelivery())-->
-                                    <!-- /ko -->원 이상 추가</span>하시면<br>
-                                <span class="pText">무료배송</span> 가능합니다!
-                            </p>
-                        </div>
-                        <!-- /ko -->
+                                <!-- ko if: $parents[0].deliveryBundleType != 1  -->
+                                <div class="popupFree"
+                                     data-bind="visible: $parent.shortfallPriceForFreeDelivery() > 0 ">
+                                    <p class="text">
+                                        묶음상품을<br>
+                                        <span class="pText"><!-- ko text: $parents[1].formatCurrency($parent.shortfallPriceForFreeDelivery())-->
+                                            <!-- /ko -->원 이상 추가</span>하시면<br>
+                                        <span class="pText">무료배송</span> 가능합니다!
+                                    </p>
+                                </div>
+                                <!-- /ko -->
 
-                        <!-- 배송비 절약상품 -->
-                        <button type="button" class="btn-save-shipping"
-                                data-bind="visible: $parent.deliveryPartnerId != 16 && $parent.bundleCost().deliveryCharge() > 0, click: function(data, event) { #*$parents[2].saveDeliveryChargeVM.eventHandler.open(event, $parent);*#}">
-                            배송비 절약상품
-                        </button>
-                    </td>
-                    <!-- /ko -->
-                </tr>
-                <!--/ko -->
+                                <!-- 배송비 절약상품 -->
+                                <button type="button" class="btn-save-shipping"
+                                        data-bind="visible: $parent.deliveryPartnerId != 16 && $parent.bundleCost().deliveryCharge() > 0, click: function(data, event) { #*$parents[2].saveDeliveryChargeVM.eventHandler.open(event, $parent);*#}">
+                                    배송비 절약상품
+                                </button>
+                            </td>
+                            <!-- /ko -->
+                        </tr>
+                        <!--/ko -->
 
-
-                <!-- /ko -->
-                </tbody>
+                        #end
+                    #end
+                #end
+            <!-- /ko -->
+            </tbody>
             </table>
 
-##            #foreach($item in $basketListGET.basketResponse)
-                <div class="cB">
-                    <div class="priceWrap v1 fL">
-                        <table class="paymentTable" cellspacing="0" cellpadding="0" summary="결제예정금액">
-                            <caption>각 상품 금액 및 업체배송 금액0</caption>
-                            <tbody>
-                            <tr>
-                                <td class="price"><span class="priceText">발그레배송 상품금액0</span>
-                                    <!-- ko text: formatCurrency(memeCost.itemCost()) --><!-- /ko --><span
-                                            class="unit">$item.message / $item.resultCode / $item.timestamp 테스트 원</span></td>
-                                <td class="deliveryCharge"><span class="priceText">배송비0</span>
-                                    <!-- ko text: formatCurrency(memeCost.deliveryCharge()) --><!-- /ko --><span
-                                            class="unit">$!{basketListGET.BasketResponse.resultCode} / ${basketListGET.message} / ${basketListGET.resultCode}  원</span></td>
-                                <td class="totalPrice last"><span class="priceText">결제 예정금액0</span>
-                                    <!-- ko text: formatCurrency(memeCost.totalCost()) --><!-- /ko --><span
-                                            class="unit">원</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <span class="plus"></span>
-                        <span class="equal"></span>
-                    </div>
-                </div>
-##            #end
+        ##            <div class="cB">
+        ##                <div class="priceWrap v1 fL">
+        ##                    ${basketListGET.message} / ${basketListGET.resultCode}
+        ##                </div>
+        ##            </div>
 
-
+        ##            #foreach($item in $basketListGET.basketResponse)
             <div class="cB">
-                <div class="priceWrap v1 fL">
-                    <table class="paymentTable" cellspacing="0" cellpadding="0" summary="결제예정금액">
-                        <caption>각 상품 금액 및 업체배송 금액</caption>
-                        <tbody>
-                        <tr>
-                            <td class="price"><span class="priceText">발그레배송 상품금액</span>
-                                <!-- ko text: formatCurrency(memeCost.itemCost()) --><!-- /ko --><span
-                                        class="unit">원</span></td>
-                            <td class="deliveryCharge"><span class="priceText">배송비</span>
-                                <!-- ko text: formatCurrency(memeCost.deliveryCharge()) --><!-- /ko --><span
-                                        class="unit">원</span></td>
-                            <td class="totalPrice last"><span class="priceText">결제 예정금액11</span>
-                                <!-- ko text: formatCurrency(memeCost.totalCost()) --><!-- /ko --><span
-                                        class="unit">원</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <span class="plus"></span>
-                    <span class="equal"></span>
-                </div>
+                #foreach($item in $basketListGET.basketList)
+                    #foreach($item2 in $item)
+                        #foreach($item3 in $item2)
+
+                            <div class="priceWrap v1 fL">
+                                <table class="paymentTable" cellspacing="0" cellpadding="0" summary="결제예정금액">
+                                    <caption>각 상품 금액 및 업체배송 금액0</caption>
+                                    <tbody>
+                                    <tr>
+                                        <td class="price"><span class="priceText">발그레배송 상품금액</span>
+                                            <!-- ko text: formatCurrency(memeCost.itemCost()) --><!-- /ko -->
+                                            <span class="unit">${item3.brand.brandId} 원</span></td>
+                                        <td class="deliveryCharge"><span class="priceText">배송비</span>
+                                            <!-- ko text: formatCurrency(memeCost.deliveryCharge()) --><!-- /ko -->
+                                            <span class="unit">${basketListGET.message}
+                                                / ${basketListGET.resultCode}원</span>
+                                        </td>
+                                        <td class="totalPrice last"><span class="priceText">결제 예정금액55</span>
+                                            <!-- ko text: formatCurrency(memeCost.totalCost()) --><!-- /ko -->
+                                            <span class="unit">원</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <span class="plus"></span>
+                                <span class="equal"></span>
+                            </div>
+                        #end
+                    #end
+                #end
             </div>
-
-
+        ##            #end
             <!-- /ko -->
-            <!-- /ko -->
-
 
             <!-- ko with: bundleVM -->
             <!--  ko if: partnerBundles().length -->
@@ -418,8 +348,8 @@
                     </td>
                     <td class="itemInfo">
                         <div>
-                            <a data-bind="attr:{href: productUrl}"><img src=""
-                                                                        data-bind="attr:{src: thumbnailUrl }"></a>
+                            <a data-bind="attr:{href: productUrl}">
+                                <img src="" data-bind="attr:{src: thumbnailUrl }"></a>
                         </div>
                         <div class="textArea fL">
                             <p class="productName fW">
@@ -738,11 +668,11 @@
         <div class="btnWrap mA cB"
              data-bind="with: bundleVM, visible: bundleVM.memeBundles().length > 0 || bundleVM.partnerBundles().length > 0">
             <button data-returnurl="http://www.memebox.com/product/514490?list=%EB%B2%A0%EC%8A%A4%ED%8A%B8%20VS%20List"
-                    type="button" class="shoppingBtn tI">쇼핑 계속하기
+                    type="button" #*class="shoppingBtn tI"*#>쇼핑 계속하기
             </button>
 
             <a href="https://memebox.com/login?returnUrl=https://order.memebox.com/cart">
-                <button type="button" class="buyBtn tI">결제하기</button>
+                <button type="button" #*class="buyBtn tI"*#>결제하기</button>
             </a>
 
             <div class="pointSave"><span class="point"><!-- ko text: formatCurrency(costInfo.savingPoint()) -->

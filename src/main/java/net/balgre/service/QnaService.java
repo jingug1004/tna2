@@ -14,10 +14,10 @@ public interface QnaService {
 	/*qna list response*/
 	public QnaListResponse qnaListResponse(String token);
 	
-	/*qna detail*/
-	/*public Qna qnaDetail(String token);*/
-	
 	/*qna get user info*/
 	public UserResponse getUserInfo(String token);
+	
+	/*qna delete*/
+	public QnaListResponse qnaDelete(String token, int id);
 
 }
