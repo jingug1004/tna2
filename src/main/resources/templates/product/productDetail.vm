@@ -406,7 +406,6 @@
                         <strong class="nuNumber rateNum">
                             #if(${choiceDetailProduct.product.sale} != 0)
                                 ~${choiceDetailProduct.product.sale} <span class="percentage_symbol">%</span>
-
                             #end
                         </strong>
                     </dd>
@@ -2371,6 +2370,26 @@
 <!-- 배송정보 -->
 
 <script>
+
+	$(".purchaseBtn").on("click", function (event) {
+		var formData = $("#ReadingInfoSelectForm").serialize();
+
+        $.ajax({
+            type: 'post',
+            url: '/payment/order',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            processData: false,
+            data: formData,
+            success: function (data) {
+				if(data) {
+					window.location.href = "/payment/order?q="+data;
+				}
+            },
+            error: function (data, textStatus, errorThrown) {
+                alert("로그인 하신 후 옵션을 선택해주세요.");
+            }
+        });
+	});
 
     ##    //    $(document).ready(function)()
     ##    //    {

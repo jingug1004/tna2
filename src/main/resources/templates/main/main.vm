@@ -263,164 +263,7 @@
 ##
 ##                    <div class="newSearchWrap" id="searchInputBox">
 ##
-##                        <div class="searchBar-wrap">
-##                            <div class="searchBar-inputBox-wrap">
-##                                <form id="searchForm" class="searchBar-inputBox" method="GET" action="//search.memebox.com/memebox/search" 
-##                                  enctype="application/x-www-form-urlencoded" onsubmit="return SPexecuteSearch();">
-##                                    <label class="searchBar-inputBox-label"> <span class="searchBar-inputBox-text">search bar</span>
-##                                        <input id="search"
-##                                               class="searchBox ui-autocomplete-input searchBar-inputBox-input"
-##                                               type="text" name="q" autocomplete="off" placeholder="아이섀도우는 이거 하나면 끝!"
-##                                               searchbartype="searchKeyword" landingparameter="섀도우팔레트"> <span
-##                                                class="searchBar-inputBox-reset" id="sb-q-rm"
-##                                                style="display: block;"></span> </label>
-##                                    <button class="iconSearch searchBar-inputBox-submit" id="executeSearchButton"
-##                                            type="submit"
-##                                            onclick="SPsearchbarQueryLog('searchKeyword', '아이섀도우는 이거 하나면 끝!', '섀도우팔레트', q.value);">
-##                                        검색하기
-##                                    </button>
-##                                    <a class="iconSearch searchBar-inputBox-submit" id="landingPageButton"
-##                                       style="display:none;"> 검색하기 </a> <input type="hidden" name="ab" value=""> <input
-##                                        type="hidden" name="qt" value="box"> <input type="hidden" name="at" value="1">
-##                                    <input type="hidden" name="cat1" value=""> <input type="hidden" name="cat2"
-##                                                                                      value=""> <input type="hidden"
-##                                                                                                       name="cat3"
-##                                                                                                       value=""> <input
-##                                        type="hidden" name="brd" value=""> <input type="hidden" name="enq" value="">
-##                                    <input type="hidden" name="door" value="pc_main"> <input type="hidden"
-##                                                                                             name="recombar" value="1">
-##                                </form>
-##                            </div>
-##                            <div id="tabs" class="suggest-layer" style="display: none;">
-##                                <div id="sb-tab-selector" class="suggest-selector-wrap">
-##                                    <ol class="suggest-selector">
-##                                        <li class="suggest-selector-tab"><a id="realtime-trigger"
-##                                                                            class="suggest-selector-trigger selected">실시간검색어</a>
-##                                        </li>
-##                                        <li class="suggest-selector-tab"><a id="recent-trigger"
-##                                                                            class="suggest-selector-trigger">최근검색어</a>
-##                                        </li>
-##                                    </ol>
-##                                </div>
-##                                <div id="sb-keyword" class="suggest-recommendation-wrap">
-##                                    <div id="realtime_keyword" class="suggest-keyword-wrap suggest-keyword-ranking">
-##                                        <div class="exhibit">
-##                                            <div class="exhibit-header"><strong class="exhibit-keyWord">실시간 검색어 BEST
-##                                                상품</strong></div>
-##                                            <ul class="memebox-deal-list memebox-deal-list-line-amount-1">
-##                                                <li class="memebox-deal-wrapper">
-##                                                    <div class="memebox-deal deal_type_vertical_square_4">
-##                                                        <div class="memebox-deal-info">
-##                                                            <div class="memebox-deal-image-wrap"><span
-##                                                                    class="memebox-deal-badge badge-none"></span> <img
-##                                                                    class="memebox-deal-image"
-##                                                                    src="https://img1.memebox.com/8qrbbjaj/contents/img/memeboxProductItem/20170110064432_887f3e1f872a01698d6c3bb4159eefb2.jpg"
-##                                                                    alt="[코스알엑스] 원스텝 모이스쳐 업 패드 3종"
-##                                                                    style="width: 152px; height: 152px;"></div>
-##                                                            <div class="memebox-deal-name"><strong
-##                                                                    class="memebox-deal-name-main">[코스알엑스] 원스텝 모이스쳐 업 패드
-##                                                                3종 </strong></div>
-##                                                            <p class="memebox-deal-price-wrap"><strong
-##                                                                    class="memebox-deal-price-result"> <span
-##                                                                    class="memebox-deal-price-info">발그레가격</span> <strong
-##                                                                    class="memebox-deal-price-value">17,500</strong> <em
-##                                                                    class="memebox-deal-price-unit">원</em> </strong></p>
-##                                                            <a class="memebox-deal-link"
-##                                                               onclick="SPOpenBestDeal('네일', 508337 , 'realtime')">바로가기</a>
-##                                                        </div>
-##                                                    </div>
-##                                                </li>
-##                                            </ul>
-##                                        </div>
-##                                        <div class="keyword-ranking-wrap"><span class="keyword-ranking-date">2017.04.14 09:01 AM</span>
-##                                            <ol class="keyword-ranking-list">
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('15개3천원','realtime')">
-##                                                    <em class="keyword-ranking-value">1</em> <strong
-##                                                        class="keyword-ranking-text">15개3천원</strong><span
-##                                                        class="keyword-ranking-differ">-</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('에뛰드','realtime')">
-##                                                    <em class="keyword-ranking-value">2</em> <strong
-##                                                        class="keyword-ranking-text">에뛰드</strong><span
-##                                                        class="keyword-ranking-differ">-</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('섀도우팔레트','realtime')">
-##                                                    <em class="keyword-ranking-value">3</em> <strong
-##                                                        class="keyword-ranking-text">섀도우팔레트</strong><span
-##                                                        class="keyword-ranking-direction-up">up</span><span
-##                                                        class="keyword-ranking-differ">6</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('1+1','realtime')">
-##                                                    <em class="keyword-ranking-value">4</em> <strong
-##                                                        class="keyword-ranking-text">1+1</strong><span
-##                                                        class="keyword-ranking-direction-down">down</span><span
-##                                                        class="keyword-ranking-differ">-1</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('이니스프리','realtime')">
-##                                                    <em class="keyword-ranking-value">5</em> <strong
-##                                                        class="keyword-ranking-text">이니스프리</strong><span
-##                                                        class="keyword-ranking-direction-NEW">NEW</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('네일','realtime')">
-##                                                    <em class="keyword-ranking-value">6</em> <strong
-##                                                        class="keyword-ranking-text">네일</strong><span
-##                                                        class="keyword-ranking-direction-up">up</span><span
-##                                                        class="keyword-ranking-differ">10</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('어퓨','realtime')">
-##                                                    <em class="keyword-ranking-value">7</em> <strong
-##                                                        class="keyword-ranking-text">어퓨</strong><span
-##                                                        class="keyword-ranking-direction-up">up</span><span
-##                                                        class="keyword-ranking-differ">5</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('아임발그레','realtime')">
-##                                                    <em class="keyword-ranking-value">8</em> <strong
-##                                                        class="keyword-ranking-text">아임발그레</strong><span
-##                                                        class="keyword-ranking-direction-up">up</span><span
-##                                                        class="keyword-ranking-differ">9</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('로픈바오밥','realtime')">
-##                                                    <em class="keyword-ranking-value">9</em> <strong
-##                                                        class="keyword-ranking-text">로픈바오밥</strong><span
-##                                                        class="keyword-ranking-direction-NEW">NEW</span> </a></li>
-##                                                <li class="keyword-ranking-li"><a class="keyword-ranking-trigger"
-##                                                                                  onclick="SPgoSearch('나스','realtime')">
-##                                                    <em class="keyword-ranking-value">10</em> <strong
-##                                                        class="keyword-ranking-text">나스</strong><span
-##                                                        class="keyword-ranking-direction-NEW">NEW</span> </a></li>
-##                                            </ol>
-##                                        </div>
-##                                    </div>
-##                                    <div id="recent_keyword" class="suggest-keyword-wrap suggest-keyword-recent">
-##                                        <ol class="keyword-recent-list" style="display: none;"></ol>
-##                                        <div class="recommendation-keyword-recent-off" style=""> 최근 검색어가 꺼져
-##                                            있습니다.<br><br></div>
-##                                        <div class="recommendation-keyword-recent-menu"><a
-##                                                class="recommendation-keyword-recent-use-off" data-recent-use="false">검색저장끄기</a>
-##                                            <a class="recommendation-keyword-recent-use-on selected"
-##                                               data-recent-use="true">검색저장켜기</a> <span
-##                                                    class="recommendation-keyword-recent-menu-split"
-##                                                    style="display: none;">|</span> <a
-##                                                    class="recommendation-keyword-recent-delete" style="display: none;">
-##                                                전체삭제 </a></div>
-##                                    </div>
-##                                </div>
-##                                <div id="sb-atc" class="suggest-result-wrap" style="display: none;">
-##                                    <div class="exhibit"></div>
-##                                    <ul class="keyword-autoComplete-wrap"></ul>
-##                                    <div class="keyword-quickLink-wrap"><span class="keyword-quickLink-info">바로보기</span>
-##                                        <ul class="keyword-quickLink-content"></ul>
-##                                    </div>
-##                                </div>
-##                                <div class="suggest-layer-menu"><a id="close-tabs" class="suggest-layer-menu-close"
-##                                                                   style="cursor: pointer;">닫기</a></div>
-##                            </div>
-##                        </div>
-##
-##                    </div>
-##
-##
+
 ##                    <div class="topRollingBannerWrap fR"
 ##                         data-components-data="2">
 ##
@@ -4868,6 +4711,8 @@
 
 <!-- container -->
 <div id="container" class="mA memeHome">
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
     <div class="sideBannerR">
         <ul>
 
@@ -4940,6 +4785,8 @@
             z-index: 3;
         }
     </style>
+    
+
     <!-- 실시간오픈 -->
 
     #foreach($item in $showMain.mainMenu)
@@ -8749,3 +8596,22 @@
 ##
 ##    });
 ##</script>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>

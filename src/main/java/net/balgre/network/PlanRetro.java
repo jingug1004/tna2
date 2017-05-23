@@ -4,20 +4,14 @@ package net.balgre.network;
 import net.balgre.domain.Plan;
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
+import retrofit2.http.Path;
 
 public interface PlanRetro {
-
-    @GET("/api/plan")
-    Call<Plan> getPlan();
-
-    @GET("/api/plan")
-    Call<Plan> getPlanDetail();
-
-    @GET("/api/plan")
-    Call<Plan> getPlan(
-            @Query("pid") int pid1
+	
+	/*plan list by minho*/
+    @GET("/api/plan/{page}")
+    Call<Plan> planList (
+        @Path("page") int page
     );
-
 
 }

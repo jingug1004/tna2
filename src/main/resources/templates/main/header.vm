@@ -67,7 +67,7 @@
     <!--}-->
     <link rel="stylesheet" type="text/css" href="/css/mainCommon.css">
 ##    <link type="text/css" href="/css/mainCommon.css?v=bgz-g97ieg" rel="stylesheet"/>
-
+<link type="text/css" href="/css/myPage/searchBar.css" rel="stylesheet"/>
 ##    productDetail CSS
     <link type="text/css" href="/css/product/shop.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/css/product/deal_add.css">
@@ -75,9 +75,8 @@
     <link type="text/css" href="/css/product/review.css" rel="stylesheet"/>
     <link type="text/css" href="/css/product/lightbox.css" rel="stylesheet"/>
     <link type="text/css" href="/css/product/bootstrap.carousel.css" rel="stylesheet"/>
-
     ## productDetail Modal popup
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script defer async src="//cdn.optimizely.com/js/537732300.js"></script>
@@ -121,8 +120,6 @@
 ##    <script type="text/javascript" src="/web/js/vendor/store.min.js?v=1z4-ow7o7u"></script>
 ##    <script src="/web/js/vendor/jquery-1.9.1.min.js?v=1zg6-1wlu1iw"></script>
 ##    <link type="text/css" href="/package/components/layout/pc/header/v.1.0.0/header.css?v=1756Tu" rel="stylesheet"/>
-    <link type="text/css" href="//search.memebox.com/static/css/searchBar.css?v=1756Tu" rel="stylesheet"/>
-    <script type="text/javascript" src="//search.memebox.com/static/js/searchbar.js?v=1756Tu"></script>
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script><![endif]-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/history.js/1.7.1/bundled/html5/jquery.history.js"></script>
@@ -340,9 +337,11 @@
                             <div class="searchBar-inputBox-wrap">
                             
                                 <form type="submit" id="searchForm" class="searchBar-inputBox" method="get" action="/product/search">
-                                    <label class="searchBar-inputBox-label"> <span class="searchBar-inputBox-text">search bar</span>
+                                    <label class="searchBar-inputBox-label">
+                                    <span class="searchBar-inputBox-text">search bar</span>
                                         <input id="search" class="searchBox ui-autocomplete-input searchBar-inputBox-input"
                                            type="text" name="search" placeholder="ㅇㅇ?!">
+                                           <span class="searchBar-inputBox-reset" id="sb-q-rm" style="display: block;"></span>
                                     </label>
                                     <input type="submit" class="iconSearch searchBar-inputBox-submit" id="searchBtn" value="검색">
                                  </form>
@@ -1611,7 +1610,7 @@
                         <li class="newGnbTab">
                             <h3>
                                 <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-                                   href="/plan" ga-event="menu,menu_memepb" data-nav-type="Global Navigation">
+                                   href="/plan?page=0" ga-event="menu,menu_memepb" data-nav-type="Global Navigation">
                                     기획전
                                 </a>
                             </h3>
@@ -1639,18 +1638,6 @@
                                 </a>
                             </h3>
                         </li>
-
-                        <li class="newGnbTab">
-                            <h3>
-                                <a class="mainMenu" segment-event="Nav Clicked" segment-event-ex="Main Tab Clicked"
-                                   href="/promotion" ga-event="gnb,gnb_promo" data-nav-type="Global Navigation">
-                                    기획전
-
-
-                                </a>
-                            </h3>
-                        </li>
-
 
                     </ul>
 

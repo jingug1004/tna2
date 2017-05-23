@@ -2,8 +2,6 @@ package net.balgre.domain;
 
 import lombok.Data;
 
-import java.util.List;
-
 /**
  * Created by user on 2017-04-07 오후 3:17
  * Prac / PACKAGE_NAME
@@ -33,7 +31,6 @@ public class User {
     private String phone;
     private String profile;
     private String regDate;
-    private List<UserRole> roles;
     private Integer skinType;
     private String smsAgree;
     private String userId;

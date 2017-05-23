@@ -152,8 +152,7 @@
                                                 <col style="width:38px;">
                                             </colgroup>
 
-
-                                            <tbody data-bind="foreach:items">
+                                            <tbody data-bind="foreach:items" class="tbody">
                                             <!-- ko if: itemType != '10010604' -->
 
                                             <tr #*class="itemList"*#
@@ -166,6 +165,7 @@
                                                     <strong class="deal-item-type-title"><!--ko text: title-->
                                                         ${item3.itemName}
                                                         <!--/ko--></strong>
+                                                    <input type="hidden" class="basket_id" value=" ${item3.basketId}">
                                                     <!--ko if:isBest -->
 ##                                                    <span class="conversion-popularity-notice">인기급상승</span>
                                                     <!--/ko-->
@@ -213,10 +213,12 @@
                                                 <td class="selectPrice"><span data-bind="text: #*$parents[2].formatCurrency(itemCount() * price)*# "></span>원
                                                 </td>
                                                 <td class="delete">
-                                                    <button #*class="tI"*# type="button"
-                                                            data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
+                                                    <a href="/basketDelete" type="button" id="removeBtn">
+##                                                    <button #*class="tI"*# type="button"
+##                                                            data-bind="click: function(){$parents[1].eventHandler.removeCart($data, $parent, $parents[1])}">
                                                         삭제
-                                                    </button>
+##                                                    </button>
+                                                    </a>
                                                 </td>
                                             </tr>
 
@@ -284,39 +286,38 @@
         ##                </div>
         ##            </div>
 
-        ##            #foreach($item in $basketListGET.basketResponse)
-            <div class="cB">
-                #foreach($item in $basketListGET.basketList)
-                    #foreach($item2 in $item)
-                        #foreach($item3 in $item2)
-
-                            <div class="priceWrap v1 fL">
-                                <table class="paymentTable" cellspacing="0" cellpadding="0" summary="결제예정금액">
-                                    <caption>각 상품 금액 및 업체배송 금액0</caption>
-                                    <tbody>
-                                    <tr>
-                                        <td class="price"><span class="priceText">발그레배송 상품금액</span>
-                                            <!-- ko text: formatCurrency(memeCost.itemCost()) --><!-- /ko -->
-                                            <span class="unit">${item3.brand.brandId} 원</span></td>
-                                        <td class="deliveryCharge"><span class="priceText">배송비</span>
-                                            <!-- ko text: formatCurrency(memeCost.deliveryCharge()) --><!-- /ko -->
-                                            <span class="unit">${basketListGET.message}
-                                                / ${basketListGET.resultCode}원</span>
-                                        </td>
-                                        <td class="totalPrice last"><span class="priceText">결제 예정금액55</span>
-                                            <!-- ko text: formatCurrency(memeCost.totalCost()) --><!-- /ko -->
-                                            <span class="unit">원</span></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <span class="plus"></span>
-                                <span class="equal"></span>
-                            </div>
-                        #end
-                    #end
-                #end
-            </div>
-        ##            #end
+##        ##            #foreach($item in $basketListGET.basketResponse)
+##            <div class="cB">
+##                #foreach($item in $basketListGET.basketList)
+##                    #foreach($item2 in $item)
+##                        #foreach($item3 in $item2)
+##                            <div class="priceWrap v1 fL">
+##                                <table class="paymentTable" cellspacing="0" cellpadding="0" summary="결제예정금액">
+##                                    <caption>각 상품 금액 및 업체배송 금액0</caption>
+##                                    <tbody>
+##                                    <tr>
+##                                        <td class="price"><span class="priceText">발그레배송 상품금액</span>
+##                                            <!-- ko text: formatCurrency(memeCost.itemCost()) --><!-- /ko -->
+##                                            <span class="unit">${item3.brand.brandId} 원</span></td>
+##                                        <td class="deliveryCharge"><span class="priceText">배송비</span>
+##                                            <!-- ko text: formatCurrency(memeCost.deliveryCharge()) --><!-- /ko -->
+##                                            <span class="unit">${basketListGET.message}
+##                                                / ${basketListGET.resultCode}원</span>
+##                                        </td>
+##                                        <td class="totalPrice last"><span class="priceText">결제 예정금액55</span>
+##                                            <!-- ko text: formatCurrency(memeCost.totalCost()) --><!-- /ko -->
+##                                            <span class="unit">원</span></td>
+##                                    </tr>
+##                                    </tbody>
+##                                </table>
+##                                <span class="plus"></span>
+##                                <span class="equal"></span>
+##                            </div>
+##                        #end
+##                    #end
+##                #end
+##            </div>
+##        ##            #end
             <!-- /ko -->
 
             <!-- ko with: bundleVM -->
@@ -1146,5 +1147,45 @@
 <
 script
 src = "js/common/cartSendSegment.js?v=1494985500000" ></script>
+
+## 장바구니 상품 옵션 제거
+<script>
+
+    $(document).ready(function (event) {
+        event.preventDefault();
+
+        $("#removeBtn").on("click", function () {
+
+            var basket_id = $(".basket_id").val();
+
+            var  data = "basketId" : basket_id;
+
+            console.log("basket_id" + data);
+
+            $.ajax({
+                type:'delete',
+                url: '/basketDelete/',
+                contentType: false/*'application/x-www-form-urlencoded; charset=UTF-8'*/,
+                processData: false,
+                data: data,
+                sucess:function (result) {
+
+                    console.log("basket_id02" + data);
+
+                    $(".tbody").remove();
+
+                },
+                error:function (result) {
+                    alert("에러! " + result);
+                }
+
+            })
+
+        })
+
+    });
+
+
+</script>
 </body>
 </html>

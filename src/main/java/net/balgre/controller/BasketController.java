@@ -30,6 +30,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -150,21 +151,38 @@ public class BasketController {
     }
 
     @RequestMapping(value = "/basketDirectPayPage", method = {RequestMethod.GET, RequestMethod.POST})
-    public String basketPayPageGETPOST() {
+    public String basketPayPageGETPOST() throws Exception {
 
         return "/basket/basketPay";
 
     }
 
-    @RequestMapping(value = "/basketDelete", method = RequestMethod.DELETE)
-    public String basketDelete() {
+    @RequestMapping(value = "/basketDelete", method = RequestMethod.GET)
+    public void basketDelete(HttpSession session,
+                               HttpServletRequest request,
+                               Model model,
+                               BasketResponse basketResponse,
+                               @RequestParam("basketId") long basket_id) throws Exception {
 
-        return null;
+        LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
+
+//        long basket_id = 111;
+
+//        long basket_id = request.getParameter(basketResponse.getBasketList());
+
+        logger.info("lll~~~ basket_id Delete 1 . " + basket_id + " lll~~~");
+        logger.info("lll~~~ basket login Delete 2 .. " + login + " lll~~~");
+
+        basketService.basketDelete(login.getToken(), basket_id);
+
+        logger.info("lll~~~ basketService Delete 3 ... " + basketService + " lll~~~");
+
+//        return "redirect:/basket/basket";
 
     }
 
     @RequestMapping(value = "/basketUpdate", method = RequestMethod.PUT)
-    public String basketUpdate() {
+    public String basketUpdate() throws Exception {
 
         return null;
 

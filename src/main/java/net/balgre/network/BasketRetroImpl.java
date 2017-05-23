@@ -67,21 +67,21 @@ public class BasketRetroImpl {
 
     public BasketResponse basketListGET(String token) {
 
-        logger.info("retroImpl Token : " + token);
+        logger.info("retroImpl List Get Token : " + token);
 
-        Call<BasketResponse> call = this.basketRetro.basketGET(token,
-                "application/x-www-form-urlencoded");
+        Call<BasketResponse> call = this.basketRetro.basketGET
+                (token, "application/x-www-form-urlencoded");
 
-        logger.info("token : " + token);
+        logger.info("List Get Token : " + token);
 
         try {
             Response<BasketResponse> response = call.execute();
 
-            logger.info("response : " + response);
+            logger.info("response List Get : " + response);
 
             if (response.isSuccessful()) {
 
-                logger.info("response.toString() : " + response.toString());
+                logger.info("response.toString() List Get : " + response.toString());
 //                System.out.println(response.body());
 
                 return response.body();
@@ -107,6 +107,34 @@ public class BasketRetroImpl {
 
                 return response.body();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public BasketResponse basketDelete(String token, long basket_id) {
+
+        logger.info("retroImpl Delete Token : " + token);
+
+        Call<BasketResponse> call = this.basketRetro.basketDelete
+                (token, "application/x-www-form-urlencoded", basket_id);
+
+        logger.info("token Delete : " + token);
+
+        try {
+            Response<BasketResponse> response = call.execute();
+
+            logger.info("response Delete : " + response);
+
+            if (response.isSuccessful()) {
+
+                logger.info("response.toString() Delete : " + response.toString());
+//                System.out.println(response.body());
+
+                return response.body();
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -3,7 +3,7 @@ div.topBanner {
 }
 
 div.topBanner a img {
-    width: 1048px;
+    width: 1080px;
     margin: auto;
     display: block
 }
@@ -224,7 +224,7 @@ div#header_v2 div.gnbTop {
 }
 
 div#header_v2 div.gnbTopInner {
-    width: 1048px;
+    width: 1080px;
     height: 36px
 }
 
@@ -406,7 +406,7 @@ div#header_v2 div.gnbLogoOuter.fix {
 
 div#header_v2 div.gnbLogo {
     position: relative;
-    width: 1048px;
+    width: 1080px;
     height: 72px;
     z-index: 4
 }
@@ -494,7 +494,7 @@ div#header_v2 div.gnbOuter {
 
 div#header_v2 div.newGnb {
     position: relative;
-    width: 1048px
+    width: 1080px
 }
 
 div#header_v2 div.newGnb .gnbUl {
@@ -1155,7 +1155,7 @@ a[disabled] {
 }
 
 #container {
-    width: 1048px;
+    width: 1080px;
     position: relative
 }
 
@@ -1269,14 +1269,14 @@ a[disabled] {
 
 div.mainVisual {
     position: relative;
-    width: 1048px;
+    width: 1080px;
     height: 477px;
     margin: 0 auto 50px;
     overflow: hidden
 }
 
 div.mainVisual img {
-    width: 1048px
+    width: 1080px
 }
 
 div.mainVisual .arrow {
@@ -1580,7 +1580,7 @@ div#footer {
 
 div#footer .footerTopInner, div#footer .footerBottomInner {
     margin: 0 auto;
-    width: 1048px
+    width: 1080px
 }
 
 div#footer a {
@@ -3826,7 +3826,7 @@ div.mdChoiceWrap .mdChoice {
 }
 
 div.mdChoiceWrap .mdChoicdBox {
-    width: 1048px;
+    width: 1080px;
     height: 567px
 }
 
@@ -3969,7 +3969,7 @@ div.homeMainBannerWrap .homeBannerLiner {
 
 div.homeMainBannerWrap .mA {
     position: relative;
-    width: 1048px;
+    width: 1080px;
     height: 4px
 }
 
@@ -3998,7 +3998,7 @@ div.homeMainBannerWrap .bannerBar {
 div.homeMainBanner {
     position: relative;
     margin: 0 auto;
-    width: 1048px;
+    width: 1080px;
     height: 480px
 }
 

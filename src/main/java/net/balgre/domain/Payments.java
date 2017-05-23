@@ -41,11 +41,11 @@ public class Payments {
 	private String refund_account; // (string, optional): 환불계좌 계좌번호 ,
 	private String refund_bank; // (string, optional): 환불계좌 은행코드 ,
 	private String refund_holder; // (string, optional): 환불계좌 예금주 ,
-	private String regDate; // (string, optional): 주문일 ,
+	private Long regDate; // (string, optional): 주문일 ,
 	private String status; // (string, optional): 결제상태. ready:미결제, paid:결제완료, cancelled:결제취소, failed:결제실패 = ['ready', 'paid', 'cancelled', 'failed'] ,
 	private int totalPayment; // (integer, optional): 총 결제금액 ,
 	private User user; // (UserService, optional): 구매자ID ,
-	private String vbank_date; // (string, optional): 입금받을 가상계좌 마감기한 UNIX timestamp ,
+	private Long vbank_date; // (string, optional): 입금받을 가상계좌 마감기한 UNIX timestamp ,
 	private String vbank_holder; // (string, optional): 입금받을 가상계좌 예금주 ,
 	private String vbank_name; // (string, optional): 입금받을 가상계좌 은행명 ,
 	private String vbank_num; // (string, optional): 입금받을 가상계좌 계좌번호

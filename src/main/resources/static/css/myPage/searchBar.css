@@ -37,7 +37,7 @@ div#header_v2 .searchBar-wrap ul li {
     height: 38px;
     text-indent: 20px;
     padding-left: 0;
-    border: none;
+    border: none !important;
     line-height: 28px;
     font-family: "\B098\B214\ACE0\B515\BCFC\B4DC", NanumGothicBold, "\B098\B214\ACE0\B515", NanumGothic, "\B3CB\C6C0", Dotum, AppleSDGothic, AppleGothic, "\AD74\B9BC", Gulim, sans-serif;
     color: #1a1a1a;
@@ -63,9 +63,9 @@ input[type="text"]::-ms-clear {
     display: block;
     width: 16px;
     height: 16px;
-    background-image: url("/package/components/search/bar/v.1.0.0/pc/_images/searchBar.png");
+    background-image: url("/img/balgeure_icons.png");
     background-repeat: no-repeat;
-    background-position: 0 -35px;
+    background-position: -215px -5px;
     cursor: pointer; }
 
 .searchBar-inputBox-submit {
@@ -78,7 +78,7 @@ input[type="text"]::-ms-clear {
     text-indent: -99999px;
     background-image: url("/img/balgeure_icons.png");
     background-repeat: no-repeat;
-    background-position: -116px -4px;
+    background-position: -111px 2px;
     border: none;
     background-color: #fff;
     cursor: pointer; }

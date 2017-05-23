@@ -23,10 +23,7 @@ package net.balgre.network;
 
 import net.balgre.domain.BasketResponse;
 import retrofit2.Call;
-import retrofit2.http.GET;
-import retrofit2.http.Header;
-import retrofit2.http.POST;
-import retrofit2.http.Query;
+import retrofit2.http.*;
 
 /**
  * Created by user on 2017-04-30 오후 5:51
@@ -63,6 +60,14 @@ public interface BasketRetro {
             @Header("Content-Type") String contentType,
             @Query("item_id") long item_id2,
             @Query("item_count") int item_count2
+
+    );
+
+    @DELETE("/api/v1/basket/delete")
+    Call<BasketResponse> basketDelete(
+            @Header("X-Authorization") String token,
+            @Header("Content-Type") String contentType,
+            @Query("basket_id") long basket_id
 
     );
 

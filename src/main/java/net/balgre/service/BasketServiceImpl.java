@@ -65,8 +65,8 @@ public class BasketServiceImpl implements BasketService {
             return null;
         }
 
-//        if (response.getResultCode().equals("200")) {
-        if (response.getResultCode() == "200") {
+        if (response.getResultCode().equals("200")) {
+//        if (response.getResultCode() == "200") {
             logger.info("lll~~~ ListGET 성공: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
 
             return response;
@@ -90,8 +90,8 @@ public class BasketServiceImpl implements BasketService {
             return null;
         }
 
-//        if (response.getResultCode().equals("200")) {
-        if (response.getResultCode() == "200") {
+        if (response.getResultCode().equals("200")) {
+//        if (response.getResultCode() == "200") {
             logger.info("lll~~~ AddPOST 성공: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
 
             return response;
@@ -103,5 +103,32 @@ public class BasketServiceImpl implements BasketService {
 
     }
 
+    @Override
+    public BasketResponse basketDelete(String token, long basket_id) throws Exception {
+
+        BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
+
+        BasketResponse response = basketRetroImpl.basketDelete("Bearer " + token, basket_id);
+
+        if (response == null) {
+
+            return null;
+
+        }
+
+        if (response.getResultCode().equals("200")) {
+//        if (response.getResultCode() == "200") {
+            logger.info("lll~~~ Basket Delete 성공: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
+
+            return response;
+
+        } else {
+            logger.info("lll~~~ Basket Delete 실패: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
+
+            return null;
+
+        }
+
+    }
 
 }

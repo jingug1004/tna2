@@ -51,4 +51,6 @@ public interface BasketService {
 
     public BasketResponse basketAddPOST(String token, long itemId, int itemCount) throws Exception;
 
+    public BasketResponse basketDelete(String token, long basket_id) throws Exception;
+
 }

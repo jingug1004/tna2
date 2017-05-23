@@ -18,7 +18,6 @@
 </head>
 ##<body class="memebox" data-controller="memebox/pc/member/login/login" data-controller-domain='{"current":"//frontend-dev.memebox.com/","cdn":"//cdn.memebox.com/","cdnImage":"//cdn.memebox.com/"}' data-controller-info='{"device":"pc","service":"memebox"}' data-controller-message='{"error":""}' id="memebox-service" oncontextmenu="return false" ondragstart="return false">
 
-<body#* class="memebox" data-controller="memebox/pc/member/login/login" data-controller-domain='{"current":"//frontend-dev.memebox.com/","cdn":"//cdn.memebox.com/","cdnImage":"//cdn.memebox.com/"}' data-controller-info='{"device":"pc","service":"memebox"}' data-controller-message='{"error":""}' id="memebox-service" oncontextmenu="return false" ondragstart="return false"*#>
 
 ##<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-WMMF2B" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 ##<script>
@@ -44,165 +43,50 @@
 ##<link href="/web/css/memebox_login.css?v=7kc-1n234ch" rel="stylesheet" type="text/css">
 <link href="/css/loginCommon.css?v=7kc-1n234ch" rel="stylesheet" type="text/css">
 <div class="layout-structure-content">
-    <h1 class="header-main-content-logo-center"><a class="back-home" href="/"><img alt="내 삶을 아름답게 MEMEBOX"
-                                                                                   class="header-main-content-logo-center-image"
-                                                                                   src="https://image.winudf.com/v2/image/c3VtY3JlYXRpdmUuY29tLmJlYXV0eV9pY29uX3MwbThsMDVl/icon.png?w=170&fakeurl=1&type=.png"></a>
+    <h1 class="header-main-content-logo-center">
+    <a class="back-home" href="/"><img src="/img/login/rebbit.png" width="100px" height="100px"></a>
     </h1>
-##    <form action="/login" class="login-form" method="post">
-##        <fieldset>
-##            <legend>로그인</legend>
-##            <div class="login-form-required">
-##                <ul class="login-form-required-ul">
-##                    <li class="login-form-required-li">
-##                        <div class="inputGroups-email-wrap">
-##                            <label class="inputGroups-email-label"><span class="inputGroups-email-text">아이디(이메일)</span>
-##                                <input class="inputGroups-email-input" data-required="true"
-##                                       data-required-message="올바른 이메일을 입력해 주세요"
-##                                       data-required-wrap="inputGroups-email-wrap" id="email" name="email"
-##                                       placeholder="아이디(이메일)" type="text" value=""></label>
-##                            <div class="inputGroups-email-host-select" data-options=''></div>
-##                        </div>
-##                        <p class="validate-message"></p>
-##                    </li>
-##                    <li class="login-form-required-li">
-##                        <div class="inputGroups-password-wrap">
-##                            <label class="inputGroups-password-label"><span
-##                                    class="inputGroups-password-text">비밀번호</span> <input
-##                                    class="inputGroups-password-input" data-required="true"
-##                                    data-required-message="6~15자의 영문(대소문자), 숫자, 특수문자 중 2가지 이상 조합하여 작성합니다."
-##                                    data-required-wrap="inputGroups-password-wrap" id="password" name="password"
-##                                    placeholder="비밀번호" type="password" value=""></label>
-##                        </div>
-##                        <p class="validate-message"></p>
-##                    </li>
-##                </ul>
-##            </div>
-##            <div class="login-captcha" style="display: none">
-##                <strong class="inputGroups-captcha-title">비밀번호와 자동입력 방지문자를 함께 입력해주세요.</strong>
-##                <p class="inputGroups-captcha-info">비밀번호를 5회 이상 잘못 입력하면,<br>
-##                    정보보호를 위해 자동입력 방지문자를 입력하셔야 합니다.</p>
-##                <div class="inputGroups-captcha-content">
-##                    <div class="inputGroups-captcha-image-wrap">
-##                        <img alt="자동입력 방지문자 그림입니다." class="inputGroups-captcha-image" src=""> <a
-##                            class="inputGroups-captcha-refresh" href="">새로고침</a>
-##                    </div>
-##                    <label class="inputGroups-captcha-label"><input class="inputGroups-captcha-input"
-##                                                                    data-required="true"
-##                                                                    data-required-message="자동입력 방지문자를 입력해주세요."
-##                                                                    data-required-wrap="inputGroups-captcha-content"
-##                                                                    name="captcha" placeholder="자동입력 방지문자" type="text"
-##                                                                    value=""></label>
-##                </div>
-##                <p class="validate-message"></p>
-##            </div>
-##            <div class="login-CSCenter" style="display: none">
-##                <p class="customer-service-center"><span class="customer-service-center-title">고객센터</span> <span
-##                        class="customer-service-center-tel">1544-0439</span> <span class="customer-service-center-info">평일 9:00 - 18:00</span>
-##                    <span class="customer-service-center-info-sub">(주말/공휴일 제외)</span> <a
-##                            class="customer-service-center-trigger" href="/cs/faq">고객 감동 서비스센터 &gt;</a></p>
-##            </div>
-##            <p class="validate-message"></p>
-##            <div class="login-auto-wrap">
-##                <label class="login-auto-label"><input checked class="login-auto-checkbox" name="autoLogin"
-##                                                       type="checkbox" value="confirm"> <span class="login-auto-text">자동 로그인</span></label>
-##            </div>
-##            <div class="login-form-controller">
-##                <input class="login-form-submit" data-required-message="올바른 이메일을 입력해 주세요"
-##                       data-required-wrap="login-form-controller" disabled type="submit" value="로그인">
-##            </div>
-##        </fieldset>
-##        <input id="redirectUrl" name="redirectUrl" type="hidden" value="http://www.memebox.com/">
-##    </form>
-##    <div class="member-method">
-##        <a class="member-find-email-trigger"
-##           data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;/accountFind&quot;,&quot;type&quot;:&quot;get&quot;,&quot;title&quot;:&quot;find email id&quot;,&quot;name&quot;:&quot;아이디 찾기&quot;,&quot;size&quot;:{&quot;width&quot;:&quot;400&quot;,&quot;height&quot;:&quot;400&quot;}}'
-##           href="#" id="accountFind">아이디 찾기</a> <a class="member-find-password-trigger"
-##                                                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;/passwordFind&quot;,&quot;type&quot;:&quot;get&quot;,&quot;title&quot;:&quot;find password&quot;,&quot;name&quot;:&quot;비밀번호 찾기&quot;,&quot;size&quot;:{&quot;width&quot;:&quot;415&quot;,&quot;height&quot;:&quot;555&quot;}}'
-##                                                   href="#" id="passwordFind">비밀번호 찾기</a> <a class="signup-trigger"
-##                                                                                             href="/signUp?redirectUrl=http://www.memebox.com/&amp;type=email"
-##                                                                                             id="accountFind">회원가입</a>
-##    </div>
-    <div class="easy-login-method">
-        <div class="signUp-welcome-message">
-            <span>SNS 계정으로 간편하게 회원가입/로그인 하세요.</span>
-        </div>
-
-        <div
-                class="fb-like"
-                data-share="true"
-                data-width="450"
-                data-show-faces="true">
-        </div>
-
-        <ul class="easy-login-SNS">
-            <li class="easy-login-SNS-list" id="naverLogin">
-                <a class="member-SNS member-SNS-naver"
-                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;naver&quot;}'
-                   data-segment='' href="#"><span class="member-SNS-icon member-SNS-icon-naver">naver</span> <strong
-                        class="member-SNS-text">계정으로 회원가입</strong></a>
-            </li>
-            <li class="easy-login-SNS-list" id="facebookLogin">
-                <a class="member-SNS member-SNS-facebook"
-                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;facebook&quot;}'
-                   data-segment='' href="#"><span class="member-SNS-icon member-SNS-icon-facebook">facebook</span>
-                    <strong class="member-SNS-text">계정으로 회원가입</strong></a>
-            </li>
-            <li class="easy-login-SNS-list" id="kakaoLogin">
-                <a class="member-SNS member-SNS-kakao"
-                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;kakao&quot;}'
-                   data-segment='' href="#"><span class="member-SNS-icon member-SNS-icon-kakao">kakao</span> <strong
-                        class="member-SNS-text">계정으로 회원가입</strong></a>
-            </li>
-
-            <div class="col-md-5">
+    <p class="text_under_header">발그레에서 싸게 쇼핑하자</p>
+    <div class="login-title-image">
+        <span class="login-bigtitle-img"><img src="/img/login/login_title.png" height="35"></span>
+    </div>
+    <div class="login_form_onpage">
 ##                <%--<form id="loginfrm" name="loginfrm"--%>
 ##                <%--action="<c:url value="${ctx}/login"/>"--%>
                 <form id="sky-form1" class="log-reg-block sky-form" action="/loginPost" method="post">
 ##                    <%--<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">--%>
-                    <h2>Log in to your account</h2>
-
 ##                    <%--<form action="${ctx}/j_spring_security_ckeck" method="post">--%>
                     <section>
-                        <label class="input login-input">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" placeholder="USER ID" name="username"
-                                       class="form-control">
-##                                <%--<input type="email" placeholder="ID(Email Address)" name="email" class="form-control">--%>
+                        <label class="login-input-text">
+                            <div class="input-group-id">
+                                <input type="text" placeholder="이메일 (아이디)" name="username" class="form-control_email">
+
                             </div>
                         </label>
                     </section>
 
                     <section>
-                        <label class="input login-input no-border-top">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                <input type="password" placeholder="Password" name="password"
-                                       class="form-control">
-##                                <%--<input type="password" placeholder="Password" name="password" class="form-control">--%>
+                        <label class="login-input-text-pw">
+                            <div class="input-group-pw">
+                                <input type="password" placeholder="비밀번호" name="password"
+                                       class="form-control_pw">
+
                             </div>
                         </label>
                     </section>
-##                    <%--<input type="submit" value="login">--%>
-##                    <%--</form>--%>
 
                     <div class="row margin-bottom-5">
                         <div class="col-xs-6">
-                            <label class="checkbox">
-                                <%--<input type="checkbox" name="checkbox"/>--%>
-
-                                <input type="checkbox" name="useCookie">
-                                <i></i>
+                            <label class="checkbox_on_loginform">
+                                <input type="checkbox" name="useCookie" class="login_form_checkbox">
                                 자동 로그인
                             </label>
                         </div>
-                        <div class="col-xs-6 text-right">
-                            <a href="#">Forget your Password?</a>
-                        </div>
                     </div>
-                    <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit" value="login">Log in
-                    </button>
-##                    <%--<button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Log in</button>--%>
+                    <div class="login-submit-button">
+                    <button class="balgeure_login_submit-Btn" type="submit" value="login">로그인</button>
+                    </div>
+
                 </form>
 
 ##                <c:if test="${not empty param.fail}">
@@ -226,41 +110,41 @@
 ##                <%--<span></span>--%>
 ##                <%--</div>--%>
            
-                <div class="row columns-space-removes">
-                    <div class="col-lg-6 margin-bottom-10">
-                        <button type="button" class="btn-u btn-u-md btn-u-fb btn-block"><i
-                                class="fa fa-facebook"></i> Facebook Log In
-                        </button>
-                    </div>
-                    <div class="col-lg-6">
-                        <button type="button" class="btn-u btn-u-md btn-u-tw btn-block"><i
-                                class="fa fa-twitter"></i> Kakao-Talk Log In
-                        </button>
-                    </div>
-                    <div class="col-lg-6">
-                        <button type="button" class="btn-u btn-u-md btn-u-tw btn-block"><i
-                                class="fa fa-twitter"></i> Naver Log In
-                        </button>
-                    </div>
-                </div>
-                
-                <div>
-                    <input type="button" value="아이디 찾기" class="myButton" data-toggle="modal" data-target="#myModal">
-                    <input type="button" value="패스워드 찾기" onclick="window.open('/goFindPw','a','width=430,height=500,location=no,status=no,scrollbars=yes');">
-                </div>
-
-
-                <div class="margin-bottom-20"></div>
-                <p class="text-center">회원이 아니십니까? 회원가입 <a href="<c:url value="/user/shop-ui-register"/>">Sign
-                    Up</a></p>
-            </div>
-
-
+           <div class="search_id_and_pw_register">
+                <p class="text-center">
+                    <a href="#" class="search-email-and-password find_balgeure_email">이메일(아이디) 찾기</a>  |   
+                    <a href="#" class="search-email-and-password find_balgeure_password">비밀번호 찾기</a>  |   
+                    <a href="#" class="search-email-and-password join_balgeure_register">회원가입</a></p>
+           </div>
+           
+                <div class="simple-sns-login-method">
+                    <ul class="simple-login-SNS">
+            <li class="simple-login-SNS-list" id="naverLogin">
+                <a class="member-SNS_Login member-SNS-naver-login"
+                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;naver&quot;}'
+                   data-segment='' href="#"><span class="member-SNS-login-icon member-SNS-login-icon-naver">naver</span> <strong
+                        class="member-SNS-login-text">계정으로 회원가입</strong></a>
+            </li>
+            <li class="simple-login-SNS-list" id="facebookLogin">
+                <a class="member-SNS_Login member-SNS-facebook-login"
+                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;facebook&quot;}'
+                   data-segment='' href="#"><span class="member-SNS-login-icon member-SNS-login-icon-facebook">facebook</span>
+                    <strong class="member-SNS-login-text">계정으로 회원가입</strong></a>
+            </li>
+            <li class="simple-login-SNS-list" id="kakaoLogin">
+                <a class="member-SNS_Login member-SNS-kakao-login"
+                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;kakao&quot;}'
+                   data-segment='' href="#"><span class="member-SNS-login-icon member-SNS-login-icon-kakao">kakao</span> <strong
+                        class="member-SNS-login-text">계정으로 회원가입</strong></a>
+            </li>
         </ul>
-    </div>
-</div><!-- S : 로거 환경변수 -->
+                </div>           
+            </div>
+   
+</div>
+<!-- S : 로거 환경변수 -->
 
-<form name="findIdForm" method="post">
+         <form name="findIdForm" method="post">
 	                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 	                        <div class="modal-dialog">
 	                            <div class="modal-content">

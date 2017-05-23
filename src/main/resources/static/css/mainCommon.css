@@ -417,7 +417,7 @@ div#header_v2 div.gnbLogo a.memeLogo {
     height: 41px;
     margin-top: 9px;
     display: block;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -180px -180px no-repeat
+    background: url("/img/balgeure_icons.png") -2px -537px no-repeat;
 }
 
 div#header_v2 div.gnbLogo .topRollingBannerWrap .topRollingArrow {
@@ -1606,9 +1606,9 @@ div#footer li {
 
 div#footer .call {
     display: block;
-    width: 176px;
+    width: 255px;
     height: 26px;
-    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") 0 0
+    background: url("/img/balgeure_icons.png") -5px -348px no-repeat;
 }
 
 div#footer dl {
@@ -1799,7 +1799,7 @@ div#footer .footerLogo {
     display: block;
     width: 119px;
     height: 16px;
-    background: url("//www.memebox.com/web/images/footer/footerSprite20161117.png") 0 -30px
+    background: url("/img/balgeure_icons.png") 0 -499px
 }
 
 div#footer .textBox {
@@ -4057,3 +4057,21 @@ div.homeMainBanner .next {
     /*background: url("/web/images/header/headerSprite20160921.png") -410px -40px*/
 }
 
+/** Go to Top button CSS  **/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  background: url('/img/balgeure_icons.png') no-repeat -1px -1px;
+  width:71px;
+  height:35px;
+  cursor: pointer;
+  text-indent: -9999em;
+}
+
+#myBtn:hover {
+  background: url('/img/balgeure_icons.png') no-repeat -1px -1px;
+}

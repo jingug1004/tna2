@@ -176,6 +176,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(authInter)
                 .addPathPatterns("/my/privacy")
                 .excludePathPatterns();
+        registry.addInterceptor(authInter)
+        		.addPathPatterns("/payment/**")
+        		.excludePathPatterns();
     }
 
 }
