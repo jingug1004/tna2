@@ -1,8 +1,0 @@
-#parse ("/main/header.vm")
-
-#foreach($plan in $Plan)
-<div style="width: 100%; min-height: 400px;">
-    $plan.title
-    ##<img src="https://img2.memebox.com/static/contents/img/upload/memeshop_thumbnail_20160812123215_KFRW7LIDic.jpg">
-</div>
-#end

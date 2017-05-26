@@ -42,7 +42,7 @@ import net.balgre.domain.BasketResponse;
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
  *  2017/05/01  김진국          최초 생성
- *  </pre>
+ * </pre>
  */
 
 public interface BasketService {
@@ -51,6 +51,8 @@ public interface BasketService {
 
     public BasketResponse basketAddPOST(String token, long itemId, int itemCount) throws Exception;
 
-    public BasketResponse basketDelete(String token, long basket_id) throws Exception;
+    public BasketResponse basketDeleteDELETE(String token, long basket_id) throws Exception;
+
+    public BasketResponse basketUpdatePUT(String token, long basket_id, int item_count) throws Exception;
 
 }

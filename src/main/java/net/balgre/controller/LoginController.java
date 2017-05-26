@@ -129,8 +129,10 @@ public class LoginController {
 //
 //
 //        }
-
-        return "/main/main";
+        
+        // 기존 main/main 으로 리턴을 줄 시 url이 loginPost가 되어서
+        // main 페이지에 기본적으로 뿌려주는 카테고리가 깨지게 되므로 redirect로 변경함. by minho(2017-05-25)
+        return "redirect:/main";
 
     }
 

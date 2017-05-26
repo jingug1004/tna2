@@ -3,7 +3,7 @@ div.topBanner {
 }
 
 div.topBanner a img {
-    width: 1048px;
+    width: 1080px;
     margin: auto;
     display: block
 }
@@ -215,46 +215,35 @@ div#header_v2 ul li {
     line-height: 20px;
 }
 
-div#header_v2 div.gnbTop {
-    margin: 4px 0 10px 0;
-    width: 100%;
-    background: #fff;
+div#header_v2 .gnbTop {
+    position: relative;
+    width: 1080px;
+    height:16px;
+    margin: 5px auto 0;
     color: #555;
     font-size: 12px;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
 }
 
-div#header_v2 div.gnbTopInner {
-    width: 1080px;
-    height: 36px
+.link_text_onRightside_top{
+	position: absolute;
+    right: 0;
 }
 
-div#header_v2 div.gnbTopInner .count .pText {
-    margin: 1px 5px 0 0;
-    font-family: 'Tahoma';
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0;
-    color: #ff5073
-}
 
-div#header_v2 div.gnbTopInner .count .text {
-    margin-top: 1px
-}
-
-div#header_v2 div.gnbTopInner .appText {
+div#header_v2 .gnbTop .appText {
     margin: 1px 0 0 5px;
     display: block;
     font-size: 12px
 }
 
-div#header_v2 div.gnbTopInner .link {
+div#header_v2 .gnbTop .link {
     display: block;
     cursor: pointer;
     float: left
 }
 
-div#header_v2 div.gnbTopInner .bar {
+div#header_v2 .gnbTop .bar {
     display: block;
     margin: 1px 10px 0 10px;
     color: #e1e1e1;
@@ -262,14 +251,22 @@ div#header_v2 div.gnbTopInner .bar {
     font-size: 15px
 }
 
-div#header_v2 div.gnbTopInner .bar_half {
+div#header_v2 .gnbTop .bar_half {
     display: block;
     margin: 3px 5px 0 5px;
     color: #e1e1e1;
     float: left
 }
 
-div#header_v2 div.gnbTopInner .appDownIcon {
+div#header_v2 .gnbTop .email_to_sumIcon {
+    margin-top: 3px;
+    display: block;
+    width: 23px;
+    height: 16px;
+    background: url("/img/balgeure_icons.png") no-repeat -183px -21px;
+}
+
+div#header_v2 .gnbTop .appDownIcon {
     margin-top: 3px;
     display: block;
     width: 13px;
@@ -277,13 +274,13 @@ div#header_v2 div.gnbTopInner .appDownIcon {
     background: url("/img/balgeure_icons.png") no-repeat -179px -4px;
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .li {
+div#header_v2 .gnbTop ul.gnbTopRight .li {
     position: absolute;
     font-size: 11px;
     z-index: 5
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .navi {
+div#header_v2 .gnbTop ul.gnbTopRight .navi {
     margin-top: 1px;
     display: block;
     height: 27px;
@@ -291,7 +288,7 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .navi {
     float: left
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .arrow {
+div#header_v2 .gnbTop ul.gnbTopRight .arrow {
     display: block;
     width: 6px;
     height: 3px;
@@ -299,7 +296,7 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .arrow {
     background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -210px -60px
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .gnbTopRight_bar {
+div#header_v2 .gnbTop ul.gnbTopRight .gnbTopRight_bar {
     display: block;
     margin: 1px 10px 0;
     color: #e1e1e1;
@@ -307,14 +304,14 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .gnbTopRight_bar {
     font-size: 15px
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .top_cartIcon {
+div#header_v2 .gnbTop ul.gnbTopRight .top_cartIcon {
     margin: 3px 2px 0 0;
     width: 17px;
     height: 14px;
     background: url("/img/balgeure_icons.png") -196px -4px
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .cart_count {
+div#header_v2 .gnbTop ul.gnbTopRight .cart_count {
     padding: 0 6px;
     margin: 1px 0 0 4px;
     display: inline-block;
@@ -329,7 +326,7 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .cart_count {
     line-height: 18px
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .loginBtn {
+div#header_v2 .gnbTop ul.gnbTopRight .loginBtn {
     margin: 1px 10px 0 0;
     width: 56px;
     height: 19px;
@@ -340,15 +337,15 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .loginBtn {
     -moz-border-radius: 3px
 }
 
-div#header_v2 div.gnbTopInner .hover:hover {
+div#header_v2 .gnbTop .hover:hover {
     position: relative
 }
 
-div#header_v2 div.gnbTopInner .hover {
+div#header_v2 .gnbTop .hover {
     position: relative
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over {
+div#header_v2 .gnbTop .topMenu_over {
     display: none;
     position: absolute;
     width: 105px;
@@ -357,46 +354,289 @@ div#header_v2 div.gnbTopInner .topMenu_over {
     z-index: 5
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over .topMenu_over_inner {
+div#header_v2 .gnbTop .topMenu_over .topMenu_over_inner {
     width: 100px;
     background: #fff;
     border: 1px solid #f9f9fa
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over ul {
+div#header_v2 .gnbTop .topMenu_over ul {
     display: block;
     padding: 12px 10px
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over li {
+div#header_v2 .gnbTop .topMenu_over li {
     float: none;
     margin-bottom: 8px
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over a {
+div#header_v2 .gnbTop .topMenu_over a {
     color: #555
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over a:hover {
+div#header_v2 .gnbTop .topMenu_over a:hover {
     color: #ff5073
 }
 
-div#header_v2 div.gnbTopInner div.cs {
+div#header_v2 .gnbTop div.cs {
     width: 96px
 }
 
-div#header_v2 div.gnbTopInner div.cs .topMenu_over_inner {
+div#header_v2 .gnbTop div.cs .topMenu_over_inner {
     width: 91px
 }
 
-div#header_v2 div.gnbTopInner .hover:hover .topMenu_over {
+div#header_v2 .gnbTop .hover:hover .topMenu_over {
     display: block
 }
 
-div#header_v2 div.gnbLogoOuter {
-    width: 100%;
-    background: url("//img2.memebox.com/static/contents/img/upload/image_20160607105330_9hztwMIrVc.png") repeat-x
+
+.topRollingBannerWrap{
+	position: absolute;
+    top: 18px;
+    right: 0;
+    height: 30px;
 }
+
+.right_side_gnb_menu li{
+	position: relative;
+    float: left;
+    width: 75px;
+    margin-left: 30px;
+}
+
+.right_side_gnb_menu .memberlogin_icons{
+	width: 85px !important;
+}
+
+.right_side_gnb_menu li .Right_txt{
+	letter-spacing: -1px;
+    display: block;
+    line-height: 100%;
+}
+
+
+.right_side_gnb_menu #MyCart_icon_header{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -18px -35px;
+    margin-top: 4px;
+}
+
+.right_side_gnb_menu #MyCart_icon_header:hover {
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -75px -35px;
+    cursor: pointer;
+}
+
+#MyCart_icon_header a, #MyWishlist_icon_header a{
+	position: absolute;
+    top: 0;
+    left: 30px;
+    width: 45px;
+    text-align: center;
+}
+
+.right_side_gnb_menu #MyWishlist_icon_header{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -16px -72px;
+    margin-top: 4px;
+}
+
+.right_side_gnb_menu #MyWishlist_icon_header:hover{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -71px -72px;
+    cursor: pointer;
+}
+
+.right_side_gnb_menu #balgeure_member_login_btn{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -16px -108px;
+    margin-top: 4px;
+}
+
+.right_side_gnb_menu #balgeure_member_login_btn:hover{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -74px -108px;
+    cursor: pointer;
+}
+
+
+#balgeure_member_login_btn .Bal_member_info{
+	position: absolute;
+    top: 0;
+    left: 30px;
+    width: 55px;
+}
+
+.quantity-txt{
+	border-radius: 10px;
+    padding: 4px 5px 4px 5px;
+    line-height: 60%;
+    background: #ff8fa7;
+    color: #FFF;
+    display: inline-block;
+}
+
+
+/**  로그인 메뉴 Drop Down CSS  Start  **/
+
+
+.sub_balgeure_member_login{
+	position: relative;
+    top: 42px;
+    right: 93px;
+    width: 178px;
+    padding:0 0 0 8px;
+    margin: 0;
+
+}
+
+
+.sub_balgeure_member_login .small_contents{
+	padding: 10px 18px;
+    border: 1px solid #757672;
+    background: #FFF;
+}
+
+.login_balgeure_btn li{
+	margin: 0;
+	padding: 0;
+	float: none !important;
+}
+
+.login_balgeure_btn .loginBtn{
+	width: 128px;
+    text-align: center;
+    color: #FFF !important;
+    background: #ff8fa7;
+    display: inline-block;
+    line-height: 31px !important;
+    height: 33px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.Bal_member_info .loginBtn .logintxt, .Bal_member_info .mypageBtn .mypagetxt{
+	line-height:18px;
+	letter-spacing: -1px;
+    display: block;
+}
+
+.sub_balgeure_member_login .upside_arrow_on_dropdown{
+	background: url(/img/header/header_icons.png) no-repeat -101px -6px;
+	position: absolute;
+    top: -7px;
+    left: 101px;
+    width: 13px;
+    height: 8px;
+    font-size: 0;
+    display: inline-block;
+}
+
+
+.small_contents .joining_balgeure{
+	background: #afafaf;
+    width: 128px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF !important;
+    margin-top: 1px;
+    display: inline-block;
+    line-height: 33px !important;
+    height: 33px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+}
+
+.small_contents .joining_balgeure span{
+	color: #000 !important;
+    display: inline-block;
+    line-height: 34px !important;
+    height: 33px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.small_contents .mypage_dropdown_menu{
+	border-top: 1px solid #ff8fa7;
+    border-bottom: 1px dotted #dfdfdf;
+    padding: 7px 0;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    margin-top: 1px;
+    font-weight: bold;
+    display: block;
+}
+
+.After_login{
+	margin-top:5px;
+}
+
+.afterlogin_dropdown_menu{
+	text-align: center;
+    padding: 3px 0;
+    position: relative;
+    float: none !important;
+}
+
+.afterlogin_dropdown_menu a{
+	color: #333;
+    text-align: center;
+}
+
+.logintype_on_balgeure{
+	position: relative;
+    height: 18px;
+    padding-top: 2px;
+    margin: 10px 0;
+    display: block;
+    color: #555;
+}
+
+.logintype_on_balgeure .login_icons{
+	position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.logintype_on_balgeure .login_icons a{
+	width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    display: inline-block;
+}
+
+.logintype_on_balgeure .login_icons .naver{
+	background: url(/img/header/header_icons.png) no-repeat -4px -185px;
+	text-indent: -9999em;
+}
+
+.logintype_on_balgeure .login_icons .facebook{
+	background: url(/img/header/header_icons.png) no-repeat -31px -185px;
+	text-indent: -9999em;
+}
+
+.logintype_on_balgeure .login_icons .kakaotalk{
+	background: url(/img/header/header_icons.png) no-repeat -58px -185px;
+	text-indent: -9999em;
+}
+
+
+/**       로그인 메뉴 Drop Down CSS  End     **/
 
 div#header_v2 div.gnbLogoOuter.fix {
     position: fixed;
@@ -406,18 +646,24 @@ div#header_v2 div.gnbLogoOuter.fix {
 }
 
 div#header_v2 div.gnbLogo {
-    position: relative;
+	position: relative;
     width: 1080px;
-    height: 72px;
-    z-index: 4
+    height: 70px;
+    padding-top: 0;
+    border-bottom: none !important;
+    margin: 0 auto;
+    z-index: 10000;
 }
 
-div#header_v2 div.gnbLogo a.memeLogo {
+div#header_v2 div.gnbLogo a.balgeureLogo {
     width: 174px;
-    height: 41px;
-    margin-top: 9px;
+    height: 48px;
+    margin-top: 5px;
     display: block;
-    background: url("/img/balgeure_icons.png") -2px -537px no-repeat;
+    background: url("/img/balgeure_icons.png") -132px -532px no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 div#header_v2 div.gnbLogo .topRollingBannerWrap .topRollingArrow {
@@ -489,7 +735,7 @@ div#header_v2 div.gnbOuter {
     width: 100%;
     height: 42px;
     border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 2px solid #ff8fa7;
     font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪�▣ヂ냈셌モ�쑩�', NanumGothicBold, '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
 }
 
@@ -1011,11 +1257,13 @@ div#header_v2 .lnbClose {
 }
 
 .newSearchWrap {
-    position: absolute;
-    top: 9px;
-    left: 260px;
-    width: 460px;
-    z-index: 1
+    position: relative;
+    padding-top: 8px;
+    left: 0;
+    width: 376px;
+    margin: 0 auto;
+    z-index: 1;
+    text-align: center;
 }
 
 .imMeMe-stick-floating-banner {
@@ -1038,6 +1286,16 @@ div#header_v2 .lnbClose {
     height: 23px;
     text-indent: -9999em
 }
+
+
+/*** Header   ***/
+
+#MyCart_icon_header{
+	/**    background: url(/img/header/header_icons.png) no-repeat -1px 0px;   **/
+}
+
+
+
 
 @font-face {
     font-family: 'NanumGothic';
@@ -3973,7 +4231,7 @@ div.promotionBanner .page {
 div.homeMainBannerWrap {
     margin-bottom: 44px;
     width: 100%;
-    background: #fff
+    background: #ffebe8
 }
 
 div.homeMainBannerWrap .homeBannerLiner {

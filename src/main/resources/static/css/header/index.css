@@ -172,8 +172,8 @@ select{
 .banner {
 	position:relative;
 	min-width:1000px;
-	height:120px;
-	/*background:url(../images/common/bg_top.gif);*/
+	height:70px;
+	background-color: #757672;
 	overflow:hidden;
 	z-index:1;
 }
@@ -181,10 +181,10 @@ select{
 .banner .top_banner {
 	position:absolute;
 	bottom:0;
-	left:25%;
+	left:35%;
 	margin-left:0;
 	width:1048px;
-	height:120px;
+	height:70px;
 }
 
 .banner .btn_close {

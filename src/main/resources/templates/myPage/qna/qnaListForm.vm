@@ -92,17 +92,6 @@
            #set($beforePage = $currentPage - 1)
            #set($nextPage = $currentPage + 1)
            
-           <!-- <div class="text-center">
-              <ul class="pagination">
-                 <li>#if($currentPage != 1) <a href="javascript:common.goPage('$!{formName}','$beforePage')">&laquo;</a>#else<a href="#">&laquo;</a>#end</li>
-                 
-                 #foreach ($pageNum in [$startPage..$endPage])
-                    <li #if($pageNum == $currentPage)class="active"#end><a href="javascript:common.goPage('$!{formName}','$pageNum')">$pageNum</a></li>
-                 #end
-                 
-                 <li>#if($currentPage != $lastPage) <a href="javascript:common.goPage('$!{formName}','$nextPage')">&raquo;</a>#else<a href="#">&raquo;</a>#end</li>
-              </ul>
-           </div> -->
           #end
 
 	<script type="text/javascript" src="/js/myPage/qna/jquery-3.1.1.min.js"></script>

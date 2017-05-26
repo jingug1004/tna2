@@ -82,7 +82,6 @@ public class BasketRetroImpl {
             if (response.isSuccessful()) {
 
                 logger.info("response.toString() List Get : " + response.toString());
-//                System.out.println(response.body());
 
                 return response.body();
             }
@@ -113,11 +112,11 @@ public class BasketRetroImpl {
         return null;
     }
 
-    public BasketResponse basketDelete(String token, long basket_id) {
+    public BasketResponse basketDeleteDELETE(String token, long basket_id) {
 
         logger.info("retroImpl Delete Token : " + token);
 
-        Call<BasketResponse> call = this.basketRetro.basketDelete
+        Call<BasketResponse> call = this.basketRetro.basketDeleteDELETE
                 (token, "application/x-www-form-urlencoded", basket_id);
 
         logger.info("token Delete : " + token);
@@ -130,7 +129,33 @@ public class BasketRetroImpl {
             if (response.isSuccessful()) {
 
                 logger.info("response.toString() Delete : " + response.toString());
-//                System.out.println(response.body());
+
+                return response.body();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public BasketResponse basketUpdatePUT(String token, long basket_id, int item_count) {
+
+        logger.info("retroImpl Update Token : " + token);
+
+        Call<BasketResponse> call = this.basketRetro.basketUpdatePUT
+                (token, "application/x-www-form-urlencoded", basket_id, item_count);
+
+        logger.info("token Update : " + token);
+
+        try {
+            Response<BasketResponse> response = call.execute();
+
+            logger.info("response Update : " + response);
+
+            if (response.isSuccessful()) {
+
+                logger.info("response.toString() Update : " + response.toString());
 
                 return response.body();
             }

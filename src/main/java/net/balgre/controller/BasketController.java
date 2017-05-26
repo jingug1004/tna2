@@ -45,11 +45,11 @@ import java.util.Map;
  * Why :
  * How :
  *
- * @author  숨 크리에이티브 개발팀 김진국
+ * @author 숨 크리에이티브 개발팀 김진국
  * @version 1.0
  * @see
- * @since   2017/04/10
- *
+ * @since 2017/04/10
+ * <p>
  * <pre>
  * << 개정이력(Modification Information) >>
  *
@@ -57,7 +57,6 @@ import java.util.Map;
  *  -------    --------    ---------------------------
  *  2017/04/19  김진국          최초 생성
  * </pre>
- *
  */
 
 @Controller
@@ -70,13 +69,13 @@ public class BasketController {
 
     @RequestMapping(value = "/basketList", method = RequestMethod.GET)
     public String basketListGET(HttpSession session,
-                            HttpServletRequest request,
-                            Model model,
-                            BasketResponse basketResponse) throws Exception {
+                                HttpServletRequest request,
+                                Model model,
+                                BasketResponse basketResponse) throws Exception {
 
         logger.info("lll~~~ Connect basketList GET 1 . lll~~~");
 
-        LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
 
         model.addAttribute("basketListGET", basketService.basketListGET(login.getToken()));
 
@@ -87,7 +86,7 @@ public class BasketController {
 
     }
 
-    //    @RequestMapping(value = "/basketAdd", method = RequestMethod.POST)
+//    @RequestMapping(value = "/basketAdd", method = RequestMethod.POST)
 //    @ResponseBody
 //    public BasketResponse basketPOST(HttpSession session,
 //                                     ProductItem productItem,
@@ -106,11 +105,11 @@ public class BasketController {
     @RequestMapping(value = "/basketAdd", method = RequestMethod.POST)
     @ResponseBody
     public String basketAddPOST(HttpSession session,
-                             HttpServletRequest request,
-                             Model model,
-                             BasketResponse basketResponse) throws Exception {
+                                HttpServletRequest request,
+                                Model model,
+                                BasketResponse basketResponse) throws Exception {
 
-        LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
 
 //        logger.info("lll~~~ " + itemsVm[0] + " 1 . lll~~~");
 
@@ -119,7 +118,7 @@ public class BasketController {
 
         System.out.println("lll~~~ Request? " + param + " 2 .. lll~~~");
 
-        for (String item:itemsVm) {
+        for (String item : itemsVm) {
 
             param.get("items[" + item + "].price");
 
@@ -142,7 +141,7 @@ public class BasketController {
 
         }
 
-        System.out.println("lll~~~ " + request.getParameterMap() + " 5 ..... lll~~~" );
+        System.out.println("lll~~~ " + request.getParameterMap() + " 5 ..... lll~~~");
 
 //        BasketResponse res = basketService.basketPOST(login.getToken(), items.length);
 
@@ -157,34 +156,52 @@ public class BasketController {
 
     }
 
-    @RequestMapping(value = "/basketDelete", method = RequestMethod.GET)
-    public void basketDelete(HttpSession session,
-                               HttpServletRequest request,
-                               Model model,
-                               BasketResponse basketResponse,
-                               @RequestParam("basketId") long basket_id) throws Exception {
+    @RequestMapping(value = "/basketDelete", method = RequestMethod.POST)
+    @ResponseBody
+    public String basketDelete(HttpSession session,
+                             HttpServletRequest request,
+                             Model model,
+                             BasketResponse basketResponse,
+                             @RequestParam("basketId") String basket_id) throws Exception {
 
-        LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
 
 //        long basket_id = 111;
 
+        long basketid = (long) Float.parseFloat(basket_id);
+
+        logger.info("lll~~~ basket_id Delete 0 . " + basketid + " lll~~~");
 //        long basket_id = request.getParameter(basketResponse.getBasketList());
 
-        logger.info("lll~~~ basket_id Delete 1 . " + basket_id + " lll~~~");
+        logger.info("lll~~~ basket_id parameter Delete 1 . " + basket_id + " lll~~~");
         logger.info("lll~~~ basket login Delete 2 .. " + login + " lll~~~");
 
-        basketService.basketDelete(login.getToken(), basket_id);
+        basketService.basketDeleteDELETE(login.getToken(), basketid);
 
-        logger.info("lll~~~ basketService Delete 3 ... " + basketService + " lll~~~");
-
-//        return "redirect:/basket/basket";
+        return "delSucc";
 
     }
 
-    @RequestMapping(value = "/basketUpdate", method = RequestMethod.PUT)
-    public String basketUpdate() throws Exception {
+    @RequestMapping(value = "/basketUpdate", method = RequestMethod.POST)
+    @ResponseBody
+    public void basketUpdatePUT(HttpSession session,
+                                HttpServletRequest request,
+                                Model model,
+                                BasketResponse basketResponse,
+                                @RequestParam("basketId") String basket_id,
+                                @RequestParam("itemCount") String item_count) throws Exception {
 
-        return null;
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+
+        long basketid = (long) Float.parseFloat(basket_id);
+        int itemcount = (int) Float.parseFloat(item_count);
+
+        logger.info("basketid : " + basketid + " ");
+        logger.info("itemcount : " + itemcount + " ");
+
+        basketService.basketUpdatePUT(login.getToken(), basketid, itemcount);
+
+//        return null;
 
     }
 

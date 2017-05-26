@@ -133,18 +133,48 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	
-	/*category list by minho*/
+	/*category by minho*/
 	@Override
-	public CategoryResponse2 categoryList2() {
+	public CategoryResponse category2() {
 		// TODO Auto-generated method stub
 		
 		ProductRetroImpl PRI = new ProductRetroImpl();
 		
-		CategoryResponse2 res = PRI.categoryList();
+		CategoryResponse res = PRI.category2();
 		
-		logger.info("[CategoryServiceImpl] 레트로에서 받은 res : " + res);
+		logger.info("[ProductServiceImpl] 레트로에서 받은 res : " + res);
 		
 		return res;
 	}
 
+	
+	/*sub category by minho*/
+	@Override
+	public CategoryResponse subCategory2(long menu_id) {
+		// TODO Auto-generated method stub
+		
+		ProductRetroImpl PRI = new ProductRetroImpl();
+		
+		CategoryResponse res = PRI.subCategory(menu_id);
+		
+		logger.info("[ProductServiceImpl] 레트로에서 받은 res : " + res);
+		
+		return res;
+	}
+
+	
+	/*category list by minho*/
+	@Override
+	public PageProduct categoryList2(long parent, int page, long menu_id, int sort) {
+		// TODO Auto-generated method stub
+		
+		ProductRetroImpl PRI = new ProductRetroImpl();
+		
+		PageProduct res = PRI.categoryList2(parent, page, menu_id, sort);
+		
+		logger.info("[ProductServiceImpl] 레트로에서 받은 res : " + res);
+		
+		return res;
+	}
+	
 }

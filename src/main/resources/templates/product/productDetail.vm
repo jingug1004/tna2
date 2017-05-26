@@ -1,4 +1,4 @@
-#parse ("/main/header.vm")
+﻿﻿#parse ("/main/header.vm")
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 
@@ -406,6 +406,7 @@
                         <strong class="nuNumber rateNum">
                             #if(${choiceDetailProduct.product.sale} != 0)
                                 ~${choiceDetailProduct.product.sale} <span class="percentage_symbol">%</span>
+
                             #end
                         </strong>
                     </dd>
@@ -484,7 +485,7 @@
                             <option value="" class="selectedChoiceP" #*selected="selected"*#>상품을 선택해주세요.</option>
                             #foreach($item in $choiceDetailProduct.productItem)
                                 <option value="$item.itemId|$item.price|$item.maxItemCnt|$item.itemName">
-                                    $!{item.itemName} / 남은 수량 $!{item.maxItemCnt}
+                                    $!{item.itemName} / 남은 수량 $!{item.itemCnt}
                                 </option>
                             #end
                         </select>
@@ -573,9 +574,11 @@
                                 data-product-price="16000"
                                 data-recommend-type="RDD"
                                 data-current-productid="514398"
-                                data-theme-count="1_2">
+                                data-theme-count="1_2"
+                            >
                                 <div id="result_505378" class="memebox-deal deal_type_thumbnail_4">
-                                    <a href="/product/505378" onclick="onRecommendProductClick('505378', '[에뛰드] 글로우 온 베이스 2종', $(this).parent().parent().parent().data('productlist-id')
+                                    <a href="/product/505378"
+                                       onclick="onRecommendProductClick('505378', '[에뛰드] 글로우 온 베이스 2종', $(this).parent().parent().parent().data('productlist-id')
                                                        ,$(this).parent().parent().parent().data('productlist-name'),'347','42265','RDD', '0', 'top'); return false;">
                                         <div class="memebox-deal-info">
 
@@ -642,7 +645,8 @@
                                 data-product-price="15300"
                                 data-recommend-type="RDD"
                                 data-current-productid="514398"
-                                data-theme-count="1_2">
+                                data-theme-count="1_2"
+                            >
                                 <div id="result_11454" class="memebox-deal deal_type_thumbnail_4">
                                     <a href="/product/11454"
                                        onclick="onRecommendProductClick('11454', '[로레알파리] 베이스 매직 프라이머', $(this).parent().parent().parent().data('productlist-id')
@@ -1349,7 +1353,7 @@
                                             #foreach($item in $choiceDetailProduct.productItem)
 
                                                 <option value="$item.itemId|$item.price|$item.maxItemCnt|$item.itemName">$!{item.itemName}
-                                                    / 남은 수량 $!{item.maxItemCnt}
+                                                    / 남은 수량 $!{item.itemCnt}
                                                 </option>
                                             #end
                                         </select>
@@ -1381,7 +1385,7 @@
                                     <form name="cart" action="/checkout/withoutCart" method="post"></form>
 
                                     <span class="infoBtnCell purchaseBlock" data-test="true">
-                                  <button #*type="submit"*# id="directBasket" class="btnDeal btnMeme purchaseBtn" ga-event="view,view_buy">
+                                  <button type="submit" class="btnDeal btnMeme purchaseBtn" ga-event="view,view_buy">
                                       <span class="btnTxt btnTxtPurchase">즉시구매</span>
                                   </button>
                                 </span>
@@ -1389,7 +1393,7 @@
                                     <span class="infoBtnCell cartBlock">
                                     <button #*type="submit"*# class="btnDeal btnWhite cart" ga-event="view,view_cart"
                                     #*id="buttomCartAddBtn"*# id="beforeSubmitBasket2">
-                                <span class="btnTxt btnTxtCart" href="/cart">장바구니2</span></button>
+                                <span class="btnTxt btnTxtCart" href="/cart">장바구니</span></button>
                                 </span>
                                     </form>
                                 ##                ----- 장바구니 폼 태그 <form> 끝 -----
@@ -2371,8 +2375,8 @@
 
 <script>
 
-	$(".purchaseBtn").on("click", function (event) {
-		var formData = $("#ReadingInfoSelectForm").serialize();
+    $(".purchaseBtn").on("click", function (event) {
+        var formData = $("#ReadingInfoSelectForm").serialize();
 
         $.ajax({
             type: 'post',
@@ -2381,15 +2385,15 @@
             processData: false,
             data: formData,
             success: function (data) {
-				if(data) {
-					window.location.href = "/payment/order?q="+data;
-				}
+                if(data) {
+                    window.location.href = "/payment/order?q="+data;
+                }
             },
             error: function (data, textStatus, errorThrown) {
                 alert("로그인 하신 후 옵션을 선택해주세요.");
             }
         });
-	});
+    });
 
     ##    //    $(document).ready(function)()
     ##    //    {
@@ -2455,13 +2459,25 @@
             }
         });
     });
+    //    }
+
+    //    $("#basketList").on("click", function () {
+    //
+    //        window.open("", "popup_window", "width=500, height=300, scrollbars=no");
+    //
+    ////        $("#cartPopupWrap").show();
+    ////        $("#cartPopupWrap").center();
+    //
+    //        $("#cartPopupWrap").append();
+    //
+    //    })
 
     //    $(document).ready(function () {
     $("#beforeSubmitBasket").on("click", function () {
 
-//        $('#basketList').click(function () {
-##        var result = confirm('${choiceDetailProduct.product.prodName} 상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?');
-##        var productData = "${choiceDetailProduct.product}";
+        //        $('#basketList').click(function () {
+    ##        var result = confirm('${choiceDetailProduct.product.prodName} 상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?');
+    ##        var productData = "${choiceDetailProduct.product}";
 
 //        var productCode = $('#choiceItem option:selected').val();
 //
@@ -2565,77 +2581,9 @@
 //            location.replace('/basketList');
     });
     //    });
-    //    $(document).ready(function () {
-    $("#beforeSubmitBasket2").on("click", function () {
-
-        //        $('#basketList').click(function () {
-    ##        var result = confirm('${choiceDetailProduct.product.prodName} 상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?');
-    ##        var productData = "${choiceDetailProduct.product}";
-
-//        var productCode = $('#choiceItem option:selected').val();
-//
-////        var itemCount = $("#itemCount").val();
-//        var itemCount = 1;
-//        var itemId = 118;
-////        var itemId = (productCode.split("|")[0]);
-
-//        var formData = new FormData();
-//        formData.append("itemId", itemId);
-//        formData.append("itemCount", itemCount);
-//        formData.append("itemPrice", productItemCost);
-
-//        console.log(itemCount + ", " + itemId)
-
-        var formData = $("#ReadingInfoSelectForm").serialize();
-
-        console.log("lll~~~~ " + formData + " + formData, this success! lll~~~");
-
-        $.ajax({
-            type: 'post',
-            url: '/basketAdd',
-            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-            processData: false,
-//            data: JSON.stringify(formData),
-            data: formData,
-            success: function (data) {
-
-                console.log(data + "Succ 01!");
-
-                if (data == "basketSucc") {
-                    console.log(data + "Succ 02!!");
-
-                    wrapEntirePage();
-                    $('.cartPopupWrap').show();
-
-                    $('#shoppingBtn').on('click', function (e) {
-                        unwrapEntirePage();
-
-                        $('.cartPopupWrap').hide();
-                    });
-
-                    $('#cartClose').on('click', function (e) {
-                        unwrapEntirePage();
-                        $('.cartPopupWrap').close();
-                    });
-
-                    $('#goCartBtn').click(function () {
-                        analytics.track('Button Clicked', {
-                            category: 'Product Page',
-                            label: 'Popup > Go To Cart'
-                        });
-                        window.location.href = "https://order.memebox.com/cart";
-                    });
-
-                }
-            },
-
-            error: function (data, textStatus, errorThrown) {
-                alert("로그인 하신 후 옵션을 선택해주세요.");
-            }
-        });
-    });
 </script>
 
+##<input id="numberUpDown" type="hidden" value="1">1</input>
 
 <script>
     ## ----- 상품 장바구니 이동 전 아이템(옵션) 선택 시작 -----
@@ -2679,6 +2627,9 @@
             totalPrice += multiplePrice;
 //            totalPrice2 += multiplePrice2;
 
+            console.log(totalPrice + " 2 .. lll~~~");
+            console.log(totalPrice2 + " 2 .. second lll~~~");
+
 //            var index = $('#orders li').size();
 
             if (checkDupl(itemId)) {
@@ -2703,7 +2654,7 @@
 
                 orderHtml2 += '<input type="button" class="orderRemoveButton" value="취소" />';
 
-            } else {
+            } else{
                 return;
             }
 
@@ -2739,6 +2690,13 @@
 
             var liEl = $('<li/>').html(orderHtml).appendTo('#orders1');
 
+            console.log("lll~~~ " + orderHtml2 + " 2-b-ㄱ .. third lll~~~");
+            console.log("lll~~~ " + itemId + " 2-b-ㄴ .. third lll~~~");
+            console.log("lll~~~ " + productText + " 2-b-ㄷ .. third lll~~~");
+            console.log("lll~~~ " + productPrice + " 2-b-ㄹ .. third lll~~~");
+            console.log("lll~~~ " + maxItemCnt + " 2-b-ㅁ .. third lll~~~");
+            console.log("lll~~~ " + multiplePrice + " 2-b-ㅂ .. third lll~~~");
+
             liEl.find('.orderRemoveButton').on("click", function () {
 //                totalPrice -= multiplePrice;
                 liEl.remove();
@@ -2754,6 +2712,8 @@
 //                $('.choiceItem2').toggle();
 
 //                location.reload();
+
+                console.log(totalPrice + " 3-a ... sumBasket del 1button lll~~~");
 
             });
 
@@ -2773,11 +2733,14 @@
 
 //                location.reload();
 
+                console.log(totalPrice2 + " 3-b ... sumBasket del 1button lll~~~");
             });
 
             sumBasket(itemId, productPrice, num);
 //            sumBasket2(itemId2, productPrice2, num);
 //              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
+            console.log(totalPrice + " 4 .... Final sumBasket totalPrice 1button lll~~~");
+            console.log(totalPrice2 + " 4 .... Final sumBasket totalPrice2 1button lll~~~");
 
 //            $('.choiceItem').trigger("change", function(event) {
 //                event.stopPropagation();
@@ -2890,6 +2853,7 @@
 //              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
 
 
+                console.log(totalPrice + " 3-a ... sumBasket del 2button lll~~~");
             });
 
             liEl2.find('.orderRemoveButton').on("click", function () {
@@ -2902,11 +2866,15 @@
 //              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
 
 
+                console.log(totalPrice + " 3-b ... sumBasket del 2button lll~~~");
+
             });
 
             sumBasket(itemId, productPrice, num);
 //            sumBasket2(itemId2, productPrice2, num);
 //              $('#cartItem').html("<span id="total_txt">총 상품금액 : </span><span id="SumProductP">(totalPrice)</span><span id="KR_won">원</span>");
+            console.log(totalPrice + " 4 .... Final sumBasket totalPrice 2button lll~~~");
+            console.log(totalPrice2 + " 4 .... Final sumBasket totalPrice2 2button lll~~~");
         });
 
     });
@@ -2958,17 +2926,14 @@
 
         var toSum = productPrice * num;
 
-        $('#sum' + itemId).text((toSum));
-        $('#sum2' + itemId).text((toSum));
+        $('#sum' + itemId).text(toSum);
+        $('#sum2' + itemId).text(toSum);
 
         var totalSum = 0;
 
         $('span[name=getSum]').each(function () {
             totalSum += parseInt($(this).text());
         });
-
-        $('#sum' + itemId).text($.number(toSum));
-        $('#sum2' + itemId).text($.number(toSum));
 
         $('#cartItem1').html("<span id=\"total_txt\">총 상품금액 : </span><span id=\"SumProductP\"> " + $.number(totalSum / 2) + "</span><span id=\"KR_won\">원</span>");
         $('#cartItem2').html("<span id=\"total_txt\">총 상품금액 : </span><span id=\"SumProductP\"> " + $.number(totalSum / 2) + "</span><span id=\"KR_won\">원</span>");
@@ -2986,92 +2951,39 @@
 
         $('span[name=getSum]').each(function () {
 
-            console.log($(this).attr("id") + " $(this).attr(id) 00");
-            console.log(valId + " valId 01");
-            console.log(valAttr + " valId 01-a");
+            console.log($(this).attr("id") + "$(this).attr(id) 00");
+            console.log(valId + "valId 01");
+            console.log(valAttr + "valId 01-a");
 
             var attrId = $(this).attr("id");
 
             if (valId == attrId || valId2 == attrId || valId == valId2) {
-                console.log(valId + " valId 02");
+                console.log(valId + "valId 02");
                 valAttr = false;
-                return valAttr;
+                return;
             }
 
         });
 
-        console.log(valId + " valId 03 - 아무것도 안 누르고 처음 눌렀을 때");
+        console.log(valId + "valId 03 - 아무것도 안 누르고 처음 눌렀을 때");
+
+//        $('.choiceItem').toggle();
+//        $('.choiceItem2').toggle();
 
         return valAttr;
 
-        console.log(valAttr + " valAttr 03");
+//        $('.choiceItem').on("toggleRecentSave", function (event) {
+//            event.preventDefault();
+//        }
+//        $('.choiceItem2').on("toggleRecentSave", function (event) {
+//            event.preventDefault();
+//        }
+
+        console.log(valAttr + "valAttr 03");
+
 
     }
     ## ----- 상품 장바구니 이동 전 아이템(옵션) 선택 끝 -----
-
-
-## ------ 상품 상세 페이지에서 즉시구매 시작 -----
-    $("#directBasket").on("click", function (event) {
-        event.preventDefault();
-
-        var formData = $("#ReadingInfoSelectForm").serialize();
-
-        console.log("lll~~~~ " + formData + " + formData, this success! lll~~~");
-
-        $.ajax({
-            type: 'post',
-            url: '/basketDirectPayPage',
-            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-            processData: false,
-            data: formData,
-            success: function (data) {
-
-                console.log(data + "Succ 01!");
-
-                if (data == "basketSucc") {
-                    console.log(data + "Succ 02!!");
-
-                    wrapEntirePage();
-                    $('.cartPopupWrap').show();
-
-                    $('#shoppingBtn').on('click', function (e) {
-                        unwrapEntirePage();
-                        $('.cartPopupWrap').hide();
-                    });
-
-                    $('#cartClose').on('click', function (e) {
-                        unwrapEntirePage();
-                        // Segment Analytics: Button Behaviour
-//                        analytics.track('Button Clicked', {
-//                            category: 'Product Page',
-//                            label: 'Popup > Close Popup'
-//                        });
-//                        $('.cartPopupWrap').hide();
-                        $('.cartPopupWrap').close();
-                    });
-
-                    $('#goCartBtn').click(function () {
-                        analytics.track('Button Clicked', {
-                            category: 'Product Page',
-                            label: 'Popup > Go To Cart'
-                        });
-                        window.location.href = "https://order.memebox.com/cart";
-                    });
-
-                }
-            },
-
-            error: function (data, textStatus, errorThrown) {
-                alert("로그인 하신 후 옵션을 선택해주세요.");
-//                alert("error! data? \n" + data + "textStatus? \n" + textStatus + "errorThrown? \n" + errorThrown);
-            }
-        });
-
-
-
-    })
-## ------ 상품 상세 페이지에서 즉시구매 끝 -----
-
 
 </script>
 

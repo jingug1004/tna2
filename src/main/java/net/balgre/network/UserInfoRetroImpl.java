@@ -26,18 +26,18 @@ private static final Logger logger = LoggerFactory.getLogger(UserInfoRetroImpl.c
 		this.userInfoRetro = this.create();
 	}
 	
+	
+	/*user info by minho*/
 	public UserResponse getUserInfo2(String token) {
 		
-		logger.info("userInfo token : " + token);
+		logger.info("[UserInfoRetroImpl] Service에서 받은 token : " + token);
 		
 		Call<UserResponse> call = this.userInfoRetro.getUserInfo(token, 
 				"application/x-www-form-urlencoded");
 		
-		logger.info("getUserInfo Response token : " + token);
-		
 		try {
 			Response<UserResponse> response = call.execute();
-			logger.info("try response : " + response);
+			logger.info("response : " + response);
 			if (response.isSuccessful()) {
 				System.out.println(response.body());
 				return response.body();

@@ -64,11 +64,19 @@ public interface BasketRetro {
     );
 
     @DELETE("/api/v1/basket/delete")
-    Call<BasketResponse> basketDelete(
+    Call<BasketResponse> basketDeleteDELETE(
             @Header("X-Authorization") String token,
             @Header("Content-Type") String contentType,
             @Query("basket_id") long basket_id
 
+    );
+
+    @PUT("/api/v1/basket/update")
+    Call<BasketResponse> basketUpdatePUT(
+            @Header("X-Authorization") String token,
+            @Header("Content-Type") String contentType,
+            @Query("basket_id") long basket_id,
+            @Query("item_count") int item_count
     );
 
 }

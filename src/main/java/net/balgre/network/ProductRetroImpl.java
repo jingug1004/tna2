@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class ProductRetroImpl {
 	
 	private static final Logger logger = LoggerFactory.getLogger(ProductRetroImpl.class);
@@ -82,7 +83,7 @@ public class ProductRetroImpl {
         return null;
     }
 
-        public HashMap<String, Object> listParentPageGET(long parent3, int page3, long menu_id3, int sort3) {
+        /*public HashMap<String, Object> listParentPageGET(long parent3, int page3, long menu_id3, int sort3) {
             Call<HashMap<String, Object>> call = this.productRetro.listParentPageGET(parent3, page3, menu_id3, sort3);
             try {
                 Response<HashMap<String, Object>> response = call.execute();
@@ -95,28 +96,13 @@ public class ProductRetroImpl {
                 e.printStackTrace();
             }
         return null;
-    }
+    }*/
 
         public List<Product> searchGET(String search3) {
             Call<List<Product>> call = this.productRetro.searchGET(search3);
             try {
                 Response<List<Product>> response = call.execute();
                 if (response.isSuccessful()) {
-                    System.out.println(response.body().toString());
-                    return response.body();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        return null;
-    }
-
-        public List<Product> sub_categoryGET(String sub_categoryGET3) {
-            Call<List<Product>> call = this.productRetro.sub_categoryGET(sub_categoryGET3);
-            try {
-                Response<List<Product>> response = call.execute();
-                if (response.isSuccessful()) {
-                    System.out.println(response.body().toString());
                     System.out.println(response.body().toString());
                     return response.body();
                 }
@@ -187,13 +173,53 @@ public class ProductRetroImpl {
     }
     
     
-    /*category list by minho*/
-    public CategoryResponse2 categoryList() {
+    /*category by minho*/
+    public CategoryResponse category2() {
     	
-    	Call<CategoryResponse2> call = this.productRetro.categoryList();
+    	Call<CategoryResponse> call = this.productRetro.category();
     	
     	try {
-    		Response<CategoryResponse2> response = call.execute();
+    		Response<CategoryResponse> response = call.execute();
+    		logger.info("response : " + response);
+    		if (response.isSuccessful()) {
+    			logger.info("response.body : " + response.body());
+    			
+    			return response.body();
+    		}
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
+    	return null;
+    }
+    
+    
+    /*category2 by minho*/
+    public CategoryResponse subCategory(long menu_id) {
+    	
+    	Call<CategoryResponse> call = this.productRetro.subCategory(menu_id);
+    	
+    	try {
+    		Response<CategoryResponse> response = call.execute();
+    		logger.info("response : " + response);
+    		if (response.isSuccessful()) {
+    			logger.info("response.body : " + response.body());
+    			
+    			return response.body();
+    		}
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
+    	return null;
+    }
+    
+    
+    /*category list by minho*/
+    public PageProduct categoryList2(long parent, int page, long menu_id, int sort) {
+    	
+    	Call<PageProduct> call = this.productRetro.categoryList(parent, page, menu_id, sort);
+    	
+    	try {
+    		Response<PageProduct> response = call.execute();
     		logger.info("response : " + response);
     		if (response.isSuccessful()) {
     			logger.info("response.body : " + response.body());

@@ -7,6 +7,8 @@ import retrofit2.http.POST;
 
 public interface UserInfoRetro {
 	
+	
+	/*user info by minho*/
 	@POST("/api/v1/mypage/user_info")
 	Call<UserResponse> getUserInfo(
 	    @Header("X-Authorization") String token,

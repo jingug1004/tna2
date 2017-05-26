@@ -104,11 +104,11 @@ public class BasketServiceImpl implements BasketService {
     }
 
     @Override
-    public BasketResponse basketDelete(String token, long basket_id) throws Exception {
+    public BasketResponse basketDeleteDELETE(String token, long basket_id) throws Exception {
 
         BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
 
-        BasketResponse response = basketRetroImpl.basketDelete("Bearer " + token, basket_id);
+        BasketResponse response = basketRetroImpl.basketDeleteDELETE("Bearer " + token, basket_id);
 
         if (response == null) {
 
@@ -117,13 +117,39 @@ public class BasketServiceImpl implements BasketService {
         }
 
         if (response.getResultCode().equals("200")) {
-//        if (response.getResultCode() == "200") {
             logger.info("lll~~~ Basket Delete 성공: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
 
             return response;
 
         } else {
             logger.info("lll~~~ Basket Delete 실패: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
+
+            return null;
+
+        }
+
+    }
+
+    @Override
+    public BasketResponse basketUpdatePUT(String token, long basket_id, int item_count) throws Exception {
+
+        BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
+
+        BasketResponse response = basketRetroImpl.basketUpdatePUT("Bearer " + token, basket_id, item_count);
+
+        if (response == null) {
+
+            return null;
+
+        }
+
+        if (response.getResultCode().equals("200")) {
+            logger.info("lll~~~ Basket Update 성공: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
+
+            return response;
+
+        } else {
+            logger.info("lll~~~ Basket Update 실패: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
 
             return null;
 

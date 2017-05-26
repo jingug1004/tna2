@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import net.balgre.domain.PagePlan;
 import net.balgre.domain.Plan;
 import retrofit2.Call;
 import retrofit2.Response;
@@ -28,10 +29,29 @@ public class PlanRetroImpl {
     
     
     /*plan list by minho*/
-    public Plan planList2(int page) {
+    public PagePlan planList2(int page) {
     	logger.info("[PlanRetroImpl] 서비스에서 받은 값 : " + page);
     	
-    	Call<Plan> call = this.planRetro.planList(page);
+    	Call<PagePlan> call = this.planRetro.planList(page);
+    	
+    	try {
+    		Response<PagePlan> response = call.execute();
+    		if (response.isSuccessful()) {
+    			
+    			return response.body();
+    		}
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
+    	return null;
+    }
+    
+    
+    /*plan detail by minho*/
+    public Plan planDetail2(long pid) {
+    	logger.info("[PlanRetroImpl] 서비스에서 받은 값 : " + pid);
+    	
+    	Call<Plan> call = this.planRetro.planDetail(pid);
     	
     	try {
     		Response<Plan> response = call.execute();
@@ -49,21 +69,18 @@ public class PlanRetroImpl {
 
 
     protected PlanRetro create() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(API_URL)
-                .addConverterFactory(buildGsonConverter())
-                .build();
 
-        return retrofit.create(PlanRetro.class);
-    }
+		Retrofit retrofit = new Retrofit.Builder().baseUrl(API_URL).addConverterFactory(buildGsonConverter()).build();
 
-    protected GsonConverterFactory buildGsonConverter() {
-        GsonBuilder gsonBuilder = new GsonBuilder();
+		return retrofit.create(PlanRetro.class);
+	}
 
-        Gson myGson = gsonBuilder.create();
+	protected GsonConverterFactory buildGsonConverter() {
+		GsonBuilder gsonBuilder = new GsonBuilder();
 
-        return GsonConverterFactory.create(myGson);
+		Gson myGson = gsonBuilder.create();
 
-    }
+		return GsonConverterFactory.create(myGson);
+	}
 
 }

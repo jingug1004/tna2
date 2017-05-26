@@ -25,16 +25,17 @@ div#header_v2 .searchBar-wrap ul li {
 
 .searchBar-inputBox {
     position: relative;
-    border: 2px solid #ff8fa7;
-    margin: 0; }
+    border: 3px solid #ff8fa7;
+    margin: 0;
+    margin-top: 7px; }
 
 .searchBar-inputBox-text {
     display: none; }
 
 .searchBar-inputBox-input {
     display: block;
-    width: 80%;
-    height: 38px;
+    width: 313px;
+    height: 27px;
     text-indent: 20px;
     padding-left: 0;
     border: none !important;
@@ -74,13 +75,11 @@ input[type="text"]::-ms-clear {
     right: 0;
     display: block;
     width: 40px;
-    height: 38px;
+    height: 27px;
     text-indent: -99999px;
-    background-image: url("/img/balgeure_icons.png");
-    background-repeat: no-repeat;
-    background-position: -111px 2px;
+    background: url("/img/balgeure_icons.png") no-repeat -122px 0px;
     border: none;
-    background-color: #fff;
+    background-color: #ff8fa7;
     cursor: pointer; }
 
 .searchBar-relatedBox {
