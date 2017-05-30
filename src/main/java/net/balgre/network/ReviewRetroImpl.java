@@ -167,7 +167,6 @@ public class ReviewRetroImpl {
                 .baseUrl(API_URL)
                 .addConverterFactory(buildGsonConverter())
                 .build();
-
         return retrofit.create(ReviewRetro.class);
     }
 

@@ -75,7 +75,6 @@ public class BasketServiceImpl implements BasketService {
             logger.info("lll~~~ ListGET 실패: " + response.getMessage() + " and " + response.getResultCode() + " lll~~~");
             return null;
         }
-
     }
 
 

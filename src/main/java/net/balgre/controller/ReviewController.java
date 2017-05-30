@@ -20,6 +20,8 @@
 
 package net.balgre.controller;
 
+import net.balgre.domain.CommonResponse;
+import net.balgre.dto.LoginDTO02;
 import net.balgre.service.ReviewService;
 import net.balgre.util.Page;
 import org.slf4j.Logger;
@@ -27,8 +29,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,14 +66,14 @@ public class ReviewController {
     private static final Logger logger = LoggerFactory.getLogger(ReviewController.class);
 
     @Autowired
-    private ReviewService service;
+    private ReviewService reviewService;
 
     @RequestMapping(value = "/review/list/{page}", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<Map<String, Object>> listPage(@PathVariable("page") int page,
                                                         @RequestParam("product_id") long product_id,
                                                         @RequestParam("photo") int photo,
-                                                        @RequestParam("sort") int sort) throws Exception{
+                                                        @RequestParam("sort") int sort) throws Exception {
 
         ResponseEntity<Map<String, Object>> entity = null;
 
@@ -81,13 +86,13 @@ public class ReviewController {
             pageMaker.setCri(page, 10);
 
             Map<String, Object> map = new HashMap<String, Object>();
-//            Map<String, Object> list = service.listPageGET(page, product_id, photo, sort);
+//            Map<String, Object> list = reviewService.listPageGET(page, product_id, photo, sort);
 
-            Map<String, Object> list = service.listPageGET(page, product_id, photo, sort);
+            Map<String, Object> list = reviewService.listPageGET(page, product_id, photo, sort);
 
             map.put("list", list);
 
-//            int replyCount = service.count();
+//            int replyCount = reviewService.count();
 //            pageMaker.setTotalCount(replyCount);
 
             map.put("pageMaker", pageMaker);
@@ -105,45 +110,78 @@ public class ReviewController {
 
     }
 
-//    @RequestMapping(value = "/review/list", method = RequestMethod.GET)
-//    public ResponseEntity<Map<String, Object>> listPage(
-//            @Path("page") int page,
-//            @Query("product_id") long product_id,
-//            @Query("photo") int photo,
-//            @Query("sort") int sort) {
-//
-//        logger.info("lll~~~ 1st review enter " + page + " lll~~~");
-//
-//        ResponseEntity<Map<String, Object>> entity = null;
-//
-//        try {
-//
-//            entity = new ResponseEntity<Map<String, Object>>(
-//
-//                    service.listPageGET(page, product_id, photo, sort), HttpStatus.OK);
-//
-//            logger.info("lll~~~ 2nd review enter " + page + " lll~~~");
-//
-//        } catch (Exception e) {
-//
-//            e.printStackTrace();
-//
-//            entity = new ResponseEntity<Map<String, Object>>(HttpStatus.BAD_REQUEST);
-//
-//        }
-//
-//        logger.info("lll~~~ 3rd review enter " + page + " lll~~~");
-//
-//
-//        return entity;
-////        return "review/review";
-//
-//    }
+    @RequestMapping(value = "/reviewAddPOST", method = RequestMethod.POST)
+    @ResponseBody
+    public String reviewAddPOST(HttpSession session,
+                                HttpServletRequest request,
+                                Model model,
+                                CommonResponse commonResponse) throws Exception {
 
-//    @RequestMapping(value = "/review/list", method = RequestMethod.GET)
-//    public String listGET() throws Exception{
-//
-//        return "/review/list.vm";
-//    }
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+
+        Map<String, String[]> param = request.getParameterMap();
+//        추후에 reviews[] 라는 이름으로 작업해야 함.
+        String[] reviewsVm = request.getParameterValues("reviews[]");
+        for (String review : reviewsVm) {
+
+
+        }
+        return "reviewAddPOSTsucc";
+    }
+
+    @RequestMapping(value = "reviewDelDELETE", method = RequestMethod.POST)
+    @ResponseBody
+    public String reviewDelDELETE(HttpSession session,
+                                          HttpServletRequest request,
+                                          Model model,
+                                          CommonResponse commonResponse,
+                                          @RequestParam("review_id") long review_id) throws Exception {
+
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+
+        reviewService.reviewDelDELETE(login.getToken(), review_id);
+
+        return "reviewDelDELETEsucc";
+
+    }
+
+    @RequestMapping(value = "reviewLikePOST", method = RequestMethod.POST)
+    @ResponseBody
+    public CommonResponse reviewLikePOST(HttpSession session,
+                                         HttpServletRequest request,
+                                         Model model,
+                                         CommonResponse commonResponse) throws Exception {
+
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+
+        return null;
+
+    }
+
+    @RequestMapping(value = "reviewListPageGET", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResponse reviewListPageGET(HttpSession session,
+                                            HttpServletRequest request,
+                                            Model model,
+                                            CommonResponse commonResponse) throws Exception {
+
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+
+        return null;
+
+    }
+
+    @RequestMapping(value = "reviewMyreviewPOST", method = RequestMethod.POST)
+    @ResponseBody
+    public CommonResponse reviewMyreviewPOST(HttpSession session,
+                                             HttpServletRequest request,
+                                             Model model,
+                                             CommonResponse commonResponse) throws Exception {
+
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+
+        return null;
+
+    }
 
 }

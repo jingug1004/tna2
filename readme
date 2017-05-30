@@ -3,17 +3,17 @@
         RAM : 16GB
         TCP/IP Network : LocalHost port:8088
         Web Programming Language : Java 8(JDK1.8) 
-        Markup Language : HTML5, CSS, XML, JSON
+        Markup Language : HTML5, CSS, XML, JSON, Velocity
         Scripting Language : JavaScript, JQuery, Ajax
-        Structured Query Language : 
+        Structured Query Language : Maria DB
         Framework : Spring Boot, Maven, MyBatis
         OS : MS Window 10
-        IDE : IntelliJ, SublimeText3, Eclipse
-        Web Server : Apache Tomcat 8.0.0.M17 WAS, Spring Boot App
+        IDE : IntelliJ, Visual Source Code, STS
+        Web Server : Spring Boot (inner) WAS
         VCS : SVN
-        Client GUI Tool : 
+        Client GUI Tool : X
         Test Browser : Chrome, IE
-        CI : 
+        CI : X
         Online Web Service : cafe24
-        Accesible DNS : 
-        FTP S/W : 
+        Accesible DNS : X
+        FTP S/W : X
