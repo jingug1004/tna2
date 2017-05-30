@@ -1,14 +1,19 @@
 package net.balgre.network;
 
 
-import net.balgre.domain.*;
+import java.util.HashMap;
+import java.util.List;
+
+import net.balgre.domain.BestResponse;
+import net.balgre.domain.CategoryResponse;
+import net.balgre.domain.PageProduct;
+import net.balgre.domain.Product;
+import net.balgre.domain.ProductResponse;
+import net.balgre.domain.ProductTimeSale;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
-
-import java.util.HashMap;
-import java.util.List;
 
 public interface ProductRetro {
 
@@ -64,7 +69,7 @@ public interface ProductRetro {
     
     /*category by minho*/
     @GET("/api/product/category")
-    Call<CategoryResponse> category(
+    Call<CategoryResponse> categoryList(
     );
     
  

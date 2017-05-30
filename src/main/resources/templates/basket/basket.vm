@@ -27,17 +27,6 @@
     </div>
 
 
-    <div class="pointCoouponWrap">
-        <div class="pointCoupon">
-            <table cellpadding="0" cellspacing="0">
-                <tr>
-                    <th>로그인 후, 보유 포인트 및 쿠폰 수량을 확인하실 수 있습니다.</th>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-
 </div>
 
 
@@ -58,7 +47,7 @@
                 <thead>
                 <tr class="cartHeaderRow">
                     <th class="col1">
-                        <input type="checkbox" id="allCheck" checked="on">
+                        <input type="checkbox" id="allCheck" checked="checked">
                     </th>
                     <th class="leftAlign col2">전체선택</th>
                     <th class="col3">상품정보</th>
@@ -82,10 +71,9 @@
             <!-- ko if: memeBundles().length  -->
 
             <form method="post" id="ReadingBasketSelectForm">
-
-                <table class="cartList bundles" cellspacing="0" cellpadding="0" summary="장바구니 목록"
-                       data-bind="visible: isInit()" #*style="display: none;*#
-                ">
+				<div id="dataProd" style="display:none;">
+				</div>
+                <table class="cartList bundles" cellspacing="0" cellpadding="0" summary="장바구니 목록">
                 <caption>발그레배송 장바구니 상품 리스트</caption>
                 <colgroup>
                     <col style="width:37px;">
@@ -111,26 +99,24 @@
                     #foreach($item in $basketListGET.basketList)
                         #foreach($item2 in $item)
                             #set($total = 0)
-                        ##                        #foreach($item3 in $item2)
                         <tr>
                             <td class="check">
-                                <input type="checkbox" value="${item2.get(0).basketId}" checked="on"/>
+                                <input type="checkbox" name="basketChk" value="$math.toInteger(${item2.get(0).productId})" checked="checked" onchange="basketChecked();"/>
                             </td>
                             <td class="itemInfo">
                                 <div>
-                                ##                                <a href="/detail?${item2.get(0).productId}">
                                     <a href="/detail?product_id=$math.toInteger(${item2.get(0).productId})">
                                         <img src="http://sumcrimage.cafe24.com/${item2.get(0).thumbUrl}">
                                     </a>
                                 </div>
-                                <div #*class="textArea fL"*#>
+                                <div>
                                     <p class="productName fW">
                                         <a data-bind="attr:{href: productUrl}"><!--ko text: productTitle-->
                                             [${item2.get(0).brand.brandName}] ${item2.get(0).prodName}
                                             <!--/ko--></a>
                                     </p>
-                                    <div #*class="option"*#>
-                                        <table #*class="optionSelect"*# cellpadding="0" cellspacing="0">
+                                    <div>
+                                        <table cellpadding="0" cellspacing="0">
                                             <colgroup>
                                                 <col style="width:235px;">
                                                 <col style="width:90px;">
@@ -140,37 +126,28 @@
                                             </colgroup>
 
                                             #foreach($item3 in $item2)
-
-                                                <input type="hidden" name="items[]" value="$math.toInteger($item3.itemId)">
-                                                <input type="hidden" name="items[$math.toInteger($item3.itemId)].price"
-                                                       value="$math.toInteger($item3.price)">
-                                                <input type="hidden" name="upDown[$math.toInteger($item3.itemId)].cnt"
-                                                       value="$math.toInteger($item3.itemCount)">
-                                                <tbody id="tbody">
-                                                <!-- ko if: itemType != '10010604' -->
-
+											<tbody id="tbody">
+                                                <input type="hidden" name="chk$math.toInteger($!{item3.productId})" value="$math.toInteger($!{item3.basketId})"/>
+                                                <input type="hidden" name="chkItems$math.toInteger($!{item3.productId})" value="$math.toInteger($item3.itemId)"/>
+                                                <input type="hidden" name="items[$math.toInteger($item3.itemId)].price" value="$math.toInteger($item3.price)"/>
+                                                <input type="hidden" name="upDown[$math.toInteger($item3.itemId)].cnt" value="$math.toInteger($item3.itemCount)"/>
                                                 <tr>
                                                     <th class="optionTitle">
-                                                        <!-- ko if: itemType == '10010604' -->
                                                         <span class="addArrow"></span>
-                                                        <!-- /ko -->
                                                         ${item3.itemName}
-                                                        <strong class="deal-item-type-title"><!--ko text: title-->
-                                                            <!--/ko--></strong>
-                                                        <input type="hidden" id="basket_id" value=" ${item3.basketId}">
+                                                        <strong class="deal-item-type-title"></strong>
+                                                        <input type="hidden" id="basket_id" value="${item3.basketId}">
                                                     </th>
                                                     <td class="selectPrice each">
-                                                        <span>$number.format(${item3.price})</span>
-                                                        원
+                                                        <span>$number.format(${item3.price})</span> 원
                                                     </td>
                                                     <td class="option_cnt"
                                                         data-bind="visible: ui.itemCountSelect.visible()">
                                                         <input type="hidden" data-bind="value: originalItemCount()">
-                                                        <select class="basketItemCnt" onchange="basketUpdte(this);">
-                                                        ##                                                        myPoint.vm         #foreach($Pages in [0..$MyPoint.pointList.totalPages]) 참고
+                                                        <select class="basketItemCnt" name="count$math.toInteger($!{item3.productId})" id="count$math.toInteger($!{item3.basketId})" onchange="basketUpdte(this);">
                                                             #foreach($i in [1..10])
                                                                 <option class="basketItemCntChoice"
-                                                                        value="${item3.basketId}|$i"
+                                                                        value="$math.toInteger(${item3.basketId})|$i|$math.toInteger(${item3.productId})"
                                                                     #if($i == $number.format(${item3.itemCount}))
                                                                         selected="selected" #end>$i</option>
                                                             #end
@@ -178,15 +155,14 @@
                                                     </td>
 
                                                     <td class="selectPrice">
-                                                    <span id="numUpDown01${item3.basketId}">$number.format($math.mul($number.format(${item3.price}), $number.format(${item3.itemCount})))
-                                                    #set($total = $math.add($total, $math.mul($number.format(${item3.price}), $number.format(${item3.itemCount}))))</span>
-                                                        원
+                                                    <input type="hidden" id="price$math.toInteger($!{item3.basketId})" value="$math.toInteger($!{item3.price})"/>
+                                                    <input type="hidden" id="total$math.toInteger($!{item3.basketId})" name="total$math.toInteger($!{item3.productId})" value="$math.mul($number.format(${item3.price}), $number.format(${item3.itemCount}))"/>
+                                                    <span id="numUpDown01$math.toInteger($!{item3.basketId})">$number.format($math.mul($number.format(${item3.price}), $number.format(${item3.itemCount})))
+                                                    #set($total = $math.add($total, $math.mul($number.format(${item3.price}), $number.format(${item3.itemCount}))))</span> 원
                                                     </td>
                                                     <td class="delete">
-                                                        <a href="javascript:deleteBasket('${item3.basketId}')"
-                                                           type="button"
-                                                           id="removeBtn">
-                                                            삭제
+                                                        <a href="javascript:deleteBasket('${item3.basketId}')" type="button" id="removeBtn">
+                                                            	삭제
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -200,29 +176,44 @@
                             </td>
 
                             <td class="price">
-                            <span class="unit" id="numUpDown02">
+                            <input type="hidden" id="totalprod$math.toInteger(${item2.get(0).productId})" value="$total"/>
+                            <span class="unit" id="numUpDown02$math.toInteger(${item2.get(0).productId})">
                                 $number.format($total)
                             </span>원
                                 #set($total3 = $math.add($total3, $total))
                             </td>
-                            <td class="price last"
-                            #if(${item2.get(0).productDelivery.freeDelivery} < $total)
+                            <td class="price last">
+                            #if(${item2.get(0).productDelivery.freeDelivery} == 0)
                                 <span>무료배송</span>
+                                <input type="hidden" id="delivery$math.toInteger(${item2.get(0).productId})" value="0"/>
+                                <input type="hidden" id="free$math.toInteger(${item2.get(0).productId})" value="0"/>
+                                <input type="hidden" id="totalDel$math.toInteger(${item2.get(0).productId})" value="0"/>
                             #elseif(${item2.get(0).productDelivery.freeDelivery} == -1)
+                            	<span>유료배송</span><br/>
                                 <span class="unit">$number.format(${item2.get(0).productDelivery.deliveryPrice})원</span>
+                                <input type="hidden" id="free$math.toInteger(${item2.get(0).productId})" value="-1"/>
+                                <input type="hidden" id="delivery$math.toInteger(${item2.get(0).productId})" value="$math.toInteger(${item2.get(0).productDelivery.deliveryPrice})"/>
+                                <input type="hidden" id="totalDel$math.toInteger(${item2.get(0).productId})" value="$math.toInteger(${item2.get(0).productDelivery.deliveryPrice})"/>
                                 #set($totalDlv3 = $math.add($totalDlv3, ${item2.get(0).productDelivery.deliveryPrice}))
-                            #else(${item2.get(0).productDelivery.freeDelivery})
-                                <span>$number.format(${item2.get(0).productDelivery.freeDelivery})
-                                    원 이상<br> 무료배송</span><br>
-                                <span class="unit">$number.format(${item2.get(0).productDelivery.deliveryPrice})원</span>
-                                #set($totalDlv3 = $math.add($totalDlv3, ${item2.get(0).productDelivery.deliveryPrice}))
+                            #else
+                            	#if(${item2.get(0).productDelivery.freeDelivery} < $total)
+                            		<div id="delDiv$math.toInteger(${item2.get(0).productId})">
+	                                	<span>무료배송</span>
+                                	</div>
+                                	<input type="hidden" id="totalDel$math.toInteger(${item2.get(0).productId})" value="0"/>
+                                #else
+                                	<div id="delDiv$math.toInteger(${item2.get(0).productId})">
+	                                	<span>$number.format(${item2.get(0).productDelivery.freeDelivery})원 이상<br> 무료배송</span><br>
+	                                	<span class="unit">$number.format(${item2.get(0).productDelivery.deliveryPrice})원</span>
+	                                </div>
+	                                <input type="hidden" id="totalDel$math.toInteger(${item2.get(0).productId})" value="$math.toInteger(${item2.get(0).productDelivery.deliveryPrice})"/>
+                                	#set($totalDlv3 = $math.add($totalDlv3, ${item2.get(0).productDelivery.deliveryPrice}))
+                                #end
+                                <input type="hidden" id="free$math.toInteger(${item2.get(0).productId})" value="$math.toInteger(${item2.get(0).productDelivery.freeDelivery})"/>
+	                            <input type="hidden" id="delivery$math.toInteger(${item2.get(0).productId})" value="$math.toInteger(${item2.get(0).productDelivery.deliveryPrice})"/>
                             #end
                             </td>
-
-                            </br>
-                        ##                        #end
                         </tr>
-
                         #end
                     #end
                 <!-- /ko -->
@@ -235,14 +226,14 @@
 
             <p class="choice fL"><span class="vCheck fL"></span>선택상품을</p>
             <!--<button class="wishBtn fL" type="button">찜하기</button>-->
+            <a href="javascript:selectDelete()">
             <button class="delBtn bottom fL" type="button">삭제하기</button>
-
+            </a>
             <p class="keepText fR">장바구니에 담긴 상품은 최대 30일까지 보관됩니다.</p>
         </div>
     </div>
 
-    <div class="cB"
-         data-bind="with: bundleVM, visible: bundleVM.memeBundles().length > 0 || bundleVM.partnerBundles().length > 0">
+    <div class="cB">
         <div class="priceWrap v1 fL">
             <table class="paymentTotalTable" cellspacing="0" cellpadding="0" summary="결제예정금액">
                 <caption>종 결제 금액</caption>
@@ -253,15 +244,16 @@
                 </colgroup>
                 <tbody>
                 <tr>
-                    <td class="price"><span class="priceText">총 상품금액</span>
-                        <span class="unit">$number.format($total3)</span>원
+                    <td class="price">
+                    	<span class="priceText">총 상품금액</span>
+                        <span id="total_prod" class="unit">$number.format($total3)</span> 원
                     </td>
-                    <td class="deliveryCharge"><span class="priceText">배송비</span>
-                        <!-- ko text: formatCurrency(costInfo.deliveryCharge()) --><!-- /ko --><span
-                                class="unit">$number.format($totalDlv3)원</span></td>
-                    <td class="totalPrice last"><span class="priceText">결제 예정금액</span>
-                        <!-- ko text: formatCurrency(costInfo.totalCost()) --><!-- /ko --><span
-                                class="unit" id="numUpDown03">$number.format($math.add($total3, $totalDlv3))</span>원
+                    <td class="deliveryCharge">
+                    	<span class="priceText">배송비</span>
+                    	<span id="total_delivery" class="unit">$number.format($totalDlv3) 원</span></td>
+                    <td class="totalPrice last">
+                    	<span class="priceText">결제 예정금액</span>
+                        <span class="unit" id="total_price">$number.format($math.add($total3, $totalDlv3))</span> 원
                     </td>
                 </tr>
                 </tbody>
@@ -272,308 +264,55 @@
     </div>
 
     <div class="btnWrap mA cB">
-        <button type="button" id="prevBasket">쇼핑 계속하기
-        </button>
-
-    ##            <a href="https://memebox.com/login?returnUrl=https://order.memebox.com/cart">
+        <button type="button" id="prevBasket">쇼핑 계속하기</button>
         <button type="button" id="directBasket">결제하기4444</button>
-    ##            </a>
-
-    ##            <div class="pointSave"><span class="point"><!-- ko text: formatCurrency(costInfo.savingPoint()) -->
-    ##                <!-- /ko -->&nbsp;P</span> 가 적립될 예정입니다.
-    ##            </div>
     </div>
 </div>
-</div>
-
-<div id="footer" class="mA">
-    <div class="footerTopInner">
-        <ul class="oF landing">
-            <li class="footerList_01">
-                <a href="https://memebox.recruiter.co.kr/" target="_blank">
-                    <span class="icon_05 icon"></span>
-                    <span class="landingText">세상을 바꾸는<br>발그레박서 인재채용</span>
-                </a>
-            </li>
-            <li class="footerList_02">
-                <a href="http://memebox.com/page/15939">
-                    <span class="icon_01 icon"></span>
-                    <span class="landingText">온라인 화장품 구매<br>믿어도 될까요?</span>
-                </a>
-            </li>
-            <li class="footerList_03">
-                <a href="http://memebox.com/page/16098">
-                    <span class="icon_02 icon"></span>
-                    <span class="landingText">발그레박스가 배송하는<br>특별한 발그레배송!</span>
-                </a>
-            </li>
-            <li class="footerList_04">
-                <a href="http://memebox.com/page/16089">
-                    <span class="icon_03 icon"></span>
-                    <span class="landingText">실패없는 쇼핑을 위한<br>90일 환불 정책</span>
-                </a>
-            </li>
-            <li class="footerList_05">
-                <a href="http://memebox.com/offlinestore/immeme">
-                    <span class="icon_04 icon"></span>
-                    <!--<span class="landingText">I'M MEME<br/>오프라인에서 만나보기</span>-->
-                    <span class="landingText">발그레박스<br>오프라인 스토어</span>
-                </a>
-            </li>
-        </ul>
-        <div class="footerMiddle">
-            <p class="csCenter fL">
-                <span class="call"></span>
-                <strong><a href="http://memebox.com">고객 감동 서비스센터 &gt;</a></strong>
-                <span>평일 9:00 - 18:00(주말/공휴일 제외)</span>
-            </p>
-            <dl>
-                <dt class="recruit">기업 문화</dt>
-                <dd>
-                    <a class="mg_t" href="http://blog.naver.com/memebox" target="_blank" ga-event="푸터,푸터_기업문화블로그">기업문화
-                        블로그 보기 &gt; </a>
-                    <a class="mg_t" href="http://www.facebook.com/playmemebox" target="_blank">기업문화 페이스북 보기 &gt; </a>
-                    <a class="mg_t"
-                       href="http://img2.memebox.com/static/contents/img/upload/contents_20160926141749_f3H73NLEoz.pdf"
-                       target="_blank" ga-event="푸터,푸터_플레이북">PLAYBOOK 2015 Ver DOWNLOAD > </a>
-                    <a class="mg_t"
-                       href="http://img2.memebox.com/static/contents/img/upload/contents_20160926141840_WKTIHpU6lD.pdf"
-                       target="_blank" ga-event="푸터,푸터_플레이북">PLAYBOOK 2016 Ver DOWNLOAD > </a>
-                </dd>
-            </dl>
-            <dl>
-                <dt>고객의 소리</dt>
-                <dd>
-                    <span class="gText">고객님의 소리에<br>더 다가가겠습니다.</span>
-                    <a href="http://memebox.com/cs/inquiry/" ga-event="푸터,푸터_1:1문의">제안하러 가기 &gt;</a>
-                </dd>
-            </dl>
-            <dl class="partner">
-                <dt>파트너 서비스</dt>
-                <dd>
-                    <ul>
-                        <li>
-                            <a href="mailto:partners@memebox.com">온라인 입점 문의 &gt;</a>
-                            <div class="copyBox p_left">partners@memebox.com</div>
-
-                        </li>
-                        <li>
-                            <a class="mg_t" href="mailto:b2b@memebox.com">WHOLESALE 문의 &gt;</a>
-                            <div class="copyBox">b2b@memebox.com</div>
-                        </li>
-                        <li>
-                            <a class="mg_t" href="mailto:partner_mkt@memebox.com">광고/프로모션 문의 &gt;</a>
-                            <div class="copyBox">partner_mkt@memebox.com</div>
-                        </li>
-                    </ul>
-                </dd>
-            </dl>
-            <div class="cB"></div>
-        </div>
-        <div class="memeBoxInfo oF">
-            <a class="footerLogo fL" href="http://memebox.com"></a>
-            <div class="textBox fL">
-                <ul class="oF">
-                    <li>
-                        <a href="http://corp.memebox.com" target="_blank">회사소개</a>
-                        <span class="bar">|</span>
-                    </li>
-                    <li>
-                        <a href="http://memebox.com/policy/agreement" ga-event="푸터,푸터_이용약관">이용약관</a>
-                        <span class="bar">|</span>
-                    </li>
-                    <li>
-                        <a href="http://memebox.com/policy/privacy" ga-event="푸터,푸터_개인정보취급방침"><strong>개인 정보 취급
-                            방침</strong></a>
-                        <span class="bar">|</span>
-                    </li>
-                    <li>
-                        <a href="http://memebox.com/policy/youth">청소년 보호 정책</a>
-                        <span class="bar">|</span>
-                    </li>
-                    <li><a href="http://memebox.com/policy/email">이메일 무단 수집 거부 방침</a></li>
-                </ul>
-                <address>
-                    (주)발그레박스 | 대표자 : | 개인 정보 보호 책임자 : | 사업자등록번호 111-11-11111 <a
-                        href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2118847525"
-                        target="_blank" ga-event="푸터,푸터_사업자정보확인">사업자 정보 확인 &gt;</a><br>
-                    통신판매 신고번호 : 제 호 | <br>
-                    본사 : <a href="http://memebox.com/page/8386" target="_parent" ga-event="푸터,푸터_오시는길">발그레박스 오시는길
-                    &gt;</a>
-                    <br>
-                    물류센터 :
-                    <br>
-                    <span class="e_text">Copyright ﻿ⓒ 2017 balgre Inc. All rights reserved.</span><br>
-                    <span class="lastLine"><strong>LG U+ 구매 안전 서비스</strong> : 고객님의 안전거래를 위해 현금 등으로 결제 시, 저희 사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다. <a
-                            onclick="goValidEscrow('memebox_mobile');" style="cursor:pointer;" ga-event="푸터,푸터_구매안전서비스">서비스 가입 확인 &gt;</a></span>
-                </address>
-            </div>
-        </div>
-    </div>
-    <div class="footerBottomOuter">
-        <div class="footerBottomInner">
-            <div class="award fL">
-                <div class="bx-wrapper" style="max-width: 712px; margin: 0px auto;">
-                    <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 43px;">
-                        <ul id="awardList" class="badge fL"
-                            style="width: 1115%; position: relative; transition-duration: 0s; transform: translate3d(-712px, 0px, 0px);">
-                            <li class="list6 bx-clone"
-                                style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_01 mark"></span>
-                                <span class="listText">2015 한국소비자<br>만족지수 1위</span>
-                            </li>
-                            <li class="list7 bx-clone"
-                                style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_04 mark"></span>
-                                <span class="listText">여성친화<br>일촌기업 협약</span>
-                            </li>
-                            <li class="list8 bx-clone"
-                                style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_02 mark"></span>
-                                <span class="listText">나는 글로벌 벤처다<br>2013 대상</span>
-                            </li>
-                            <li class="list9 bx-clone"
-                                style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_03 mark"></span>
-                                <span class="listText">제 7회 대한민국<br>인터넷 대상 특별상</span>
-                            </li>
-                            <li class="list1" style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_08 mark"></span>
-                                <span class="listText">여성가족부 주관<br>가족친화 우수기업</span>
-                            </li>
-                            <li class="list2" style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_06 mark"></span>
-                                <span class="listText">스마트앱어워드 2015<br>전문쇼핑부문 대상</span>
-                            </li>
-                            <li class="list3" style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_07 mark"></span>
-                                <span class="listText">HWB Award 2015<br>BEST New Brand</span>
-                            </li>
-                            <li class="list4" style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_05 mark"></span>
-                                <span class="listText">대한민국 리딩기업<br>2015 대상</span>
-                            </li>
-                            <li class="list5" style="float: left; list-style: none; position: relative; width: 168px;">
-                                <span class="kobacoMark"></span>
-                                <span class="kobacoText">혁신형중소기업 선정</span>
-                            </li>
-                            <li class="list6" style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_01 mark"></span>
-                                <span class="listText">2015 한국소비자<br>만족지수 1위</span>
-                            </li>
-                            <li class="list7" style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_04 mark"></span>
-                                <span class="listText">여성친화<br>일촌기업 협약</span>
-                            </li>
-                            <li class="list8" style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_02 mark"></span>
-                                <span class="listText">나는 글로벌 벤처다<br>2013 대상</span>
-                            </li>
-                            <li class="list9" style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_03 mark"></span>
-                                <span class="listText">제 7회 대한민국<br>인터넷 대상 특별상</span>
-                            </li>
-                            <li class="list1 bx-clone"
-                                style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_08 mark"></span>
-                                <span class="listText">여성가족부 주관<br>가족친화 우수기업</span>
-                            </li>
-                            <li class="list2 bx-clone"
-                                style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_06 mark"></span>
-                                <span class="listText">스마트앱어워드 2015<br>전문쇼핑부문 대상</span>
-                            </li>
-                            <li class="list3 bx-clone"
-                                style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_07 mark"></span>
-                                <span class="listText">HWB Award 2015<br>BEST New Brand</span>
-                            </li>
-                            <li class="list4 bx-clone"
-                                style="float: left; list-style: none; position: relative; width: 178px;">
-                                <span class="mark_05 mark"></span>
-                                <span class="listText">대한민국 리딩기업<br>2015 대상</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bx-controls"></div>
-                </div>
-                <span id="award_arrow_prev" class="award_prev list_arrow tI" data-action="prev">이전 수상내역</span>
-                <span id="award_arrow_next" class="award_next_on list_arrow tI" data-action="next">다음 수상내역</span>
-            </div>
-            <div class="snsNavi fR">
-                <a class="insta" href="http://instagram.com/memebox_korea" target="_blank" ga-event="푸터,푸터_인스타그램">인스타그램
-                    바로가기</a>
-                <a class="faceBook" href="http://www.facebook.com/memebox" target="_blank" ga-event="푸터,푸터_페이스북">페이스북
-                    바로가기</a>
-                <a class="youtube" href="https://www.youtube.com/user/memeboxseoul" target="_blank"
-                   ga-event="푸터,푸터_유투브">유뷰트 바로가기</a>
-            </div>
-            <div class="globalWrap fR">
-                <a class="global">
-                    <span class="arrow"></span>
-                    <span class="text fW">FAMILY SITE</span>
-                </a>
-                <div class="globalSelect">
-                    <ul>
-                        <li>
-                            <a href="http://corp.memebox.com" target="_blank">
-                                <span class="globalIcon corp"></span>
-                                <span class="globalText">발그레박스 기업사이트</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://​iammeme.com" target="_blank">
-                                <span class="globalIcon immeme"></span>
-                                <span class="globalText">I'M MEME 아임발그레</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://ponyeffect.com" target="_blank">
-                                <span class="globalIcon ponyEffect"></span>
-                                <span class="globalText">Pony Effect 포니이펙트</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a id="linkToUS" ga-event="푸터,푸터_미국">
-                                <span class="globalIcon usa"></span>
-                                <span class="globalText">MEMEBOX USA</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a id="linkToCN" ga-event="푸터,푸터_중국">
-                                <span class="globalIcon china"></span>
-                                <span class="globalText">MEMEBOX CHINA</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+#parse("/main/footer.vm")
 
 
 <script>
+	$(document).ready(function () {
+		basketChecked();
+	});
+	## 선택된 상품 계산
+	function basketChecked() {
+		var items = [];
+		var total = 0;
+		var totalDelivery = 0;
+		$('input:checkbox[name="basketChk"]:checked').each(function() {
+			$('input[name=total' + this.value + ']').each(function() {
+				total += parseInt(this.value);
+			});
+			
+			$('input[name=chkItems' + this.value + ']').each(function() {
+				items.push(this.value);
+			});
+			
+			totalDelivery += parseInt($("#totalDel"+this.value).val());
+	   	});
+		var str = "";
+		
+		for(i=0; i<items.length; i++) {
+			str += '<input type="hidden" name="items[]" value="' + items[i] + '"/>'; 
+		}
+		$("#dataProd").html(str);
+		$("#total_prod").text($.number(total));
+		$("#total_delivery").text($.number(totalDelivery) + " 원");
+		$("#total_price").text($.number(total+totalDelivery));
+	}
+	
     ## 장바구니 상품 옵션 제거
     function deleteBasket(basketId) {
-
         var data = "basketId=" + basketId;
-
-        console.log("basket_id1111 " + data);
-
         $.ajax({
             type: 'post',
             url: '/basketDelete?' + data,
-            contentType: false/*'application/x-www-form-urlencoded; charset=UTF-8'*/,
+            contentType: false,
             processData: false,
             data: null,
             success: function (result) {
-                console.log("basket_id02" + data);
-                console.log("result test " + result);
-
                 alert("옵션 상품을 삭제하였습니다.")
-//                $("#tbody").remove();
                 window.location.reload();
             },
             error: function (result) {
@@ -582,33 +321,30 @@
         })
     };
 
-
-
     ## 장바구니 상품(브랜드) 제거
     function selectDelete() {
-
-        $(".wrap input:checked").each(function () {
-            var checked = $(this).attr("checked").val();
-
-            $.ajax({
-                type: 'post',
-                url: '/basketDelete?' + checked,
-                contentType: false/*'application/x-www-form-urlencoded; charset=UTF-8'*/,
-                processData: false,
-                data: null,
-                success: function (result) {
-                    console.log("basket_id02" + checked);
-                    console.log("result test " + result);
-
-                    alert("브랜드 상품 모두를 삭제하였습니다.")
-//                $("#tbody").remove();
-                    window.location.reload();
-                },
-                error: function (result) {
-                    alert("에러! " + result);
-                }
-            })
-        })
+		var basketIds = [];    	
+    	 $('input:checkbox[name="basketChk"]:checked').each(function() {
+			$('input[name=chk' + this.value + ']').each(function() {
+				basketIds.push(this.value);
+			});
+    	 });
+    	 if(basketIds.length > 0) {
+    		 $.ajax({
+                 type: 'post',
+                 url: '/deleteBsk?basketId='+basketIds,
+                 contentType: false,
+                 processData: false,
+                 data: null,
+                 success: function (result) {
+                     alert("브랜드 상품 모두를 삭제하였습니다.")
+                     window.location.reload();
+                 },
+                 error: function (result) {
+                     alert("에러! " + result);
+                 }
+             });
+    	 }
     }
 
 
@@ -616,13 +352,19 @@
     ## 장바구니 옵션 수량 수정
     function basketUpdte(basket) {
 
+    	var total = 0;
         var formData = new FormData();
-
-        formData.append("basketId", basket.value.split("|")[0]);
-        formData.append("itemCount", basket.value.split("|")[1]);
-        console.log(basket.value);
-//        console.log("lll~~~~ " + formData + " + formData, this success! lll~~~");
-
+		var basketId = basket.value.split("|")[0];
+		var itemCount = basket.value.split("|")[1];
+		var prodId = basket.value.split("|")[2];
+		
+        formData.append("basketId", basketId);
+        formData.append("itemCount", itemCount);
+        
+        var price = $("#price"+ basketId).val();
+        
+        total = price*itemCount;
+        
         $.ajax({
             type: 'post',
             url: '/basketUpdate',
@@ -630,60 +372,77 @@
             processData: false,
             data: formData,
             success: function (data) {
-//                alert("성공!" + data);
-                console.log("성공" + formData + data);
-                window.location.reload();
-
+                $("#total"+ basketId).val(total);
+                basketSum01(basketId, total);
+                basketSum02(prodId);
+                deliverySum(prodId);
+                basketChecked();
             }, error: function (data) {
                 alert("오류!" + data);
                 console.log("실패" + formData + data);
             }
-
-//            event.preventDefault();
-//            var itemCnt = $('.basketItemCnt option:selected').val();
-
         });
     }
 
-    function basketSum01(basketId) {
-        var stat = $('#numUpDown01' + basketId).text();
-        var num = parseInt(stat, 10);
-        $('#numUpDown01').text(num);
+    ## 옵션별 총 가격
+    function basketSum01(basketId, total) {
+        $('#numUpDown01' + basketId).text($.number(total));
     }
 
-    function basketSum02() {
-        var stat = $('#numUpDown02').text();
-        var num = parseInt(stat, 10);
-        $('#numUpDown02').text(num);
+    ## 상품 별 총 가격 
+    function basketSum02(productId) {
+    	var total = 0;
+    	$('input[name=total' + productId + ']').each(function() {
+			total += parseInt(this.value);
+		});
+    	$('#totalprod'+productId).val(total);
+        $('#numUpDown02'+productId).text($.number(total));
     }
 
-    function basketSum03() {
-        var stat = $('#numUpDown03').text();
-        var num = parseInt(stat, 10);
-        $('#numUpDown03').text(num);
+    ## 배송비 계산
+    function deliverySum(productId) {
+    	var totalProd = parseInt($('#totalprod'+productId).val());
+    	var free = parseInt($('#free'+productId).val());
+    	var delivery = parseInt($('#delivery'+productId).val());
+    
+    	if(free == 0) {
+    	} else if(free == -1) {
+    	} else {
+    		if(totalProd >= parseInt(free)) {
+    			$("#totalDel"+productId).val(0);
+    			$("#delDiv"+productId).html('<span>무료배송</span>');
+    		} else {
+    			var str = '<span>' + $.number(free) + ' 원 이상<br> 무료배송</span><br>';
+            	str += '<span class="unit">' + $.number(delivery) + ' 원</span>';
+    			$("#totalDel"+productId).val(delivery);
+    			$("#delDiv"+productId).html(str);
+    		}
+    	}
     }
-
-
+    
 
     ## ------ 상품 상세 페이지에서 마지막 결제하기 시작 -----
     $("#directBasket").on("click", function (event) {
         var formData = $("#ReadingBasketSelectForm").serialize();
-
-        $.ajax({
-            type: 'post',
-            url: '/payment/order',
-            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-            processData: false,
-            data: formData,
-            success: function (data) {
-                if (data) {
-                    window.location.href = "/payment/order?q=" + data;
+        if($('input:checkbox[name="basketChk"]:checked').length > 0) {
+        	$.ajax({
+                type: 'post',
+                url: '/payment/order',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                processData: false,
+                data: formData,
+                success: function (data) {
+                    if (data) {
+                        window.location.href = "/payment/order?q=" + data;
+                    }
+                },
+                error: function (data, textStatus, errorThrown) {
+                    alert("로그인 하신 후 옵션을 선택해주세요.");
                 }
-            },
-            error: function (data, textStatus, errorThrown) {
-                alert("로그인 하신 후 옵션을 선택해주세요.");
-            }
-        });
+            });
+        } else {
+			alert("구매 상품을 체크 해 주세요.");        	
+        }
     });
     ## ------ 상품 상세 페이지에서 마지막 결제하기 끝 -----
 
@@ -713,6 +472,7 @@
                 //해당화면에 모든 checkbox들의 체크를해제시킨다.
                 $("input[type=checkbox]").prop("checked", false);
             }
+            basketChecked();
         })
     })
 </script>

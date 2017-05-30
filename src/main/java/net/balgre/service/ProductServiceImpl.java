@@ -22,7 +22,6 @@ package net.balgre.service;
 
 import net.balgre.domain.*;
 import net.balgre.network.ProductRetroImpl;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -135,12 +134,12 @@ public class ProductServiceImpl implements ProductService {
 	
 	/*category by minho*/
 	@Override
-	public CategoryResponse category2() {
+	public CategoryResponse categoryList2() {
 		// TODO Auto-generated method stub
 		
 		ProductRetroImpl PRI = new ProductRetroImpl();
 		
-		CategoryResponse res = PRI.category2();
+		CategoryResponse res = PRI.categoryList();
 		
 		logger.info("[ProductServiceImpl] 레트로에서 받은 res : " + res);
 		

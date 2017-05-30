@@ -20,10 +20,11 @@
 
 package net.balgre.controller;
 
+import net.balgre.domain.UserResponse;
 import net.balgre.dto.LoginDTO;
-
 import net.balgre.dto.LoginDTO02;
 import net.balgre.service.LoginService;
+import net.balgre.service.UserInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +32,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.util.Enumeration;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -70,10 +69,9 @@ public class LoginController {
     private LoginService service;
 
 
-
-
-
-
+    @Autowired
+    private UserInfoService userInfoService;
+    
     // 로그인 접속
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginGET() throws Exception {
@@ -108,6 +106,9 @@ public class LoginController {
 
         model.addAttribute("userVO", loginDTO02);
 
+        UserResponse userRes = userInfoService.getUserInfo2(loginDTO02.getToken());
+        session.setAttribute("user", userRes.getUser());
+      
 //        logger.info("lll~~~ 토큰 : " + loginDTO02.getToken() + " lll~~~");
 
 //        session.setAttribute("login", loginDTO02);

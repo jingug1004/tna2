@@ -174,9 +174,9 @@ public class ProductRetroImpl {
     
     
     /*category by minho*/
-    public CategoryResponse category2() {
+    public CategoryResponse categoryList() {
     	
-    	Call<CategoryResponse> call = this.productRetro.category();
+    	Call<CategoryResponse> call = this.productRetro.categoryList();
     	
     	try {
     		Response<CategoryResponse> response = call.execute();

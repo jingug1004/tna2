@@ -1,4 +1,4 @@
-#parse ("/main/header.vm")
+#parse ("/main/header2.vm")
 
 <script type="text/javascript" async=""
 	src="/js/myPage/ec.js"></script>

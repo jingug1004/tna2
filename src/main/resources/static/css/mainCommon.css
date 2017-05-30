@@ -164,12 +164,13 @@ div.lnb .lnbTextBox li {
 
 div.lnb .lnbTextBox a:hover, div.lnb .lnbTextBox .on {
     color: #ff8fa7;
+    text-decoration: none;
 }
 
 div.lnb .relatedResult {
     padding-top: 10px;
     color: #333;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
     font-size: 13px
 }
 
@@ -263,7 +264,7 @@ div#header_v2 .gnbTop .email_to_sumIcon {
     display: block;
     width: 23px;
     height: 16px;
-    background: url("/img/balgeure_icons.png") no-repeat -183px -21px;
+    background: url("/img/header/header_icons.png") no-repeat -1px -1px;
 }
 
 div#header_v2 .gnbTop .appDownIcon {
@@ -271,7 +272,7 @@ div#header_v2 .gnbTop .appDownIcon {
     display: block;
     width: 13px;
     height: 16px;
-    background: url("/img/balgeure_icons.png") no-repeat -179px -4px;
+    background: url("/img/header/header_icons.png") no-repeat -29px -2px;
 }
 
 div#header_v2 .gnbTop ul.gnbTopRight .li {
@@ -317,7 +318,7 @@ div#header_v2 .gnbTop ul.gnbTopRight .cart_count {
     display: inline-block;
     zoom: 1;
     height: 18px;
-    background: #ff5073;
+    background: #ff8fa7;
     color: #fff;
     text-align: center;
     border-radius: 9px;
@@ -375,7 +376,7 @@ div#header_v2 .gnbTop .topMenu_over a {
 }
 
 div#header_v2 .gnbTop .topMenu_over a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .gnbTop div.cs {
@@ -396,6 +397,8 @@ div#header_v2 .gnbTop .hover:hover .topMenu_over {
     top: 18px;
     right: 0;
     height: 30px;
+    font-size:12px;
+    font-family:'나눔고딕', NanumGothicBold, NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
 }
 
 .right_side_gnb_menu li{
@@ -503,6 +506,12 @@ div#header_v2 .gnbTop .hover:hover .topMenu_over {
     border: 1px solid #757672;
     background: #FFF;
 }
+
+.small_contents a:hover{
+	text-decoration:none;
+	color: #333;
+}
+
 
 .login_balgeure_btn li{
 	margin: 0;
@@ -695,33 +704,6 @@ div#header_v2 div.gnbLogo .topRollingBanner img {
     height: 50px
 }
 
-div#header_v2 div.gnbLogo .dot {
-    display: block;
-    width: 4px;
-    height: 4px;
-    margin: 8px 12px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -80px -60px
-}
-
-div#header_v2 div.gnbLogo .point_icon {
-    position: absolute;
-    top: -16px;
-    right: 28px;
-    display: block;
-    width: 50px;
-    height: 13px;
-    background: url('http://img2.memebox.com/static/contents/img/upload/content_20150803103040_5m871yWyAk.png')
-}
-
-div#header_v2 div.gnbLogo .newIcon {
-    position: absolute;
-    top: -9px;
-    display: block;
-    width: 31px;
-    height: 9px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -60px -40px
-}
-
 div#header_v2 div.gnbLogo .text3 {
     left: 3px
 }
@@ -736,7 +718,7 @@ div#header_v2 div.gnbOuter {
     height: 42px;
     border-top: 1px solid #e1e1e1;
     border-bottom: 2px solid #ff8fa7;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪�▣ヂ냈셌モ�쑩�', NanumGothicBold, '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+    font-family: '나눔고딕', NanumGothicBold, NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
 }
 
 div#header_v2 div.newGnb {
@@ -764,7 +746,7 @@ div#header_v2 .arrow {
 div#header_v2 .mainMenu {
     position: relative;
     display: block;
-    padding: 11px 15px 0;
+    padding: 9px 15px 0;
     height: 31px;
     color: #000;
     font-size: 14px;
@@ -802,7 +784,7 @@ div#header_v2 .category {
     position: relative;
     display: block;
     width: 174px;
-    height: 42px;
+    height: 39px;
     background: #f9f9fa;
     color: #000;
     font-size: 14px;
@@ -845,11 +827,11 @@ div#header_v2 .mainMenu.on, div#header_v2 .mainMenu:hover {
 
 div#header_v2 .fixCategory {
     position: absolute;
-    top: 42px;
+    top: 41px;
     padding: 15px 0 20px 15px;
-    width: 159px;
-    height: 408px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20160411152307_ceEubOv60n.png") repeat-x;
+    width: 174px;
+    height: 443px;
+    background: url("/img/header/main_header_background.png") repeat-x;
     border-top: 1px solid #8b8b8b;
     font-size: 13px;
     font-weight: bold;
@@ -919,7 +901,7 @@ div#header_v2 .fixCategory_side li {
 div#header_v2 .fixCategory_side_inner {
     padding: 30px 0 0 30px;
     width: 170px;
-    height: 413px;
+    height: 442px;
     background: #fff
 }
 
@@ -1144,7 +1126,7 @@ div#header_v2 .category-block {
     position: relative;
     padding-right: 174px;
     overflow: hidden;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
 }
 
 div#header_v2 .category-block a {
@@ -1531,14 +1513,14 @@ a[disabled] {
 
 div.mainVisual {
     position: relative;
-    width: 1048px;
+    width: 1080px;
     height: 477px;
     margin: 0 auto 50px;
     overflow: hidden
 }
 
 div.mainVisual img {
-    width: 1048px
+    width: 1080px
 }
 
 div.mainVisual .arrow {
@@ -1751,7 +1733,7 @@ div.myView span.fL {
 }
 
 div.myView .on {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div.myView .pre, div.myView .next {
@@ -1802,7 +1784,7 @@ div.myView .title {
 }
 
 div.myView .price {
-    color: #ff5073;
+    color: #ff8fa7;
     font-weight: bold
 }
 
@@ -1855,7 +1837,7 @@ div#footer a {
 }
 
 div#footer .textBox a:hover, div#footer dl a:hover {
-    text-decoration: underline
+    text-decoration: none;
 }
 
 div#footer li {
@@ -2019,7 +2001,7 @@ div#footer .landing li:hover .icon_05 {
 }
 
 div#footer .landing li:hover a {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#footer .footerList_01 {
@@ -2336,7 +2318,7 @@ div#footer .globalSelect a {
 }
 
 div#footer .globalSelect a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#footer .globalIcon {
@@ -2509,7 +2491,7 @@ div.newSlideBanner .price del {
 
 div.newSlideBanner .price span {
     font-family: "tahoma";
-    color: #ff5073;
+    color: #ff8fa7;
     font-size: 15px;
     font-weight: bold
 }
@@ -2524,1715 +2506,6 @@ span.block {
     height: 10px
 }
 
-p.noResultTitle {
-    width: 410px;
-    height: 20px;
-    margin-bottom: 20px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150728135929_tRw6Wmbf7J.png")
-}
-
-div.newDealContents:after {
-    content: '';
-    display: block;
-    height: 27px;
-    clear: both
-}
-
-div.newDealContents .dealList {
-    width: 1068px
-}
-
-div.newDealContents .dealList li {
-    width: 334px;
-    height: 478px;
-    border: 1px solid #f0f0f0;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    margin: 0 20px 23px 0;
-    float: left
-}
-
-div.newDealContents .dealList li:hover {
-    border: 1px solid #ff5073
-}
-
-div.newDealContents .dealList .overBorder {
-    display: block;
-    position: relative
-}
-
-div.newDealContents .dealList li:hover .title {
-    text-decoration: underline
-}
-
-div.newDealContents .dealList li:hover .overBack {
-    display: block
-}
-
-div.newDealContents .dealList a {
-    display: block;
-    cursor: pointer
-}
-
-div.newDealContents .dealList .m_left {
-    margin-right: 0
-}
-
-div.newDealContents .dealList .dealThumb {
-    position: relative
-}
-
-div.newDealContents .dealList .dealThumb img {
-    width: 334px;
-    height: 334px
-}
-
-div.newDealContents .dealList .back {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 334px;
-    height: 65px;
-    background: #f00;
-    opacity: .7;
-    filter: alpha(opacity=70)
-}
-
-div.newDealContents .dealList .caption {
-    position: absolute;
-    bottom: 0;
-    width: 334px;
-    height: 40px;
-    padding-top: 25px;
-    text-align: center
-}
-
-div.newDealContents .dealList .caption strong {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.5em
-}
-
-div.newDealContents .dealList .badge {
-    position: absolute;
-    top: 9px;
-    right: 11px
-}
-
-div.newDealContents .dealList .badge span {
-    width: 46px;
-    height: 46px;
-    display: block
-}
-
-div.newDealContents .dealList .badge .hot {
-    /*background: url("/web/images/shopList/shopList_20170102.png") 0 -40px*/
-}
-
-div.newDealContents .dealList .badge .md {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -50px -40px*/
-}
-
-div.newDealContents .dealList .badge .memebox {
-    background: url("/img/balgeure_icons.png") -1px -43px;
-    height: 60px;
-    width:60px;
-}
-
-div.newDealContents .dealList .badge .best {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -150px -40px*/
-}
-
-div.newDealContents .dealList .badge .new {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -200px -40px*/
-}
-
-div.newDealContents .dealList .badge .threeTime {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -100px -40px*/
-}
-
-div.newDealContents .dealList .badge .lowest {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -250px -40px*/
-}
-
-div.newDealContents .dealList .badge .freebie {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -300px -40px*/
-}
-
-div.newDealContents .dealList .badge .refund90 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -350px -40px*/
-}
-
-div.newDealContents .dealList .badge .lowest90 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -400px -40px*/
-}
-
-div.newDealContents .dealList .badge .sale369 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -100px -40px*/
-}
-
-div.newDealContents .dealList .badge .promotion {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -500px -40px*/
-}
-
-div.newDealContents .dealList .badge .soldOutSoon {
-    background: url("/img/balgeure_icons.png") -43px -1px;
-}
-
-div.newDealContents .dealList .badge .deal_0 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -600px -40px*/
-}
-
-div.newDealContents .dealList .badge .deal_100 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -650px -40px*/
-}
-
-div.newDealContents .dealList .badge .reservation {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -700px -40px*/
-}
-
-div.newDealContents .dealList .bestTag {
-    width: 62px;
-    height: 62px;
-    display: block;
-    position: absolute;
-    top: 0;
-    /*background: url("/web/images/shopList/shopList_20170102.png");*/
-    z-index: 1
-}
-
-div.newDealContents .dealList .best1 {
-    background-position: 0 -220px
-}
-
-div.newDealContents .dealList .best2 {
-    background-position: -70px -220px
-}
-
-div.newDealContents .dealList .best3 {
-    background-position: -140px -220px
-}
-
-div.newDealContents .dealList .best4 {
-    background-position: -210px -220px
-}
-
-div.newDealContents .dealList .best5 {
-    background-position: -280px -220px
-}
-
-div.newDealContents .dealList .best6 {
-    background-position: -350px -220px
-}
-
-div.newDealContents .dealList .best7 {
-    background-position: -420px -220px
-}
-
-div.newDealContents .dealList .best8 {
-    background-position: -490px -220px
-}
-
-div.newDealContents .dealList .best9 {
-    background-position: -560px -220px
-}
-
-div.newDealContents .dealList .overBack {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 334px;
-    height: 334px;
-    background: #fff;
-    opacity: .1;
-    filter: alpha(opacity=10);
-    z-index: 2
-}
-
-div.newDealContents .dealList .zzimBack {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 334px;
-    height: 334px;
-    background: #fff;
-    opacity: .69;
-    filter: alpha(opacity=70);
-    z-index: 0
-}
-
-div.newDealContents .dealList .zzimCheck {
-    position: absolute;
-    top: 103px;
-    left: 103px;
-    margin: 0 auto;
-    display: block;
-    width: 130px;
-    height: 130px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") 0 -290px*/
-}
-
-div.newDealContents .dealBottom {
-    position: relative;
-    height: 91px;
-    padding: 20px 0 0 20px
-}
-
-div.newDealContents .dealhead .title {
-    width: 295px;
-    overflow: hidden;
-    font-size: 14px;
-    font-weight: bold;
-    color: #555;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    letter-spacing: -0.1em
-}
-
-div.newDealContents .dealhead .title strong {
-    margin-right: 10px
-}
-
-div.newDealContents .dealBody {
-    overflow: hidden;
-    position: absolute;
-    bottom: 9px
-}
-
-div.newDealContents .dealBody .discount {
-    margin: 0 8px 0 0;
-    font-family: Verdana;
-    font-size: 20px;
-    font-weight: bold;
-    color: #ff5073;
-    line-height: 29px
-}
-
-div.newDealContents .dealBody .discount .percent {
-    display: inline-block;
-    float: left
-}
-
-div.newDealContents .dealBody .discount .dealList-MaximumDiscount {
-    display: inline-block;
-    margin-right: 4px;
-    font-size: 19px;
-    float: left
-}
-
-div.newDealContents .dealBody .discount .unit {
-    font-size: 19px
-}
-
-div.newDealContents .dealBody .discount .memePercent {
-    display: block;
-    width: 59px;
-    height: 16px;
-    margin-top: 7px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -370px -190px*/
-}
-
-div.newDealContents .dealPrice {
-    margin-top: 6px
-}
-
-div.newDealContents .dealPrice del {
-    margin: 0 8px 0 0;
-    font-family: tahoma;
-    font-size: 12px;
-    color: #898989
-}
-
-div.newDealContents .dealPrice .noDel {
-    margin-top: -2px
-}
-
-div.newDealContents .dealPrice .price .price_value {
-    display: inline-block;
-    float: left
-}
-
-div.newDealContents .dealPrice .price .unit, div.newDealContents .dealPrice .price .tilde {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: normal;
-    float: left
-}
-
-div.newDealContents .dealPrice .price .unit {
-    margin: 1px 0 0 2px
-}
-
-div.newDealContents .zzim {
-    display: block;
-    position: absolute;
-    bottom: 43px;
-    right: 13px;
-    width: 26px;
-    height: 26px;
-    border: 0;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -600px -110px*/
-}
-
-div.newDealContents .openNew {
-    display: block;
-    position: absolute;
-    bottom: 43px;
-    right: 49px;
-    width: 26px;
-    height: 26px;
-    border: 0;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -600px -170px*/
-}
-
-div.newDealContents .zzimTag {
-    display: none;
-    position: absolute;
-    top: -23px;
-    left: -6px;
-    width: 38px;
-    height: 19px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -630px -150px*/
-}
-
-div.newDealContents .openNewTag {
-    display: none;
-    position: absolute;
-    top: -23px;
-    left: -11px;
-    width: 47px;
-    height: 19px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -660px -170px*/
-}
-
-div.newDealContents .openNew:hover {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -630px -170px*/
-}
-
-div.newDealContents .openNew:hover .openNewTag {
-    display: block
-}
-
-div.newDealContents .zzim:hover, div.newDealContents .zzimOn {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -600px -140px*/
-}
-
-div.newDealContents .zzim:hover .zzimTag {
-    display: block
-}
-
-div.newDealContents .price {
-    margin-top: -3px;
-    font-family: tahoma;
-    font-size: 16px;
-    font-weight: bold;
-    color: #555
-}
-
-div.newDealContents .price .unit {
-    font-family: '챘혧�뮨р�뷜궗', Dotum;
-    font-size: 12px
-}
-
-div.newDealContents .dealFoot {
-    padding-left: 8px;
-    height: 33px;
-    background: #f0f0f0
-}
-
-div.newDealContents .dealFoot span {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    padding: 0 3px;
-    height: 15px;
-    margin: 9px 2px 0 0;
-    float: left;
-    color: #fff;
-    font-size: 11px;
-    letter-spacing: -0.1em;
-    text-align: center;
-    line-height: 17px;
-    *line-height: 14px
-}
-
-div.newDealContents .dealFoot .freeIcon {
-    background: #71a6e2
-}
-
-div.newDealContents .dealFoot .businessIcon {
-    background: #45c1a2
-}
-
-div.newDealContents .dealFoot .mdIcon {
-    background: #ff7ba3
-}
-
-div.newDealContents .dealFoot .priceIcon {
-    background: #ff7758
-}
-
-div.newDealContents .dealFoot .sampleIcon {
-    background: #ce68da
-}
-
-div.newDealContents .dealFoot .memedeliveryIcon {
-    background: #fd49ab
-}
-
-div.newDealContents .dealFoot .giftIcon {
-    background: #2fa6d8
-}
-
-div.newDealContents .dealFoot .overseasIcon {
-    background: #874cd0
-}
-
-div.newDealContents .dealFoot .payDeliveryIcon {
-    background: #707c94
-}
-
-div.newDealContents .dealFoot .overFreeIcon {
-    background: #71a6e2
-}
-
-div.newDealContents .dealFoot .codIcon {
-    background: #ac5bff
-}
-
-div.newDealContents .memeDelivery {
-    width: 65px;
-    height: 33px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -530px -110px*/
-}
-
-div.newDealContents .coDelivery {
-    width: 65px;
-    height: 33px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20160310150747_WoNfaf8Sok.png")
-}
-
-.newDealContents .starBox {
-    overflow: hidden;
-    margin-top: 6px
-}
-
-.newDealContents .starBox .amount {
-    display: block;
-    margin-top: 1px;
-    text-align: right;
-    font-size: 12px;
-    color: #555
-}
-
-.newDealContents .grade {
-    font-family: 'tahoma';
-    margin: -1px 6px 0 0;
-    font-weight: bold;
-    color: #555
-}
-
-.newDealContents .star {
-    width: 83px
-}
-
-.newDealContents .star, .newDealContents .star em {
-    display: inline-block;
-    overflow: hidden;
-    height: 17px;
-    /*background: url("/web/images/myPage/star_v2.png") no-repeat 0 -16px;*/
-    vertical-align: middle
-}
-
-.newDealContents .star em {
-    background-position: 0 0;
-    line-height: 0;
-    font-size: 0;
-    vertical-align: top
-}
-
-.newDealContents .star {
-    margin-right: 6px
-}
-
-.newDealContents .star em.half {
-    width: 8px
-}
-
-.newDealContents .star em.one {
-    width: 17px
-}
-
-.newDealContents .star em.oneHalf {
-    width: 25px
-}
-
-.newDealContents .star em.two {
-    width: 34px
-}
-
-.newDealContents .star em.twoHalf {
-    width: 42px
-}
-
-.newDealContents .star em.three {
-    width: 51px
-}
-
-.newDealContents .star em.threeHalf {
-    width: 59px
-}
-
-.newDealContents .star em.four {
-    width: 68px
-}
-
-.newDealContents .star em.fourHalf {
-    width: 76px
-}
-
-.newDealContents .star em.five {
-    width: 83px
-}
-
-div.timerBanner {
-    height: 149px;
-    margin-bottom: 18px;
-    background: #fafafa;
-    border: 2px solid #f8f8f8;
-    overflow: hidden
-}
-
-div.timerBanner span {
-    display: block
-}
-
-div.timerBanner .leftWrap span {
-    margin: 47px 0 0 58px;
-    width: 347px;
-    height: 55px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -140px -290px*/
-}
-
-div.timerBanner .sticker span {
-    margin: 40px 0 5px 90px;
-    width: 63px;
-    height: 63px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -460px -150px*/
-}
-
-div.timerBanner .sticker .imminent {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -530px -150px*/
-}
-
-div.timerBanner .rightWrap {
-    overflow: hidden
-}
-
-div.timerBanner .rightWrap .time {
-    margin-top: 36px;
-    width: 55px;
-    height: 73px;
-    /*background: url("/web/images/shopList/shopList_20170102.png")*/
-}
-
-div.timerBanner .rightWrap span.num0 {
-    background-position: -140px -360px
-}
-
-div.timerBanner .rightWrap span.num1 {
-    background-position: -200px -360px
-}
-
-div.timerBanner .rightWrap span.num2 {
-    background-position: -260px -360px
-}
-
-div.timerBanner .rightWrap span.num3 {
-    background-position: -320px -360px
-}
-
-div.timerBanner .rightWrap span.num4 {
-    background-position: -380px -360px
-}
-
-div.timerBanner .rightWrap span.num5 {
-    background-position: -440px -360px
-}
-
-div.timerBanner .rightWrap span.num6 {
-    background-position: -500px -360px
-}
-
-div.timerBanner .rightWrap span.num7 {
-    background-position: -560px -360px
-}
-
-div.timerBanner .rightWrap span.num8 {
-    background-position: -620px -360px
-}
-
-div.timerBanner .rightWrap span.num9 {
-    background-position: -680px -360px
-}
-
-div.timerBanner .rightWrap .colon {
-    margin: 75px 25px 0 25px;
-    width: 6px;
-    height: 34px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -40px -150px*/
-}
-
-div.timerBanner .rightWrap .sec {
-    margin-top: 65px;
-    width: 33px;
-    height: 44px;
-    /*background: url("/web/images/shopList/shopList_20170102.png")*/
-}
-
-div.timerBanner .rightWrap span.s_num0 {
-    background-position: -170px -100px
-}
-
-div.timerBanner .rightWrap span.s_num1 {
-    background-position: -210px -100px
-}
-
-div.timerBanner .rightWrap span.s_num2 {
-    background-position: -250px -100px
-}
-
-div.timerBanner .rightWrap span.s_num3 {
-    background-position: -290px -100px
-}
-
-div.timerBanner .rightWrap span.s_num4 {
-    background-position: -330px -100px
-}
-
-div.timerBanner .rightWrap span.s_num5 {
-    background-position: -370px -100px
-}
-
-div.timerBanner .rightWrap span.s_num6 {
-    background-position: -410px -100px
-}
-
-div.timerBanner .rightWrap span.s_num7 {
-    background-position: -450px -100px
-}
-
-div.timerBanner .rightWrap span.s_num8 {
-    background-position: -210px -150px
-}
-
-div.timerBanner .rightWrap span.s_num9 {
-    background-position: -250px -150px
-}
-
-div.arrayWrap {
-    padding: 11px 0 0 20px;
-    margin-bottom: 10px;
-    width: 1026px;
-    height: 27px;
-    background: #fbfbfb;
-    border: 1px solid #f1f1f1;
-    overflow: hidden
-}
-
-div.arrayWrap li {
-    float: left
-}
-
-div.arrayWrap a {
-    color: #434343;
-    font-size: 12px
-}
-
-div.arrayWrap .bar {
-    margin: 0 15px;
-    color: #c2c2c2
-}
-
-div.arrayWrap li.on a {
-    color: #ff5073;
-    font-weight: bold
-}
-
-div.arrayWrap li.on .arrow {
-    margin: 6px 5px 0 0;
-    display: block;
-    width: 7px;
-    height: 4px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") 0 -100px no-repeat;*/
-    float: left
-}
-
-span.block {
-    display: block;
-    height: 10px
-}
-
-p.noResultTitle {
-    width: 410px;
-    height: 20px;
-    margin-bottom: 20px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150728135929_tRw6Wmbf7J.png")
-}
-
-div.newDealContents:after {
-    content: '';
-    display: block;
-    height: 27px;
-    clear: both
-}
-
-div.newDealContents .dealList {
-    width: 1120px;
-}
-
-div.newDealContents .dealList li {
-    width: 343px;
-    height: 489px;
-    border: 1px solid #f0f0f0;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    margin: 0 20px 23px 0;
-    float: left
-}
-
-div.newDealContents .dealList li:hover {
-    border: 1px solid #ff8fa7;
-}
-
-div.newDealContents .dealList .overBorder {
-    display: block;
-    position: relative
-}
-
-div.newDealContents .dealList li:hover .title {
-    text-decoration: underline
-}
-
-div.newDealContents .dealList li:hover .overBack {
-    display: block
-}
-
-div.newDealContents .dealList a {
-    display: block;
-    cursor: pointer
-}
-
-div.newDealContents .dealList .m_left {
-    margin-right: 0
-}
-
-div.newDealContents .dealList .dealThumb {
-    position: relative
-}
-
-div.newDealContents .dealList .dealThumb img {
-    width: 343px;
-    height: 343px
-}
-
-div.newDealContents .dealList .back {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 334px;
-    height: 65px;
-    background: #f00;
-    opacity: .7;
-    filter: alpha(opacity=70)
-}
-
-div.newDealContents .dealList .caption {
-    position: absolute;
-    bottom: 0;
-    width: 334px;
-    height: 40px;
-    padding-top: 25px;
-    text-align: center
-}
-
-div.newDealContents .dealList .caption strong {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.5em
-}
-
-div.newDealContents .dealList .badge {
-    position: absolute;
-    top: 9px;
-    right: 11px
-}
-
-div.newDealContents .dealList .badge span {
-    width: 46px;
-    height: 46px;
-    display: block
-}
-
-div.newDealContents .dealList .badge .hot {
-    /*background: url("/web/images/shopList/shopList_20170102.png") 0 -40px*/
-}
-
-div.newDealContents .dealList .badge .md {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -50px -40px*/
-}
-
-3div.newDealContents .dealList .badge .memebox {
-    background: url("/img/balgeure_icons.png") -43px -1px;
-}
-
-div.newDealContents .dealList .badge .best {
-    background: url("/img/balgeure_icons.png") -93px -1px;
-}
-
-div.newDealContents .dealList .badge .new {
-    background: url("/img/balgeure_icons.png") -65px -43px;
-    width: 60px;
-    height:60px;
-}
-
-div.newDealContents .dealList .badge .threeTime {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -100px -40px*/
-}
-
-div.newDealContents .dealList .badge .lowest {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -250px -40px*/
-}
-
-div.newDealContents .dealList .badge .freebie {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -300px -40px*/
-}
-
-div.newDealContents .dealList .badge .refund90 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -350px -40px*/
-}
-
-div.newDealContents .dealList .badge .lowest90 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -400px -40px*/
-}
-
-div.newDealContents .dealList .badge .sale369 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -100px -40px*/
-}
-
-div.newDealContents .dealList .badge .promotion {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -500px -40px*/
-}
-
-div.newDealContents .dealList .badge .soldOutSoon {
-    background: url("/img/balgeure_icons.png") -43px -1px;
-}
-
-div.newDealContents .dealList .badge .deal_0 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -600px -40px*/
-}
-
-div.newDealContents .dealList .badge .deal_100 {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -650px -40px*/
-}
-
-div.newDealContents .dealList .badge .reservation {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -700px -40px*/
-}
-
-div.newDealContents .dealList .bestTag {
-    width: 62px;
-    height: 62px;
-    display: block;
-    position: absolute;
-    top: 0;
-    /*background: url("/web/images/shopList/shopList_20170102.png");*/
-    z-index: 1
-}
-
-div.newDealContents .dealList .best1 {
-    background-position: 0 -220px
-}
-
-div.newDealContents .dealList .best2 {
-    background-position: -70px -220px
-}
-
-div.newDealContents .dealList .best3 {
-    background-position: -140px -220px
-}
-
-div.newDealContents .dealList .best4 {
-    background-position: -210px -220px
-}
-
-div.newDealContents .dealList .best5 {
-    background-position: -280px -220px
-}
-
-div.newDealContents .dealList .best6 {
-    background-position: -350px -220px
-}
-
-div.newDealContents .dealList .best7 {
-    background-position: -420px -220px
-}
-
-div.newDealContents .dealList .best8 {
-    background-position: -490px -220px
-}
-
-div.newDealContents .dealList .best9 {
-    background-position: -560px -220px
-}
-
-div.newDealContents .dealList .overBack {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 343px;
-    height: 343px;
-    background: #fff;
-    opacity: .1;
-    filter: alpha(opacity=10);
-    z-index: 2
-}
-
-div.newDealContents .dealList .zzimBack {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 334px;
-    height: 334px;
-    background: #fff;
-    opacity: .69;
-    filter: alpha(opacity=70);
-    z-index: 0
-}
-
-div.newDealContents .dealList .zzimCheck {
-    position: absolute;
-    top: 103px;
-    left: 103px;
-    margin: 0 auto;
-    display: block;
-    width: 130px;
-    height: 130px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") 0 -290px*/
-}
-
-div.newDealContents .dealBottom {
-    position: relative;
-    height: 91px;
-    padding: 22px 0 0 20px
-}
-
-div.newDealContents .dealhead .title {
-    width: 295px;
-    overflow: hidden;
-    font-size: 14px;
-    font-weight: bold;
-    color: #555;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    letter-spacing: -0.1em
-}
-
-div.newDealContents .dealhead .title strong {
-    margin-right: 10px
-}
-
-div.newDealContents .dealBody {
-    overflow: hidden;
-    position: absolute;
-    bottom: 9px
-}
-
-div.newDealContents .dealBody .discount {
-    margin: 0 8px 0 0;
-    font-family: Verdana;
-    font-size: 20px;
-    font-weight: bold;
-    color: #ff5073;
-    line-height: 29px
-}
-
-div.newDealContents .dealBody .discount .percent {
-    display: inline-block;
-    float: left
-}
-
-div.newDealContents .dealBody .discount .dealList-MaximumDiscount {
-    display: inline-block;
-    margin-right: 4px;
-    font-size: 19px;
-    float: left
-}
-
-div.newDealContents .dealBody .discount .unit {
-    font-size: 19px
-}
-
-div.newDealContents .dealBody .discount .memePercent {
-    display: block;
-    width: 59px;
-    height: 16px;
-    margin-top: 7px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -370px -190px*/
-}
-
-div.newDealContents .dealPrice {
-    margin-top: 6px
-}
-
-div.newDealContents .dealPrice del {
-    margin: 0 8px 0 0;
-    font-family: tahoma;
-    font-size: 12px;
-    color: #898989;
-    line-height:20px;
-}
-
-div.newDealContents .dealPrice .noDel {
-    margin-top: -2px
-}
-
-div.newDealContents .dealPrice .price .price_value {
-    display: inline-block;
-    float: left
-}
-
-div.newDealContents .dealPrice .price .unit, div.newDealContents .dealPrice .price .tilde {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: normal;
-    float: left
-}
-
-div.newDealContents .dealPrice .price .unit {
-    margin: 1px 0 0 2px
-}
-
-div.newDealContents .zzim {
-    display: block;
-    position: absolute;
-    bottom: 43px;
-    right: 13px;
-    width: 26px;
-    height: 26px;
-    border: 0;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -600px -110px*/
-}
-
-div.newDealContents .openNew {
-    display: block;
-    position: absolute;
-    bottom: 43px;
-    right: 49px;
-    width: 26px;
-    height: 26px;
-    border: 0;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -600px -170px*/
-}
-
-div.newDealContents .zzimTag {
-    display: none;
-    position: absolute;
-    top: -23px;
-    left: -6px;
-    width: 38px;
-    height: 19px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -630px -150px*/
-}
-
-div.newDealContents .openNewTag {
-    display: none;
-    position: absolute;
-    top: -23px;
-    left: -11px;
-    width: 47px;
-    height: 19px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -660px -170px*/
-}
-
-div.newDealContents .openNew:hover {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -630px -170px*/
-}
-
-div.newDealContents .openNew:hover .openNewTag {
-    display: block
-}
-
-div.newDealContents .zzim:hover, div.newDealContents .zzimOn {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -600px -140px*/
-}
-
-div.newDealContents .zzim:hover .zzimTag {
-    display: block
-}
-
-div.newDealContents .price {
-    margin-top: -3px;
-    font-family: tahoma;
-    font-size: 16px;
-    font-weight: bold;
-    color: #555
-}
-
-div.newDealContents .price .unit {
-    font-family: '챘혧�뮨р�뷜궗', Dotum;
-    font-size: 12px
-}
-
-div.newDealContents .dealFoot {
-    padding-left: 8px;
-    height: 33px;
-    background: #f0f0f0
-}
-
-div.newDealContents .dealFoot span {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    padding: 0 3px;
-    height: 15px;
-    margin: 9px 2px 0 0;
-    float: left;
-    color: #fff;
-    font-size: 11px;
-    letter-spacing: -0.1em;
-    text-align: center;
-    line-height: 17px;
-    *line-height: 14px
-}
-
-div.newDealContents .dealFoot .freeIcon {
-    background: #71a6e2
-}
-
-div.newDealContents .dealFoot .businessIcon {
-    background: #45c1a2
-}
-
-div.newDealContents .dealFoot .mdIcon {
-    background: #ff7ba3
-}
-
-div.newDealContents .dealFoot .priceIcon {
-    background: #ff7758
-}
-
-div.newDealContents .dealFoot .sampleIcon {
-    background: #ce68da
-}
-
-div.newDealContents .dealFoot .memedeliveryIcon {
-    background: #fd49ab
-}
-
-div.newDealContents .dealFoot .giftIcon {
-    background: #2fa6d8
-}
-
-div.newDealContents .dealFoot .overseasIcon {
-    background: #874cd0
-}
-
-div.newDealContents .dealFoot .payDeliveryIcon {
-    background: #707c94
-}
-
-div.newDealContents .dealFoot .overFreeIcon {
-    background: #71a6e2
-}
-
-div.newDealContents .dealFoot .codIcon {
-    background: #ac5bff
-}
-
-div.newDealContents .memeDelivery {
-    width: 65px;
-    height: 33px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -530px -110px*/
-}
-
-div.newDealContents .coDelivery {
-    width: 65px;
-    height: 33px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20160310150747_WoNfaf8Sok.png")
-}
-
-.newDealContents .starBox {
-    overflow: hidden;
-    margin-top: 6px
-}
-
-.newDealContents .starBox .amount {
-    display: block;
-    margin-top: 1px;
-    text-align: right;
-    font-size: 12px;
-    color: #555
-}
-
-.newDealContents .grade {
-    font-family: 'tahoma';
-    margin: -1px 6px 0 0;
-    font-weight: bold;
-    color: #555
-}
-
-.newDealContents .star {
-    width: 83px
-}
-
-.newDealContents .star, .newDealContents .star em {
-    display: inline-block;
-    overflow: hidden;
-    height: 17px;
-    /*background: url("/web/images/myPage/star_v2.png") no-repeat 0 -16px;*/
-    vertical-align: middle
-}
-
-.newDealContents .star em {
-    background-position: 0 0;
-    line-height: 0;
-    font-size: 0;
-    vertical-align: top
-}
-
-.newDealContents .star {
-    margin-right: 6px
-}
-
-.newDealContents .star em.half {
-    width: 8px
-}
-
-.newDealContents .star em.one {
-    width: 17px
-}
-
-.newDealContents .star em.oneHalf {
-    width: 25px
-}
-
-.newDealContents .star em.two {
-    width: 34px
-}
-
-.newDealContents .star em.twoHalf {
-    width: 42px
-}
-
-.newDealContents .star em.three {
-    width: 51px
-}
-
-.newDealContents .star em.threeHalf {
-    width: 59px
-}
-
-.newDealContents .star em.four {
-    width: 68px
-}
-
-.newDealContents .star em.fourHalf {
-    width: 76px
-}
-
-.newDealContents .star em.five {
-    width: 83px
-}
-
-div.timerBanner {
-    height: 149px;
-    margin-bottom: 18px;
-    background: #fafafa;
-    border: 2px solid #f8f8f8;
-    overflow: hidden
-}
-
-div.timerBanner span {
-    display: block
-}
-
-div.timerBanner .leftWrap span {
-    margin: 47px 0 0 58px;
-    width: 347px;
-    height: 55px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -140px -290px*/
-}
-
-div.timerBanner .sticker span {
-    margin: 40px 0 5px 90px;
-    width: 63px;
-    height: 63px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -460px -150px*/
-}
-
-div.timerBanner .sticker .imminent {
-    /*background: url("/web/images/shopList/shopList_20170102.png") -530px -150px*/
-}
-
-div.timerBanner .rightWrap {
-    overflow: hidden
-}
-
-div.timerBanner .rightWrap .time {
-    margin-top: 36px;
-    width: 55px;
-    height: 73px;
-    /*background: url("/web/images/shopList/shopList_20170102.png")*/
-}
-
-div.timerBanner .rightWrap span.num0 {
-    background-position: -140px -360px
-}
-
-div.timerBanner .rightWrap span.num1 {
-    background-position: -200px -360px
-}
-
-div.timerBanner .rightWrap span.num2 {
-    background-position: -260px -360px
-}
-
-div.timerBanner .rightWrap span.num3 {
-    background-position: -320px -360px
-}
-
-div.timerBanner .rightWrap span.num4 {
-    background-position: -380px -360px
-}
-
-div.timerBanner .rightWrap span.num5 {
-    background-position: -440px -360px
-}
-
-div.timerBanner .rightWrap span.num6 {
-    background-position: -500px -360px
-}
-
-div.timerBanner .rightWrap span.num7 {
-    background-position: -560px -360px
-}
-
-div.timerBanner .rightWrap span.num8 {
-    background-position: -620px -360px
-}
-
-div.timerBanner .rightWrap span.num9 {
-    background-position: -680px -360px
-}
-
-div.timerBanner .rightWrap .colon {
-    margin: 75px 25px 0 25px;
-    width: 6px;
-    height: 34px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") -40px -150px*/
-}
-
-div.timerBanner .rightWrap .sec {
-    margin-top: 65px;
-    width: 33px;
-    height: 44px;
-    /*background: url("/web/images/shopList/shopList_20170102.png")*/
-}
-
-div.timerBanner .rightWrap span.s_num0 {
-    background-position: -170px -100px
-}
-
-div.timerBanner .rightWrap span.s_num1 {
-    background-position: -210px -100px
-}
-
-div.timerBanner .rightWrap span.s_num2 {
-    background-position: -250px -100px
-}
-
-div.timerBanner .rightWrap span.s_num3 {
-    background-position: -290px -100px
-}
-
-div.timerBanner .rightWrap span.s_num4 {
-    background-position: -330px -100px
-}
-
-div.timerBanner .rightWrap span.s_num5 {
-    background-position: -370px -100px
-}
-
-div.timerBanner .rightWrap span.s_num6 {
-    background-position: -410px -100px
-}
-
-div.timerBanner .rightWrap span.s_num7 {
-    background-position: -450px -100px
-}
-
-div.timerBanner .rightWrap span.s_num8 {
-    background-position: -210px -150px
-}
-
-div.timerBanner .rightWrap span.s_num9 {
-    background-position: -250px -150px
-}
-
-div.arrayWrap {
-    padding: 11px 0 0 20px;
-    margin-bottom: 10px;
-    width: 1026px;
-    height: 27px;
-    background: #fbfbfb;
-    border: 1px solid #f1f1f1;
-    overflow: hidden
-}
-
-div.arrayWrap li {
-    float: left
-}
-
-div.arrayWrap a {
-    color: #434343;
-    font-size: 12px
-}
-
-div.arrayWrap .bar {
-    margin: 0 15px;
-    color: #c2c2c2
-}
-
-div.arrayWrap li.on a {
-    color: #ff5073;
-    font-weight: bold
-}
-
-div.arrayWrap li.on .arrow {
-    margin: 6px 5px 0 0;
-    display: block;
-    width: 7px;
-    height: 4px;
-    /*background: url("/web/images/shopList/shopList_20170102.png") 0 -100px no-repeat;*/
-    float: left
-}
-
-div.slideBanner p.todayHot {
-    width: 108px;
-    height: 21px;
-    margin: 0 0 7px 8px;
-    /*background: url("/web/images/home/homeSprite20160811.png") 0 0*/
-}
-
-div.slideBanner .slideBannerWrap {
-    width: 1036px;
-    height: 170px;
-    margin-bottom: 40px;
-    padding: 10px 0 10px 10px;
-    position: relative;
-    border: 1px #d6d6d6 solid
-}
-
-div.slideBanner .slideBannerList li {
-    float: left
-}
-
-div.slideBanner .slideBannerList a {
-    width: 247px;
-    height: 168px;
-    margin-right: 10px;
-    display: block;
-    border: 1px #d6d6d6 solid
-}
-
-div.slideBanner .page {
-    width: 23px;
-    height: 11px;
-    position: absolute;
-    top: -20px;
-    right: 8px;
-    /*background: url("/web/images/home/homeSprite20160811.png") -230px -20px;*/
-    display: block
-}
-
-div.slideBanner .v2 {
-    background-position: -230px 0
-}
-
-div.slideBanner .subBannerLeftButton {
-    width: 26px;
-    height: 31px;
-    display: block;
-    position: absolute;
-    top: 82px;
-    left: 0;
-    /*background: url("/web/images/home/homeSprite20160811.png") -170px 0;*/
-    text-indent: -9999px
-}
-
-div.slideBanner .subBannerRightButton {
-    width: 26px;
-    height: 31px;
-    display: block;
-    position: absolute;
-    top: 82px;
-    right: 0;
-    /*background: url("/web/images/home/homeSprite20160811.png") -200px 0;*/
-    text-indent: -9999px
-}
-
-div.mdChoiceWrap {
-    margin-bottom: 40px
-}
-
-div.mdChoiceWrap .mdChoice {
-    width: 124px;
-    height: 19px;
-    margin: 0 0 15px 8px;
-    /*background: url("/web/images/home/homeSprite20160811.png") 0 -30px*/
-}
-
-div.mdChoiceWrap .mdChoicdBox {
-    width: 1048px;
-    height: 567px
-}
-
-div.bestDealWrap .bestDeal {
-    margin-bottom: 15px;
-    width: 410px;
-    height: 20px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144033_WmhvSpwu0f.png")
-}
-
-div.dealContents .bestItem, div.newDealContents .bestItem, div.bestDealWrap .bestItem {
-    margin-bottom: 15px;
-    width: 410px;
-    height: 20px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144131_GnsDCKgqol.png")
-}
-
-div.dealContents .memeBest, div.newDealContents .memeBest, div.bestDealWrap .memeBest {
-    margin-bottom: 15px;
-    width: 410px;
-    height: 20px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144248_s7DNNuRBgR.png")
-}
-
-div.dealContents .memeBest_v2, div.newDealContents .memeBest_v2, div.bestDealWrap .memeBest_v2 {
-    margin-bottom: 15px;
-    width: 410px;
-    height: 20px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144520_bxgRZ9y5HW.png")
-}
-
-div.dealContents .memeShippingCostItem, div.newDealContents .memeShippingCostItem, div.bestDealWrap .memeShippingCostItem {
-    margin-bottom: 15px;
-    width: 231px;
-    height: 19px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/content_20151013194004_O7kNKTLwiq.png") no-repeat
-}
-
-div.dealContents .clear_fl::after, div.newDealContents .clear_fl::after, div.bestDealWrap .clear_fl::after {
-    display: block;
-    content: "";
-    clear: both;
-    height: 0
-}
-
-div.homeBottom .memeOnAir {
-    width: 124px;
-    height: 19px;
-    margin: 0 0 15px 8px;
-    *margin-top: 40px;
-    /*background: url("/web/images/home/homeSprite20160811.png") 0 -90px*/
-}
-
-div.promotionBanner {
-    position: relative
-}
-
-div.promotionBanner .listWrap {
-    margin-bottom: 50px;
-    width: 1047px;
-    height: 175px;
-    border: 1px solid #f0f0f0;
-    overflow: hidden
-}
-
-div.promotionBanner p.promotion {
-    margin-bottom: 15px;
-    width: 410px;
-    height: 20px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713143935_KIumZzSFEm.png")
-}
-
-div.promotionBanner li a, div.promotionBanner img {
-    display: block;
-    width: 348px;
-    height: 175px;
-    overflow: hidden
-}
-
-div.promotionBanner li a {
-    border-right: 1px solid #f0f0f0
-}
-
-div.promotionBanner a.last {
-    border-right: 0
-}
-
-div.promotionBanner .arrow {
-    position: absolute;
-    top: 105px;
-    width: 24px;
-    height: 34px;
-    text-indent: -9999px
-}
-
-div.promotionBanner a.preBtn {
-    left: 0;
-    /*background: url("/web/images/home/homeSprite20160811.png") 0 -30px no-repeat*/
-}
-
-div.promotionBanner a.preBtn:hover {
-    /*background: url("/web/images/home/homeSprite20160811.png") -60px -30px no-repeat*/
-}
-
-div.promotionBanner a.nextBtn {
-    right: 0;
-    /*background: url("/web/images/home/homeSprite20160811.png") -30px -30px no-repeat*/
-}
-
-div.promotionBanner a.nextBtn:hover {
-    /*background: url("/web/images/home/homeSprite20160811.png") -90px -30px no-repeat*/
-}
-
-div.promotionBanner .page {
-    position: absolute;
-    top: 4px;
-    right: 0;
-    display: block;
-    font-size: 12px;
-    font-weight: bold
-}
-
-.promotionBanner:after {
-    display: block;
-    content: "";
-    height: 0;
-    clear: both
-}
-
-div.homeMainBannerWrap {
-    margin-bottom: 44px;
-    width: 100%;
-    background: #ffebe8
-}
 
 div.homeMainBannerWrap .homeBannerLiner {
     width: 100%;
@@ -4333,3 +2606,489 @@ div.homeMainBanner .next {
 #myBtn:hover {
   background: url('/img/balgeure_icons.png') no-repeat -1px -1px;
 }
+
+
+
+
+/** 상품 정렬 관련 css Start **/
+
+
+.main_product_list{
+	font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+span.block {
+    display: block;
+    height: 10px
+}
+
+p.noResultTitle {
+    width: 410px;
+    height: 20px;
+    margin-bottom: 20px;
+    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150728135929_tRw6Wmbf7J.png")
+}
+
+div.newDealContents:after {
+    content: '';
+    display: block;
+    height: 27px;
+    clear: both
+}
+
+div.newDealContents .dealList {
+    width: 1080px
+}
+
+div.newDealContents .dealList li {
+    width: 338px;
+    height: 485px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin: 0 20px 23px 0;
+    float: left
+}
+
+div.newDealContents .dealList li:hover {
+    border: 1px solid #ff8fa7;
+    text-decoration: none;
+}
+
+div.newDealContents .dealList .overBorder {
+    display: block;
+    position: relative
+}
+
+div.newDealContents .dealList li:hover .title {
+    text-decoration: underline
+}
+
+div.newDealContents .dealList li:hover .overBack {
+    display: block
+}
+
+div.newDealContents .dealList a {
+    display: block;
+    cursor: pointer
+}
+
+div.newDealContents .dealList .m_left {
+    margin-right: 0
+}
+
+div.newDealContents .dealList .dealThumb {
+    position: relative;
+    display: block;
+}
+
+div.newDealContents .dealList .dealThumb img {
+    width: 334px;
+    height: 334px
+}
+
+div.newDealContents .dealList .back {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 334px;
+    height: 65px;
+    background: #f00;
+    opacity: .7;
+    filter: alpha(opacity=70)
+}
+
+div.newDealContents .dealList .caption {
+    position: absolute;
+    bottom: 0;
+    width: 334px;
+    height: 40px;
+    padding-top: 25px;
+    text-align: center
+}
+
+div.newDealContents .dealList .caption strong {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em
+}
+
+div.newDealContents .dealList .bestTag {
+    width: 62px;
+    height: 62px;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: url("/web/images/shopList/shopList_20170102.png");
+    z-index: 1
+}
+
+div.newDealContents .dealList .best1 {
+    background-position: 0 -220px
+}
+
+div.newDealContents .dealList .best2 {
+    background-position: -70px -220px
+}
+
+div.newDealContents .dealList .best3 {
+    background-position: -140px -220px
+}
+
+div.newDealContents .dealList .best4 {
+    background-position: -210px -220px
+}
+
+div.newDealContents .dealList .best5 {
+    background-position: -280px -220px
+}
+
+div.newDealContents .dealList .best6 {
+    background-position: -350px -220px
+}
+
+div.newDealContents .dealList .best7 {
+    background-position: -420px -220px
+}
+
+div.newDealContents .dealList .best8 {
+    background-position: -490px -220px
+}
+
+div.newDealContents .dealList .best9 {
+    background-position: -560px -220px
+}
+
+div.newDealContents .dealList .overBack {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 334px;
+    height: 334px;
+    background: #fff;
+    opacity: .1;
+    filter: alpha(opacity=10);
+    z-index: 2
+}
+
+div.newDealContents .dealBottom {
+    position: relative;
+    height: 91px;
+    padding: 20px 0 0 20px
+}
+
+
+div.newDealContents .dealhead{
+	height: 55px;
+}
+
+
+div.newDealContents .dealhead .small_title_thum{
+	overflow: hidden;
+    position: relative;
+    height: 13px;
+    margin-bottom: 4px;
+    padding-top: 15px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #828284;
+    letter-spacing: -1px;	
+}
+
+div.newDealContents .dealhead .title {
+    width: 295px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    letter-spacing: -0.1em;
+    display: block;
+    margin-bottom: 4px;
+    line-height: 20px;
+}
+
+div.newDealContents .dealhead .title strong {
+    margin-right: 10px
+}
+
+div.newDealContents .dealBody {
+    position: relative;
+    height: 119px;
+    padding: 0 10px 0 13px;
+}
+
+div.newDealContents .dealBody .discount {
+    float: left;
+    margin: 4px 9px 0 0;
+    font-weight: bold;
+    font-size: 31px;
+    line-height: 25px;
+    color: #ff8fa7;
+    left:0
+}
+
+div.newDealContents .dealBody .discount .percent {
+    float: left;
+    margin: 4px 9px 0 0;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 30px;
+    color: #ff8fa7;
+    top: 5px;
+}
+
+div.newDealContents .dealBody .discount .dealList-MaximumDiscount {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 19px;
+    float: left
+}
+
+div.newDealContents .dealBody .discount .unit {
+    position: relative;
+    font-weight: normal;
+    font-size: 19px;
+}
+
+div.newDealContents .dealBody .discount .memePercent {
+    display: block;
+    width: 59px;
+    height: 16px;
+    margin-top: 7px;
+    background: url("/web/images/shopList/shopList_20170102.png") -370px -190px
+}
+
+.dealBody .dealPrice{
+	float:left;
+	position: relative;
+}
+
+.dealBody .dealPrice .fL{
+    margin-bottom: -15px;
+    position: relative;
+    top: 0px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.dealBody .dealPrice .price{
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 17px;
+    color: #333;
+}
+
+.dealBody .amount {
+    position: absolute;
+    top: 88px;
+    right: 15px;
+    font-size: 11px;
+    color: #999;
+    letter-spacing: -1px;
+}
+
+
+div.newDealContents .dealPrice .noDel {
+    margin-top: -2px
+}
+
+div.newDealContents .dealPrice .price .price_value {
+    display: inline-block;
+    float: left
+}
+
+div.newDealContents .dealPrice .price .unit, div.newDealContents .dealPrice .price .tilde {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    float: left
+}
+
+div.newDealContents .dealPrice .price .unit {
+    margin: 1px 0 0 2px
+}
+
+div.newDealContents .openNew {
+    display: block;
+    position: absolute;
+    bottom: 43px;
+    right: 49px;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -170px
+}
+
+div.newDealContents .openNewTag {
+    display: none;
+    position: absolute;
+    top: -23px;
+    left: -11px;
+    width: 47px;
+    height: 19px;
+    background: url("/web/images/shopList/shopList_20170102.png") -660px -170px
+}
+
+div.newDealContents .openNew:hover {
+    background: url("/web/images/shopList/shopList_20170102.png") -630px -170px
+}
+
+div.newDealContents .openNew:hover .openNewTag {
+    display: block
+}
+
+div.newDealContents .zzim:hover, div.newDealContents .zzimOn {
+    background: url("/web/images/shopList/shopList_20170102.png") -600px -140px
+}
+
+div.newDealContents .zzim:hover .zzimTag {
+    display: block
+}
+
+div.newDealContents .price {
+    margin-top: -3px;
+    font-family: tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555
+}
+
+div.newDealContents .price .unit {
+    font-family: '�룍��', Dotum;
+    font-size: 12px
+}
+
+div.newDealContents .dealFoot {
+    height: 30px;
+    margin: 0px;
+    padding: 0 9px 0 14px;
+    border-top: 1px solid #f0f0f0;
+}
+
+div.newDealContents .dealFoot .delivery_option_show{
+    float: left;
+    margin: 6px 4px 0 0;
+}
+
+div.newDealContents .dealFoot span {
+    display: inline-block;
+    zoom: 1;
+    padding: 0 3px;
+    float: left;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    height: 18px;
+    margin: 0 0 6px 0;
+    line-height: 18px;
+
+
+}
+
+div.newDealContents .dealFoot .freeIcon {
+    background: #71a6e2;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .businessIcon {
+    background: #45c1a2;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .mdIcon {
+    background: #ff7ba3;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .priceIcon {
+    background: #ff7758;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .sampleIcon {
+    background: #ce68da;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .memedeliveryIcon {
+    background: #fd49ab;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .giftIcon {
+    background: #2fa6d8;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .overseasIcon {
+    background: #874cd0;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .payDeliveryIcon {
+    background: #707c94;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .overFreeIcon {
+    background: #71a6e2;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .codIcon {
+    background: #ac5bff;
+    margin-right: 3px;
+}
+
+div.newDealContents .dealFoot .zzim_wishlist{
+	float: right;
+	padding-right:5px;
+}
+
+div.newDealContents .dealFoot .go_to_wishlist_ZZim{
+	display: inline-block;
+    position: relative;
+    width: 17px;
+    height: 16px;
+    padding: 7px 6px 6px;
+    z-index: 20;
+} 
+
+div.newDealContents .dealFoot .go_to_wishlist_ZZim .zzimCheck{
+	display: inline-block;
+    overflow: hidden;
+    width: 17px;
+    height: 16px;
+    background: url("/img/balgeure_icons.png") -121px -6px;
+    line-height: 200px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.newDealContents .starBox {
+    overflow: hidden;
+    margin-top: 6px
+}
+
+.newDealContents .starBox .amount {
+    display: block;
+    margin-top: 1px;
+    text-align: right;
+    font-size: 12px;
+    color: #555
+}
+
+.newDealContents .grade {
+    font-family: 'tahoma';
+    margin: -1px 6px 0 0;
+    font-weight: bold;
+    color: #555
+}
+

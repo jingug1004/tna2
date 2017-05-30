@@ -1,4 +1,15 @@
 @charset "UTF-8";
+
+.Bal_member_info .btn-example, .Bal_member_info .mypageBtn{
+	text-decoration: none;
+    color: #383d41;
+}
+
+.login_balgeure_btn .a:hover {
+	text-decoration: none;
+}
+
+
 .header-main-content-logo-center {
     width: 400px;
     margin: 110px auto 0;

@@ -1,3 +1,4 @@
+
 /* ################################################## searchBar begin */
 body .searchBar-wrap {
     line-height: normal;
@@ -32,11 +33,16 @@ div#header_v2 .searchBar-wrap ul li {
 .searchBar-inputBox-text {
     display: none; }
 
+.searchBar-inputBox-label{
+    width: 100% !important;
+}
+
+
 .searchBar-inputBox-input {
+	margin: 5px 0 0 5px;
     display: block;
-    width: 313px;
+    width: 300px;
     height: 27px;
-    text-indent: 20px;
     padding-left: 0;
     border: none !important;
     line-height: 28px;
@@ -75,9 +81,9 @@ input[type="text"]::-ms-clear {
     right: 0;
     display: block;
     width: 40px;
-    height: 27px;
+    height: 37px;
     text-indent: -99999px;
-    background: url("/img/balgeure_icons.png") no-repeat -122px 0px;
+    background: url(/img/header/header_icons.png) no-repeat -60px 7px;
     border: none;
     background-color: #ff8fa7;
     cursor: pointer; }

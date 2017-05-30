@@ -1,4 +1,4 @@
-#parse( "/main/header.vm" )
+#parse( "/main/header2.vm" )
 
 <!--2017/ 02/ 07 사이트 이동 경로 제거-->
 <!--<div class="lnb">-->

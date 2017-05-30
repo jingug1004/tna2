@@ -50,16 +50,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class MainServiceImpl implements MainService {
 
-//    @Autowired
-//    private Balgre client;
-
-//    BalgreClient client;
-
-//    @Before
-//    public void setup() {
-//        client = new BalgreClient();
-//    }
-
     @Override
     public MainResponse showMain() throws Exception {
 
@@ -73,7 +63,6 @@ public class MainServiceImpl implements MainService {
     @Override
     public void id(Product product) throws Exception {
         Long productId = 1L;
-//        Product response = client.getProductDetail(productId);
     }
 
 }

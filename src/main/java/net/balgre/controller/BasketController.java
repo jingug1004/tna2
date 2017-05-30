@@ -73,34 +73,17 @@ public class BasketController {
                                 Model model,
                                 BasketResponse basketResponse) throws Exception {
 
-        logger.info("lll~~~ Connect basketList GET 1 . lll~~~");
+        logger.debug("lll~~~ Connect basketList GET 1 . lll~~~");
 
         LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
 
         model.addAttribute("basketListGET", basketService.basketListGET(login.getToken()));
 
-        logger.info("lll~~~ model : " + model + " 2 .. lll~~~");
-//        logger.info("lll~~~ model : " + model.toString() + " 2 .. lll~~~");
+        logger.debug("lll~~~ model : " + model + " 2 .. lll~~~");
 
         return "/basket/basket";
 
     }
-
-//    @RequestMapping(value = "/basketAdd", method = RequestMethod.POST)
-//    @ResponseBody
-//    public BasketResponse basketPOST(HttpSession session,
-//                                     ProductItem productItem,
-//                                     Model model) throws Exception {
-//
-//        LoginDTO02 loginDTO02 = (LoginDTO02)session.getAttribute("login");
-//
-//        BasketResponse response = basketService.basketPOST(loginDTO02.getToken(), productItem);
-//
-//        logger.info("lll~~~ 장바구니 상품 등록 POST 2 .. token : " + loginDTO02.getToken() + " + response : " + response.toString() + " lll~~~");
-//
-//        return response;
-//
-//    }
 
     @RequestMapping(value = "/basketAdd", method = RequestMethod.POST)
     @ResponseBody
@@ -111,41 +94,19 @@ public class BasketController {
 
         LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
 
-//        logger.info("lll~~~ " + itemsVm[0] + " 1 . lll~~~");
-
         Map<String, String[]> param = request.getParameterMap();
         String[] itemsVm = request.getParameterValues("items[]");
 
-        System.out.println("lll~~~ Request? " + param + " 2 .. lll~~~");
-
         for (String item : itemsVm) {
-
-            param.get("items[" + item + "].price");
-
-            logger.info("lll~~~ " + param + " 3-a ... lll~~~");
-            logger.info("lll~~~ " + item + " 3 ... lll~~~");
-            logger.info("lll~~~ " + param.get("items[" + item + "].price")[0] + " 4 .... lll~~~");
-            logger.info("lll~~~ " + param.get("upDown[" + item + "].cnt")[0] + " 4 count .... lll~~~");
-
-//            int itemPrice = Integer.parseInt(param.get("items[" + item + "].price")[0].toString());
-
             int itemEach = Integer.parseInt(param.get("upDown[" + item + "].cnt")[0].toString());
             long itemId = Long.parseLong(item.toString());
 
             basketService.basketAddPOST(login.getToken(), /*itemPrice, */ itemId, itemEach);
-
-//            basketService.basketPOST();
-
-            logger.info("lll~~~ " + itemEach + " 5 each ..... lll~~~");
-            logger.info("lll~~~ " + itemId + " 5 price ..... lll~~~");
-
+            
+            logger.debug("ITEM ID : " + itemId);
+            logger.debug("ITEM COUNT : " + itemEach);
         }
 
-        System.out.println("lll~~~ " + request.getParameterMap() + " 5 ..... lll~~~");
-
-//        BasketResponse res = basketService.basketPOST(login.getToken(), items.length);
-
-//        return "redirect:/basket/basket";
         return "basketSucc";
     }
 
@@ -205,4 +166,24 @@ public class BasketController {
 
     }
 
+    
+    
+    @RequestMapping(value = "/deleteBsk", method = RequestMethod.POST)
+    @ResponseBody
+    public String basketDelete(HttpSession session,
+                             HttpServletRequest request,
+                             Model model,
+                             BasketResponse basketResponse,
+                             @RequestParam("basketId") String basket_id[]) throws Exception {
+
+        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+        
+        
+        for(String basketId:basket_id) {
+        	basketService.basketDeleteDELETE(login.getToken(), Long.parseLong(basketId));
+        }
+
+        return "delSucc";
+
+    }
 }

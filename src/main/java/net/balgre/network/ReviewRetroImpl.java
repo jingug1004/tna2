@@ -22,6 +22,8 @@ package net.balgre.network;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import net.balgre.domain.CommonResponse;
+import net.balgre.domain.MyReviewResponse;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
@@ -29,6 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by user on 2017-04-27 오후 2:24
@@ -77,6 +80,85 @@ public class ReviewRetroImpl {
         return null;
     }
 
+    public CommonResponse reviewAddPOST(String token, long order_id, List files, String content, int star, int skin_type) {
+        Call<CommonResponse> call = this.reviewRetro.reviewAddPOST(
+                token, "application/x-www-form-urlencoded", order_id, files, content, star, skin_type);
+        try {
+            Response<CommonResponse> response = call.execute();
+            if (response.isSuccessful()) {
+                System.out.println(response.body().toString());
+                System.out.println(response.body().getMessage());
+                return response.body();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public CommonResponse reviewDelDELETE(String token, long review_id) {
+        Call<CommonResponse> call = this.reviewRetro.reviewDelDELETE(
+                token, "application/x-www-form-urlencoded", review_id);
+        try {
+            Response<CommonResponse> response = call.execute();
+            if (response.isSuccessful()) {
+                System.out.println(response.body().toString());
+                System.out.println(response.body().getMessage());
+                return response.body();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public CommonResponse reviewLikePOST(String token, long review_id) {
+        Call<CommonResponse> call = this.reviewRetro.reviewLikePOST(
+                token, "application/x-www-form-urlencoded", review_id);
+        try {
+            Response<CommonResponse> response = call.execute();
+            if (response.isSuccessful()) {
+                System.out.println(response.body().toString());
+                System.out.println(response.body().getMessage());
+                return response.body();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public HashMap<String, Object> reviewListPageGET(String token, int page, long product_id, int photo, int sort) {
+        Call<HashMap<String, Object>> call = this.reviewRetro.reviewListPageGET(
+                token, "application/x-www-form-urlencoded", page, product_id, photo, sort);
+        try {
+            Response<HashMap<String, Object>> response = call.execute();
+            if (response.isSuccessful()) {
+                System.out.println(response.body().toString());
+//                System.out.println(response.body().getMessage());
+                return response.body();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public MyReviewResponse reviewMyreviewPOST(String token) {
+        Call<MyReviewResponse> call = this.reviewRetro.reviewMyreviewPOST(
+                token, "application/x-www-form-urlencoded");
+        try {
+            Response<MyReviewResponse> response = call.execute();
+            if (response.isSuccessful()) {
+                System.out.println(response.body().toString());
+//                System.out.println(response.body().getMessage());
+                return response.body();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 
 

@@ -68,7 +68,7 @@ public class ReviewController {
     public ResponseEntity<Map<String, Object>> listPage(@PathVariable("page") int page,
                                                         @RequestParam("product_id") long product_id,
                                                         @RequestParam("photo") int photo,
-                                                        @RequestParam("sort") int sort) {
+                                                        @RequestParam("sort") int sort) throws Exception{
 
         ResponseEntity<Map<String, Object>> entity = null;
 

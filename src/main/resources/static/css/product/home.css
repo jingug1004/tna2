@@ -93,82 +93,6 @@ div.newDealContents .dealList .caption strong {
     font-size: 1.5em
 }
 
-div.newDealContents .dealList .badge {
-    position: absolute;
-    top: 9px;
-    right: 11px
-}
-
-div.newDealContents .dealList .badge span {
-    width: 46px;
-    height: 46px;
-    display: block
-}
-
-div.newDealContents .dealList .badge .hot {
-    background: url("/web/images/shopList/shopList_20170102.png") 0 -40px
-}
-
-div.newDealContents .dealList .badge .md {
-    background: url("/web/images/shopList/shopList_20170102.png") -50px -40px
-}
-
-div.newDealContents .dealList .badge .memebox {
-    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
-}
-
-div.newDealContents .dealList .badge .best {
-    background: url("/web/images/shopList/shopList_20170102.png") -150px -40px
-}
-
-div.newDealContents .dealList .badge .new {
-    background: url("/web/images/shopList/shopList_20170102.png") -200px -40px
-}
-
-div.newDealContents .dealList .badge .threeTime {
-    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
-}
-
-div.newDealContents .dealList .badge .lowest {
-    background: url("/web/images/shopList/shopList_20170102.png") -250px -40px
-}
-
-div.newDealContents .dealList .badge .freebie {
-    background: url("/web/images/shopList/shopList_20170102.png") -300px -40px
-}
-
-div.newDealContents .dealList .badge .refund90 {
-    background: url("/web/images/shopList/shopList_20170102.png") -350px -40px
-}
-
-div.newDealContents .dealList .badge .lowest90 {
-    background: url("/web/images/shopList/shopList_20170102.png") -400px -40px
-}
-
-div.newDealContents .dealList .badge .sale369 {
-    background: url("/web/images/shopList/shopList_20170102.png") -100px -40px
-}
-
-div.newDealContents .dealList .badge .promotion {
-    background: url("/web/images/shopList/shopList_20170102.png") -500px -40px
-}
-
-div.newDealContents .dealList .badge .soldOutSoon {
-    background: url("/web/images/shopList/shopList_20170102.png") -550px -40px
-}
-
-div.newDealContents .dealList .badge .deal_0 {
-    background: url("/web/images/shopList/shopList_20170102.png") -600px -40px
-}
-
-div.newDealContents .dealList .badge .deal_100 {
-    background: url("/web/images/shopList/shopList_20170102.png") -650px -40px
-}
-
-div.newDealContents .dealList .badge .reservation {
-    background: url("/web/images/shopList/shopList_20170102.png") -700px -40px
-}
-
 div.newDealContents .dealList .bestTag {
     width: 62px;
     height: 62px;
@@ -228,29 +152,6 @@ div.newDealContents .dealList .overBack {
     z-index: 2
 }
 
-div.newDealContents .dealList .zzimBack {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 334px;
-    height: 334px;
-    background: #fff;
-    opacity: .69;
-    filter: alpha(opacity=70);
-    z-index: 0
-}
-
-div.newDealContents .dealList .zzimCheck {
-    position: absolute;
-    top: 103px;
-    left: 103px;
-    margin: 0 auto;
-    display: block;
-    width: 130px;
-    height: 130px;
-    background: url("/web/images/shopList/shopList_20170102.png") 0 -290px
-}
-
 div.newDealContents .dealBottom {
     position: relative;
     height: 91px;
@@ -259,12 +160,9 @@ div.newDealContents .dealBottom {
 
 div.newDealContents .dealhead .title {
     width: 295px;
-    overflow: hidden;
     font-size: 14px;
     font-weight: bold;
     color: #555;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     letter-spacing: -0.1em
 }
 
@@ -273,9 +171,9 @@ div.newDealContents .dealhead .title strong {
 }
 
 div.newDealContents .dealBody {
-    overflow: hidden;
-    position: absolute;
-    bottom: 9px
+    position: relative;
+    height: 120px;
+    padding: 0 10px 0 13px;
 }
 
 div.newDealContents .dealBody .discount {
@@ -283,7 +181,7 @@ div.newDealContents .dealBody .discount {
     font-family: Verdana;
     font-size: 20px;
     font-weight: bold;
-    color: #ff5073;
+    color: #ff8fa7;
     line-height: 29px
 }
 
@@ -311,16 +209,35 @@ div.newDealContents .dealBody .discount .memePercent {
     background: url("/web/images/shopList/shopList_20170102.png") -370px -190px
 }
 
-div.newDealContents .dealPrice {
-    margin-top: 6px
+.dealBody .dealPrice{
+	float:left;
 }
 
-div.newDealContents .dealPrice del {
-    margin: 0 8px 0 0;
-    font-family: tahoma;
-    font-size: 12px;
-    color: #898989
+.dealBody .dealPrice .fL{
+    margin-bottom: -15px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #aaa;
+    text-decoration: line-through;
 }
+
+.dealBody .dealPrice .price{
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333;
+}
+
+.dealBody .amount {
+    position: absolute;
+    top: 78px;
+    right: 15px;
+    font-size: 11px;
+    color: #999;
+    letter-spacing: -1px;
+}
+
 
 div.newDealContents .dealPrice .noDel {
     margin-top: -2px
@@ -340,17 +257,6 @@ div.newDealContents .dealPrice .price .unit, div.newDealContents .dealPrice .pri
 
 div.newDealContents .dealPrice .price .unit {
     margin: 1px 0 0 2px
-}
-
-div.newDealContents .zzim {
-    display: block;
-    position: absolute;
-    bottom: 43px;
-    right: 13px;
-    width: 26px;
-    height: 26px;
-    border: 0;
-    background: url("/web/images/shopList/shopList_20170102.png") -600px -110px
 }
 
 div.newDealContents .openNew {
@@ -409,7 +315,7 @@ div.newDealContents .price {
 }
 
 div.newDealContents .price .unit {
-    font-family: '돋움', Dotum;
+    font-family: '�룍��', Dotum;
     font-size: 12px
 }
 
@@ -511,68 +417,7 @@ div.newDealContents .coDelivery {
     color: #555
 }
 
-.newDealContents .star {
-    width: 83px
-}
 
-.newDealContents .star, .newDealContents .star em {
-    display: inline-block;
-    overflow: hidden;
-    height: 17px;
-    background: url("/web/images/myPage/star_v2.png") no-repeat 0 -16px;
-    vertical-align: middle
-}
-
-.newDealContents .star em {
-    background-position: 0 0;
-    line-height: 0;
-    font-size: 0;
-    vertical-align: top
-}
-
-.newDealContents .star {
-    margin-right: 6px
-}
-
-.newDealContents .star em.half {
-    width: 8px
-}
-
-.newDealContents .star em.one {
-    width: 17px
-}
-
-.newDealContents .star em.oneHalf {
-    width: 25px
-}
-
-.newDealContents .star em.two {
-    width: 34px
-}
-
-.newDealContents .star em.twoHalf {
-    width: 42px
-}
-
-.newDealContents .star em.three {
-    width: 51px
-}
-
-.newDealContents .star em.threeHalf {
-    width: 59px
-}
-
-.newDealContents .star em.four {
-    width: 68px
-}
-
-.newDealContents .star em.fourHalf {
-    width: 76px
-}
-
-.newDealContents .star em.five {
-    width: 83px
-}
 
 div.timerBanner {
     height: 149px;
@@ -827,13 +672,13 @@ div.mdChoiceWrap .mdChoicdBox {
     height: 567px
 }
 
-div.bestDealWrap .bestDeal {
-    margin-bottom: 15px;
+.realtimeBestItemWrap .realtime_bestItem {
+    margin: 40px 0 10px;
     width: 410px;
-    height: 20px;
-    background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150713144033_WmhvSpwu0f.png")
+    height: 30px;
+    background: url("/img/balgeure_icons.png") no-repeat -828px -461px;
+    
 }
-
 div.dealContents .bestItem, div.newDealContents .bestItem, div.bestDealWrap .bestItem {
     margin-bottom: 15px;
     width: 410px;
@@ -956,7 +801,7 @@ div.promotionBanner .page {
 div.homeMainBannerWrap {
     margin-bottom: 44px;
     width: 100%;
-    background: #fff
+    background: #fffee9;
 }
 
 div.homeMainBannerWrap .homeBannerLiner {

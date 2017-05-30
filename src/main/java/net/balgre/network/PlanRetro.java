@@ -7,17 +7,18 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
+
 public interface PlanRetro {
-	
-	/*plan list by minho*/
+
+    /*plan list by minho*/
     @GET("/api/plan/{page}")
     Call<PagePlan> planList (
-        @Path("page") int page
+            @Path("page") int page
     );
-    
+
     /*plan detail by minho*/
     @GET("/api/plan")
     Call<Plan> planDetail (
-        @Query("pid") long pid
+            @Query("pid") long pid
     );
 }

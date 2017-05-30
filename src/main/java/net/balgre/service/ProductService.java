@@ -21,14 +21,9 @@
 
 package net.balgre.service;
 
-import java.util.List;
+import net.balgre.domain.*;
 
-import net.balgre.domain.BestResponse;
-import net.balgre.domain.CategoryResponse;
-import net.balgre.domain.PageProduct;
-import net.balgre.domain.Product;
-import net.balgre.domain.ProductResponse;
-import net.balgre.domain.ProductTimeSale;
+import java.util.List;
 
 /**
  * Created by user on 2017-04-21 오전 9:30
@@ -72,7 +67,7 @@ public interface ProductService {
     public BestResponse newProduct2();
     
     /*category by minho*/
-    public CategoryResponse category2();
+    public CategoryResponse categoryList2();
     
     /*sub category by minho*/
     public CategoryResponse subCategory2(long menu_id);

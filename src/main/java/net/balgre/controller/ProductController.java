@@ -51,9 +51,6 @@ import net.balgre.service.ProductService;
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
  *  2017/04/21  김진국          최초 생성 
- *  2017/05/18  김진국          "민호씨! 남의 소스를 함부로 지워주지 말아주세요. 주석 처리해서 댓글남겨주시기 바래요."
- *                             "읽었다면 여기 밑에 글 남겨주시기 바래요. ^^"
- *  </pre>               네?? 어떤 소스요?
  */
 
 @Controller
@@ -136,7 +133,7 @@ public class ProductController {
     
     /*time sale list by minho*/
     @RequestMapping(value = "/bg/timeSale", method = RequestMethod.GET)
-    public String timeSaleList(Model model) {
+    public String timeSaleList(Model model) throws Exception{
     	
     	model.addAttribute("Res", service.timeSaleList2());
     	
@@ -148,7 +145,7 @@ public class ProductController {
     
     /*balgeure box by minho*/
     @RequestMapping(value = "/bg/box", method = RequestMethod.GET)
-    public String balgeureBox(Model model) {
+    public String balgeureBox(Model model) throws Exception{
     	
     	model.addAttribute("Res", service.balgeureBox2());
     	
@@ -160,7 +157,7 @@ public class ProductController {
     
     /*new product by minho*/
     @RequestMapping(value = "/bg/new", method = RequestMethod.GET)
-    public String newProduct(Model model) {
+    public String newProduct(Model model) throws Exception{
     	
     	BestResponse res = service.newProduct2();
     	

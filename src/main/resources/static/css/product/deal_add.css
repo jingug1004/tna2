@@ -64,30 +64,30 @@ a.dealLink:hover {
     letter-spacing: 0
 }
 
-.memeTab {
+.blageureTab {
     position: relative;
     background: #f9f9fa;
     *zoom: 1;
     height: 45px;
 }
 
-.memeTab:before, .memeTab:after {
+.balgeureTab:before, .balgeureTab:after {
     display: table;
     content: "";
     line-height: 0
 }
 
-.memeTab:after {
+.balgeureTab:after {
     clear: both
 }
 
-.memeTab .memeTabInner {
+.balgeureTab .balgeureTabInner {
     position: relative;
     width: 1080px;
     margin: 0 auto;
 }
 
-.memeTab li {
+.balgeureTab li {
     float: left;
     width: 20%;
     height: 45px;
@@ -96,21 +96,25 @@ a.dealLink:hover {
 
 
 
-.memeTab .tabItem {
+.balgeureTab .tabItem {
     position: relative;
     display: block;
     padding: 11px 0 13px 0;
     color: #8a8a8a;
     font-size: 14px;
     font-weight: bold;
-    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림┝', Gulim, sans-serif;
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0;
     cursor: pointer;
 }
 
-.memeTab .tabArr {
+.balgeureTab .tabItem a{
+    color: #8a8a8a;
+}
+
+.balgeureTab .tabArr {
     display: none;
     position: absolute;
     top: 100%;
@@ -121,19 +125,20 @@ a.dealLink:hover {
     background: url("/img/balgeure_icons.png") no-repeat -815px -112px;
 }
 
-.memeTab .on {
+.balgeureTab .on {
+    background-color: #ff8fa7;
+    height: 21px;
+}
+
+.balgeureTab .on a{
     color: #fff;
     background-color: #ff8fa7;
     height: 21px;
 }
 
-.memeTab .on .tabArr {
+.balgeureTab .on .tabArr {
     display: block
 }
-
-.contentsDetail {
-	display: none;
-	}
 
 .contentsDetail.on {
 	display: block;
@@ -252,87 +257,6 @@ a.dealLink:hover {
     background: #ac5bff
 }
 
-.dealDescription .badge {
-    position: absolute;
-    top: 10px;
-    right: 10px
-}
-
-.dealDescription .badge span {
-    width: 60px;
-    height: 60px;
-    display: block;
-    background: url("/img/balgeure_icons.png") no-repeat;
-}
-
-.dealDescription .badge .none {
-    display: none;
-    background: #000
-}
-
-.dealDescription .badge .hot {
-    background-position: 0 0
-}
-
-.dealDescription .badge .md {
-    background-position: -70px 0
-}
-
-.dealDescription .badge .memebox {
-    background-position: -1px -43px;
-}
-
-.dealDescription .badge .best {
-    background-position: -100px -43px;
-}
-
-.dealDescription .badge .new {
-    background-position: -71px -43px;
-}
-
-.dealDescription .badge .threeTime {
-    background-position: -140px 0
-}
-
-.dealDescription .badge .lowest {
-    background-position: -350px 0
-}
-
-.dealDescription .badge .freebie {
-    background-position: -420px 0
-}
-
-.dealDescription .badge .refund90 {
-    background-position: -490px 0
-}
-
-.dealDescription .badge .lowest90 {
-    background-position: -560px 0
-}
-
-.dealDescription .badge .sale369 {
-    background-position: -630px 0
-}
-
-.dealDescription .badge .promotion {
-    background-position: -700px 0
-}
-
-.dealDescription .badge .soldOutSoon {
-    background-position: -1px -43px;
-}
-
-.dealDescription .badge .deal_0 {
-    background-position: -840px 0
-}
-
-.dealDescription .badge .deal_100 {
-    background-position: -910px 0
-}
-
-.dealDescription .badge .reservation {
-    background-position: -980px 0
-}
 
 .infoTitle, .infoPrice {
     font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif

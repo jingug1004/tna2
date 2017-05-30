@@ -37,26 +37,26 @@ public class MyPageController {
 	private PaymentService paymentService;
 	
 	@Autowired
-	UserInfoService userService;
+	private UserInfoService userService;
 	
 	@Autowired
-	PointService pointService;
+	private PointService pointService;
 	
 	@Autowired
-	CouponService couponService;
+	private CouponService couponService;
 	
 	
 	/*go myPage by minho*/
-	@RequestMapping("/my/index")
+	@RequestMapping("/index")
 	public String myPage(Model model, HttpSession session, String token, String page) {
 		
 		LoginDTO02 login = (LoginDTO02)session.getAttribute("login");
 		
-		UserResponse res = userService.getUserInfo2(login.getToken());
+//		UserResponse res = userService.getUserInfo2(login.getToken());
 		
-		User user = res.getUser();
+//		User uid = res.getUser();
 		
-		logger.info("[MyPageController] 서비스에서 받은 res : " + res);
+//		logger.info("[MyPageController] 서비스에서 받은 res : " + res);
 		
 		if (StringUtils.isEmpty(page)) {
 			page = String.valueOf(0);
@@ -65,12 +65,15 @@ public class MyPageController {
 		CouponUserResponse cu = couponService.myCouponList2(login.getToken());
 		int cu2 = cu.getCouponUserList().size();
 		
-		model.addAttribute("user", user);
+//		model.addAttribute("user", uid);
 		model.addAttribute("point", pointService.myPoint2(login.getToken(), Integer.parseInt(page)));
 		model.addAttribute("Coupon", cu2);
 		logger.info("[Coupon] : " + cu2);
+		
 		return "/myPage/myPage";
 	}
+	
+
 	@RequestMapping(value = "/order", method = RequestMethod.GET)
 	public String order(HttpSession session, Model model) {
 		LoginDTO02 login = (LoginDTO02)session.getAttribute("login");

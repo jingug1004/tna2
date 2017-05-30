@@ -3,7 +3,7 @@ div.newSlideBanner {
     height: 330px;
     overflow: hidden;
     margin-bottom: 50px;
-    font-family: 'ë‹ì›€', Dotum, 'êµ´ë¦¼', Gulim, "AppleSDGothic neo", AppleGothic, sans-serif;
+    font-family: '챘혧�뮨р�뷜궗', Dotum, '챗쨉쨈챘짝쩌', Gulim, "AppleSDGothic neo", AppleGothic, sans-serif;
     letter-spacing: 0
 }
 
@@ -361,29 +361,6 @@ div.newDealContents .dealList .overBack {
     z-index: 2
 }
 
-div.newDealContents .dealList .zzimBack {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 334px;
-    height: 334px;
-    background: #fff;
-    opacity: .69;
-    filter: alpha(opacity=70);
-    z-index: 0
-}
-
-div.newDealContents .dealList .zzimCheck {
-    position: absolute;
-    top: 103px;
-    left: 103px;
-    margin: 0 auto;
-    display: block;
-    width: 130px;
-    height: 130px;
-    background: url("/web/images/shopList/shopList_20170102.png") 0 -290px
-}
-
 div.newDealContents .dealBottom {
     position: relative;
     height: 91px;
@@ -392,12 +369,9 @@ div.newDealContents .dealBottom {
 
 div.newDealContents .dealhead .title {
     width: 295px;
-    overflow: hidden;
     font-size: 14px;
     font-weight: bold;
     color: #555;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     letter-spacing: -0.1em
 }
 
@@ -406,9 +380,9 @@ div.newDealContents .dealhead .title strong {
 }
 
 div.newDealContents .dealBody {
-    overflow: hidden;
-    position: absolute;
-    bottom: 9px
+    position: relative;
+    height: 120px;
+    padding: 0 10px 0 13px;
 }
 
 div.newDealContents .dealBody .discount {
@@ -475,16 +449,6 @@ div.newDealContents .dealPrice .price .unit {
     margin: 1px 0 0 2px
 }
 
-div.newDealContents .zzim {
-    display: block;
-    position: absolute;
-    bottom: 43px;
-    right: 13px;
-    width: 26px;
-    height: 26px;
-    border: 0;
-    background: url("/web/images/shopList/shopList_20170102.png") -600px -110px
-}
 
 div.newDealContents .openNew {
     display: block;
@@ -497,15 +461,7 @@ div.newDealContents .openNew {
     background: url("/web/images/shopList/shopList_20170102.png") -600px -170px
 }
 
-div.newDealContents .zzimTag {
-    display: none;
-    position: absolute;
-    top: -23px;
-    left: -6px;
-    width: 38px;
-    height: 19px;
-    background: url("/web/images/shopList/shopList_20170102.png") -630px -150px
-}
+
 
 div.newDealContents .openNewTag {
     display: none;
@@ -542,7 +498,7 @@ div.newDealContents .price {
 }
 
 div.newDealContents .price .unit {
-    font-family: 'ë‹ì›€', Dotum;
+    font-family: '챘혧�뮨р�뷜궗', Dotum;
     font-size: 12px
 }
 

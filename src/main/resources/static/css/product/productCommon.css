@@ -163,7 +163,7 @@ div.lnb .lnbTextBox li {
 }
 
 div.lnb .lnbTextBox a:hover, div.lnb .lnbTextBox .on {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div.lnb .relatedResult {
@@ -214,46 +214,35 @@ div#header_v2 ul li {
     float: left
 }
 
-div#header_v2 div.gnbTop {
-    margin: 4px 0 10px 0;
-    width: 100%;
-    background: #fff;
+div#header_v2 .gnbTop {
+    position: relative;
+    width: 1080px;
+    height:16px;
+    margin: 5px auto 0;
     color: #555;
     font-size: 12px;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
 }
 
-div#header_v2 div.gnbTopInner {
-    width: 1080px;
-    height: 36px
+.link_text_onRightside_top{
+	position: absolute;
+    right: 0;
 }
 
-div#header_v2 div.gnbTopInner .count .pText {
-    margin: 1px 5px 0 0;
-    font-family: 'Tahoma';
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0;
-    color: #ff5073
-}
 
-div#header_v2 div.gnbTopInner .count .text {
-    margin-top: 1px
-}
-
-div#header_v2 div.gnbTopInner .appText {
+div#header_v2 .gnbTop .appText {
     margin: 1px 0 0 5px;
     display: block;
     font-size: 12px
 }
 
-div#header_v2 div.gnbTopInner .link {
+div#header_v2 .gnbTop .link {
     display: block;
     cursor: pointer;
     float: left
 }
 
-div#header_v2 div.gnbTopInner .bar {
+div#header_v2 .gnbTop .bar {
     display: block;
     margin: 1px 10px 0 10px;
     color: #e1e1e1;
@@ -261,28 +250,36 @@ div#header_v2 div.gnbTopInner .bar {
     font-size: 15px
 }
 
-div#header_v2 div.gnbTopInner .bar_half {
+div#header_v2 .gnbTop .bar_half {
     display: block;
     margin: 3px 5px 0 5px;
     color: #e1e1e1;
     float: left
 }
 
-div#header_v2 div.gnbTopInner .appDownIcon {
+div#header_v2 .gnbTop .email_to_sumIcon {
+    margin-top: 3px;
+    display: block;
+    width: 23px;
+    height: 16px;
+    background: url("/img/header/header_icons.png") no-repeat -1px -1px;
+}
+
+div#header_v2 .gnbTop .appDownIcon {
     margin-top: 3px;
     display: block;
     width: 13px;
     height: 16px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -230px -40px
+    background: url("/img/header/header_icons.png") no-repeat -29px -2px;
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .li {
+div#header_v2 .gnbTop ul.gnbTopRight .li {
     position: absolute;
     font-size: 11px;
     z-index: 5
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .navi {
+div#header_v2 .gnbTop ul.gnbTopRight .navi {
     margin-top: 1px;
     display: block;
     height: 27px;
@@ -290,7 +287,7 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .navi {
     float: left
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .arrow {
+div#header_v2 .gnbTop ul.gnbTopRight .arrow {
     display: block;
     width: 6px;
     height: 3px;
@@ -298,7 +295,7 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .arrow {
     background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -210px -60px
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .gnbTopRight_bar {
+div#header_v2 .gnbTop ul.gnbTopRight .gnbTopRight_bar {
     display: block;
     margin: 1px 10px 0;
     color: #e1e1e1;
@@ -306,20 +303,20 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .gnbTopRight_bar {
     font-size: 15px
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .top_cartIcon {
+div#header_v2 .gnbTop ul.gnbTopRight .top_cartIcon {
     margin: 3px 2px 0 0;
     width: 17px;
     height: 14px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -250px -40px
+    background: url("/img/balgeure_icons.png") -196px -4px
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .cart_count {
+div#header_v2 .gnbTop ul.gnbTopRight .cart_count {
     padding: 0 6px;
     margin: 1px 0 0 4px;
     display: inline-block;
     zoom: 1;
     height: 18px;
-    background: #ff5073;
+    background: #ff8fa7;
     color: #fff;
     text-align: center;
     border-radius: 9px;
@@ -328,7 +325,7 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .cart_count {
     line-height: 18px
 }
 
-div#header_v2 div.gnbTopInner ul.gnbTopRight .loginBtn {
+div#header_v2 .gnbTop ul.gnbTopRight .loginBtn {
     margin: 1px 10px 0 0;
     width: 56px;
     height: 19px;
@@ -339,15 +336,15 @@ div#header_v2 div.gnbTopInner ul.gnbTopRight .loginBtn {
     -moz-border-radius: 3px
 }
 
-div#header_v2 div.gnbTopInner .hover:hover {
+div#header_v2 .gnbTop .hover:hover {
     position: relative
 }
 
-div#header_v2 div.gnbTopInner .hover {
+div#header_v2 .gnbTop .hover {
     position: relative
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over {
+div#header_v2 .gnbTop .topMenu_over {
     display: none;
     position: absolute;
     width: 105px;
@@ -356,45 +353,295 @@ div#header_v2 div.gnbTopInner .topMenu_over {
     z-index: 5
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over .topMenu_over_inner {
+div#header_v2 .gnbTop .topMenu_over .topMenu_over_inner {
     width: 100px;
     background: #fff;
     border: 1px solid #f9f9fa
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over ul {
+div#header_v2 .gnbTop .topMenu_over ul {
     display: block;
     padding: 12px 10px
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over li {
+div#header_v2 .gnbTop .topMenu_over li {
     float: none;
     margin-bottom: 8px
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over a {
+div#header_v2 .gnbTop .topMenu_over a {
     color: #555
 }
 
-div#header_v2 div.gnbTopInner .topMenu_over a:hover {
-    color: #ff5073
+div#header_v2 .gnbTop .topMenu_over a:hover {
+    color: #ff8fa7
 }
 
-div#header_v2 div.gnbTopInner div.cs {
+div#header_v2 .gnbTop div.cs {
     width: 96px
 }
 
-div#header_v2 div.gnbTopInner div.cs .topMenu_over_inner {
+div#header_v2 .gnbTop div.cs .topMenu_over_inner {
     width: 91px
 }
 
-div#header_v2 div.gnbTopInner .hover:hover .topMenu_over {
+div#header_v2 .gnbTop .hover:hover .topMenu_over {
     display: block
 }
 
+
+.topRollingBannerWrap{
+	position: absolute;
+    top: 18px;
+    right: 0;
+    height: 30px;
+    font-size: 12px;
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
+}
+
+.right_side_gnb_menu li{
+	position: relative;
+    float: left;
+    width: 75px;
+    margin-left: 30px;
+}
+
+.right_side_gnb_menu .memberlogin_icons{
+	width: 85px !important;
+}
+
+.right_side_gnb_menu li .Right_txt{
+	letter-spacing: -1px;
+    display: block;
+    line-height: 100%;
+}
+
+
+.right_side_gnb_menu #MyCart_icon_header{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -18px -35px;
+    margin-top: 4px;
+}
+
+.right_side_gnb_menu #MyCart_icon_header:hover {
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -75px -35px;
+    cursor: pointer;
+}
+
+#MyCart_icon_header a, #MyWishlist_icon_header a{
+	position: absolute;
+    top: 0;
+    left: 30px;
+    width: 45px;
+    text-align: center;
+}
+
+.right_side_gnb_menu #MyWishlist_icon_header{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -16px -72px;
+    margin-top: 4px;
+}
+
+.right_side_gnb_menu #MyWishlist_icon_header:hover{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -71px -72px;
+    cursor: pointer;
+}
+
+.right_side_gnb_menu #balgeure_member_login_btn{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -16px -108px;
+    margin-top: 4px;
+}
+
+.right_side_gnb_menu #balgeure_member_login_btn:hover{
+	width: 30px;
+    height: 30px;
+    background: url(/img/header/header_icons.png) no-repeat -74px -108px;
+    cursor: pointer;
+}
+
+
+#balgeure_member_login_btn .Bal_member_info{
+	position: absolute;
+    top: 0;
+    left: 30px;
+    width: 55px;
+}
+
+.quantity-txt{
+	border-radius: 10px;
+    padding: 4px 5px 4px 5px;
+    line-height: 60%;
+    background: #ff8fa7;
+    color: #FFF;
+    display: inline-block;
+}
+
+
+/**  로그인 메뉴 Drop Down CSS  Start  **/
+
+
+.sub_balgeure_member_login{
+	position: relative;
+    top: 42px;
+    right: 93px;
+    width: 178px;
+    padding:0 0 0 8px;
+    margin: 0;
+
+}
+
+
+.sub_balgeure_member_login .small_contents{
+	padding: 10px 18px;
+    border: 1px solid #757672;
+    background: #FFF;
+}
+
+.login_balgeure_btn li{
+	margin: 0;
+	padding: 0;
+	float: none !important;
+}
+
+.login_balgeure_btn .loginBtn{
+	width: 128px;
+    text-align: center;
+    color: #FFF !important;
+    background: #ff8fa7;
+    display: inline-block;
+    line-height: 31px !important;
+    height: 33px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.Bal_member_info .loginBtn .logintxt, .Bal_member_info .mypageBtn .mypagetxt{
+	line-height:18px;
+	letter-spacing: -1px;
+    display: block;
+}
+
+.sub_balgeure_member_login .upside_arrow_on_dropdown{
+	background: url(/img/header/header_icons.png) no-repeat -101px -6px;
+	position: absolute;
+    top: -7px;
+    left: 101px;
+    width: 13px;
+    height: 8px;
+    font-size: 0;
+    display: inline-block;
+}
+
+
+.small_contents .joining_balgeure{
+	background: #afafaf;
+    width: 128px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF !important;
+    margin-top: 1px;
+    display: inline-block;
+    line-height: 33px !important;
+    height: 33px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+}
+
+.small_contents .joining_balgeure span{
+	color: #000 !important;
+    display: inline-block;
+    line-height: 34px !important;
+    height: 33px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.small_contents .mypage_dropdown_menu{
+	border-top: 1px solid #ff8fa7;
+    border-bottom: 1px dotted #dfdfdf;
+    padding: 7px 0;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    margin-top: 1px;
+    font-weight: bold;
+    display: block;
+}
+
+.After_login{
+	margin-top:5px;
+}
+
+.afterlogin_dropdown_menu{
+	text-align: center;
+    padding: 3px 0;
+    position: relative;
+    float: none !important;
+}
+
+.afterlogin_dropdown_menu a{
+	color: #333;
+    text-align: center;
+}
+
+.logintype_on_balgeure{
+	position: relative;
+    height: 18px;
+    padding-top: 2px;
+    margin: 10px 0;
+    display: block;
+    color: #555;
+}
+
+.logintype_on_balgeure .login_icons{
+	position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.logintype_on_balgeure .login_icons a{
+	width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    display: inline-block;
+}
+
+.logintype_on_balgeure .login_icons .naver{
+	background: url(/img/header/header_icons.png) no-repeat -4px -185px;
+	text-indent: -9999em;
+}
+
+.logintype_on_balgeure .login_icons .facebook{
+	background: url(/img/header/header_icons.png) no-repeat -31px -185px;
+	text-indent: -9999em;
+}
+
+.logintype_on_balgeure .login_icons .kakaotalk{
+	background: url(/img/header/header_icons.png) no-repeat -58px -185px;
+	text-indent: -9999em;
+}
+
+
+/**       로그인 메뉴 Drop Down CSS  End     **/
+
+
 div#header_v2 div.gnbLogoOuter {
     width: 100%;
-    background: url("//img2.memebox.com/static/contents/img/upload/image_20160607105330_9hztwMIrVc.png") repeat-x
 }
 
 div#header_v2 div.gnbLogoOuter.fix {
@@ -405,27 +652,32 @@ div#header_v2 div.gnbLogoOuter.fix {
 }
 
 div#header_v2 div.gnbLogo {
-    position: relative;
+	position: relative;
     width: 1080px;
-    height: 72px;
-    z-index: 4
+    height: 70px;
+    padding-top: 0;
+    border-bottom: none !important;
+    margin: 0 auto;
+    z-index: 10000;
 }
 
-div#header_v2 div.gnbLogo a.memeLogo {
+div#header_v2 div.gnbLogo a.balgeureLogo {
     width: 174px;
-    height: 41px;
-    margin-top: 9px;
+    height: 48px;
+    margin-top: 5px;
     display: block;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -180px -180px no-repeat
+    background: url("/img/balgeure_icons.png") -132px -532px no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-div#header_v2 div.gnbLogo .topRollingBannerWrap .topRollingArrow {
-    position: absolute;
-    top: 9px;
-    display: block;
-    width: 16px;
-    height: 16px;
-    cursor: pointer
+
+.topRollingBannerWrap{
+	position: absolute;
+    top: 18px;
+    right: 0;
+    height: 30px;
 }
 
 div#header_v2 div.gnbLogo .topRollingBannerWrap .pre {
@@ -591,7 +843,7 @@ div#header_v2 .categoryWrap {
 }
 
 div#header_v2 .mainMenu.on, div#header_v2 .mainMenu:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .fixCategory {
@@ -646,7 +898,7 @@ div#header_v2 .fixCategory:hover .bar {
 }
 
 div#header_v2 .fixCategory:hover a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .fixCategory_side {
@@ -761,14 +1013,14 @@ div#header_v2 .depth_3_box {
     left: 180px;
     width: 296px;
     background: #fff;
-    border: 1px solid #ff5073;
+    border: 1px solid #ff8fa7;
     border-left: 1px solid #dbdbdb;
     font-size: 13px;
     overflow: hidden
 }
 
 div#header_v2 .depth_2_li:hover .depth_2, div#header_v2 .depth_3_li:hover .depth_3 {
-    background: #ff5073;
+    background: #ff8fa7;
     color: #fff
 }
 
@@ -837,7 +1089,7 @@ div#header_v2 .categoryTable a {
 }
 
 div#header_v2 .categoryTable a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .categoryTable, div#header_v2 .brandTable {
@@ -879,7 +1131,7 @@ div#header_v2 .brandTable td {
 }
 
 div#header_v2 .brandTable a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .category-block .top, div#header_v2 .category-block-content .top {
@@ -902,7 +1154,7 @@ div#header_v2 .category-block a {
 }
 
 div#header_v2 .category-block a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#header_v2 .category-block-content {
@@ -1007,11 +1259,13 @@ div#header_v2 .lnbClose {
 }
 
 .newSearchWrap {
-    position: absolute;
-    top: 9px;
-    left: 260px;
-    width: 460px;
-    z-index: 1
+    position: relative;
+    padding-top: 8px;
+    left: 0;
+    width: 376px;
+    margin: 0 auto;
+    z-index: 1;
+    text-align: center;
 }
 
 .imMeMe-stick-floating-banner {
@@ -1213,7 +1467,7 @@ a[disabled] {
 }
 
 .pText {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 .blackBtn {
@@ -1436,7 +1690,7 @@ div.myView .amount {
     float: right;
     font-size: 13px;
     font-weight: bold;
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div.myView .viewList {
@@ -1484,7 +1738,7 @@ div.myView span.fL {
 }
 
 div.myView .on {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div.myView .pre, div.myView .next {
@@ -1535,7 +1789,7 @@ div.myView .title {
 }
 
 div.myView .price {
-    color: #ff5073;
+    color: #ff8fa7;
     font-weight: bold
 }
 
@@ -1752,7 +2006,7 @@ div#footer .landing li:hover .icon_05 {
 }
 
 div#footer .landing li:hover a {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#footer .footerList_01 {
@@ -2069,7 +2323,7 @@ div#footer .globalSelect a {
 }
 
 div#footer .globalSelect a:hover {
-    color: #ff5073
+    color: #ff8fa7
 }
 
 div#footer .globalIcon {
@@ -2242,7 +2496,7 @@ div.newSlideBanner .price del {
 
 div.newSlideBanner .price span {
     font-family: "tahoma";
-    color: #ff5073;
+    color: #ff8fa7;
     font-size: 15px;
     font-weight: bold
 }
@@ -2287,7 +2541,7 @@ div.newDealContents .dealList li {
 }
 
 div.newDealContents .dealList li:hover {
-    border: 1px solid #ff5073
+    border: 1px solid #ff8fa7;
 }
 
 div.newDealContents .dealList .overBorder {
@@ -2537,7 +2791,7 @@ div.newDealContents .dealBody .discount {
     font-family: Verdana;
     font-size: 20px;
     font-weight: bold;
-    color: #ff5073;
+    color: #ff8fa7;
     line-height: 29px
 }
 
@@ -2988,7 +3242,7 @@ div.arrayWrap .bar {
 }
 
 div.arrayWrap li.on a {
-    color: #ff5073;
+    color: #ff8fa7;
     font-weight: bold
 }
 
@@ -3036,7 +3290,7 @@ div.newDealContents .dealList li {
 }
 
 div.newDealContents .dealList li:hover {
-    border: 1px solid #ff5073
+    border: 1px solid #ff8fa7
 }
 
 div.newDealContents .dealList .overBorder {
@@ -3286,7 +3540,7 @@ div.newDealContents .dealBody .discount {
     font-family: Verdana;
     font-size: 20px;
     font-weight: bold;
-    color: #ff5073;
+    color: #ff8fa7;
     line-height: 29px
 }
 
@@ -3737,7 +3991,7 @@ div.arrayWrap .bar {
 }
 
 div.arrayWrap li.on a {
-    color: #ff5073;
+    color: #ff8fa7;
     font-weight: bold
 }
 
@@ -4053,7 +4307,7 @@ div.homeMainBanner .next {
     overflow: hidden; }
 
 /* �긽�뭹 �씠誘몄�, 踰녹� */
-.deal_type_horizontal_square_best_10 .memebox-deal-image-wrap {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-image-wrap {
     float: left;
     position: relative;
     left: -141px;
@@ -4064,7 +4318,7 @@ div.homeMainBanner .next {
     margin-right: -133px; }
 
 /* ���씠癒� */
-.deal_type_horizontal_square_best_10 .memebox-deal-timer {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-timer {
     position: absolute;
     top: 0;
     left: 0;
@@ -4072,7 +4326,7 @@ div.homeMainBanner .next {
     height: 100%;
     display: block; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-timer::before {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-timer::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -4082,7 +4336,7 @@ div.homeMainBanner .next {
     content: "";
     opacity: .2; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-timer-value {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-timer-value {
     display: block;
     position: absolute;
     top: 50%;
@@ -4098,7 +4352,7 @@ div.homeMainBanner .next {
     font-weight: bold; }
 
 /* �젥�궧 */
-.deal_type_horizontal_square_best_10 .memebox-deal-ranking {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-ranking {
     position: absolute;
     top: 20px;
     left: 110px;
@@ -4115,39 +4369,39 @@ div.homeMainBanner .next {
     text-align: center;
     color: #8a8a8a; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-ranking-1 {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-ranking-1 {
     background-position: 0 0;
     font-weight: bold;
     color: #fff; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-ranking-2 {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-ranking-2 {
     background-position: 0 -50px;
     font-weight: bold;
     color: #fff; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-ranking-3 {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-ranking-3 {
     background-position: 0 -100px;
     font-weight: bold;
     color: #fff; }
 
 /* �뒪�떚而� */
-.deal_type_horizontal_square_best_10 .memebox-deal-sticker {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-sticker {
     display: none; }
 
 /* �긽�뭹 �씠誘몄� */
-.deal_type_horizontal_square_best_10 .memebox-deal-image {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-image {
     display: block;
     width: auto;
     height: 100%; }
 
 /* �긽�뭹�씠由� */
-.deal_type_horizontal_square_best_10 .memebox-deal-name {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-name {
     position: relative;
     display: block;
     height: 40px;
     padding-top: 5px; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-name-main {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-name-main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -4162,18 +4416,18 @@ div.homeMainBanner .next {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-name-sub {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-name-sub {
     display: none; }
 
 /* �긽�뭹 �쁽�옱 �긽�깭 �몴�떆 */
-.deal_type_horizontal_square_best_10 .memebox-deal-current-status {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-current-status {
     margin-top: 5px;
     font-size: 0;
     line-height: 13px;
     overflow: hidden; }
 
 /* 蹂� 由щ럭 */
-.deal_type_horizontal_square_best_10 .memebox-deal-review-star {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-review-star {
     position: relative;
     top: 1px;
     display: inline-block;
@@ -4188,7 +4442,7 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 -20px; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-review-star-value {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-review-star-value {
     display: block;
     overflow: hidden;
     height: 12px;
@@ -4200,11 +4454,11 @@ div.homeMainBanner .next {
     background-position: 0 -35px; }
 
 /* �룊�젏 */
-.deal_type_horizontal_square_best_10 .memebox-deal-review-average {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-review-average {
     display: none; }
 
 /* 由щ럭 �닔 */
-.deal_type_horizontal_square_best_10 .memebox-deal-review-count {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-review-count {
     font-style: normal;
     margin-top: 1px;
     text-align: right;
@@ -4212,70 +4466,70 @@ div.homeMainBanner .next {
     color: #555; }
 
 /* �뙋留ㅼ셿猷� */
-.deal_type_horizontal_square_best_10 .memebox-deal-sold-out {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-sold-out {
     display: none; }
 
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 媛�寃� 愿��젴 �궡�슜 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_horizontal_square_best_10 .memebox-deal-price-wrap {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-wrap {
     position: relative;
     margin: 5px 0 0 0;
     padding: 0;
     font-size: 0;
     line-height: 1.0; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-price-discount,
-.deal_type_horizontal_square_best_10 .memebox-deal-price-origin {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-discount,
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-origin {
     margin-right: 5px; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-price-info,
-.deal_type_horizontal_square_best_10 .memebox-deal-price-value,
-.deal_type_horizontal_square_best_10 .memebox-deal-price-from {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-info,
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-value,
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-from {
     position: relative;
     font-size: 14px;
     font-style: normal;
     line-height: 17px; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-price-unit,
-.deal_type_horizontal_square_best_10 .memebox-deal-price-info {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-unit,
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-info {
     margin-right: 3px; }
 
 /* �긽�뭹 �븷�씤 */
-.deal_type_horizontal_square_best_10 .memebox-deal-price-discount {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-discount {
     margin-right: 8px;
     font-weight: bold;
-    color: #ff5073; }
+    color: #ff8fa7; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-price-discount .memebox-deal-price-unit {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-discount .balgeurebox-deal-price-unit {
     font-size: 11px; }
 
 /* �긽�뭹 珥덇린 媛�寃� */
-.deal_type_horizontal_square_best_10 .memebox-deal-price-origin {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-origin {
     display: none; }
 
 /* �긽�뭹 泥�援� 媛�寃� */
-.deal_type_horizontal_square_best_10 .memebox-deal-price-result {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-result {
     font-size: 0; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-price-result .memebox-deal-price-info {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-result .balgeurebox-deal-price-info {
     font-weight: bold;
-    color: #ff5073;
+    color: #ff8fa7;
     font-size: 14px; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-price-result .memebox-deal-price-value,
-.deal_type_horizontal_square_best_10 .memebox-deal-price-result .memebox-deal-price-unit {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-result .balgeurebox-deal-price-value,
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-result .balgeurebox-deal-price-unit {
     font-style: normal;
     color: #555555;
     font-size: 14px; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-price-result .memebox-deal-price-from {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-price-result .balgeurebox-deal-price-from {
     font-size: 14px; }
 
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 諛곗넚�궡�슜  �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_horizontal_square_best_10 .memebox-deal-delivery {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-delivery {
     display: none; }
 
 /* �긽�뭹 留곹겕 �� action */
-.deal_type_horizontal_square_best_10 .memebox-deal-link {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-link {
     display: block;
     position: absolute;
     top: 0;
@@ -4284,11 +4538,11 @@ div.homeMainBanner .next {
     height: 100%;
     text-indent: -9999px; }
 
-.deal_type_horizontal_square_best_10:hover .memebox-deal-link {
+.deal_type_horizontal_square_best_10:hover .balgeurebox-deal-link {
     /*background-color: #fff;*/
     /*opacity: .1;*/ }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-sell-stop {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-sell-stop {
     position: absolute;
     top: 0;
     left: 0;
@@ -4302,10 +4556,10 @@ div.homeMainBanner .next {
     z-index: 1; }
 
 /* 李쒗븯湲� */
-.deal_type_horizontal_square_best_10 .memebox-deal-poke-wrap {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-poke-wrap {
     display: none; }
 
-.deal_type_horizontal_square_best_10 .memebox-deal-poke-checked {
+.deal_type_horizontal_square_best_10 .balgeurebox-deal-poke-checked {
     display: none; }
 @charset "UTF-8";
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
@@ -4317,7 +4571,7 @@ div.homeMainBanner .next {
     overflow: hidden; }
 
 /* �긽�뭹 �씠誘몄�, 踰녹� */
-.deal_type_horizontal_square_10 .memebox-deal-image-wrap {
+.deal_type_horizontal_square_10 .balgeurebox-deal-image-wrap {
     float: left;
     position: relative;
     left: -152px;
@@ -4328,7 +4582,7 @@ div.homeMainBanner .next {
     margin-right: -133px; }
 
 /* ���씠癒� */
-.deal_type_horizontal_square_10 .memebox-deal-timer {
+.deal_type_horizontal_square_10 .balgeurebox-deal-timer {
     position: absolute;
     top: 0;
     left: 0;
@@ -4336,7 +4590,7 @@ div.homeMainBanner .next {
     height: 100%;
     display: block; }
 
-.deal_type_horizontal_square_10 .memebox-deal-timer::before {
+.deal_type_horizontal_square_10 .balgeurebox-deal-timer::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -4346,7 +4600,7 @@ div.homeMainBanner .next {
     content: "";
     opacity: .2; }
 
-.deal_type_horizontal_square_10 .memebox-deal-timer-value {
+.deal_type_horizontal_square_10 .balgeurebox-deal-timer-value {
     display: block;
     position: absolute;
     top: 50%;
@@ -4362,7 +4616,7 @@ div.homeMainBanner .next {
     font-weight: bold; }
 
 /* �젥�궧 */
-.deal_type_horizontal_square_10 .memebox-deal-ranking {
+.deal_type_horizontal_square_10 .balgeurebox-deal-ranking {
     display: none;
     position: absolute;
     top: 6px;
@@ -4381,21 +4635,21 @@ div.homeMainBanner .next {
     color: #ffffff; }
 
 /* �뒪�떚而� */
-.deal_type_horizontal_square_10 .memebox-deal-sticker {
+.deal_type_horizontal_square_10 .balgeurebox-deal-sticker {
     display: none; }
 
 /* �긽�뭹 �씠誘몄� */
-.deal_type_horizontal_square_10 .memebox-deal-image {
+.deal_type_horizontal_square_10 .balgeurebox-deal-image {
     display: block;
     width: auto;
     height: 100%; }
 
 /* �긽�뭹�씠由� */
-.deal_type_horizontal_square_10 .memebox-deal-name {
+.deal_type_horizontal_square_10 .balgeurebox-deal-name {
     height: 56px;
     padding-top: 17px; }
 
-.deal_type_horizontal_square_10 .memebox-deal-name-main {
+.deal_type_horizontal_square_10 .balgeurebox-deal-name-main {
     display: block;
     color: #555;
     font-size: 15px;
@@ -4407,7 +4661,7 @@ div.homeMainBanner .next {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical; }
 
-.deal_type_horizontal_square_10 .memebox-deal-name-sub {
+.deal_type_horizontal_square_10 .balgeurebox-deal-name-sub {
     display: block;
     margin-top: 3px;
     color: #AAA;
@@ -4419,14 +4673,14 @@ div.homeMainBanner .next {
     overflow: hidden; }
 
 /* �긽�뭹 �쁽�옱 �긽�깭 �몴�떆 */
-.deal_type_horizontal_square_10 .memebox-deal-current-status {
+.deal_type_horizontal_square_10 .balgeurebox-deal-current-status {
     margin-top: 2px;
     font-size: 0;
     line-height: 13px;
     overflow: hidden; }
 
 /* 蹂� 由щ럭 */
-.deal_type_horizontal_square_10 .memebox-deal-review-star {
+.deal_type_horizontal_square_10 .balgeurebox-deal-review-star {
     position: relative;
     top: 1px;
     display: inline-block;
@@ -4441,7 +4695,7 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 -20px; }
 
-.deal_type_horizontal_square_10 .memebox-deal-review-star-value {
+.deal_type_horizontal_square_10 .balgeurebox-deal-review-star-value {
     display: block;
     overflow: hidden;
     height: 12px;
@@ -4453,11 +4707,11 @@ div.homeMainBanner .next {
     background-position: 0 -35px; }
 
 /* �룊�젏 */
-.deal_type_horizontal_square_10 .memebox-deal-review-average {
+.deal_type_horizontal_square_10 .balgeurebox-deal-review-average {
     display: none; }
 
 /* 由щ럭 �닔 */
-.deal_type_horizontal_square_10 .memebox-deal-review-count {
+.deal_type_horizontal_square_10 .balgeurebox-deal-review-count {
     font-style: normal;
     margin-top: 1px;
     text-align: right;
@@ -4465,64 +4719,64 @@ div.homeMainBanner .next {
     color: #555; }
 
 /* �뙋留ㅼ셿猷� */
-.deal_type_horizontal_square_10 .memebox-deal-sold-out {
+.deal_type_horizontal_square_10 .balgeurebox-deal-sold-out {
     display: none; }
 
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 媛�寃� 愿��젴 �궡�슜 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_horizontal_square_10 .memebox-deal-price-wrap {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-wrap {
     position: relative;
     margin: 10px 0 0 0;
     padding: 0;
     font-size: 0;
     line-height: 1.0; }
 
-.deal_type_horizontal_square_10 .memebox-deal-price-discount,
-.deal_type_horizontal_square_10 .memebox-deal-price-origin {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-discount,
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-origin {
     margin-right: 5px; }
 
-.deal_type_horizontal_square_10 .memebox-deal-price-info,
-.deal_type_horizontal_square_10 .memebox-deal-price-value,
-.deal_type_horizontal_square_10 .memebox-deal-price-unit,
-.deal_type_horizontal_square_10 .memebox-deal-price-from {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-infomemebox-deal-price-value,
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-value,
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-unit,
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-from {
     position: relative;
     font-size: 14px;
     font-style: normal;
     line-height: 17px; }
 
-.deal_type_horizontal_square_10 .memebox-deal-price-info {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-info {
     margin-right: 3px; }
 
 /* �긽�뭹 �븷�씤 */
-.deal_type_horizontal_square_10 .memebox-deal-price-discount {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-discount {
     margin-right: 5px;
     font-weight: bold;
-    color: #ff5073; }
+    color: #ff8fa7; }
 
-.deal_type_horizontal_square_10 .memebox-deal-price-discount .memebox-deal-price-unit {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-discount .balgeurebox-deal-price-unit {
     font-size: 11px; }
 
 /* �긽�뭹 珥덇린 媛�寃� */
-.deal_type_horizontal_square_10 .memebox-deal-price-origin {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-origin {
     display: none; }
 
 /* �긽�뭹 泥�援� 媛�寃� */
-.deal_type_horizontal_square_10 .memebox-deal-price-result .memebox-deal-price-info {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-result .balgeurebox-deal-price-info {
     font-weight: bold;
-    color: #ff5073; }
+    color: #ff8fa7; }
 
-.deal_type_horizontal_square_10 .memebox-deal-price-result .memebox-deal-price-unit {
+.deal_type_horizontal_square_10 .balgeurebox-deal-price-result .balgeurebox-deal-price-unit {
     font-style: normal; }
 
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 諛곗넚�궡�슜  �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_horizontal_square_10 .memebox-deal-delivery {
+.deal_type_horizontal_square_10 .balgeurebox-deal-delivery {
     position: absolute;
     right: 0;
     bottom: 0;
     text-align: right;
     font-size: 0; }
 
-.deal_type_horizontal_square_10 .memebox-deal-delivery-shipping,
-.deal_type_horizontal_square_10 .memebox-deal-delivery-type {
+.deal_type_horizontal_square_10 .balgeurebox-deal-delivery-shipping,
+.deal_type_horizontal_square_10 .balgeurebox-deal-delivery-type {
     display: inline-block;
     height: 12px;
     padding: 0 3px;
@@ -4530,16 +4784,16 @@ div.homeMainBanner .next {
     line-height: 12px;
     overflow: hidden; }
 
-.deal_type_horizontal_square_10 .memebox-deal-delivery-shipping {
+.deal_type_horizontal_square_10 .balgeurebox-deal-delivery-shipping {
     color: #5895da;
     background-color: #f1f6fc; }
 
-.deal_type_horizontal_square_10 .memebox-deal-delivery-type {
-    color: #ff5073;
+.deal_type_horizontal_square_10 .balgeurebox-deal-delivery-type {
+    color: #ff8fa7;
     background-color: #ffebf1; }
 
 /* �긽�뭹 留곹겕 �� action */
-.deal_type_horizontal_square_10 .memebox-deal-link {
+.deal_type_horizontal_square_10 .balgeurebox-deal-link {
     display: block;
     position: absolute;
     top: 0;
@@ -4548,11 +4802,11 @@ div.homeMainBanner .next {
     height: 100%;
     text-indent: -9999px; }
 
-.deal_type_horizontal_square_10:hover .memebox-deal-link {
+.deal_type_horizontal_square_10:hover .balgeurebox-deal-link {
     /*background-color: #fff;*/
     /*opacity: .1;*/ }
 
-.deal_type_horizontal_square_10 .memebox-deal-sell-stop {
+.deal_type_horizontal_square_10 .balgeurebox-deal-sell-stop {
     position: absolute;
     top: 0;
     left: 0;
@@ -4566,10 +4820,10 @@ div.homeMainBanner .next {
     z-index: 1; }
 
 /* 李쒗븯湲� */
-.deal_type_horizontal_square_10 .memebox-deal-poke-wrap {
+.deal_type_horizontal_square_10 .balgeurebox-deal-poke-wrap {
     display: none; }
 
-.deal_type_horizontal_square_10 .memebox-deal-poke-checked {
+.deal_type_horizontal_square_10 .balgeurebox-deal-poke-checked {
     display: none; }
 @charset "UTF-8";
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
@@ -4578,20 +4832,20 @@ div.homeMainBanner .next {
     position: relative; }
 
 /* �긽�뭹 �씠誘몄�, 踰녹� */
-.deal_type_vertical_circle_4 .memebox-deal-image-wrap {
+.deal_type_vertical_circle_4 .balgeurebox-deal-image-wrap {
     position: relative;
     margin-bottom: 8px; }
 
-.deal_type_vertical_circle_4 .memebox-deal-timer {
+.deal_type_vertical_circle_4 .balgeurebox-deal-timer {
     display: none; }
 
-.deal_type_vertical_circle_4 .memebox-deal-timer:before {
+.deal_type_vertical_circle_4 .balgeurebox-deal-timer:before {
     display: none; }
 
-.deal_type_vertical_circle_4 .memebox-deal-timer-value {
+.deal_type_vertical_circle_4 .balgeurebox-deal-timer-value {
     display: none; }
 
-.deal_type_vertical_circle_4 .memebox-deal-ranking {
+.deal_type_vertical_circle_4 .balgeurebox-deal-ranking {
     display: block;
     position: absolute;
     top: 6%;
@@ -4612,13 +4866,13 @@ div.homeMainBanner .next {
     color: #ffffff;
     z-index: 1; }
 
-.deal_type_vertical_circle_4 .memebox-deal-image {
+.deal_type_vertical_circle_4 .balgeurebox-deal-image {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 50%; }
 
-.deal_type_vertical_circle_4 .memebox-deal-image-wrap:after {
+.deal_type_vertical_circle_4 .balgeurebox-deal-image-wrap:after {
     /* �씠誘몄� �븞履쎌쑝濡� 洹몃┝�옄 �슚怨� 二쇨린 */
     position: absolute;
     display: block;
@@ -4631,15 +4885,15 @@ div.homeMainBanner .next {
     box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(0, 0, 0, 0.2);
     box-sizing: border-box; }
 
-.deal_type_vertical_circle_4 .memebox-deal-sticker {
+.deal_type_vertical_circle_4 .balgeurebox-deal-sticker {
     display: none; }
 
 /* �긽�뭹�씠由� */
-.deal_type_vertical_circle_4 .memebox-deal-name {
+.deal_type_vertical_circle_4 .balgeurebox-deal-name {
     text-align: center;
     min-height: 48px; }
 
-.deal_type_vertical_circle_4 .memebox-deal-name-main {
+.deal_type_vertical_circle_4 .balgeurebox-deal-name-main {
     display: block;
     width: 100%;
     font-size: 13px;
@@ -4653,16 +4907,16 @@ div.homeMainBanner .next {
     -webkit-box-orient: vertical;
     font-weight: normal; }
 
-.deal_type_vertical_circle_4 .memebox-deal-name-sub {
+.deal_type_vertical_circle_4 .balgeurebox-deal-name-sub {
     display: none; }
 
 /* �긽�뭹 �쁽�옱 �긽�깭 �몴�떆 */
-.deal_type_vertical_circle_4 .memebox-deal-current-status {
+.deal_type_vertical_circle_4 .balgeurebox-deal-current-status {
     display: none;
     position: relative;
     padding: 0 20px; }
 
-.deal_type_vertical_circle_4 .memebox-deal-review-star {
+.deal_type_vertical_circle_4 .balgeurebox-deal-review-star {
     display: inline-block;
     overflow: hidden;
     height: 14px;
@@ -4672,7 +4926,7 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 -14px; }
 
-.deal_type_vertical_circle_4 .memebox-deal-review-star-value {
+.deal_type_vertical_circle_4 .balgeurebox-deal-review-star-value {
     display: inline-block;
     overflow: hidden;
     height: 14px;
@@ -4682,23 +4936,23 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 0; }
 
-.deal_type_vertical_circle_4 .memebox-deal-review-average {
+.deal_type_vertical_circle_4 .balgeurebox-deal-review-average {
     font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
     font-weight: bold;
     color: #555; }
 
-.deal_type_vertical_circle_4 .memebox-deal-review-count {
+.deal_type_vertical_circle_4 .balgeurebox-deal-review-count {
     font-style: normal;
     margin-top: 1px;
     text-align: right;
     font-size: 12px;
     color: #555; }
 
-.deal_type_vertical_circle_4 .memebox-deal-sold-out {
+.deal_type_vertical_circle_4 .balgeurebox-deal-sold-out {
     display: none; }
 
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 媛�寃� 愿��젴 �궡�슜 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_vertical_circle_4 .memebox-deal-price-wrap {
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-wrap {
     position: relative;
     margin: 2px 0 0 0;
     padding: 0;
@@ -4706,14 +4960,14 @@ div.homeMainBanner .next {
     line-height: 1.0;
     text-align: center; }
 
-.deal_type_vertical_circle_4 .memebox-deal-price-discount,
-.deal_type_vertical_circle_4 .memebox-deal-price-origin {
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-discount,
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-origin {
     margin-right: 5px; }
 
-.deal_type_vertical_circle_4 .memebox-deal-price-info,
-.deal_type_vertical_circle_4 .memebox-deal-price-value,
-.deal_type_vertical_circle_4 .memebox-deal-price-unit,
-.deal_type_vertical_circle_4 .memebox-deal-price-from {
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-info,
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-value,
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-unit,
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-from {
     position: relative;
     font-size: 15px;
     font-style: normal;
@@ -4721,29 +4975,29 @@ div.homeMainBanner .next {
     line-height: 18px; }
 
 /* �긽�뭹 �븷�씤 */
-.deal_type_vertical_circle_4 .memebox-deal-price-discount {
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-discount {
     display: none; }
 
 /* �긽�뭹 珥덇린 媛�寃� */
-.deal_type_vertical_circle_4 .memebox-deal-price-origin {
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-origin {
     display: none; }
 
 /* �긽�뭹 泥�援� 媛�寃� */
-.deal_type_vertical_circle_4 .memebox-deal-price-result .memebox-deal-price-info {
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-result .balgeurebox-deal-price-info {
     display: none; }
 
-.deal_type_vertical_circle_4 .memebox-deal-price-result .memebox-deal-price-unit {
+.deal_type_vertical_circle_4 .balgeurebox-deal-price-result .balgeurebox-deal-price-unit {
     font-style: normal; }
 
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 諛곗넚�궡�슜  �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_vertical_circle_4 .memebox-deal-delivery {
+.deal_type_vertical_circle_4 .balgeurebox-deal-delivery {
     display: none;
     position: relative;
     padding-left: 8px;
     height: 33px;
     background: #f0f0f0; }
 
-.deal_type_vertical_circle_4 .memebox-deal-delivery-shipping {
+.deal_type_vertical_circle_4 .balgeurebox-deal-delivery-shipping {
     display: inline-block;
     background: #71a6e2;
     color: #fff;
@@ -4752,11 +5006,11 @@ div.homeMainBanner .next {
     text-align: center;
     padding: 0 3px; }
 
-.deal_type_vertical_circle_4 .memebox-deal-info {
+.deal_type_vertical_circle_4 .balgeurebox-deal-info {
     position: relative; }
 
 /* �긽�뭹 留곹겕 �� action */
-.deal_type_vertical_circle_4 .memebox-deal-link {
+.deal_type_vertical_circle_4 .balgeurebox-deal-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -4765,16 +5019,16 @@ div.homeMainBanner .next {
     text-indent: -9999px;
     display: block; }
 
-.deal_type_vertical_circle_4:hover .memebox-deal-link {
+.deal_type_vertical_circle_4:hover .balgeurebox-deal-link {
     border: none;
     /*background-color: #fff;*/
     /*opacity: .1;*/ }
 
 /* 李쒗븯湲� */
-.deal_type_vertical_circle_4 .memebox-deal-poke-wrap {
+.deal_type_vertical_circle_4 .balgeurebox-deal-poke-wrap {
     display: none; }
 
-.deal_type_vertical_circle_4 .memebox-deal-poke {
+.deal_type_vertical_circle_4 .balgeurebox-deal-poke {
     position: absolute;
     bottom: 40px;
     right: 10px;
@@ -4788,10 +5042,10 @@ div.homeMainBanner .next {
     background-image: url("/package/components/deal/v.1.1.0/mobile/_images/_poke.png");
     background-repeat: no-repeat; }
 
-.deal_type_vertical_circle_4 .memebox-deal-poke:hover {
+.deal_type_vertical_circle_4 .balgeurebox-deal-poke:hover {
     background-position: 0 -50px; }
 
-.deal_type_vertical_circle_4 .memebox-deal-poke-checked {
+.deal_type_vertical_circle_4 .balgeurebox-deal-poke-checked {
     display: none; }
 @charset "UTF-8";
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
@@ -4801,13 +5055,13 @@ div.homeMainBanner .next {
     line-height: 16px; }
 
 /* �긽�뭹 �씠誘몄�, 踰녹� */
-.deal_type_vertical_wide_2 .memebox-deal-image-wrap {
+.deal_type_vertical_wide_2 .balgeurebox-deal-image-wrap {
     position: relative;
     overflow: hidden;
     margin-bottom: 9px;
     background-color: #fff; }
 
-.deal_type_vertical_wide_2 .memebox-deal-image-wrap:after {
+.deal_type_vertical_wide_2 .balgeurebox-deal-image-wrap:after {
     /* �씠誘몄� �븞履쎌쑝濡� 洹몃┝�옄 �슚怨� 二쇨린 */
     position: absolute;
     display: block;
@@ -4819,32 +5073,32 @@ div.homeMainBanner .next {
     box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(0, 0, 0, 0.2);
     box-sizing: border-box; }
 
-.deal_type_vertical_wide_2 .memebox-deal-timer {
+.deal_type_vertical_wide_2 .balgeurebox-deal-timer {
     display: none; }
 
-.deal_type_vertical_wide_2 .memebox-deal-timer:before {
+.deal_type_vertical_wide_2 .balgeurebox-deal-timer:before {
     display: none; }
 
-.deal_type_vertical_wide_2 .memebox-deal-timer-value {
+.deal_type_vertical_wide_2 .balgeurebox-deal-timer-value {
     display: none; }
 
-.deal_type_vertical_wide_2 .memebox-deal-ranking {
+.deal_type_vertical_wide_2 .balgeurebox-deal-ranking {
     display: none; }
 
-.deal_type_vertical_wide_2 .memebox-deal-image {
+.deal_type_vertical_wide_2 .balgeurebox-deal-image {
     display: block;
     width: 100%;
     margin: 0 auto;
     height: auto; }
 
-.deal_type_vertical_wide_2 .memebox-deal-sticker {
+.deal_type_vertical_wide_2 .balgeurebox-deal-sticker {
     display: none; }
 
 /* �긽�뭹�씠由� */
-.deal_type_vertical_wide_2 .memebox-deal-name-main {
+.deal_type_vertical_wide_2 .balgeurebox-deal-name-main {
     display: none; }
 
-.deal_type_vertical_wide_2 .memebox-deal-name-sub {
+.deal_type_vertical_wide_2 .balgeurebox-deal-name-sub {
     display: block;
     width: 100%;
     height: 32px;
@@ -4860,12 +5114,12 @@ div.homeMainBanner .next {
     -webkit-box-orient: vertical; }
 
 /* �긽�뭹 �쁽�옱 �긽�깭 �몴�떆 */
-.deal_type_vertical_wide_2 .memebox-deal-current-status {
+.deal_type_vertical_wide_2 .balgeurebox-deal-current-status {
     display: none;
     position: relative;
     padding: 0 20px; }
 
-.deal_type_vertical_wide_2 .memebox-deal-review-star {
+.deal_type_vertical_wide_2 .balgeurebox-deal-review-star {
     display: inline-block;
     overflow: hidden;
     height: 14px;
@@ -4875,7 +5129,7 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 -14px; }
 
-.deal_type_vertical_wide_2 .memebox-deal-review-star-value {
+.deal_type_vertical_wide_2 .balgeurebox-deal-review-star-value {
     display: inline-block;
     overflow: hidden;
     height: 14px;
@@ -4885,37 +5139,37 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 0; }
 
-.deal_type_vertical_wide_2 .memebox-deal-review-average {
+.deal_type_vertical_wide_2 .balgeurebox-deal-review-average {
     font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
     font-weight: bold;
     color: #555; }
 
-.deal_type_vertical_wide_2 .memebox-deal-review-count {
+.deal_type_vertical_wide_2 .balgeurebox-deal-review-count {
     font-style: normal;
     margin-top: 1px;
     text-align: right;
     font-size: 12px;
     color: #555; }
 
-.deal_type_vertical_wide_2 .memebox-deal-sold-out {
+.deal_type_vertical_wide_2 .balgeurebox-deal-sold-out {
     display: none; }
 
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 媛�寃� 愿��젴 �궡�슜 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_vertical_wide_2 .memebox-deal-price-wrap {
+.deal_type_vertical_wide_2 .balgeurebox-deal-price-wrap {
     display: none; }
 
 /* �긽�뭹 �븷�씤 */
 /* �긽�뭹 珥덇린 媛�寃� */
 /* �긽�뭹 泥�援� 媛�寃� */
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 諛곗넚�궡�슜  �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_vertical_wide_2 .memebox-deal-delivery {
+.deal_type_vertical_wide_2 .balgeurebox-deal-delivery {
     display: none;
     position: relative;
     padding-left: 8px;
     height: 33px;
     background: #f0f0f0; }
 
-.deal_type_vertical_wide_2 .memebox-deal-delivery-shipping {
+.deal_type_vertical_wide_2 .balgeurebox-deal-delivery-shipping {
     display: inline-block;
     background: #71a6e2;
     color: #fff;
@@ -4924,11 +5178,11 @@ div.homeMainBanner .next {
     text-align: center;
     padding: 0 3px; }
 
-.deal_type_vertical_wide_2 .memebox-deal-info {
+.deal_type_vertical_wide_2 .balgeurebox-deal-info {
     position: relative; }
 
 /* �긽�뭹 留곹겕 �� action */
-.deal_type_vertical_wide_2 .memebox-deal-link {
+.deal_type_vertical_wide_2 .balgeurebox-deal-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -4937,16 +5191,16 @@ div.homeMainBanner .next {
     text-indent: -9999px;
     display: block; }
 
-.deal_type_vertical_wide_2:hover .memebox-deal-link {
+.deal_type_vertical_wide_2:hover .balgeurebox-deal-link {
     border: none;
     /*background-color: #fff;*/
     /*opacity: .1;*/ }
 
 /* 李쒗븯湲� */
-.deal_type_vertical_wide_2 .memebox-deal-poke-wrap {
+.deal_type_vertical_wide_2 .balgeurebox-deal-poke-wrap {
     display: none; }
 
-.deal_type_vertical_wide_2 .memebox-deal-poke {
+.deal_type_vertical_wide_2 .balgeurebox-deal-poke {
     position: absolute;
     bottom: 40px;
     right: 10px;
@@ -4960,26 +5214,35 @@ div.homeMainBanner .next {
     background-image: url("/package/components/deal/v.1.1.0/mobile/_images/_poke.png");
     background-repeat: no-repeat; }
 
-.deal_type_vertical_wide_2 .memebox-deal-poke:hover {
+.deal_type_vertical_wide_2 .balgeurebox-deal-poke:hover {
     background-position: 0 -50px; }
 
-.deal_type_vertical_wide_2 .memebox-deal-poke-checked {
+.deal_type_vertical_wide_2 .balgeurebox-deal-poke-checked {
     display: none; }
+    
+    
 @charset "UTF-8";
-/* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_vertical_square_amount5_10 {
+
+.deal_type_vertical_square_amount_col_3 {
     position: relative;
-    margin: 10px; }
+    display: block;}
 
 /* �긽�뭹 �씠誘몄�, 踰녹� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-image-wrap {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-image-wrap {
     position: relative;
     text-align: center;
     overflow: hidden;
-    margin-bottom: 16px; }
+}
+
+.balgeurebox_list_body{
+	position: relative;
+    height: 120px;
+    padding: 0 10px 0 13px;
+}
+
 
 /* ���씠癒� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-timer {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-timer {
     position: absolute;
     top: 0;
     left: 0;
@@ -4987,7 +5250,7 @@ div.homeMainBanner .next {
     height: 100%;
     display: block; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-timer::after {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-timer::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -4997,7 +5260,7 @@ div.homeMainBanner .next {
     content: "";
     opacity: .1; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-timer-value {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-timer-value {
     display: block;
     position: absolute;
     top: 50%;
@@ -5011,523 +5274,174 @@ div.homeMainBanner .next {
     color: #fff;
     font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif; }
 
-/* �젥�궧 */
-.deal_type_vertical_square_amount5_10 .memebox-deal-ranking {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 42px;
-    height: 61px;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_bast_ranking_bg.png");
-    background-repeat: no-repeat;
-    background-position: 0 -200px;
-    font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 3.5;
-    text-align: center;
-    color: #fff;
-    z-index: 1; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-ranking.memebox-deal-ranking-1,
-.deal_type_vertical_square_amount5_10 .memebox-deal-ranking.memebox-deal-ranking-2,
-.deal_type_vertical_square_amount5_10 .memebox-deal-ranking.memebox-deal-ranking-3 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 52px;
-    height: 61px;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_bast_ranking_bg.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 3.2;
-    text-align: center;
-    color: #fff;
-    z-index: 1; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-ranking-2 {
-    background-position: 0 -100px; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-ranking-3 {
-    background-position: 0 -100px; }
+/* 발그레 박스 페이지 */
 
-/* �뒪�떚而� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-sticker {
-    display: none; }
+.balgeurebox_page_Topbanner_img{
+	margin: 15px 0 30px;
+}
 
-/* �긽�뭹 �씠誘몄� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-image {
+
+
+/* 신상품 리스트 페이지  */
+
+.NewProductList_page_TopBanner{
+	margin: 15px 0 30px;
+}
+
+
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-image {
     width: 100%;
     height: auto; }
 
 /* �긽�뭹�씠由� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-name {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-name {
     font-family: tahoma, HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-name-main {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-name-main {
     display: block;
-    height: 35px;
-    font-size: 13px;
+    height: 40px;
+    font-size: 16px;
     font-weight: bold;
-    color: #333;
-    line-height: 16px;
-    padding: 0 11px;
+    color: #555;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical; }
+    letter-spacing: -0.1em;  
+    }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-name-sub {
-    display: none; }
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-name-sub {
+    overflow: hidden;
+    position: relative;
+    height: 17px;
+    margin-bottom: 4px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #828284;
+    letter-spacing: -1px;
+}
 
-/* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 媛�寃� 愿��젴 �궡�슜 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-wrap {
+
+
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-price-wrap {
     position: relative;
     height: 20px;
     margin: 0;
-    padding: 0 11px; }
+    margin-top: 6px;
+}
 
-/* �븷�씤媛�寃� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-discount {
-    margin-right: 5px;
+
+.discount_percentage_timeSale{
+	float: left;
+    margin: 4px 9px 0 0;
     font-weight: bold;
-    color: #ff5073;
-    font-size: 0;
-    line-height: 1.0;
-    font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif; }
+    font-size: 31px;
+    line-height: 25px;
+    color: #ff8fa7;
+    left: 0;
+}
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-discount .memebox-deal-price-info {
-    padding-right: 2px;
-    font-size: 14px; }
+.timeSale_Product_Price{
+	float: left;
+}
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-discount .memebox-deal-price-value {
-    font-size: 14px; }
+.timeSale_Product_Price .origin-price_timeSale{
+	position: relative;
+    top: 0px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #aaa;
+    text-decoration: line-through;
+}
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-discount .memebox-deal-price-unit {
-    font-size: 11px; }
+.deal_type_vertical_square_amount_col_3 .discount_percentage_timeSale .balgeurebox-deal-price-value {
+    float: left;
+    font-weight: bold;
+    font-size: 40px;
+    color: #ff8fa7;
+    top: 5px; }
 
-/* 怨듦툒媛�寃� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-origin {
-    display: none;
-    color: #898989;
-    height: 20px;
+.deal_type_vertical_square_amount_col_3 .discount_percentage_timeSale .balgeurebox-deal-price-unit {
+    font-size: 19px;
+    position: relative;
     font-weight: normal;
-    font-size: 0;
-    line-height: 1.0; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-origin .memebox-deal-price-info {
-    font-size: 12px; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-origin .memebox-deal-price-value {
-    font-size: 12px;
-    text-decoration: line-through; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-origin .memebox-deal-price-unit {
-    font-size: 12px;
-    font-style: normal; }
+    }
 
 /* �뙋留ㅺ�寃� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-result {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-price-result {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 17px;
     color: #333;
-    font-size: 0;
-    line-height: 1.0;
+    position: relative;
+    top: 2px;
     font-family: tahoma, HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-result .memebox-deal-price-info {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-price-result .balgeurebox-deal-price-info {
     margin-right: 5px;
     font-size: 13px;
     font-weight: bold;
-    color: #ff5073; }
+    color: #ff8fa7; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-result .memebox-deal-price-value {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-price-result .balgeurebox-deal-price-value {
     font-size: 13px; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-result .memebox-deal-price-unit {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-price-result .balgeurebox-deal-price-unit {
     font-size: 13px;
     font-style: normal; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-price-result .memebox-deal-price-from {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-price-result .balgeurebox-deal-price-from {
     font-size: 13px;
     font-style: normal; }
 
-/* �긽�뭹 �쁽�옱 �긽�깭 �몴�떆 */
-.deal_type_vertical_square_amount5_10 .memebox-deal-current-status {
-    height: 30px;
-    position: relative;
-    margin-top: 10px;
-    padding: 0 11px;
-    line-height: 0; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-review-star {
-    display: inline-block;
-    overflow: hidden;
-    height: 14px;
-    width: 83px;
-    margin-top: 1px;
-    vertical-align: middle;
-    background-color: #fff;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_star_review.png");
-    background-repeat: no-repeat;
-    background-position: 0 -14px; }
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-review-star-value {
-    display: inline-block;
-    overflow: hidden;
-    height: 14px;
-    width: 100%;
-    background-color: #fff;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_star_review.png");
-    background-repeat: no-repeat;
-    background-position: 0 0; }
+/*한정특가 */
 
-.deal_type_vertical_square_amount5_10 .memebox-deal-review-average {
-    display: none; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-review-count {
-    font-style: normal;
-    text-align: right;
-    font-size: 12px;
-    color: #555;
-    vertical-align: middle; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-sold-out {
-    display: none; }
-
-/* �긽�뭹 諛곗넚�궡�슜 */
-.deal_type_vertical_square_amount5_10 .memebox-deal-delivery {
-    position: relative;
-    padding-left: 11px;
-    height: 33px;
-    background: #f0f0f0; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-delivery-shipping {
-    margin-top: 7px;
-    display: inline-block;
-    background: #70a6e2;
-    color: #fff;
-    font-size: 11px;
-    line-height: 18px;
-    letter-spacing: -0.1em;
-    text-align: center;
-    padding: 0 3px; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-delivery-type {
-    margin-top: 7px;
-    display: inline-block;
-    background: #ff728c;
-    color: #fff;
-    font-size: 11px;
-    line-height: 18px;
-    letter-spacing: -0.1em;
-    text-align: center;
-    padding: 0 3px; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-info {
-    position: relative; }
-
-/* �긽�뭹 留곹겕 �� action */
-.deal_type_vertical_square_amount5_10 .memebox-deal-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-indent: -9999px;
-    display: block;
-    margin: -1px;
-    border: 1px solid #f0f0f0; }
-
-.deal_type_vertical_square_amount5_10:hover .memebox-deal-link {
-    border: 1px solid #ff5073;
-    /*background-color: #fff;*/
-    /*opacity: .1;*/ }
-
-.deal_type_vertical_square_amount5_10:hover .memebox-deal-image {
-    opacity: .8; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-sell-stop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin: -1px;
-    border: 1px solid #f0f0f0;
-    background-color: #000;
-    opacity: .5;
-    z-index: 1; }
-
-/* 李쒗븯湲� */
-.deal_type_vertical_square_amount5_10 .memebox-deal-poke-wrap {
-    display: none; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-poke {
-    position: absolute;
-    bottom: 40px;
-    right: 10px;
-    display: block;
-    overflow: hidden;
-    height: 50px;
-    width: 38px;
-    border: none;
-    text-indent: -99999px;
-    background-color: transparent;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_poke.png");
-    background-repeat: no-repeat; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-poke:hover {
-    background-position: 0 -50px; }
-
-.deal_type_vertical_square_amount5_10 .memebox-deal-poke-checked {
-    display: none; }
-@charset "UTF-8";
-/* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_vertical_square_10 {
-    position: relative;
-    margin: 10px; }
-
-/* �긽�뭹 �씠誘몄�, 踰녹� */
-.deal_type_vertical_square_10 .memebox-deal-image-wrap {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    margin-bottom: 18px; }
-
-/* ���씠癒� */
-.deal_type_vertical_square_10 .memebox-deal-timer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block; }
-
-.deal_type_vertical_square_10 .memebox-deal-timer::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    content: "";
-    opacity: .1; }
-
-.deal_type_vertical_square_10 .memebox-deal-timer-value {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 20px;
-    width: 100%;
-    text-align: center;
-    margin-top: -10px;
-    font-size: 20px;
-    text-shadow: 2px 2px 2px gray;
-    color: #fff;
-    font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif; }
-
-/* �젥�궧 */
-.deal_type_vertical_square_10 .memebox-deal-ranking {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 42px;
-    height: 61px;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_bast_ranking_bg.png");
-    background-repeat: no-repeat;
-    background-position: 0 -200px;
-    font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 3.2;
-    text-align: center;
-    color: #fff;
-    z-index: 1; }
-
-.deal_type_vertical_square_10 .memebox-deal-ranking {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 52px;
-    height: 61px;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_bast_ranking_bg.png");
-    background-repeat: no-repeat;
-    background-position: 0 -200px;
-    font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 3.2;
-    text-align: center;
-    color: #fff;
-    z-index: 1; }
-
-.deal_type_vertical_square_10 .memebox-deal-ranking.memebox-deal-ranking-1 {
-    background-position: 0 0; }
-
-.deal_type_vertical_square_10 .memebox-deal-ranking.memebox-deal-ranking-2 {
-    background-position: 0 -100px; }
-
-.deal_type_vertical_square_10 .memebox-deal-ranking.memebox-deal-ranking-3 {
-    background-position: 0 -100px; }
-
-/* �뒪�떚而� */
-.deal_type_vertical_square_10 .memebox-deal-sticker {
-    display: none; }
-
-/* �긽�뭹 �씠誘몄� */
-.deal_type_vertical_square_10 .memebox-deal-image {
-    width: 100%;
-    height: 100%; }
-
-/* �긽�뭹�씠由� */
-.deal_type_vertical_square_10 .memebox-deal-name {
-    font-family: tahoma, HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif; }
-
-.deal_type_vertical_square_10 .memebox-deal-name-main {
-    display: block;
-    height: 20px;
-    color: #333;
-    padding: 0 16px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 15px; }
-
-.deal_type_vertical_square_10 .memebox-deal-name-sub {
-    display: none; }
-
-/* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 媛�寃� 愿��젴 �궡�슜 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.deal_type_vertical_square_10 .memebox-deal-price-wrap {
+.balgeurebox-deal-info .dealhead .small_title_thum_TimeSale{
+	overflow: hidden;
     position: relative;
     height: 15px;
-    margin: 10px 0 0 0;
-    padding: 0 16px; }
+    margin-bottom: 4px;
+    padding-top: 0px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #828284;
+    letter-spacing: -1px;
+}
 
-/* �븷�씤媛�寃� */
-.deal_type_vertical_square_10 .memebox-deal-price-discount {
-    margin-right: 8px;
-    font-weight: bold;
-    color: #ff5073;
-    font-size: 0;
-    line-height: 1.0;
-    font-family: tahoma, HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif; }
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-current-status {
+    position: absolute;
+    top: 84px;
+    right: 15px;
+    font-size: 11px;
+    color: #999;
+    letter-spacing: -1px;}
 
-.deal_type_vertical_square_10 .memebox-deal-price-discount .memebox-deal-price-info {
-    padding-right: 3px;
-    font-size: 17px; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-discount .memebox-deal-price-value {
-    font-size: 17px; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-discount .memebox-deal-price-unit {
-    margin-left: -2px;
-    font-size: 17px; }
-
-/* 怨듦툒媛�寃� */
-.deal_type_vertical_square_10 .memebox-deal-price-origin {
-    margin-right: 8px;
-    color: #898989;
-    height: 20px;
-    font-weight: normal;
-    font-size: 0;
-    line-height: 1.0; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-origin .memebox-deal-price-info {
-    font-size: 12px; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-origin .memebox-deal-price-value {
-    font-size: 12px;
-    font-weight: normal;
-    font-family: tahoma, HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
-    text-decoration: line-through; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-origin .memebox-deal-price-unit {
-    font-size: 12px;
-    font-style: normal; }
-
-/* �뙋留ㅺ�寃� */
-.deal_type_vertical_square_10 .memebox-deal-price-result {
-    margin-right: 8px;
-    color: #333;
-    font-size: 0;
-    line-height: 1.0;
-    font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-result .memebox-deal-price-info {
-    margin-right: 8px;
-    font-weight: bold;
-    color: #ff5073;
-    font-size: 17px; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-result .memebox-deal-price-value {
-    font-family: tahoma, HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
-    font-size: 16px; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-result .memebox-deal-price-unit {
-    font-style: normal;
-    font-size: 12px; }
-
-.deal_type_vertical_square_10 .memebox-deal-price-result .memebox-deal-price-from {
-    font-style: normal;
-    font-size: 17px; }
-
-/* �긽�뭹 �쁽�옱 �긽�깭 �몴�떆 */
-.deal_type_vertical_square_10 .memebox-deal-current-status {
-    height: 30px;
-    position: relative;
-    margin-top: 20px;
-    padding: 0 16px;
-    vertical-align: top;
-    line-height: 0; }
-
-.deal_type_vertical_square_10 .memebox-deal-review-star {
-    display: inline-block;
-    overflow: hidden;
-    height: 14px;
-    width: 83px;
-    vertical-align: middle;
-    background-color: #fff;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_star_review.png");
-    background-repeat: no-repeat;
-    background-position: 0 -14px; }
-
-.deal_type_vertical_square_10 .memebox-deal-review-star-value {
-    display: inline-block;
-    overflow: hidden;
-    height: 14px;
-    width: 100%;
-    background-color: #fff;
-    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_star_review.png");
-    background-repeat: no-repeat;
-    background-position: 0 0; }
-
-.deal_type_vertical_square_10 .memebox-deal-review-average {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-review-average {
     display: none; }
 
-.deal_type_vertical_square_10 .memebox-deal-review-count {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-review-count {
     font-style: normal;
     text-align: right;
     font-size: 12px;
     color: #555;
     vertical-align: middle; }
 
-.deal_type_vertical_square_10 .memebox-deal-sold-out {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-sold-out {
     display: none; }
 
-/* �긽�뭹 諛곗넚�궡�슜 */
-.deal_type_vertical_square_10 .memebox-deal-delivery {
+/* 한정특가  */
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-delivery {
     position: relative;
-    padding-left: 16px;
-    height: 33px;
+    padding-left: 11px;
+    height: 30px;
     background: #f0f0f0; }
 
-.deal_type_vertical_square_10 .memebox-deal-delivery-shipping {
-    margin-top: 7px;
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-delivery-shipping {
+    margin-top: 6px;
     display: inline-block;
     background: #70a6e2;
     color: #fff;
@@ -5535,24 +5449,35 @@ div.homeMainBanner .next {
     line-height: 18px;
     letter-spacing: -0.1em;
     text-align: center;
-    padding: 0 3px; }
+    padding: 2px 5px 0px 3px;
+    }
 
-.deal_type_vertical_square_10 .memebox-deal-delivery-type {
-    margin-top: 7px;
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-time-count {
     display: inline-block;
-    background: #ff728c;
+    color: #828284;;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.1em;
+    text-align: center;
+}
+
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-delivery-type {
+    margin-top: 6px;
+    display: inline-block;
+    background: #70a6e2;
     color: #fff;
     font-size: 11px;
     line-height: 18px;
     letter-spacing: -0.1em;
     text-align: center;
-    padding: 0 3px; }
+    padding: 2px 5px 0px 3px;
+}
 
-.deal_type_vertical_square_10 .memebox-deal-info {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-info {
     position: relative; }
 
 /* �긽�뭹 留곹겕 �� action */
-.deal_type_vertical_square_10 .memebox-deal-link {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -5561,17 +5486,17 @@ div.homeMainBanner .next {
     text-indent: -9999px;
     display: block;
     margin: -1px;
-    border: 1px solid #f0f0f0; }
+    /*border: 1px solid #f0f0f0; */}
 
-.deal_type_vertical_square_10:hover .memebox-deal-link {
-    border: 1px solid #ff5073;
+.deal_type_vertical_square_amount_col_3:hover .balgeurebox-deal-link {
+    /*border: 1px solid #ff8fa7;*/
     /*background-color: #fff;*/
     /*opacity: .1;*/ }
 
-.deal_type_vertical_square_10:hover .memebox-deal-image {
+.deal_type_vertical_square_amount_col_3:hover .balgeurebox-deal-image {
     opacity: .8; }
 
-.deal_type_vertical_square_10 .memebox-deal-sell-stop {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-sell-stop {
     position: absolute;
     top: 0;
     left: 0;
@@ -5585,10 +5510,10 @@ div.homeMainBanner .next {
     z-index: 1; }
 
 /* 李쒗븯湲� */
-.deal_type_vertical_square_10 .memebox-deal-poke-wrap {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-poke-wrap {
     display: none; }
 
-.deal_type_vertical_square_10 .memebox-deal-poke {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-poke {
     position: absolute;
     bottom: 40px;
     right: 10px;
@@ -5602,10 +5527,118 @@ div.homeMainBanner .next {
     background-image: url("/package/components/deal/v.1.1.0/pc/_images/_poke.png");
     background-repeat: no-repeat; }
 
-.deal_type_vertical_square_10 .memebox-deal-poke:hover {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-poke:hover {
     background-position: 0 -50px; }
 
-.deal_type_vertical_square_10 .memebox-deal-poke-checked {
+.deal_type_vertical_square_amount_col_3 .balgeurebox-deal-poke-checked {
+    display: none; }
+    
+    
+.balgeurebox-deal-delivery .zzim_wishlist{
+	float: right;
+}
+
+.balgeurebox-deal-delivery .zzim_wishlist .go_to_wishlist_ZZim{
+	display: inline-block;
+    position: relative;
+    width: 17px;
+    height: 16px;
+    padding: 4px 6px 6px;
+    z-index: 20;
+}
+
+.zzim_wishlist .go_to_wishlist_ZZim .zzimCheck{
+	display: inline-block;
+    overflow: hidden;
+    width: 17px;
+    height: 16px;
+    background: url(/img/balgeure_icons.png) -121px -6px;
+    line-height: 200px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+    
+
+.deal_type_vertical_square_10 .balgeurebox-deal-delivery-shipping {
+    margin-top: 7px;
+    display: inline-block;
+    background: #70a6e2;
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    padding: 0 3px; }
+
+.deal_type_vertical_square_10 .balgeurebox-deal-delivery-type {
+    margin-top: 7px;
+    display: inline-block;
+    background: #ff728c;
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    padding: 0 3px; }
+
+.deal_type_vertical_square_10 .balgeurebox-deal-info {
+    position: relative; }
+
+/* �긽�뭹 留곹겕 �� action */
+.deal_type_vertical_square_10 .balgeurebox-deal-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    display: block;
+    margin: -1px;
+    border: 1px solid #f0f0f0; }
+
+.deal_type_vertical_square_10:hover .balgeurebox-deal-link {
+    border: 1px solid #ff8fa7;
+    /*background-color: #fff;*/
+    /*opacity: .1;*/ }
+
+.deal_type_vertical_square_10:hover .balgeurebox-deal-image {
+    opacity: .8; }
+
+.deal_type_vertical_square_10 .balgeurebox-deal-sell-stop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: -1px;
+    border: 1px solid #f0f0f0;
+    background-color: #000;
+    opacity: .5;
+    z-index: 1; }
+
+/* 李쒗븯湲� */
+.deal_type_vertical_square_10 .balgeurebox-deal-poke-wrap {
+    display: none; }
+
+.deal_type_vertical_square_10 .balgeurebox-deal-poke {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    display: block;
+    overflow: hidden;
+    height: 50px;
+    width: 38px;
+    border: none;
+    text-indent: -99999px;
+    background-color: transparent;
+    background-image: url("/package/components/deal/v.1.1.0/pc/_images/_poke.png");
+    background-repeat: no-repeat; }
+
+.deal_type_vertical_square_10 .balgeurebox-deal-poke:hover {
+    background-position: 0 -50px; }
+
+.deal_type_vertical_square_10 .balgeurebox-deal-poke-checked {
     display: none; }
 @charset "UTF-8";
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
@@ -5614,11 +5647,11 @@ div.homeMainBanner .next {
     margin: 10px; }
 
 /* �긽�뭹 �씠誘몄�, 踰녹� */
-.deal_type_vertical_square_4 .memebox-deal-image-wrap {
+.deal_type_vertical_square_4 .balgeurebox-deal-image-wrap {
     position: relative;
     margin-bottom: 8px; }
 
-.deal_type_vertical_square_4 .memebox-deal-timer {
+.deal_type_vertical_square_4 .balgeurebox-deal-timer {
     position: absolute;
     top: 0;
     left: 0;
@@ -5626,7 +5659,7 @@ div.homeMainBanner .next {
     height: 100%;
     display: block; }
 
-.deal_type_vertical_square_4 .memebox-deal-timer::after {
+.deal_type_vertical_square_4 .balgeurebox-deal-timer::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -5636,7 +5669,7 @@ div.homeMainBanner .next {
     content: "";
     opacity: .1; }
 
-.deal_type_vertical_square_4 .memebox-deal-timer-value {
+.deal_type_vertical_square_4 .balgeurebox-deal-timer-value {
     display: block;
     position: absolute;
     top: 50%;
@@ -5650,7 +5683,7 @@ div.homeMainBanner .next {
     color: #fff;
     font-family: �굹�닎怨좊뵓, NanumGothic, �룍��, Dotum, AppleSDGothic, AppleGothic, 援대┝, Gulim, sans-serif; }
 
-.deal_type_vertical_square_4 .memebox-deal-ranking {
+.deal_type_vertical_square_4 .balgeurebox-deal-ranking {
     display: none;
     position: absolute;
     top: 5px;
@@ -5667,18 +5700,18 @@ div.homeMainBanner .next {
     text-align: center;
     color: #ffffff; }
 
-.deal_type_vertical_square_4 .memebox-deal-image {
+.deal_type_vertical_square_4 .balgeurebox-deal-image {
     width: 100%;
     height: auto; }
 
-.deal_type_vertical_square_4 .memebox-deal-sticker {
+.deal_type_vertical_square_4 .balgeurebox-deal-sticker {
     display: none; }
 
 /* �긽�뭹�씠由� */
-.deal_type_vertical_square_4 .memebox-deal-name {
+.deal_type_vertical_square_4 .balgeurebox-deal-name {
     padding-bottom: 6px; }
 
-.deal_type_vertical_square_4 .memebox-deal-name-main {
+.deal_type_vertical_square_4 .balgeurebox-deal-name-main {
     display: block;
     font-family: Nanum Gothic;
     font-size: 13px;
@@ -5686,19 +5719,19 @@ div.homeMainBanner .next {
     line-height: 1.4;
     color: #555555; }
 
-.deal_type_vertical_square_4 .memebox-deal-name-sub {
+.deal_type_vertical_square_4 .balgeurebox-deal-name-sub {
     font-style: normal;
     font-size: 11px;
     color: #666;
     display: none; }
 
 /* �긽�뭹 �쁽�옱 �긽�깭 �몴�떆 */
-.deal_type_vertical_square_4 .memebox-deal-current-status {
+.deal_type_vertical_square_4 .balgeurebox-deal-current-status {
     display: none;
     position: relative;
     padding: 0 20px; }
 
-.deal_type_vertical_square_4 .memebox-deal-review-star {
+.deal_type_vertical_square_4 .balgeurebox-deal-review-star {
     display: inline-block;
     overflow: hidden;
     height: 14px;
@@ -5708,7 +5741,7 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 -14px; }
 
-.deal_type_vertical_square_4 .memebox-deal-review-star-value {
+.deal_type_vertical_square_4 .balgeurebox-deal-review-star-value {
     display: inline-block;
     overflow: hidden;
     height: 14px;
@@ -5718,26 +5751,26 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 0; }
 
-.deal_type_vertical_square_4 .memebox-deal-review-average {
+.deal_type_vertical_square_4 .balgeurebox-deal-review-average {
     font-family: 'tahoma';
     font-weight: bold;
     color: #555; }
 
-.deal_type_vertical_square_4 .memebox-deal-review-count {
+.deal_type_vertical_square_4 .balgeurebox-deal-review-count {
     font-style: normal;
     margin-top: 1px;
     text-align: right;
     font-size: 12px;
     color: #555; }
 
-.deal_type_vertical_square_4 .memebox-deal-sold-out {
+.deal_type_vertical_square_4 .balgeurebox-deal-sold-out {
     display: none; }
 
 /* �긽�뭹 媛�寃� 愿��젴 �궡�슜 */
-.deal_type_vertical_square_4 .memebox-deal-price-wrap {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-wrap {
     margin-bottom: 10px; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-origin {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-origin {
     display: none;
     text-decoration: line-through;
     margin: 0 9px 0 0;
@@ -5745,43 +5778,43 @@ div.homeMainBanner .next {
     font-size: 12px;
     color: #898989; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-origin .memebox-deal-price-unit {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-origin .balgeurebox-deal-price-unit {
     font-style: normal; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-origin .memebox-deal-price-info {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-origin .balgeurebox-deal-price-info {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-discount {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-discount {
     padding-right: 3px; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-info {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-discount .balgeurebox-deal-price-info {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-value {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-discount .balgeurebox-deal-price-value {
     font-family: Nanum Gothic;
     font-size: 15px;
     font-weight: bold;
     line-height: 1.3;
-    color: #ff5073; }
+    color: #ff8fa7; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-unit {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-discount .balgeurebox-deal-price-unit {
     font-family: Nanum Gothic;
     font-size: 13px;
     font-weight: bold;
     line-height: 1.3;
-    color: #ff5073; }
+    color: #ff8fa7; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-info {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-result .balgeurebox-deal-price-info {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-value {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-result .balgeurebox-deal-price-value {
     font-family: Nanum Gothic;
     font-size: 15px;
     font-weight: bold;
     line-height: 1.4;
     color: #555555; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-unit {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-result .balgeurebox-deal-price-unit {
     font-family: Nanum Gothic;
     font-size: 13px;
     font-weight: bold;
@@ -5790,14 +5823,14 @@ div.homeMainBanner .next {
     font-style: normal; }
 
 /* �긽�뭹 諛곗넚�궡�슜 */
-.deal_type_vertical_square_4 .memebox-deal-delivery {
+.deal_type_vertical_square_4 .balgeurebox-deal-delivery {
     display: none;
     position: relative;
     padding-left: 8px;
     height: 33px;
     background: #f0f0f0; }
 
-.deal_type_vertical_square_4 .memebox-deal-delivery-shipping {
+.deal_type_vertical_square_4 .balgeurebox-deal-delivery-shipping {
     display: inline-block;
     background: #71a6e2;
     color: #fff;
@@ -5806,11 +5839,11 @@ div.homeMainBanner .next {
     text-align: center;
     padding: 0 3px; }
 
-.deal_type_vertical_square_4 .memebox-deal-info {
+.deal_type_vertical_square_4 .balgeurebox-deal-info {
     position: relative; }
 
 /* �긽�뭹 留곹겕 �� action */
-.deal_type_vertical_square_4 .memebox-deal-link {
+.deal_type_vertical_square_4 .balgeurebox-deal-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -5821,19 +5854,19 @@ div.homeMainBanner .next {
     margin: -1px;
     border: none; }
 
-.deal_type_vertical_square_4:hover .memebox-deal-link {
+.deal_type_vertical_square_4:hover .balgeurebox-deal-link {
     border: none;
     /*background-color: #fff;*/
     /*opacity: .1;*/ }
 
-.deal_type_vertical_square_4:hover .memebox-deal-image {
+.deal_type_vertical_square_4:hover .balgeurebox-deal-image {
     opacity: 1; }
 
 /* 李쒗븯湲� */
-.deal_type_vertical_square_4 .memebox-deal-poke-wrap {
+.deal_type_vertical_square_4 .balgeurebox-deal-poke-wrap {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-sell-stop {
+.deal_type_vertical_square_4 .balgeurebox-deal-sell-stop {
     position: absolute;
     top: 0;
     left: 0;
@@ -5846,7 +5879,7 @@ div.homeMainBanner .next {
     opacity: .5;
     z-index: 1; }
 
-.deal_type_vertical_square_4 .memebox-deal-poke {
+.deal_type_vertical_square_4 .balgeurebox-deal-poke {
     position: absolute;
     bottom: 40px;
     right: 10px;
@@ -5860,13 +5893,13 @@ div.homeMainBanner .next {
     background-image: url("/package/components/deal/v.1.1.0/pc/_images/_poke.png");
     background-repeat: no-repeat; }
 
-.deal_type_vertical_square_4 .memebox-deal-poke:hover {
+.deal_type_vertical_square_4 .balgeurebox-deal-poke:hover {
     background-position: 0 -50px; }
 
-.deal_type_vertical_square_4 .memebox-deal-poke-checked {
+.deal_type_vertical_square_4 .balgeurebox-deal-poke-checked {
     display: none; }
 @charset "UTF-8";
-.memebox-deal-sticker {
+.balgeurebox-deal-sticker {
     position: absolute;
     top: 9px;
     right: 11px;
@@ -5878,59 +5911,59 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 0; }
 
-.memebox-deal-sticker.sticker-none {
+.balgeurebox-deal-sticker.sticker-none {
     display: none;
     background: #000; }
 
-.memebox-deal-sticker.sticker-hot {
+.balgeurebox-deal-sticker.sticker-hot {
     background-position: 0px 0px; }
 
-.memebox-deal-sticker.sticker-md {
+.balgeurebox-deal-sticker.sticker-md {
     background-position: -70px 0px; }
 
 /*//�븳�젙�듅媛�*/
-.memebox-deal-sticker.sticker-memebox {
+.balgeurebox-deal-sticker.sticker-memebox {
     background-position: -140px 0px; }
 
-.memebox-deal-sticker.sticker-best {
+.balgeurebox-deal-sticker.sticker-best {
     background-position: -210px 0px; }
 
-.memebox-deal-sticker.sticker-new {
+.balgeurebox-deal-sticker.sticker-new {
     background-position: -280px 0px; }
 
-.memebox-deal-sticker.sticker-threeTime {
+.balgeurebox-deal-sticker.sticker-threeTime {
     background-position: -140px 0px; }
 
-.memebox-deal-sticker.sticker-lowest {
+.balgeurebox-deal-sticker.sticker-lowest {
     background-position: -350px 0px; }
 
-.memebox-deal-sticker.sticker-freebie {
+.balgeurebox-deal-sticker.sticker-freebie {
     background-position: -420px 0px; }
 
-.memebox-deal-sticker.sticker-refund90 {
+.balgeurebox-deal-sticker.sticker-refund90 {
     background-position: -490px 0px; }
 
-.memebox-deal-sticker.sticker-lowest90 {
+.balgeurebox-deal-sticker.sticker-lowest90 {
     background-position: -560px 0px; }
 
-.memebox-deal-sticker.sticker-sale369 {
+.balgeurebox-deal-sticker.sticker-sale369 {
     background-position: -630px 0px; }
 
-.memebox-deal-sticker.sticker-promotion {
+.balgeurebox-deal-sticker.sticker-promotion {
     background-position: -700px 0px; }
 
-.memebox-deal-sticker.sticker-soldOutSoon {
+.balgeurebox-deal-sticker.sticker-soldOutSoon {
     background-position: -770px 0px; }
 
-.memebox-deal-sticker.sticker-deal_0 {
+.balgeurebox-deal-sticker.sticker-deal_0 {
     background-position: -840px 0px; }
 
-.memebox-deal-sticker.sticker-deal_100 {
+.balgeurebox-deal-sticker.sticker-deal_100 {
     background-position: -910px 0px; }
 
-.memebox-deal-sticker.sticker-reservation {
+.balgeurebox-deal-sticker.sticker-reservation {
     background-position: -980px 0px; }
-.memebox-deal-badge {
+.balgeurebox-deal-badge {
     position: absolute;
     top: 9px;
     right: 11px;
@@ -5942,37 +5975,37 @@ div.homeMainBanner .next {
     background-repeat: no-repeat;
     background-position: 0 0; }
 
-.memebox-deal-badge.badge-none {
+.balgeurebox-deal-badge.badge-none {
     display: none; }
 
-.memebox-deal-badge.badge-hot {
+.balgeurebox-deal-badge.badge-hot {
     background-position: 0 0; }
 
-.memebox-deal-badge.badge-md {
+.balgeurebox-deal-badge.badge-md {
     background-position: -50px 0; }
 
-.memebox-deal-badge.badge-memebox {
+.balgeurebox-deal-badge.badge-memebox {
     background-position: -100px 0; }
 
-.memebox-deal-badge.badge-best {
+.balgeurebox-deal-badge.badge-best {
     background-position: -150px 0; }
 
-.memebox-deal-badge.badge-new {
+.balgeurebox-deal-badge.badge-new {
     background-position: -200px 0px; }
 
-.memebox-deal-badge.badge-lowest {
+.balgeurebox-deal-badge.badge-lowest {
     background-position: -250px 0px; }
 
-.memebox-deal-badge.badge-freebie {
+.balgeurebox-deal-badge.badge-freebie {
     background-position: -300px 0px; }
 
-.memebox-deal-badge.badge-promotion {
+.balgeurebox-deal-badge.badge-promotion {
     background-position: -500px 0; }
 
-.memebox-deal-badge.badge-soldOutSoon {
+.balgeurebox-deal-badge.badge-soldOutSoon {
     background-position: -550px 0; }
 
-.memebox-deal-badge.badge-reservation {
+.balgeurebox-deal-badge.badge-reservation {
     background-position: -700px 0; }
 @charset "UTF-8";
 /* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 諛붾줈 �꽑�깮 �샃�뀡 �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
@@ -5995,7 +6028,7 @@ div.homeMainBanner .next {
     overflow: hidden;
     left: -10px; }
 
-.deal-inline-gallery .memebox-deal-wrapper {
+.deal-inline-gallery .balgeurebox-deal-wrapper {
     float: left; }
 
 .deal-inline-gallery-navigation {
@@ -6069,7 +6102,7 @@ div.homeMainBanner .next {
     width: 74px;
     height: 74px;
     border-radius: 3px;
-    background-color: #ff5073;
+    background-color: #ff8fa7;
     background-image: url("/modules/dealViews/_deal_tooltip_floating/v.1.0.0/pc/_images/_deal_tooltip_floating.png");
     background-repeat: no-repeat;
     background-position: 50% -72px;
@@ -6086,10 +6119,10 @@ div.homeMainBanner .next {
     font-family: �굹�닎怨좊뵓蹂쇰뱶, NanumGothicBold, �굹�닎怨좊뵓, NanumGothic, �룍��, Dotum, AppleSDGothic, AppleGothic, 援대┝, Gulim, sans-serif; }
 
 /* �궘�젣�슜 */
-/*div.newDealContents .dealList a.memebox-deal-easy-choice-option-trigger {*/
+/*div.newDealContents .dealList a.balgeurebox-deal-easy-choice-option-trigger {*/
 /*display: none;*/
 /*}*/
-/*div.newDealContents .deal-tooltip-floating-containerper:hover a.memebox-deal-easy-choice-option-trigger {*/
+/*div.newDealContents .deal-tooltip-floating-containerper:hover a.balgeurebox-deal-easy-choice-option-trigger {*/
 /*display: block;*/
 /*}*/
 /*  �돩�슫 �꽑�깮 踰꾪듉 box  */
@@ -6115,8 +6148,8 @@ div.homeMainBanner .next {
     padding: 30px 80px;
     min-height: 260px;
     background-color: #f9f9fa;
-    border-top: 2px solid #ff5073;
-    border-bottom: 2px solid #ff5073; }
+    border-top: 2px solid #ff8fa7;
+    border-bottom: 2px solid #ff8fa7; }
 
 .deal-tooltip-floating-container-controller {
     position: absolute;
@@ -6140,33 +6173,163 @@ div.homeMainBanner .next {
 
 /* �넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁 �긽�뭹 諛붾줈 �꽑�깮 �샃�뀡 �넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁�넁 */
 @charset "UTF-8";
-/* �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 �긽�뭹 由ъ뒪�듃 view type all �넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃�넃 */
-.memebox-deal-list {
+
+
+
+
+/* 베스트 상품 리스트 */
+
+.BestProductList_TopBanner_img{
+	margin: 15px 0 30px;
+}
+
+
+.balgeurebox-deal-list {
     /* ul */
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden; }
 
-.memebox-deal-list-line-amount-1 .memebox-deal-wrapper {
-    float: left;
-    width: 100%; }
+.balgeurebox-deal-list-line-amount-3 .balgeurebox-deal-wrapper {
+    width: 338px;
+    height: 485px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin: 0 20px 23px 0;
+    float: left; }
+    
+    
+.balgeurebox-deal-list-line-amount-3 .balgeurebox-deal-wrapper:hover {
+    border: 1px solid #ff8fa7;
+}
 
-.memebox-deal-list-line-amount-2 .memebox-deal-wrapper {
-    float: left;
-    width: 50%; }
 
-.memebox-deal-list-line-amount-3 .memebox-deal-wrapper {
-    float: left;
-    width: 33.3%; }
+.balgeurebox-deal-info .dealBody {
+    position: relative;
+    height: 116px;
+    padding: 0 10px 0 13px;
+}
 
-.memebox-deal-list-line-amount-4 .memebox-deal-wrapper {
-    float: left;
-    width: 25%; }
 
-.memebox-deal-list-line-amount-5 .memebox-deal-wrapper {
-    float: left;
-    width: 20%; }
+    .balgeurebox-deal-info .dealBody .dealhead{
+    height: 55px;
+}
+
+
+        .balgeurebox-deal-info .dealhead .small_title_thum{
+            overflow: hidden;
+            position: relative;
+            height: 13px;
+            margin-bottom: 4px;
+            padding-top: 15px;
+            font-size: 11px;
+            line-height: 18px;
+            color: #828284;
+            letter-spacing: -1px;
+        }
+
+        .balgeurebox-deal-info .dealhead .balgeurebox-deal-name-main {
+            width: 295px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            letter-spacing: -0.1em;
+            display: block;
+            margin-bottom: 4px;
+            line-height: 20px;
+
+        }
+
+    .balgeurebox-deal-info .dealBody .dealPrice{
+        margin-top: 6px;
+        float: left;
+        position: relative;
+    }
+
+        .balgeurebox-deal-info .dealPrice .balgeurebox-deal-price-wrap{
+            float: left;
+            margin: 4px 9px 0 0;
+            font-weight: bold;
+            font-size: 31px;
+            line-height: 25px;
+            color: #ff8fa7;
+            left: 0;
+        }
+
+        .balgeurebox-deal-info .balgeurebox-deal-price-wrap .percent{
+            float: left;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 30px;
+            top: 5px;
+        }
+
+        .balgeurebox-deal-info .balgeurebox-deal-price-wrap .balgeurebox-deal-price-unit{
+                position: relative;
+                font-weight: normal;
+                font-size: 19px;
+                float: left;
+                line-height: 45px;
+        }
+        
+        .balgeurebox-deal-info .dealPrice .product_Ori_Price{
+                position: relative;
+                float: left;
+        }
+
+        .balgeurebox-deal-info .dealPrice .product_Ori_Price .fL{
+            margin-bottom: -15px;
+            position: relative;
+            top: 0px;
+            font-size: 13px;
+            line-height: 15px;
+            color: #aaa;
+            text-decoration: line-through;
+        }
+
+        .balgeurebox-deal-info .dealPrice .product_Ori_Price .balgeurebox-deal-price-result{
+            margin-top: 16px;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 17px;
+            color: #333;
+        }
+ 
+    .balgeurebox-deal-info .dealBody .balgeurebox-deal-review-count-value{
+        position: absolute;
+        top: 84px;
+        right: 15px;
+        font-size: 11px;
+        color: #999;
+        letter-spacing: -1px;
+    }
+
+.balgeurebox-deal-info .dealFoot {
+    height: 30px;
+    margin: 0px;
+    padding: 0 9px 0 14px;
+    border-top: 1px solid #f0f0f0;
+    background: #f0f0f0;
+}
+
+    .balgeurebox-deal-info .dealFoot .delivery_option_show{
+        float: left;
+        margin-top: -1px;
+    }
+
+
+    .balgeurebox-deal-info .dealFoot .zzim_wishlist{
+        float:right;
+        margin-top: 2px;
+    }
+
+
+
+
+    
 @charset "UTF-8";
 .filter-category-wrapper {
     position: relative;
@@ -6357,14 +6520,16 @@ div.homeMainBanner .next {
     width: 1080px;
     margin: 0 auto;
     padding: 0;
-    font-family: "\B098\B214\ACE0\B515", NanumGothic, Dotum, "\B3CB\C6C0", Helvetica, AppleSDGothicNeo, sans-serif;
+    font-family: "나눔고딕", NanumGothic, Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
     overflow: visible; }
 
 .exhibit.best-top3 {
     margin-top: 25px; }
 
 .exhibit.best-moreover {
-    margin-top: 20px; }
+    margin-top: 20px; 
+    width: 1080px;
+    margin: 0 auto;}
 
 /* ################################################## searchBar begin */
 body .searchBar-wrap {
@@ -6393,19 +6558,20 @@ div#header_v2 .searchBar-wrap ul li {
 
 .searchBar-inputBox {
     position: relative;
-    border: 2px solid #FF5073;
-    margin: 0; }
+    border: 3px solid #ff8fa7;
+    margin: 0;
+    margin-top: 7px; }
 
 .searchBar-inputBox-text {
     display: none; }
 
 .searchBar-inputBox-input {
     display: block;
-    width: 80%;
-    height: 38px;
+    width: 313px;
+    height: 27px;
     text-indent: 20px;
     padding-left: 0;
-    border: none;
+    border: none !important;
     line-height: 28px;
     font-family: "\B098\B214\ACE0\B515\BCFC\B4DC", NanumGothicBold, "\B098\B214\ACE0\B515", NanumGothic, "\B3CB\C6C0", Dotum, AppleSDGothic, AppleGothic, "\AD74\B9BC", Gulim, sans-serif;
     color: #1a1a1a;
@@ -6431,26 +6597,26 @@ input[type="text"]::-ms-clear {
     display: block;
     width: 16px;
     height: 16px;
-    background-image: url("/package/components/search/bar/v.1.0.0/pc/_images/searchBar.png");
+    background-image: url("/img/balgeure_icons.png");
     background-repeat: no-repeat;
-    background-position: 0 -35px;
+    background-position: -215px -5px;
     cursor: pointer; }
-
+    
+    
 .searchBar-inputBox-submit {
     position: absolute;
     top: 0;
     right: 0;
     display: block;
     width: 40px;
-    height: 38px;
+    height: 27px;
     text-indent: -99999px;
-    background-image: url("/package/components/search/bar/v.1.0.0/pc/_images/searchBar.png");
-    background-repeat: no-repeat;
-    background-position: 7px 7px;
+    background: url("/img/header/header_icons.png") no-repeat -60px 2px;
     border: none;
-    background-color: #fff;
+    background-color: #ff8fa7;
     cursor: pointer; }
-
+    
+    
 .searchBar-relatedBox {
     display: none;
     padding-top: 10px;
@@ -6528,7 +6694,7 @@ input[type="text"]::-ms-clear {
     cursor: pointer; }
 
 .suggest-selector-trigger.selected {
-    color: #ff5073; }
+    color: #ff8fa7; }
 
 .suggest-keyword-ranking,
 .suggest-keyword-recent {
@@ -6557,8 +6723,8 @@ input[type="text"]::-ms-clear {
     color: #333;
     text-align: center; }
 
-.suggest-keyword-ranking .exhibit .memebox-deal,
-.suggest-result-wrap .exhibit .memebox-deal {
+.suggest-keyword-ranking .exhibit .balgeurebox-deal,
+.suggest-result-wrap .exhibit .balgeurebox-deal {
     margin: 10px 20px; }
 
 .suggest-result-wrap .keyword-autoComplete-wrap,
@@ -6601,11 +6767,11 @@ input[type="text"]::-ms-clear {
     margin: 10px; }
 
 /* 챙�뮻겷��쇝� 챙혶쨈챘짱쨍챙짠�궗, 챘짼쨀챙짠�궗 */
-.deal_type_vertical_square_4 .memebox-deal-image-wrap {
+.deal_type_vertical_square_4 .balgeurebox-deal-image-wrap {
     position: relative;
     margin-bottom: 8px; }
 
-.deal_type_vertical_square_4 .memebox-deal-timer {
+.deal_type_vertical_square_4 .balgeurebox-deal-timer {
     position: absolute;
     top: 0;
     left: 0;
@@ -6613,7 +6779,7 @@ input[type="text"]::-ms-clear {
     height: 100%;
     display: block; }
 
-.deal_type_vertical_square_4 .memebox-deal-timer i {
+.deal_type_vertical_square_4 .balgeurebox-deal-timer i {
     position: absolute;
     top: 0;
     left: 0;
@@ -6626,7 +6792,7 @@ input[type="text"]::-ms-clear {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=10)";
     filter: alpha(opacity=10); }
 
-.deal_type_vertical_square_4 .memebox-deal-timer-value {
+.deal_type_vertical_square_4 .balgeurebox-deal-timer-value {
     display: block;
     position: absolute;
     top: 50%;
@@ -6640,7 +6806,7 @@ input[type="text"]::-ms-clear {
     color: #fff;
     font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif; }
 
-.deal_type_vertical_square_4 .memebox-deal-ranking {
+.deal_type_vertical_square_4 .balgeurebox-deal-ranking {
     display: none;
     position: absolute;
     top: 5px;
@@ -6657,18 +6823,18 @@ input[type="text"]::-ms-clear {
     text-align: center;
     color: #ffffff; }
 
-.deal_type_vertical_square_4 .memebox-deal-image {
+.deal_type_vertical_square_4 .balgeurebox-deal-image {
     width: 100%;
     height: auto; }
 
-.deal_type_vertical_square_4 .memebox-deal-sticker {
+.deal_type_vertical_square_4 .balgeurebox-deal-sticker {
     display: none; }
 
 /* 챙�뮻겷��쇝녍�혶쨈챘짝�� */
-.deal_type_vertical_square_4 .memebox-deal-name {
+.deal_type_vertical_square_4 .balgeurebox-deal-name {
     padding-bottom: 6px; }
 
-.deal_type_vertical_square_4 .memebox-deal-name-main {
+.deal_type_vertical_square_4 .balgeurebox-deal-name-main {
     display: block;
     font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
     font-weight: normal;
@@ -6676,19 +6842,19 @@ input[type="text"]::-ms-clear {
     line-height: 1.4;
     color: #333; }
 
-.deal_type_vertical_square_4 .memebox-deal-name-sub {
+.deal_type_vertical_square_4 .balgeurebox-deal-name-sub {
     font-style: normal;
     font-size: 11px;
     color: #666;
     display: none; }
 
 /* 챙�뮻겷��쇝� 챠�쒋�왗�탑짭 챙�뮻겷��뮾� 챠�샚벭р�뮴� */
-.deal_type_vertical_square_4 .memebox-deal-current-status {
+.deal_type_vertical_square_4 .balgeurebox-deal-current-status {
     display: none;
     position: relative;
     padding: 0 20px; }
 
-.deal_type_vertical_square_4 .memebox-deal-review-star {
+.deal_type_vertical_square_4 .balgeurebox-deal-review-star {
     display: inline-block;
     overflow: hidden;
     height: 14px;
@@ -6698,7 +6864,7 @@ input[type="text"]::-ms-clear {
     background-repeat: no-repeat;
     background-position: 0 -14px; }
 
-.deal_type_vertical_square_4 .memebox-deal-review-star-value {
+.deal_type_vertical_square_4 .balgeurebox-deal-review-star-value {
     display: inline-block;
     overflow: hidden;
     height: 14px;
@@ -6708,57 +6874,57 @@ input[type="text"]::-ms-clear {
     background-repeat: no-repeat;
     background-position: 0 0; }
 
-.deal_type_vertical_square_4 .memebox-deal-review-average {
+.deal_type_vertical_square_4 .balgeurebox-deal-review-average {
     font-family: tahoma, HelveticaNeue-Light, AppleSDGothicNeo-Light, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", sans-serif;
     font-weight: bold;
     color: #555; }
 
-.deal_type_vertical_square_4 .memebox-deal-review-count {
+.deal_type_vertical_square_4 .balgeurebox-deal-review-count {
     font-style: normal;
     margin-top: 1px;
     text-align: right;
     font-size: 12px;
     color: #555; }
 
-.deal_type_vertical_square_4 .memebox-deal-sold-out {
+.deal_type_vertical_square_4 .balgeurebox-deal-sold-out {
     display: none; }
 
 /* 챙�뮻겷��쇝� 챗째�궗챗짼짤 챗쨈�궗챘혻짢 챘�슿늘�큄짤 */
-.deal_type_vertical_square_4 .memebox-deal-price-wrap {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-wrap {
     margin: 0 0 10px 0; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-origin {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-origin {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-discount {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-discount {
     padding-right: 3px;
     font-size: 0; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-info {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-discount .balgeurebox-deal-price-info {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-value {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-discount .balgeurebox-deal-price-value {
     font-size: 15px;
     font-weight: bold;
     line-height: 1.3;
-    color: #ff5073; }
+    color: #ff8fa7; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-discount .memebox-deal-price-unit {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-discount .balgeurebox-deal-price-unit {
     font-size: 13px;
     font-weight: bold;
     line-height: 1.3;
-    color: #ff5073; }
+    color: #ff8fa7; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-info {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-result .balgeurebox-deal-price-info {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-value {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-result .balgeurebox-deal-price-value {
     font-size: 15px;
     font-weight: bold;
     line-height: 1.4;
     color: #333; }
 
-.deal_type_vertical_square_4 .memebox-deal-price-result .memebox-deal-price-unit {
+.deal_type_vertical_square_4 .balgeurebox-deal-price-result .balgeurebox-deal-price-unit {
     font-size: 13px;
     font-weight: bold;
     line-height: 1.4;
@@ -6766,14 +6932,14 @@ input[type="text"]::-ms-clear {
     font-style: normal; }
 
 /* 챙�뮻겷��쇝� 챘째째챙�졖≥モ�슿늘�큄짤 */
-.deal_type_vertical_square_4 .memebox-deal-delivery {
+.deal_type_vertical_square_4 .balgeurebox-deal-delivery {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-info {
+.deal_type_vertical_square_4 .balgeurebox-deal-info {
     position: relative; }
 
 /* 챙�뮻겷��쇝� 챘짠혖챠혖짭 챙�꽓�궗 action */
-.deal_type_vertical_square_4 .memebox-deal-link {
+.deal_type_vertical_square_4 .balgeurebox-deal-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -6784,19 +6950,19 @@ input[type="text"]::-ms-clear {
     margin: -1px;
     border: none; }
 
-.deal_type_vertical_square_4:hover .memebox-deal-link {
+.deal_type_vertical_square_4:hover .balgeurebox-deal-link {
     border: none;
     /*background-color: #fff;*/
     /*opacity: .1;*/ }
 
-.deal_type_vertical_square_4:hover .memebox-deal-image {
+.deal_type_vertical_square_4:hover .balgeurebox-deal-image {
     opacity: 1; }
 
 /* 챙째흹챠�▦쑦ぢ맞� */
-.deal_type_vertical_square_4 .memebox-deal-poke-wrap {
+.deal_type_vertical_square_4 .balgeurebox-deal-poke-wrap {
     display: none; }
 
-.deal_type_vertical_square_4 .memebox-deal-sell-stop {
+.deal_type_vertical_square_4 .balgeurebox-deal-sell-stop {
     position: absolute;
     top: 0;
     left: 0;
@@ -6809,7 +6975,7 @@ input[type="text"]::-ms-clear {
     opacity: .5;
     z-index: 1; }
 
-.deal_type_vertical_square_4 .memebox-deal-poke {
+.deal_type_vertical_square_4 .balgeurebox-deal-poke {
     position: absolute;
     bottom: 40px;
     right: 10px;
@@ -6823,10 +6989,10 @@ input[type="text"]::-ms-clear {
     background-image: url("/package/components/deal/v.1.2.0/pc/_images/_poke.png");
     background-repeat: no-repeat; }
 
-.deal_type_vertical_square_4 .memebox-deal-poke:hover {
+.deal_type_vertical_square_4 .balgeurebox-deal-poke:hover {
     background-position: 0 -50px; }
 
-.deal_type_vertical_square_4 .memebox-deal-poke-checked {
+.deal_type_vertical_square_4 .balgeurebox-deal-poke-checked {
     display: none; }
 
 /* ################################################## bestdeal end */
@@ -6855,7 +7021,7 @@ input[type="text"]::-ms-clear {
 
 .keyword-autoComplete-equal {
     font-size: 12px;
-    color: #FF5073; }
+    color: #ff8fa7; }
 
 .keyword-autoComplete-side {
     font-size: 12px; }
