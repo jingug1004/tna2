@@ -17,9 +17,6 @@ div.newDealContents:after {
     clear: both
 }
 
-div.newDealContents .dealList {
-    width: 1068px
-}
 
 div.newDealContents .dealList li {
     width: 334px;

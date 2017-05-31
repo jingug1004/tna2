@@ -46,7 +46,7 @@ div#header_v2 .searchBar-wrap ul li {
     padding-left: 0;
     border: none !important;
     line-height: 28px;
-    font-family: "\B098\B214\ACE0\B515\BCFC\B4DC", NanumGothicBold, "\B098\B214\ACE0\B515", NanumGothic, "\B3CB\C6C0", Dotum, AppleSDGothic, AppleGothic, "\AD74\B9BC", Gulim, sans-serif;
+    font-family: "나눔고딕", NanumGothicBold, NanumGothic, "돋움", Dotum, AppleSDGothic, AppleGothic, "굴림", Gulim, sans-serif;
     color: #1a1a1a;
     outline: none; }
 
@@ -81,9 +81,9 @@ input[type="text"]::-ms-clear {
     right: 0;
     display: block;
     width: 40px;
-    height: 37px;
+    height: 35px;
     text-indent: -99999px;
-    background: url(/img/header/header_icons.png) no-repeat -60px 7px;
+    background: url(/img/header/header_icons.png) no-repeat -60px 5px;
     border: none;
     background-color: #ff8fa7;
     cursor: pointer; }

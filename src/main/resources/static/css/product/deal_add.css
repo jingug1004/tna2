@@ -1373,7 +1373,7 @@ dd.cardBenefitWrap {
     width: 110px;
     height: 85px;
     padding: 0 0 0 10px;
-    border: 1px solid #ff5073;
+    border: 1px solid #ff8fa7;
     border-bottom: 0;
     -webkit-border-top-right-radius: 3px;
     -webkit-border-bottom-right-radius: 0;
@@ -1390,10 +1390,10 @@ dd.cardBenefitWrap {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    background: #ff5073;
+    background: #ff8fa7;
     color: #fff;
     font-size: 15px;
-    font-family: '�굹�닎怨좊뵓', NanumGothic, '�룍��', Dotum, AppleSDGothic, AppleGothic, '援대┝', Gulim, sans-serif;
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림┝', Gulim, sans-serif;
     font-weight: bold;
     line-height: 20px;
     text-align: left;
@@ -3309,7 +3309,7 @@ a.starScore button.overR {
 }
 
 #putinQty{
-	height: 18px;
+	height: 20px;
     width: 47px;
     text-align: center;
     padding: 0;

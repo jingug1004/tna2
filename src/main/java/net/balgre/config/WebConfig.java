@@ -60,8 +60,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 //		registry.addResourceHandler("/vendors/**").addResourceLocations("classpath:/static/vendors/");
 //		registry.addResourceHandler("/dist/**").addResourceLocations("classpath:/static/dist/");
-//		registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-
+		registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
         registry.addResourceHandler("/css/**").addResourceLocations("classpath:/static/css/");
         registry.addResourceHandler("/font/**").addResourceLocations("classpath:/static/font/");
         registry.addResourceHandler("/img/**").addResourceLocations("classpath:/static/img/");
@@ -147,34 +146,23 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(loginInter)
                 .addPathPatterns("/loginPost")
                 .excludePathPatterns();
-
+        registry.addInterceptor(loginInter)
+        .addPathPatterns("/sns/login")
+        .excludePathPatterns();
 //        registry.addInterceptor(authInter)
 //                .addPathPatterns("/plan")
 ////                추후에 addPathPatterns에 많이 넣어야 함. 웹 페이지 많이 만들어지면.
 //                .excludePathPatterns();
 
-        registry.addInterceptor(authInter)
-                .addPathPatterns("/my/qna")
-                .excludePathPatterns();
 
-        registry.addInterceptor(authInter)
-                .addPathPatterns("/my/index")
-                .excludePathPatterns();
 
         registry.addInterceptor(authInter)
                 .addPathPatterns("/input_form")
                 .excludePathPatterns();
 
-        registry.addInterceptor(authInter)
-                .addPathPatterns("/my/qnaList")
-                .excludePathPatterns();
 
         registry.addInterceptor(authInter)
                 .addPathPatterns("/qna/delete")
-                .excludePathPatterns();
-
-        registry.addInterceptor(authInter)
-                .addPathPatterns("/my/privacy")
                 .excludePathPatterns();
 
         registry.addInterceptor(authInter)

@@ -1,6 +1,7 @@
 package net.balgre.controller;
 
 import net.balgre.domain.BasketResponse;
+import net.balgre.domain.Brand;
 import net.balgre.domain.CategoryLvResult;
 import net.balgre.domain.CategoryResponse;
 import net.balgre.domain.WishListResponse;
@@ -52,35 +53,39 @@ public class MainController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
-	@Autowired
-	private MainService service;
-
-	// 추가영역 시작
-	@Autowired
-	private ProductService productService;
-	// 추가영역 종료
-
-	@Autowired
+    @Autowired
+    private MainService service;
+    
+    // 추가영역 시작
+    @Autowired
+    private ProductService productService;
+    
+    @Autowired
+    private WishService wishService;
+    
+    @Autowired
 	private BasketService basketService;
 
-	@Autowired
-	private WishService wishService;
+    // 메인으로
+    // 카테고리 때문에 코드 추가함 by minho
+    @RequestMapping(value = {"/main", "/"}, method = RequestMethod.GET)
+    public String mainGET(Model model, HttpSession session) throws Exception {
 
-	// 메인으로
-	// 카테고리 때문에 코드 추가함 by minho
-	@RequestMapping(value = {"/main", "/"}, method = RequestMethod.GET)
-	public String mainGET(Model model) throws Exception {
-
-		logger.info("lll~~~ 홈페이지 어디서 메인으로 . lll~~~");
-
-		// 추가영역 시작
-		CategoryResponse res = productService.categoryList2();
-
-		List<CategoryLvResult> CL = res.getCategoryList();
-
-		model.addAttribute("category", CL);
-		// 추가영역 종료
-		model.addAttribute("showMain", service.showMain());
+        logger.info("lll~~~ 홈페이지 어디서 메인으로 . lll~~~");
+        
+        // 추가영역 시작
+        
+        CategoryResponse res = productService.categoryList2();
+        
+        List<CategoryLvResult> CL = res.getCategoryList();
+        logger.info(CL.toString());
+        List<Brand> BL = res.getBrandList();
+         
+        session.setAttribute("categoryList", CL);
+        session.setAttribute("brandList", BL);
+        // 추가영역 종료
+        
+        model.addAttribute("showMain", service.showMain());
 
 		return "main/main";
 

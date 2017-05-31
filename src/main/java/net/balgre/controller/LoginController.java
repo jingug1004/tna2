@@ -82,11 +82,6 @@ public class LoginController {
 
     }
 
-
-
-
-
-
     @RequestMapping(value = "/loginPost", method = RequestMethod.POST)
     public String loginPOST(LoginDTO dto,
                           HttpSession session,

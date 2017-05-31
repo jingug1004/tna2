@@ -1,4 +1,4 @@
-#parse ("/main/header2.vm")
+#parse("/main/header.vm")
 
 <meta charset="UTF-8">
 <title>Insert title here</title>

@@ -13,22 +13,51 @@
     <link href="/css/loginCommon.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="/css/loginCommon.css?v=7kc-1n234ch" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="/webjars/jquery-validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="//connect.facebook.net/ko_KR/all.js"></script>
+	<script>
+		window.fbAsyncInit = function() {
+		  		FB.init({ 
+			  		appId : '232664117179969', // 앱 ID
+			  		status : true,         // 로그인 상태를 확인
+			  		cookie : true,          // 쿠키허용
+			  		xfbml : true          // parse XFBML
+		  		}); 
+		  		
+			FB.Event.subscribe('auth.login', function(response) {
+				if (response.status === 'connected') {
+		        	FB.api('/me', function(user) {
+		            	if (user) {
+		            		$("#login").val(user.id);
+							$("#type").val("F");
+							$("#snslogin").submit();
+		            	}
+		        	});
+		    	}
+	  		});
+		
+			FB.Event.subscribe('auth.logout', function(response) {
+				FB.login();    		
+	  		});
+		}
+	</script>
 </head>
 
 <div class="layout-structure-content">
-    <h1 class="header-main-content-logo-center">
-    <a class="back-home" href="/"><img src="/img/login/rebbit.png" width="100px" height="100px"></a>
-    </h1>
-    <p class="text_under_header">발그레에서 싸게 쇼핑하자</p>
+    
+    <p class="text_under_header">화장품 쇼핑은 발그레에서</p>
     <div class="login-title-image">
         <span class="login-bigtitle-img"><img src="/img/login/login_title.png" height="35"></span>
     </div>
     <div class="login_form_onpage">
-                <form id="sky-form1" class="log-reg-block sky-form" action="/loginPost" method="post">
+                <form id="sky-form1" class="log-reg-block sky-form"  method="post">
                     <section>
                         <label class="login-input-text">
                             <div class="input-group-id">
-                                <input type="text" placeholder="이메일 (아이디)" name="username" class="form-control_email">
+                                <input type="text" placeholder="이메일 (아이디)" id="username" name="username" class="form-control_email">
 
                             </div>
                         </label>
@@ -37,7 +66,7 @@
                     <section>
                         <label class="login-input-text-pw">
                             <div class="input-group-pw">
-                                <input type="password" placeholder="비밀번호" name="password"
+                                <input type="password" placeholder="비밀번호" id="password" name="password"
                                        class="form-control_pw">
 
                             </div>
@@ -60,129 +89,116 @@
            
            <div class="search_id_and_pw_register">
                 <p class="text-center">
-                    <a href="#" data-toggle="modal" data-target="#myModal" class="search-email-and-password find_balgeure_email">이메일(아이디) 찾기</a>  |   
-                    <a href="/goFindPw" class="search-email-and-password find_balgeure_password">비밀번호 찾기</a>  |   
+                    <a href="javascript:findId();" class="search-email-and-password find_balgeure_email">이메일(아이디) 찾기</a>  |   
+                    <a href="javascript:findPw();" class="search-email-and-password find_balgeure_password">비밀번호 찾기</a>  |   
                     <a href="/regist" class="search-email-and-password join_balgeure_register">회원가입</a></p>
            </div>
            
                 <div class="simple-sns-login-method">
                     <ul class="simple-login-SNS">
-            <li class="simple-login-SNS-list" id="naverLogin">
-                <a class="member-SNS_Login member-SNS-naver-login"
-                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;naver&quot;}'
-                   data-segment='' href="#"><span class="member-SNS-login-icon member-SNS-login-icon-naver">naver</span> <strong
-                        class="member-SNS-login-text">계정으로 회원가입</strong></a>
+            <li class="simple-login-SNS-list" id="naverLogin" style="cursor:pointer;" onclick="snsLogin('N');">
+                <span class="member-SNS-login-icon member-SNS-login-icon-naver">naver</span></a>
             </li>
-            <li class="simple-login-SNS-list" id="facebookLogin">
-                <a class="member-SNS_Login member-SNS-facebook-login"
-                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;facebook&quot;}'
-                   data-segment='' href="#"><span class="member-SNS-login-icon member-SNS-login-icon-facebook">facebook</span>
-                    <strong class="member-SNS-login-text">계정으로 회원가입</strong></a>
+            <li class="simple-login-SNS-list" id="facebookLogin" style="cursor:pointer;" onclick="snsLogin('F');">
+                <span class="member-SNS-login-icon member-SNS-login-icon-facebook">facebook</span>
             </li>
-            <li class="simple-login-SNS-list" id="kakaoLogin">
-                <a class="member-SNS_Login member-SNS-kakao-login"
-                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;kakao&quot;}'
-                   data-segment='' href="#"><span class="member-SNS-login-icon member-SNS-login-icon-kakao">kakao</span> <strong
-                        class="member-SNS-login-text">계정으로 회원가입</strong></a>
+            <li class="simple-login-SNS-list" id="kakaoLogin" style="cursor:pointer;" onclick="snsLogin('K');">
+                <span class="member-SNS-login-icon member-SNS-login-icon-kakao">kakao</span>
             </li>
         </ul>
                 </div>           
             </div>
    
 </div>
-<!-- S : 로거 환경변수 -->
-
-         <form name="findIdForm" method="post">
-	                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-	                        <div class="modal-dialog">
-	                            <div class="modal-content">
-	                                <div class="modal-header">
-		                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-		                                <h4 class="modal-title" id="myModalLabel">아이디 찾기</h4>
-	                                </div>
-	                                <div class="modal-body">
-	                                    <input type="hidden" class="R_email" id="R_email" name="R_email" value="$user.email">
-		                                <input type="text" class="name" id="name" name="name" placeholder="이름"><br>
-                                        <input type="text" class="phone" id="phone" name="phone" placeholder="핸드폰번호">
-                                        <input type="text" class="email_id" id="email_id" name="email_id" value="" readonly>
-                                        <span id="guide" style="color:#999"></span>
-	                                </div>
-	                                <div class="modal-footer">
-		                                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-		                                <button type="button" class="btn btn-primary" id="findid" name="findid">확인</button>
-	                                </div>
-	                           </div>
-	                       </div>
-	                   </div>                   
-    </form>
-    
     <script>
-        function PwBtn() {
-        	location.href="auth/08_2_popup";
-        }
-    </script>
-
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="http://googledrive.com/host/0B-QKv6rUoIcGREtrRTljTlQ3OTg"></script><!-- ie10-viewport-bug-workaround.js -->
-    <script src="http://googledrive.com/host/0B-QKv6rUoIcGeHd6VV9JczlHUjg"></script><!-- holder.js -->
-    <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+    (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/ko_KR/all.js";
+        ref.parentNode.insertBefore(js, ref);
+      }(document));
     
-    <!-- Validation -->
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="jquery.validate.min.js"></script>
-    <script type="text/javascript" src="additional-methods.min.js"></script>
-    <script type="text/javascript" src="messages_ko.min.js"></script>
-    <script src="/js/common/jquery-3.1.1.min.js"></script>
-    
-    <script>
-$(function() {
-    	$('#findid').on('click', function(e) {
-    		e.preventDefault;
-    		var name = $("#name").val();
-    		var phone = $("#phone").val();
-    		
-    		var formData = new FormData();
-    		
-    		formData.append("name", name);
-    		formData.append("phone", phone);
-    		
-    		$.ajax({
-    			type: "POST",
-    			url: "/my/privacy/findId",
-    			data: formData,
-    		    dataType: "text",
-    		    contentType: false,
-    		    processData: false,
-    		    success: function(formData) {
-    		    	console.log(formData);
-    		    	$("#email_id").val(formData);
-    		    },
-    		    error:function(request,status,error) {
-    		        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-    		    },
-    		});
+     $(document).ready(function () {
+     	Kakao.init('71fb3c875e19ee24c57124b06f983a1a');
+     	$("#sky-form1").validate({ 
+    		rules: {
+    			username : {
+    				required : true 
+    			}, 
+    			password : { 
+    				required : true 
+    			}
+    		}, 
+    		messages: {
+    			username: { required: "아이디를 입력하세요" }, 
+    			password: { required: "비밀번호를 입력하세요" } 
+    		}, submitHandler: function(form) {
+    			var returnValue = {
+    				id: $("#username").val(),
+    				type: $("#password").val()
+    			};
+    			window.opener.getReturnValue(returnValue);
+    			window.close();
+            }
     	});
-    });
+     });
+     
+    function findId() {
+    	window.open('/goFindId', 'idPopup', 'left=580, top=270, width=700, height=400, scrollbars=no, toolbar=no, location=no');
+    }
+    function findPw() {
+    	window.open('/goFindPw', 'idPopup', 'left=580, top=270, width=700, height=400, scrollbars=no, toolbar=no, location=no');
+    }
 </script>
 
 <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '504225513300446',
-            xfbml      : true,
-            version    : 'v2.8'
-        });
-        FB.AppEvents.logPageView();
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+	function snsLogin(type) {
+		if(type == 'N') {
+			naver_logout();
+		} else if(type == 'F') {
+			FB.getLoginStatus(function(response) {
+				if(response.status == 'connected' || response.status == 'not_authorized') {
+					FB.logout();
+				} else {
+					FB.login();
+				}
+			});
+			//FB.logout();
+		} else if(type == 'K') {
+			Kakao.Auth.logout(
+                function(obj) {
+                	openNewWindow("/kakao/login");
+            	}
+            );
+			
+		}
+	}
+	function openNewWindow(url) {
+	  var name = '_blank';
+	  var specs = 'menubar=no,status=no,toolbar=no, width=500, height=500';
+	  var newWindow = window.open(url, name, specs);
+	  newWindow.focus();
+	}
+	
+	function getReturnValue(returnValue) {
+		if(returnValue.id) {
+			var returnValue = {
+   				id: returnValue.id,
+   				type: returnValue.type
+   			};
+   			window.opener.getReturnValue(returnValue);
+   			window.close();
+		}
+	}
+	
+	function naver_logout() {
+		$("body").append("<iframe id='logoutframe' style='display: none;'></iframe>");
+		$("#logoutframe").attr("src", "http://nid.naver.com/nidlogin.logout");
+		setTimeout(function() {
+			openNewWindow("/naver/login");
+		}, 2000); // 2000ms(2초)가 경과하면 이 함수가 실행됩니다.
+	}
 </script>
 
 

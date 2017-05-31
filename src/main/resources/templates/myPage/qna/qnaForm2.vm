@@ -1,4 +1,4 @@
-#parse ("/main/header2.vm")
+#parse("/main/header.vm")
 <script type="text/javascript" async=""
 	src="/js/myPage/qna/linkid.js"></script>
 <script type="text/javascript" async=""

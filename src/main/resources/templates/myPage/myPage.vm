@@ -1,22 +1,22 @@
-#parse ("/main/header2.vm")
+#parse ("/main/header.vm")
 
 <script type="text/javascript" async=""
-	src="/js/myPage/ec.js"></script>
+        src="/js/myPage/ec.js"></script>
 <script type="text/javascript" async=""
-	src="/js/myPage/linkid.js"></script>
+        src="/js/myPage/linkid.js"></script>
 <script type="text/javascript" async=""
-	src="/js/myPage/analytics.js"></script>
+        src="/js/myPage/analytics.js"></script>
 <script type="text/javascript" async=""
-	src="/js/myPage/analytics.js"></script>
+        src="/js/myPage/analytics.js"></script>
 <script type="text/javascript" async=""
-	src="/js/myPage/fbevents.js"></script>
+        src="/js/myPage/fbevents.js"></script>
 <script id="facebook-jssdk"
-	src="/js/myPage/all.js#xfbml=1&amp;appId=1463989610483291"></script>
+        src="/js/myPage/all.js#xfbml=1&amp;appId=1463989610483291"></script>
 
 <meta name="google-site-verification"
-	content="riA63yIt62k3l7lk2d9ERDjnzNPPm1MhEbOtCql6EZQ">
+      content="riA63yIt62k3l7lk2d9ERDjnzNPPm1MhEbOtCql6EZQ">
 <meta name="naver-site-verification"
-	content="d03bf35c394ca4df845f8157f208e35c24cb5f86">
+      content="d03bf35c394ca4df845f8157f208e35c24cb5f86">
 <meta charset="utf-8">
 <meta http-equiv="Access-Control-Allow-Origin" content="*">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -24,8 +24,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<link rel="dns-prefetch" href="//img1.memebox.com">
-<link rel="dns-prefetch" href="//img2.memebox.com">
+
 <link rel="dns-prefetch" href="//search.memebox.com">
 <link rel="dns-prefetch" href="//ajax.cdnjs.com">
 <link rel="dns-prefetch" href="//wcs.naver.net">
@@ -38,75 +37,76 @@
 <link rel="dns-prefetch" href="//log.grucompany.co.kr">
 
 <link rel="icon" type="image/png"
-	href="/img/myPage/myP_banner_20160621103413_EdwbM7aCD3.png">
+      href="/img/myPage/myP_banner_20160621103413_EdwbM7aCD3.png">
 <link rel="shorticon icon" type="image/png"
-	href="/img/myPage/myP_banner_20160621103413_EdwbM7aCD3.png">
-<link rel="alternate" media="only screen and (max-width: 640px)"
-	href="http://m.memebox.com/my/index">
-<link rel="canonical" href="http://www.memebox.com/my/index">
+      href="/img/myPage/myP_banner_20160621103413_EdwbM7aCD3.png">
+
+
 <title>발그레::내 삶을 아름답게!</title>
 <meta name="robots" content="INDEX, FOLLOW">
 <meta name="author" content="발그레">
 <meta name="title" content="발그레::내 삶을 아름답게!">
 <meta name="description"
-	content="뷰티 No.1 발그레. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.">
+      content="뷰티 No.1 발그레. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.">
 <meta name="keywords"
-	content="뷰티 이커머스, 화장품, 쇼핑몰, 글로벌, 여성, 남성, 20대, 30대, 메이크업, 도구, 데일리, 한정특가, 추천템, 필수템, 인생템, 베스트, 추천, 선물, 미미배송, 오늘의 발견, 잇템, 최신템, 신규 상품, 할인, make up, beauty, face, lip, eye, 스킨케어, 명품, 브랜드, 수입, 미백, 화장, 피부, 케어, 스킨, 페이스, 눈, 립, 색조, 네일, 아임미미, 포니이펙트, 누니, IM MEME, PONY EFFECT, NOONI">
+      content="뷰티 이커머스, 화장품, 쇼핑몰, 글로벌, 여성, 남성, 20대, 30대, 메이크업, 도구, 데일리, 한정특가, 추천템, 필수템, 인생템, 베스트, 추천, 선물, 미미배송, 오늘의 발견, 잇템, 최신템, 신규 상품, 할인, make up, beauty, face, lip, eye, 스킨케어, 명품, 브랜드, 수입, 미백, 화장, 피부, 케어, 스킨, 페이스, 눈, 립, 색조, 네일, 아임미미, 포니이펙트, 누니, IM MEME, PONY EFFECT, NOONI">
 <meta name="application-name"
-	content="발그레::내 삶을 아름답게!">
+      content="발그레::내 삶을 아름답게!">
 <meta property="al:web:url" content="http://localhost:8088/my/index">
 <meta property="al:ios:app_name" content="발그레">
 <meta property="al:ios:app_store_id" content="896990789">
 <meta property="al:ios:url" content="memebox://">
 <meta property="al:android:app_name" content="발그레">
-<meta property="al:android:package" content="kr.co.memebox.meme">
-<meta property="al:android:url" content="memebox://">
+
+
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="발그레 내 삶을 아름답게!">
 <meta name="twitter:description"
-	content="뷰티 No.1 발그레. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.">
+      content="뷰티 No.1 발그레. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.">
 <meta property="fb:app_id" content="1463989610483291">
 <meta property="og:site_name" content="발그레">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://www.memebox.com/my/index">
+
 <meta property="og:title" content="미미박스 내 삶을 아름답게!">
 <meta property="og:description"
-	content="뷰티 No.1 발그레. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.">
+      content="뷰티 No.1 발그레. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.">
 <script type="text/javascript" async=""
-	src="/js/myPage/analytics.min.js"></script>
+        src="/js/myPage/analytics.min.js"></script>
 <script async="" src="/js/myPage/gtm.js?id=GTM-WMMF2B"></script>
-<script
-	src="https://connect.facebook.net/signals/config/1491677964385271?v=stable"
-	async=""></script>
-<script
-	src="https://connect.facebook.net/signals/config/1053563878085087?v=stable"
-	async=""></script>
+<script src="https://connect.facebook.net/signals/config/1491677964385271?v=stable"
+        async=""></script>
+<script src="https://connect.facebook.net/signals/config/1053563878085087?v=stable"
+        async=""></script>
 <script async="" src="/js/myPage/fbevents.js"></script>
-<script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://www.memebox.com/","name": "미미박스 (Memebox)", "alternateName": "뷰티 No.1 미미박스. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.","potentialAction": { "@type": "SearchAction", "target": "https://search.memebox.com/memebox/search?q={search_term_string}&at=1&door=google_search&qt=box","query-input": "required name=search_term_string" } }</script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"siteNavigationElement","name":"미미브랜드","url":"http://www.memebox.com/category/181"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"메이크업","url":"http://www.memebox.com/category/177"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"스킨케어","url":"http://www.memebox.com/category/179"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"헤어","url":"http://www.memebox.com/category/178"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"바디","url":"http://www.memebox.com/category/728"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"네일","url":"http://www.memebox.com/category/726"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"향수","url":"http://www.memebox.com/category/180"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"MEN","url":"http://www.memebox.com/category/458"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"이미용기기","url":"http://www.memebox.com/category/188"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"파우더룸","url":"http://www.memebox.com/category/186"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"생활/건강","url":"http://www.memebox.com/category/710"}]</script>
+<script type="application/ld+json">
+    { "@context": "http://schema.org", "@type": "WebSite", "url": "http://www.memebox.com/","name": "미미박스 (Memebox)", "alternateName": "뷰티 No.1 미미박스. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.","potentialAction": { "@type": "SearchAction", "target": "https://search.memebox.com/memebox/search?q={search_term_string}&at=1&door=google_search&qt=box","query-input": "required name=search_term_string" } }
+</script>
+<script type="application/ld+json">
+    [{"@context":"http://schema.org","@type":"siteNavigationElement","name":"미미브랜드","url":"http://www.memebox.com/category/181"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"메이크업","url":"http://www.memebox.com/category/177"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"스킨케어","url":"http://www.memebox.com/category/179"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"헤어","url":"http://www.memebox.com/category/178"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"바디","url":"http://www.memebox.com/category/728"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"네일","url":"http://www.memebox.com/category/726"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"향수","url":"http://www.memebox.com/category/180"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"MEN","url":"http://www.memebox.com/category/458"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"이미용기기","url":"http://www.memebox.com/category/188"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"파우더룸","url":"http://www.memebox.com/category/186"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"생활/건강","url":"http://www.memebox.com/category/710"}]
+</script>
 
 <meta name="application-name" content="미미박스">
 <meta name="msapplication-tooltip" content="미미박스, 내 삶을 아름답게!">
 <meta name="msapplication-starturl" content="http://www.memebox.com/">
 
 <link rel="apple-touch-icon-precomposed"
-	href="/img/myPage/myP_banner_20160621103357_yaL49rgT7s.png">
+      href="/img/myPage/myP_banner_20160621103357_yaL49rgT7s.png">
 <!--<link rel="icon" type="image/x-icon" href="//img2.memebox.com/static/contents/img/upload/contents_20140915095454_iv33dG71a8.ico">-->
 <link rel="shorticon icon" type="image/x-icon"
-	href="//www.memebox.com/favicon.ico">
+      href="//www.memebox.com/favicon.ico">
 <!--}-->
 <link rel="stylesheet" type="text/css" href="/css/myPage/common.css">
 <!--<link rel="stylesheet" type="text/css" href="/web/css/header.css">-->
 <link rel="stylesheet" type="text/css"
-	href="/css/myPage/jquery.fancybox.css">
+      href="/css/myPage/jquery.fancybox.css">
 <!--<link rel="stylesheet" type="text/css" href="//www.memebox.com/web/css/vendor/jquery-ui.min.css">-->
 <!--}-->
 
 <style>
-.bx-wrapper .bx-viewport {
-	border: 0px;
-	/*left: -5px;*/
-}
+    .bx-wrapper .bx-viewport {
+        border: 0px;
+        /*left: -5px;*/
+    }
 </style>
 
 
@@ -127,1059 +127,695 @@
 
 
 <script type="text/javascript"
-	src="/js/myPage/strack.min.js"></script>
+        src="/js/myPage/strack.min.js"></script>
 <style type="text/css">
-.fancybox-margin {
-	margin-right: 0px;
-}
+    .fancybox-margin {
+        margin-right: 0px;
+    }
 </style>
 <style type="text/css">
-.fb_hidden {
-	position: absolute;
-	top: -10000px;
-	z-index: 10001
-}
-
-.fb_reposition {
-	overflow: hidden;
-	position: relative
-}
-
-.fb_invisible {
-	display: none
-}
-
-.fb_reset {
-	background: none;
-	border: 0;
-	border-spacing: 0;
-	color: #000;
-	cursor: auto;
-	direction: ltr;
-	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-	font-size: 11px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	letter-spacing: normal;
-	line-height: 1;
-	margin: 0;
-	overflow: visible;
-	padding: 0;
-	text-align: left;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	visibility: visible;
-	white-space: normal;
-	word-spacing: normal
-}
-
-.fb_reset>div {
-	overflow: hidden
-}
-
-.fb_link img {
-	border: none
-}
-
-@
-keyframes fb_transform {
-	from {opacity: 0;
-	transform: scale(.95)
-}
-
-to {
-	opacity: 1;
-	transform: scale(1)
-}
-
-}
-.fb_animate {
-	animation: fb_transform .3s forwards
-}
-
-.fb_dialog {
-	background: rgba(82, 82, 82, .7);
-	position: absolute;
-	top: -10000px;
-	z-index: 10001
-}
-
-.fb_reset .fb_dialog_legacy {
-	overflow: visible
-}
-
-.fb_dialog_advanced {
-	padding: 10px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px
-}
-
-.fb_dialog_content {
-	background: #fff;
-	color: #333
-}
-
-.fb_dialog_close_icon {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
-		no-repeat scroll 0 0 transparent;
-	cursor: pointer;
-	display: block;
-	height: 15px;
-	position: absolute;
-	right: 18px;
-	top: 17px;
-	width: 15px
-}
-
-.fb_dialog_mobile .fb_dialog_close_icon {
-	top: 5px;
-	left: 5px;
-	right: auto
-}
-
-.fb_dialog_padding {
-	background-color: transparent;
-	position: absolute;
-	width: 1px;
-	z-index: -1
-}
-
-.fb_dialog_close_icon:hover {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
-		no-repeat scroll 0 -15px transparent
-}
-
-.fb_dialog_close_icon:active {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
-		no-repeat scroll 0 -30px transparent
-}
-
-.fb_dialog_loader {
-	background-color: #f6f7f9;
-	border: 1px solid #606060;
-	font-size: 24px;
-	padding: 20px
-}
-
-.fb_dialog_top_left, .fb_dialog_top_right, .fb_dialog_bottom_left,
-	.fb_dialog_bottom_right {
-	height: 10px;
-	width: 10px;
-	overflow: hidden;
-	position: absolute
-}
-
-.fb_dialog_top_left {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png)
-		no-repeat 0 0;
-	left: -10px;
-	top: -10px
-}
-
-.fb_dialog_top_right {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png)
-		no-repeat 0 -10px;
-	right: -10px;
-	top: -10px
-}
-
-.fb_dialog_bottom_left {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png)
-		no-repeat 0 -20px;
-	bottom: -10px;
-	left: -10px
-}
-
-.fb_dialog_bottom_right {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png)
-		no-repeat 0 -30px;
-	right: -10px;
-	bottom: -10px
-}
-
-.fb_dialog_vert_left, .fb_dialog_vert_right, .fb_dialog_horiz_top,
-	.fb_dialog_horiz_bottom {
-	position: absolute;
-	background: #525252;
-	filter: alpha(opacity = 70);
-	opacity: .7
-}
-
-.fb_dialog_vert_left, .fb_dialog_vert_right {
-	width: 10px;
-	height: 100%
-}
-
-.fb_dialog_vert_left {
-	margin-left: -10px
-}
-
-.fb_dialog_vert_right {
-	right: 0;
-	margin-right: -10px
-}
-
-.fb_dialog_horiz_top, .fb_dialog_horiz_bottom {
-	width: 100%;
-	height: 10px
-}
-
-.fb_dialog_horiz_top {
-	margin-top: -10px
-}
-
-.fb_dialog_horiz_bottom {
-	bottom: 0;
-	margin-bottom: -10px
-}
-
-.fb_dialog_iframe {
-	line-height: 0
-}
-
-.fb_dialog_content .dialog_title {
-	background: #6d84b4;
-	border: 1px solid #365899;
-	color: #fff;
-	font-size: 14px;
-	font-weight: bold;
-	margin: 0
-}
-
-.fb_dialog_content .dialog_title>span {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif)
-		no-repeat 5px 50%;
-	float: left;
-	padding: 5px 0 7px 26px
-}
-
-body.fb_hidden {
-	-webkit-transform: none;
-	height: 100%;
-	margin: 0;
-	overflow: visible;
-	position: absolute;
-	top: -10000px;
-	left: 0;
-	width: 100%
-}
-
-.fb_dialog.fb_dialog_mobile.loading {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif)
-		white no-repeat 50% 50%;
-	min-height: 100%;
-	min-width: 100%;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	z-index: 10001
-}
-
-.fb_dialog.fb_dialog_mobile.loading.centered {
-	width: auto;
-	height: auto;
-	min-height: initial;
-	min-width: initial;
-	background: none
-}
-
-.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
-	width: 100%
-}
-
-.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
-	background: none
-}
-
-.loading.centered #fb_dialog_loader_close {
-	color: #fff;
-	display: block;
-	padding-top: 20px;
-	clear: both;
-	font-size: 18px
-}
-
-#fb-root #fb_dialog_ipad_overlay {
-	background: rgba(0, 0, 0, .45);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-	width: 100%;
-	min-height: 100%;
-	z-index: 10000
-}
-
-#fb-root #fb_dialog_ipad_overlay.hidden {
-	display: none
-}
-
-.fb_dialog.fb_dialog_mobile.loading iframe {
-	visibility: hidden
-}
-
-.fb_dialog_content .dialog_header {
-	-webkit-box-shadow: white 0 1px 1px -1px inset;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA),
-		to(#2C4987));
-	border-bottom: 1px solid;
-	border-color: #1d4088;
-	color: #fff;
-	font: 14px Helvetica, sans-serif;
-	font-weight: bold;
-	text-overflow: ellipsis;
-	text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
-	vertical-align: middle;
-	white-space: nowrap
-}
-
-.fb_dialog_content .dialog_header table {
-	-webkit-font-smoothing: subpixel-antialiased;
-	height: 43px;
-	width: 100%
-}
-
-.fb_dialog_content .dialog_header td.header_left {
-	font-size: 12px;
-	padding-left: 5px;
-	vertical-align: middle;
-	width: 60px
-}
-
-.fb_dialog_content .dialog_header td.header_right {
-	font-size: 12px;
-	padding-right: 5px;
-	vertical-align: middle;
-	width: 60px
-}
-
-.fb_dialog_content .touchable_button {
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6),
-		color-stop(.5, #355492), to(#2A4887));
-	border: 1px solid #29487d;
-	-webkit-background-clip: padding-box;
-	-webkit-border-radius: 3px;
-	-webkit-box-shadow: rgba(0, 0, 0, .117188) 0 1px 1px inset,
-		rgba(255, 255, 255, .167969) 0 1px 0;
-	display: inline-block;
-	margin-top: 3px;
-	max-width: 85px;
-	line-height: 18px;
-	padding: 4px 12px;
-	position: relative
-}
-
-.fb_dialog_content .dialog_header .touchable_button input {
-	border: none;
-	background: none;
-	color: #fff;
-	font: 12px Helvetica, sans-serif;
-	font-weight: bold;
-	margin: 2px -12px;
-	padding: 2px 6px 3px 6px;
-	text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
-}
-
-.fb_dialog_content .dialog_header .header_center {
-	color: #fff;
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 18px;
-	text-align: center;
-	vertical-align: middle
-}
-
-.fb_dialog_content .dialog_content {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif)
-		no-repeat 50% 50%;
-	border: 1px solid #555;
-	border-bottom: 0;
-	border-top: 0;
-	height: 150px
-}
-
-.fb_dialog_content .dialog_footer {
-	background: #f6f7f9;
-	border: 1px solid #555;
-	border-top-color: #ccc;
-	height: 40px
-}
-
-#fb_dialog_loader_close {
-	float: left
-}
-
-.fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
-	text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
-}
-
-.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
-	visibility: hidden
-}
-
-#fb_dialog_loader_spinner {
-	animation: rotateSpinner 1.2s linear infinite;
-	background-color: transparent;
-	background-image:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	height: 24px;
-	width: 24px
-}
-
-@
-keyframes rotateSpinner { 0%{
-	transform: rotate(0deg)
-}
-
-100%{
-transform
-:rotate(360deg)
-}
-}
-.fb_iframe_widget {
-	display: inline-block;
-	position: relative
-}
-
-.fb_iframe_widget span {
-	display: inline-block;
-	position: relative;
-	text-align: justify
-}
-
-.fb_iframe_widget iframe {
-	position: absolute
-}
-
-.fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span,
-	.fb_iframe_widget_fluid_desktop iframe {
-	max-width: 100%
-}
-
-.fb_iframe_widget_fluid_desktop iframe {
-	min-width: 220px;
-	position: relative
-}
-
-.fb_iframe_widget_lift {
-	z-index: 1
-}
-
-.fb_hide_iframes iframe {
-	position: relative;
-	left: -10000px
-}
-
-.fb_iframe_widget_loader {
-	position: relative;
-	display: inline-block
-}
-
-.fb_iframe_widget_fluid {
-	display: inline
-}
-
-.fb_iframe_widget_fluid span {
-	width: 100%
-}
-
-.fb_iframe_widget_loader iframe {
-	min-height: 32px;
-	z-index: 2;
-	zoom: 1
-}
-
-.fb_iframe_widget_loader .FB_Loader {
-	background:
-		url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif)
-		no-repeat;
-	height: 32px;
-	width: 32px;
-	margin-left: -16px;
-	position: absolute;
-	left: 50%;
-	z-index: 4
-}
+    .fb_hidden {
+        position: absolute;
+        top: -10000px;
+        z-index: 10001;
+    }
+
+    .fb_reposition {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .fb_invisible {
+        display: none;
+    }
+
+    .fb_reset {
+        background: none;
+        border: 0;
+        border-spacing: 0;
+        color: #000;
+        cursor: auto;
+        direction: ltr;
+        font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+        font-size: 11px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 1;
+        margin: 0;
+        overflow: visible;
+        padding: 0;
+        text-align: left;
+        text-decoration: none;
+        text-indent: 0;
+        text-shadow: none;
+        text-transform: none;
+        visibility: visible;
+        white-space: normal;
+        word-spacing: normal;
+    }
+
+        .fb_reset > div {
+            overflow: hidden;
+        }
+
+    .fb_link img {
+        border: none;
+    }
+
+    @ keyframes fb_transform {
+        from {
+            opacity: 0;
+            transform: scale(.95);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .fb_animate {
+        animation: fb_transform .3s forwards;
+    }
+
+    .fb_dialog {
+        background: rgba(82, 82, 82, .7);
+        position: absolute;
+        top: -10000px;
+        z-index: 10001;
+    }
+
+    .fb_reset .fb_dialog_legacy {
+        overflow: visible;
+    }
+
+    .fb_dialog_advanced {
+        padding: 10px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+    }
+
+    .fb_dialog_content {
+        background: #fff;
+        color: #333;
+    }
+
+    .fb_dialog_close_icon {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+        cursor: pointer;
+        display: block;
+        height: 15px;
+        position: absolute;
+        right: 18px;
+        top: 17px;
+        width: 15px;
+    }
+
+    .fb_dialog_mobile .fb_dialog_close_icon {
+        top: 5px;
+        left: 5px;
+        right: auto;
+    }
+
+    .fb_dialog_padding {
+        background-color: transparent;
+        position: absolute;
+        width: 1px;
+        z-index: -1;
+    }
+
+    .fb_dialog_close_icon:hover {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;
+    }
+
+    .fb_dialog_close_icon:active {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;
+    }
+
+    .fb_dialog_loader {
+        background-color: #f6f7f9;
+        border: 1px solid #606060;
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .fb_dialog_top_left, .fb_dialog_top_right, .fb_dialog_bottom_left,
+    .fb_dialog_bottom_right {
+        height: 10px;
+        width: 10px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .fb_dialog_top_left {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
+        left: -10px;
+        top: -10px;
+    }
+
+    .fb_dialog_top_right {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
+        right: -10px;
+        top: -10px;
+    }
+
+    .fb_dialog_bottom_left {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
+        bottom: -10px;
+        left: -10px;
+    }
+
+    .fb_dialog_bottom_right {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .fb_dialog_vert_left, .fb_dialog_vert_right, .fb_dialog_horiz_top,
+    .fb_dialog_horiz_bottom {
+        position: absolute;
+        background: #525252;
+        filter: alpha(opacity = 70);
+        opacity: .7;
+    }
+
+    .fb_dialog_vert_left, .fb_dialog_vert_right {
+        width: 10px;
+        height: 100%;
+    }
+
+    .fb_dialog_vert_left {
+        margin-left: -10px;
+    }
+
+    .fb_dialog_vert_right {
+        right: 0;
+        margin-right: -10px;
+    }
+
+    .fb_dialog_horiz_top, .fb_dialog_horiz_bottom {
+        width: 100%;
+        height: 10px;
+    }
+
+    .fb_dialog_horiz_top {
+        margin-top: -10px;
+    }
+
+    .fb_dialog_horiz_bottom {
+        bottom: 0;
+        margin-bottom: -10px;
+    }
+
+    .fb_dialog_iframe {
+        line-height: 0;
+    }
+
+    .fb_dialog_content .dialog_title {
+        background: #6d84b4;
+        border: 1px solid #365899;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+        .fb_dialog_content .dialog_title > span {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+            float: left;
+            padding: 5px 0 7px 26px;
+        }
+
+    body.fb_hidden {
+        -webkit-transform: none;
+        height: 100%;
+        margin: 0;
+        overflow: visible;
+        position: absolute;
+        top: -10000px;
+        left: 0;
+        width: 100%;
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+        min-height: 100%;
+        min-width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 10001;
+    }
+
+        .fb_dialog.fb_dialog_mobile.loading.centered {
+            width: auto;
+            height: auto;
+            min-height: initial;
+            min-width: initial;
+            background: none;
+        }
+
+            .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+                width: 100%;
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+                background: none;
+            }
+
+    .loading.centered #fb_dialog_loader_close {
+        color: #fff;
+        display: block;
+        padding-top: 20px;
+        clear: both;
+        font-size: 18px;
+    }
+
+    #fb-root #fb_dialog_ipad_overlay {
+        background: rgba(0, 0, 0, .45);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        min-height: 100%;
+        z-index: 10000;
+    }
+
+        #fb-root #fb_dialog_ipad_overlay.hidden {
+            display: none;
+        }
+
+    .fb_dialog.fb_dialog_mobile.loading iframe {
+        visibility: hidden;
+    }
+
+    .fb_dialog_content .dialog_header {
+        -webkit-box-shadow: white 0 1px 1px -1px inset;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));
+        border-bottom: 1px solid;
+        border-color: #1d4088;
+        color: #fff;
+        font: 14px Helvetica, sans-serif;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+        .fb_dialog_content .dialog_header table {
+            -webkit-font-smoothing: subpixel-antialiased;
+            height: 43px;
+            width: 100%;
+        }
+
+        .fb_dialog_content .dialog_header td.header_left {
+            font-size: 12px;
+            padding-left: 5px;
+            vertical-align: middle;
+            width: 60px;
+        }
+
+        .fb_dialog_content .dialog_header td.header_right {
+            font-size: 12px;
+            padding-right: 5px;
+            vertical-align: middle;
+            width: 60px;
+        }
+
+    .fb_dialog_content .touchable_button {
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));
+        border: 1px solid #29487d;
+        -webkit-background-clip: padding-box;
+        -webkit-border-radius: 3px;
+        -webkit-box-shadow: rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;
+        display: inline-block;
+        margin-top: 3px;
+        max-width: 85px;
+        line-height: 18px;
+        padding: 4px 12px;
+        position: relative;
+    }
+
+    .fb_dialog_content .dialog_header .touchable_button input {
+        border: none;
+        background: none;
+        color: #fff;
+        font: 12px Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 2px -12px;
+        padding: 2px 6px 3px 6px;
+        text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+    }
+
+    .fb_dialog_content .dialog_header .header_center {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 18px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .fb_dialog_content .dialog_content {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+        border: 1px solid #555;
+        border-bottom: 0;
+        border-top: 0;
+        height: 150px;
+    }
+
+    .fb_dialog_content .dialog_footer {
+        background: #f6f7f9;
+        border: 1px solid #555;
+        border-top-color: #ccc;
+        height: 40px;
+    }
+
+    #fb_dialog_loader_close {
+        float: left;
+    }
+
+    .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+        text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+    }
+
+    .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+        visibility: hidden;
+    }
+
+    #fb_dialog_loader_spinner {
+        animation: rotateSpinner 1.2s linear infinite;
+        background-color: transparent;
+        background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        height: 24px;
+        width: 24px;
+    }
+
+    @ keyframes rotateSpinner {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .fb_iframe_widget {
+        display: inline-block;
+        position: relative;
+    }
+
+        .fb_iframe_widget span {
+            display: inline-block;
+            position: relative;
+            text-align: justify;
+        }
+
+        .fb_iframe_widget iframe {
+            position: absolute;
+        }
+
+    .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span,
+    .fb_iframe_widget_fluid_desktop iframe {
+        max-width: 100%;
+    }
+
+        .fb_iframe_widget_fluid_desktop iframe {
+            min-width: 220px;
+            position: relative;
+        }
+
+    .fb_iframe_widget_lift {
+        z-index: 1;
+    }
+
+    .fb_hide_iframes iframe {
+        position: relative;
+        left: -10000px;
+    }
+
+    .fb_iframe_widget_loader {
+        position: relative;
+        display: inline-block;
+    }
+
+    .fb_iframe_widget_fluid {
+        display: inline;
+    }
+
+        .fb_iframe_widget_fluid span {
+            width: 100%;
+        }
+
+    .fb_iframe_widget_loader iframe {
+        min-height: 32px;
+        z-index: 2;
+        zoom: 1;
+    }
+
+    .fb_iframe_widget_loader .FB_Loader {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
+        height: 32px;
+        width: 32px;
+        margin-left: -16px;
+        position: absolute;
+        left: 50%;
+        z-index: 4;
+    }
 </style>
-		<script type="text/javascript"
-			src="/js/myPage/gnb.js"></script>
-		<script type="text/javascript"
-			src="/js/myPage/headerRollingBanner.js"></script>
-		<script type="text/javascript"
-			src="/js/myPage/userArea.js"></script>
-		<script type="text/javascript"
-			src="/js/myPage/brandAll.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/gnb.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/headerRollingBanner.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/userArea.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/brandAll.js"></script>
 
 
-		<!-- container -->
-		<div id="container" class="mA ">
-			<div class="sideBannerR">
-				<ul>
+<!-- container -->
+<div id="container" class="mA ">
 
-					<li class="rightBannerList" segment-event="Promotion Clicked"
-						data-promotion-link="http://www.memebox.com/product/503838"
-						data-promotion-creative="/img/myPage/myP_banner_20170217115823_2kMQ5fWL8z.jpg"
-						data-promotion-id="rightBanner0" data-promotion-name=""
-						data-promotion-position="Right Banner 0"><a
-						href="http://www.memebox.com/product/503838"
-						ga-event="right_side,right_sidebanner0"><img
-							src="/img/myPage/myP_banner_20170217115823_2kMQ5fWL8z.jpg"
-							alt=""></a></li>
+    <div class="myPageWrap">
+        <div class="myPageLeftMenu fL">
+            <a href="/my/index" ga-event="마이페이지,마이페이지홈">
+                <h3 class="mA">마이페이지</h3>
+            </a>
+            <ul class="myPageSubMenu">
 
-					<li class="rightBannerList" segment-event="Promotion Clicked"
-						data-promotion-link="http://www.memebox.com/product/511789"
-						data-promotion-creative="/img/myPage/myP_banner_20170317235429_mvCAggS6tL.jpg"
-						data-promotion-id="rightBanner1" data-promotion-name=""
-						data-promotion-position="Right Banner 1"><a
-						href="http://www.memebox.com/product/511789"
-						ga-event="right_side,right_sidebanner1"><img
-							src="/img/myPage/myP_banner_20170317235429_mvCAggS6tL.jpg"
-							alt=""></a></li>
-
-					<li class="rightBannerList" segment-event="Promotion Clicked"
-						data-promotion-link="http://www.memebox.com/product/511325"
-						data-promotion-creative="/img/myPage/myP_banner_20170411234644_sdXXP7mofa.jpg"
-						data-promotion-id="rightBanner2" data-promotion-name=""
-						data-promotion-position="Right Banner 2"><a
-						href="http://www.memebox.com/product/511325"
-						ga-event="right_side,right_sidebanner2"><img
-							src="/img/myPage/myP_banner_20170411234644_sdXXP7mofa.jpg"
-							alt=""></a></li>
-
-				</ul>
-				<!--<div class="fixed" style="position: absolute;left:0px;top:518px;">-->
-				<div class="fixed"
-					style="position: absolute; left: 0px; top: 675px;">
-					<div class="topDownWrap">
-						<div class="topDownBtn">
-							<a class="top">위로</a> <a class="down">아래로</a>
-						</div>
-						<!--topDownBtn-->
-					</div>
-					<!--topDownWrap-->
-				</div>
-				<!--fixed-->
-
-
-
-				<!--아임멀티스틱 플로팅배너-->
-
-			</div>
-			<!-- content -->
-			<!--sideBannerR-->
-
-
-
-			<div class="myPageWrap">
-				<div class="myPageLeftMenu fL">
-					<a href="/my/index" ga-event="마이페이지,마이페이지홈">
-						<h3 class="mA">마이페이지</h3>
-					</a>
-					<ul class="myPageSubMenu">
-
-						<li class=""><a href="/my/order" ga-event="마이페이지,마이페이지_주문배송">구매정보</a>
-							<ul class="depth">
-								<li class=""><a href="/my/order"
-									ga-event="마이페이지,마이페이지_주문배송">주문/배송<span class="arrow"></span></a>
-								</li>
-								<!--<li class="">-->
-								<!--<a href="http://">-->
-								<!--<span class="cancel menu">취소/환불</span>-->
-								<!--<span class="arrow"></span>-->
-								<!--</a>-->
-								<!--</li>-->
-							</ul></li>
-						<li class=""><a href="/my/wishList"
-							ga-event="마이페이지,마이페이지_찜한상품">찜한 상품<span class="arrow"></span></a>
-						</li>
-						<li class=""><a href="/my/coupon" ga-event="마이페이지,마이페이지_미미쿠폰">혜택정보</a>
-							<ul class="depth">
-								<li class=""><a href="/my/coupon"
-									ga-event="마이페이지,마이페이지_미미쿠폰">발그레쿠폰<span class="arrow"></span></a>
-								</li>
-								<li class=""><a href="/my/point?page=0"
-									ga-event="마이페이지,마이페이지_미미포인트">발그레포인트<span class="arrow"></span></a>
-								</li>
-							</ul></li>
-						<li class=""><a href="/my/privacy"
-							ga-event="마이페이지,마이페이지_개인정보수정">개인 정보<span class="arrow"></span></a>
-							<ul class="depth">
-								<li class=""><a href="/my/privacy"
-									ga-event="마이페이지,마이페이지_개인정보수정">개인정보 수정<span class="arrow"></span></a>
-								</li>
-								<!--<li class="selected">-->
-								<!--<a href="/my/privacy/refund">환불계좌 등록<span class="arrow"></span></a>-->
-								<!--</li>-->
-							</ul></li>
-						<li class=""><a href="/my/review" ga-event="마이페이지,마이페이지_나의리뷰">
-								<span class="myReview menuImg">나의 리뷰</span> <span class="arrow"></span>
-						</a></li>
-						<li class="" bottom=""><a href="/my/qna"
-							a-event="마이페이지,마이페이지_1:1문의">1:1문의<span class="arrow"></span></a>
-							<ul class="depth">
-								<li class=""><a href="/my/qna"
-									ga-event="마이페이지,마이페이지_1:1문의">1:1문의하기<span class="arrow"></span></a>
-								</li>
-								<li class=""><a href="/my/qnaList"
-									ga-event="마이페이지,마이페이지_1:1답변">1:1답변보기<span class="arrow"></span></a>
-								</li>
-							</ul></li>
-						<!--<li class="bottom ">
-            <a href="/my/freeEvent" ga-event="마이페이지,마이페이지_무료체험응모내역">무료체험 응모내역<span class="arrow"></span></a>
-        </li>-->
-					</ul>
-				</div>
-				<div class="mypageRightContents fL">
-					<div class="rightContentsTop">
-						<h4 class="fL">
-							<span class="sub main"></span>
-						</h4>
-						<div class="localNavi">
-							<a class="home" href="/">홈</a> <span>&gt;</span> <span class="on">마이페이지</span>
-						</div>
-					</div>
-					<!--E : rightContentsTop-->
-					<p class="userTitle">
-						<span class="myMiniIcon fL"></span><strong>$user.name</strong>님 반갑습니다!
-					</p>
-					<table class="userInfo" cellspacing="0" cellpadding="0">
-						<caption>사용자 정보</caption>
-						<thead>
-							<tr>
-								<th class="id">$user.name님 계정정보</th>
-								<th class="th_padding">최근주문 상품</th>
-								<th class="th_padding">발그레 포인트</th>
-								<th class="th_padding">발그레 쿠폰</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="pText center">$user.email</td>
-								<td rowspan="2"><a class="pText" href="/my/order"
-									ga-event="마이페이지,마이페이지홈_최근주문상품">0</a> 개</td>
-								<td rowspan="2"><a class="pText" href="/my/point?page=0"
-									ga-event="마이페이지,마이페이지홈_포인트">$point.totalPoint</a> P</td>
-								<td rowspan="2"><a class="pText" href="/my/coupon"
-									ga-event="마이페이지,마이페이지홈_쿠폰">$Coupon</a> 개</td>
-							</tr>
-							<tr>
-								<td class="recommendCode"><a href="#" class="copyCode"
-									title="추천코드 복사하기" onclick="copyIdentifyCode('IBFWSB');"
-									ga-event="마이페이지,마이페이지홈_코드복사"> 추천코드 : <strong>$user.myCode</strong>
-								</a> <a href="/extra/memeInvite" class="recommendFriend"
-									ga-event="마이페이지,마이페이지홈_친구추천">친구추천</a></td>
-							</tr>
-						</tbody>
-					</table>
-					<ul class="myMainNotice">
-
-						<li>친구를 추천하고 5,000P 혜택 받으세요</li>
-						<li>최근주문상품은 최근 일주일 동안의 주문건을 제공합니다.</li>
-					</ul>
-					<div class="purchaseList">
-						<span class="titleImg tI fL">최근 구매 내역</span>
-					</div>
-
-					<div class="tabAll">
-						<table class="orderTable mA" cellpadding="0" cellspacing="0"
-							summary="구매정보">
-							<caption>구매정보</caption>
-							<colgroup>
-								<col style="width: 86px;">
-								<col>
-								<col style="width: 90px;">
-								<col style="width: 85px;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th>주문일</th>
-									<th>상품명</th>
-									<th>결제금액</th>
-									<th class="last">상태</th>
-								</tr>
-							</thead>
-							<tbody>
-
-
-
-								<tr>
-									<td colspan="4" class="empty last fW">최근 주문 내역이 없습니다.</td>
-								</tr>
-							</tbody>
-
-							<tfoot></tfoot>
-						</table>
-					</div>
-				</div>
-				<!--rightContents-->
-			</div>
-			<!--myPageWrap-->
-
-
-		</div>
-		<!-- //container -->
-
-
-		<link type="text/css" href="/css/myPage/footer.css" rel="stylesheet">
-		<div id="footer" class="mA">
-			<div class="footerTopInner">
-				<ul class="oF landing">
-					<li class="footerList_01"><a
-						href="https://memebox.recruiter.co.kr/" target="_blank"> <span
-							class="icon_05 icon"></span> <span class="landingText">세상을
-								바꾸는<br>미미박서 인재채용
-						</span>
-					</a></li>
-					<li class="footerList_02"><a href="/render/15939"> <span
-							class="icon_01 icon"></span> <span class="landingText">온라인
-								화장품 구매<br>믿어도 될까요?
-						</span>
-					</a></li>
-					<li class="footerList_03"><a href="/render/16098"> <span
-							class="icon_02 icon"></span> <span class="landingText">미미박스가
-								배송하는<br>특별한 미미배송!
-						</span>
-					</a></li>
-					<li class="footerList_04"><a href="/render/16089"> <span
-							class="icon_03 icon"></span> <span class="landingText">실패없는
-								쇼핑을 위한<br>90일 환불 정책
-						</span>
-					</a></li>
-					<li class="footerList_05"><a href="/offlinestore/immeme">
-							<span class="icon_04 icon"></span> <!--<span class="landingText">I'M MEME<br/>오프라인에서 만나보기</span>-->
-							<span class="landingText">미미박스<br>오프라인 스토어
-						</span>
-					</a></li>
-				</ul>
-				<div class="footerMiddle">
-					<p class="csCenter fL">
-						<span class="call"></span> <strong><a href="/cs/faq">고객
-								감동 서비스센터 &gt;</a></strong> <span>평일 9:00 - 18:00(주말/공휴일 제외)</span>
-					</p>
-					<dl>
-						<dt class="recruit">기업 문화</dt>
-						<dd>
-							<a class="mg_t" href="http://blog.naver.com/memebox"
-								target="_blank" ga-event="푸터,푸터_기업문화블로그">기업문화 블로그 보기 &gt; </a> <a
-								class="mg_t" href="http://www.facebook.com/playmemebox"
-								target="_blank">기업문화 페이스북 보기 &gt; </a> <a class="mg_t"
-								href="http://img2.memebox.com/static/contents/img/upload/contents_20160926141749_f3H73NLEoz.pdf"
-								target="_blank" ga-event="푸터,푸터_플레이북">PLAYBOOK 2015 Ver
-								DOWNLOAD &gt; </a> <a class="mg_t"
-								href="http://img2.memebox.com/static/contents/img/upload/contents_20160926141840_WKTIHpU6lD.pdf"
-								target="_blank" ga-event="푸터,푸터_플레이북">PLAYBOOK 2016 Ver
-								DOWNLOAD &gt; </a>
-						</dd>
-					</dl>
-					<dl>
-						<dt>고객의 소리</dt>
-						<dd>
-							<span class="gText">고객님의 소리에<br>더 다가가겠습니다.
-							</span> <a href="/cs/qna/" ga-event="푸터,푸터_1:1문의">제안하러 가기 &gt;</a>
-						</dd>
-					</dl>
-					<dl class="partner">
-						<dt>파트너 서비스</dt>
-						<dd>
-							<ul>
-								<li><a href="mailto:partners@memebox.com">온라인 입점 문의
-										&gt;</a>
-									<div class="copyBox p_left">partners@memebox.com</div></li>
-								<li><a class="mg_t" href="mailto:b2b@memebox.com">WHOLESALE
-										문의 &gt;</a>
-									<div class="copyBox">b2b@memebox.com</div></li>
-								<li><a class="mg_t" href="mailto:partner_mkt@memebox.com">광고/프로모션
-										문의 &gt;</a>
-									<div class="copyBox">partner_mkt@memebox.com</div></li>
-							</ul>
-						</dd>
-					</dl>
-					<div class="cB"></div>
-				</div>
-				<div class="memeBoxInfo oF">
-					<a class="footerLogo fL" href="/"></a>
-					<div class="textBox fL">
-						<ul class="oF">
-							<li><a href="http://corp.memebox.com" target="_blank">회사소개</a>
-								<span class="bar">|</span></li>
-							<li><a href="/policy/agreement" ga-event="푸터,푸터_이용약관">이용약관</a>
-								<span class="bar">|</span></li>
-							<li><a href="/policy/privacy" ga-event="푸터,푸터_개인정처리급방침"><strong>개인
-										정보 처리 방침</strong></a> <span class="bar">|</span></li>
-							<li><a href="/policy/youth">청소년 보호 정책</a> <span class="bar">|</span>
-							</li>
-							<li><a href="/policy/email">이메일 무단 수집 거부 방침</a></li>
-						</ul>
-						<address>
-							(주)미미박스 | 대표자 : 하형석 | 개인 정보 보호 책임자 : 김종광 | 사업자등록번호 211-88-47525 <a
-								href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2118847525"
-								target="_blank" ga-event="푸터,푸터_사업자정보확인">사업자 정보 확인 &gt;</a><br>
-							통신판매 신고번호 : 제 2016-경기성남-0633호 | 건강기능식품판매 : 제 2012-0107922 호 |
-							의료기기판매 : 제 2015-3780064-00183 호<br> 본사 : 경기도 성남시 분당구
-							판교역로146번길 20 (백현동) Office H 10층 | 물류센터 : 인천광역시 서구 경서동 693-4번지 <a
-								href="/render/8386" target="_parent" ga-event="푸터,푸터_오시는길">미미박스
-								오시는길 &gt;</a><br> <span class="e_text">Copyright ﻿ⓒ 2012
-								memebox Inc. All rights reserved.</span><br> <span
-								class="lastLine"><strong>LG U+ 구매 안전 서비스</strong> : 고객님의
-								안전거래를 위해 현금 등으로 결제 시, 저희 사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다. <a
-								onclick="goValidEscrow('memebox_mobile');"
-								style="cursor: pointer;" ga-event="푸터,푸터_구매안전서비스">서비스 가입 확인
-									&gt;</a></span>
-						</address>
-					</div>
-				</div>
-			</div>
-			<div class="footerBottomOuter">
-				<div class="footerBottomInner">
-
-					<div class="award fL">
-						<div class="bx-wrapper"
-							style="max-width: 712px; margin: 0px auto;">
-							<div class="bx-viewport"
-								style="width: 100%; overflow: hidden; position: relative; height: 43px;">
-								<ul id="awardList" class="badge fL"
-									style="width: 1215%; position: relative; transition-duration: 0s; transform: translate3d(-712px, 0px, 0px);">
-									<li class="list6 bx-clone"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_01 mark"></span> <span class="listText">2015
-											한국소비자<br>만족지수 1위
-									</span>
-									</li>
-									<li class="list7 bx-clone"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_04 mark"></span> <span class="listText">여성친화<br>일촌기업
-											협약
-									</span>
-									</li>
-									<li class="list8 bx-clone"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_02 mark"></span> <span class="listText">나는
-											글로벌 벤처다<br>2013 대상
-									</span>
-									</li>
-									<li class="list9 bx-clone"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_03 mark"></span> <span class="listText">제
-											7회 대한민국<br>인터넷 대상 특별상
-									</span>
-									</li>
-									<li class="list10"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_09 mark"></span> <span class="listText">앱어워드코리아
-											2016<br>뷰티부문 대상수상
-									</span>
-									</li>
-									<li class="list1"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_08 mark"></span> <span class="listText">여성가족부
-											주관<br>가족친화 우수기업
-									</span>
-									</li>
-									<li class="list2"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_06 mark"></span> <span class="listText">스마트앱어워드
-											2015<br>전문쇼핑부문 대상
-									</span>
-									</li>
-									<li class="list3"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_07 mark"></span> <span class="listText">HWB
-											Award 2015<br>BEST New Brand
-									</span>
-									</li>
-									<li class="list4"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_05 mark"></span> <span class="listText">대한민국
-											리딩기업<br>2015 대상
-									</span>
-									</li>
-									<li class="list5"
-										style="float: left; list-style: none; position: relative; width: 168px;">
-										<span class="kobacoMark"></span> <span class="kobacoText">혁신형중소기업
-											선정</span>
-									</li>
-									<li class="list6"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_01 mark"></span> <span class="listText">2015
-											한국소비자<br>만족지수 1위
-									</span>
-									</li>
-									<li class="list7"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_04 mark"></span> <span class="listText">여성친화<br>일촌기업
-											협약
-									</span>
-									</li>
-									<li class="list8"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_02 mark"></span> <span class="listText">나는
-											글로벌 벤처다<br>2013 대상
-									</span>
-									</li>
-									<li class="list9"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_03 mark"></span> <span class="listText">제
-											7회 대한민국<br>인터넷 대상 특별상
-									</span>
-									</li>
-									<li class="list10 bx-clone"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_09 mark"></span> <span class="listText">앱어워드코리아
-											2016<br>뷰티부문 대상수상
-									</span>
-									</li>
-									<li class="list1 bx-clone"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_08 mark"></span> <span class="listText">여성가족부
-											주관<br>가족친화 우수기업
-									</span>
-									</li>
-									<li class="list2 bx-clone"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_06 mark"></span> <span class="listText">스마트앱어워드
-											2015<br>전문쇼핑부문 대상
-									</span>
-									</li>
-									<li class="list3 bx-clone"
-										style="float: left; list-style: none; position: relative; width: 178px;">
-										<span class="mark_07 mark"></span> <span class="listText">HWB
-											Award 2015<br>BEST New Brand
-									</span>
-									</li>
-								</ul>
-							</div>
-							<div class="bx-controls"></div>
-						</div>
-						<span id="award_arrow_prev" class="award_prev list_arrow tI"
-							data-action="prev">이전 수상내역</span> <span id="award_arrow_next"
-							class="award_next_on list_arrow tI" data-action="next">다음
-							수상내역</span>
-					</div>
-					<div class="snsNavi fR">
-						<a class="insta" href="http://instagram.com/memebox_korea"
-							target="_blank" ga-event="푸터,푸터_인스타그램">인스타그램 바로가기</a> <a
-							class="faceBook" href="http://www.facebook.com/memebox"
-							target="_blank" ga-event="푸터,푸터_페이스북">페이스북 바로가기</a> <a
-							class="youtube" href="https://www.youtube.com/user/memeboxseoul"
-							target="_blank" ga-event="푸터,푸터_유투브">유뷰트 바로가기</a>
-					</div>
-					<div class="globalWrap fR">
-						<a class="global"> <span class="arrow"></span> <span
-							class="text fW">FAMILY SITE</span>
-						</a>
-						<div class="globalSelect">
-							<ul>
-								<li><a href="http://corp.memebox.com" target="_blank">
-										<span class="globalIcon corp"></span> <span class="globalText">미미박스
-											기업사이트</span>
-								</a></li>
-								<li><a href="http://​iammeme.com" target="_blank"> <span
-										class="globalIcon immeme"></span> <span class="globalText">I'M
-											MEME 아임미미</span>
-								</a></li>
-								<li><a href="http://ponyeffect.com" target="_blank"> <span
-										class="globalIcon ponyEffect"></span> <span class="globalText">Pony
-											Effect 포니이펙트</span>
-								</a></li>
-								<!--
-                        <li>
-                            <a href="http://star.memebox.com" target="_blank">
-                                <span class="globalIcon memeStar"></span>
-                                <span class="globalText">미미스타</span>
-                            </a>
+                <li class="">
+                    <a href="/my/order" ga-event="마이페이지,마이페이지_주문배송">구매정보</a>
+                    <ul class="depth">
+                        <li class="">
+                            <a href="/my/order"
+                               ga-event="마이페이지,마이페이지_주문배송">주문/배송<span class="arrow"></span></a>
                         </li>
-                        <li>
-                            <a href="http://www.shadecode.co.kr/" target="_blank">
-                                <span class="globalIcon shadeCode"></span>
-                                <span class="globalText">셰이드코드</span>
-                            </a>
+                        <!--<li class="">-->
+                        <!--<a href="http://">-->
+                        <!--<span class="cancel menu">취소/환불</span>-->
+                        <!--<span class="arrow"></span>-->
+                        <!--</a>-->
+                        <!--</li>-->
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="/my/wishList"
+                       ga-event="마이페이지,마이페이지_찜한상품">찜한 상품<span class="arrow"></span></a>
+                </li>
+                <li class="">
+                    <a href="/my/coupon" ga-event="마이페이지,마이페이지_미미쿠폰">혜택정보</a>
+                    <ul class="depth">
+                        <li class="">
+                            <a href="/my/coupon"
+                               ga-event="마이페이지,마이페이지_미미쿠폰">발그레쿠폰<span class="arrow"></span></a>
                         </li>
-                        -->
-								<li><a id="linkToUS" ga-event="푸터,푸터_미국"> <span
-										class="globalIcon usa"></span> <span class="globalText">MEMEBOX
-											USA</span>
-								</a></li>
-								<li><a id="linkToCN" ga-event="푸터,푸터_중국"> <span
-										class="globalIcon china"></span> <span class="globalText">MEMEBOX
-											CHINA</span>
-								</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                        <li class="">
+                            <a href="/my/point?page=0"
+                               ga-event="마이페이지,마이페이지_미미포인트">발그레포인트<span class="arrow"></span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="/my/privacy"
+                       ga-event="마이페이지,마이페이지_개인정보수정">개인 정보<span class="arrow"></span></a>
+                    <ul class="depth">
+                        <li class="">
+                            <a href="/my/privacy"
+                               ga-event="마이페이지,마이페이지_개인정보수정">개인정보 수정<span class="arrow"></span></a>
+                        </li>
+                        <!--<li class="selected">-->
+                        <!--<a href="/my/privacy/refund">환불계좌 등록<span class="arrow"></span></a>-->
+                        <!--</li>-->
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="/my/review" ga-event="마이페이지,마이페이지_나의리뷰">
+                        <span class="myReview menuImg">나의 리뷰</span> <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="" bottom="">
+                    <a href="/my/qna"
+                       a-event="마이페이지,마이페이지_1:1문의">1:1문의<span class="arrow"></span></a>
+                    <ul class="depth">
+                        <li class="">
+                            <a href="/my/qna"
+                               ga-event="마이페이지,마이페이지_1:1문의">1:1문의하기<span class="arrow"></span></a>
+                        </li>
+                        <li class="">
+                            <a href="/my/qnaList"
+                               ga-event="마이페이지,마이페이지_1:1답변">1:1답변보기<span class="arrow"></span></a>
+                        </li>
+                    </ul>
+                </li>
+                <!--<li class="bottom ">
+                    <a href="/my/freeEvent" ga-event="마이페이지,마이페이지_무료체험응모내역">무료체험 응모내역<span class="arrow"></span></a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="mypageRightContents fL">
+            <div class="rightContentsTop">
+                <h4 class="fL">
+                    <span class="sub main"></span>
+                </h4>
+                <div class="localNavi">
+                    <a class="home" href="/">홈</a> <span>&gt;</span> <span class="on">마이페이지</span>
+                </div>
+            </div>
+            <!--E : rightContentsTop-->
+            <p class="userTitle">
+                <span class="myMiniIcon fL"></span><strong>$user.name</strong>님 반갑습니다!
+            </p>
+            <table class="userInfo" cellspacing="0" cellpadding="0">
+                <caption>사용자 정보</caption>
+                <thead>
+                    <tr>
+                        <th class="id">$user.name님 계정정보</th>
+                        <th class="th_padding">최근주문 상품</th>
+                        <th class="th_padding">발그레 포인트</th>
+                        <th class="th_padding">발그레 쿠폰</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="pText center">$user.email</td>
+                        <td rowspan="2">
+                            <a class="pText" href="/my/order"
+                               ga-event="마이페이지,마이페이지홈_최근주문상품">0</a> 개
+                        </td>
+                        <td rowspan="2">
+                            <a class="pText" href="/my/point?page=0"
+                               ga-event="마이페이지,마이페이지홈_포인트">$point.totalPoint</a> P
+                        </td>
+                        <td rowspan="2">
+                            <a class="pText" href="/my/coupon"
+                               ga-event="마이페이지,마이페이지홈_쿠폰">$Coupon</a> 개
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="recommendCode">
+                            <a href="#" class="copyCode"
+                               title="추천코드 복사하기" onclick="copyIdentifyCode('IBFWSB');"
+                               ga-event="마이페이지,마이페이지홈_코드복사">
+                                추천코드 : <strong>$user.myCode</strong>
+                            </a> <a href="/extra/memeInvite" class="recommendFriend"
+                                    ga-event="마이페이지,마이페이지홈_친구추천">친구추천</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="myMainNotice">
+
+                <li>친구를 추천하고 5,000P 혜택 받으세요</li>
+                <li>최근주문상품은 최근 일주일 동안의 주문건을 제공합니다.</li>
+            </ul>
+            <div class="purchaseList">
+                <span class="titleImg tI fL">최근 구매 내역</span>
+            </div>
+
+            <div class="tabAll">
+                <table class="orderTable mA" cellpadding="0" cellspacing="0"
+                       summary="구매정보">
+                    <caption>구매정보</caption>
+                    <colgroup>
+                        <col style="width: 86px;">
+                        <col>
+                        <col style="width: 90px;">
+                        <col style="width: 85px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>주문일</th>
+                            <th>상품명</th>
+                            <th>결제금액</th>
+                            <th class="last">상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
 
 
+                        <tr>
+                            <td colspan="4" class="empty last fW">최근 주문 내역이 없습니다.</td>
+                        </tr>
+                    </tbody>
 
-		<!-- 배송정보 -->
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </div>
+        <!--rightContents-->
+    </div>
+    <!--myPageWrap-->
 
-		<div class="cover" style="display: none;"></div>
-		<div class="deliveryModal" id="deliveryPopup"></div>
+
+</div>
+<!-- //container -->
 
 
-	</div>
-	<div id="fb-root" class=" fb_reset">
-		<div
-			style="position: absolute; top: -10000px; height: 0px; width: 0px;">
-			<div>
-				<iframe name="fb_xdm_frame_https" frameborder="0"
-					allowtransparency="true" allowfullscreen="true" scrolling="no"
-					id="fb_xdm_frame_https" aria-hidden="true"
-					title="Facebook Cross Domain Communication Frame" tabindex="-1"
-					src="/js/myPage/87XNE1PC38r.js?version=42#channel=f32a488b51db298&amp;origin=https%3A%2F%2Fwww.memebox.com"
-					style="border: none;"></iframe>
-			</div>
-		</div>
-		<div
-			style="position: absolute; top: -10000px; height: 0px; width: 0px;">
-			<div></div>
-		</div>
-	</div>
-	<script type="text/javascript">
+<link type="text/css" href="/css/myPage/footer.css" rel="stylesheet">
+
+
+<!-- 배송정보 -->
+
+<div class="cover" style="display: none;"></div>
+<div class="deliveryModal" id="deliveryPopup"></div>
+
+
+<script type="text/javascript">
 		if (typeof String.prototype.trim !== 'function') {
 			String.prototype.trim = function() {
 				return this.replace(/^\s+|\s+$/g, '');
 			}
 		}
-	</script>
-	<script type="text/javascript"
-		src="/js/myPage/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/store.min.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/jquery.cookie.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/bootstrap.carousel.min.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/moment.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/jquery.fancybox.pack.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/jquery.number.min.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/swag.min.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/url.min.js"></script>
-	<script type="text/javascript">
+</script>
+<script type="text/javascript"
+        src="/js/myPage/jquery-1.9.1.min.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/store.min.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/jquery.cookie.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/bootstrap.carousel.min.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/moment.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/jquery.fancybox.pack.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/jquery.number.min.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/swag.min.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/url.min.js"></script>
+<script type="text/javascript">
 		!function() {
 			var analytics = window.analytics = window.analytics || [];
 			if (!analytics.initialize)
@@ -1337,8 +973,8 @@ transform
 			analytics.trackLink($("[segment-event='Product Clicked']"),
 					"Product Clicked", productClickProperties);
 		});
-	</script>
-	<script type="text/javascript">
+</script>
+<script type="text/javascript">
 		function checkPromotionInViewport() {
 			$(".segment_promotion_item")
 					.each(
@@ -1394,10 +1030,10 @@ transform
 		$(document).ready(function() {
 			checkPromotionInViewport();
 		});
-	</script>
+</script>
 
 
-	<script type="text/javascript">
+<script type="text/javascript">
 		// Console.log Fallback (IE)
 		if (!window.console) {
 			window.console = new function() {
@@ -1415,9 +1051,9 @@ transform
 		 */
 
 		/*
-		
+
 		 thumnailImageTest();
-		
+
 		 // 상품 썸네일 변경
 		 function thumnailImageTest(){
 
@@ -1696,10 +1332,10 @@ transform
 
 							return false;
 						});
-	</script>
+</script>
 
 
-	<script type="text/javascript">
+<script type="text/javascript">
 		var confirmPurchase = function(formData) {
 			var apiUrl = '/ajax/order/confirmPurchase';
 			$.ajax({
@@ -1854,22 +1490,22 @@ transform
 			});
 			$('.cover').css('display', 'none');
 		}
-	</script>
+</script>
 
 
-	<script src="/js/myPage/json2.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/jquery.json-2.3.min.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/jquery.number.min.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/handlebars.runtime.min.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/hbsRegister.js"></script>
-	<script type="text/javascript" src="/js/myPage/inc.js"></script>
-	<script type="text/javascript"
-		src="/js/myPage/productViewLog.js"></script>
-	<script>
+<script src="/js/myPage/json2.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/jquery.json-2.3.min.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/jquery.number.min.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/handlebars.runtime.min.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/hbsRegister.js"></script>
+<script type="text/javascript" src="/js/myPage/inc.js"></script>
+<script type="text/javascript"
+        src="/js/myPage/productViewLog.js"></script>
+<script>
 		(function() {
 			$('.fixed').css({
 				display : ''
@@ -1877,13 +1513,13 @@ transform
 			$(window).bind('scroll resize', ProductViewLog.viewBanner);
 			ProductViewLog.viewBanner();
 		})();
-	</script>
+</script>
 
 
 
-	<script type="text/javascript"
-		src="/js/myPage/jquery.bxslider.min.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript"
+        src="/js/myPage/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
 		var awardList = $('#awardList').bxSlider({
 			slideWidth : 178, // 310
 			minSlides : 4,
@@ -1946,18 +1582,18 @@ transform
 										'award_next').addClass('award_next_on');
 							}
 						});
-	</script>
+</script>
 
-	<script type="text/javascript"
-		src="/js/myPage/scriptLoader.js"></script>
-	<!------------- 여기부터 복사 ------------------------>
-	<!-- DTSI SCRIPT -->
-	<script type="text/javascript"
-		src="/js/myPage/adiz_sv110.js"></script>
-	<!--// DTSI SCRIPT -->
-	<!------------- 여기 까지 복사 ------------------------>
+<script type="text/javascript"
+        src="/js/myPage/scriptLoader.js"></script>
+<!------------- 여기부터 복사 ------------------------>
+<!-- DTSI SCRIPT -->
+<script type="text/javascript"
+        src="/js/myPage/adiz_sv110.js"></script>
+<!--// DTSI SCRIPT -->
+<!------------- 여기 까지 복사 ------------------------>
 
-	<script>
+<script>
 	<!--
 		function mobRf() {
 			try {
@@ -1968,14 +1604,14 @@ transform
 			}
 		}
 	//-->
-	</script>
-	<script async="true"
-		src="/js/myPage/enliple_min2.js" onload="mobRf()"></script>
+</script>
+<script async="true"
+        src="/js/myPage/enliple_min2.js" onload="mobRf()"></script>
 
-	<script type="text/javascript" src="/js/myPage/wcslog.js">
-		
-	</script>
-	<script>
+<script type="text/javascript" src="/js/myPage/wcslog.js">
+
+</script>
+<script>
 		if (!wcs_add)
 			var wcs_add = {};
 		wcs_add["wa"] = "s_1f26e67e5df";
@@ -2040,15 +1676,15 @@ transform
 			document.head.appendChild(_beshow);
 		} catch (e) {
 		}
-	</script>
-	<script src="/js/myPage/kcadchk.js"
-		type="text/javascript"></script>
-	<script src="https://log.grucompany.co.kr/adjs/kcadchk_drt.js"
-		type="text/javascript"></script>
+</script>
+<script src="/js/myPage/kcadchk.js"
+        type="text/javascript"></script>
+<script src="https://log.grucompany.co.kr/adjs/kcadchk_drt.js"
+        type="text/javascript"></script>
 
 
 
-	<script>
+<script>
 		$(document)
 				.ready(
 						function() {
@@ -2098,7 +1734,6 @@ transform
 							;
 
 						});
-	</script>
-</body>
-<whale translate="no"></whale>
-</html>
+</script>
+
+#parse("/main/footer.vm")

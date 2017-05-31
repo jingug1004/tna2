@@ -27,7 +27,8 @@
     <meta name="msapplication-task" content="name=브랜드관;action-uri=/shop/brands;icon-uri=/favicon.ico" />
     <meta name="msapplication-task" content="name=스킨케어;action-uri=/shop/skincare;icon-uri=/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/css/mainCommon.css">
-
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	
     <!-- login dim-layer css start -->
     <link rel="stylesheet" type="text/css" href="/css/auth/login-popup-layer.css">
     <!-- login dim-layer css start -->
@@ -59,15 +60,45 @@
 
     <link href="/css/loginCommon.css?v=2km-17bbwp3" rel="stylesheet" type="text/css">
     <link href="/css/loginCommon.css" rel="stylesheet" type="text/css">
-    <link href="/css/loginCommon.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="/css/loginCommon.css?v=7kc-1n234ch" rel="stylesheet" type="text/css">
 
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="/webjars/jquery-validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="//connect.facebook.net/ko_KR/all.js"></script>
+	<script>
+		window.fbAsyncInit = function() {
+		  		FB.init({ 
+			  		appId : '232664117179969', // 앱 ID
+			  		status : true,         // 로그인 상태를 확인
+			  		cookie : true,          // 쿠키허용
+			  		xfbml : true          // parse XFBML
+		  		}); 
+		  		
+			FB.Event.subscribe('auth.login', function(response) {
+				if (response.status === 'connected') {
+		        	FB.api('/me', function(user) {
+		            	if (user) {
+		            		$("#login").val(user.id);
+							$("#type").val("F");
+							$("#snslogin").submit();
+		            	}
+		        	});
+		    	}
+	  		});
+		
+			FB.Event.subscribe('auth.logout', function(response) {
+				FB.login();    		
+	  		});
+		}
+	</script>
 </head>
 
 <body ondragstart="return false">
+
+#set($category = $!request.getSession().getAttribute("categoryList"))
+
     ## 메인 최상단 배너
     <div id="wrap">
         <div class="banner">
@@ -217,12 +248,7 @@
                                 <li class="memberlogin_icons">
                                     <div id="balgeure_member_login_btn">
                                         <div class="Bal_member_info">
-                                            <!-- <a class="navi loginBtn" href="/login">
-                                                <span class="logintxt">로그인</span>
-                                            </a> -->
-
-                                            <a href="#layer2" class="btn-example">로그인</a>
-
+                                            <a href="javascript:openLogin();" class="btn-example">로그인</a>
                                             <a class="navi mypageBtn" href="/my/index">
                                                 <span class="mypagetxt">마이페이지</span>
                                             </a>
@@ -232,206 +258,15 @@
                                             <div class="small_contents">
                                                 <ul class="login_balgeure_btn">
                                                     <li class="">
-                                                        <a href="#layer2" class="loginBtn btn-example" style="text-decoration: none;">로그인</a>
+                                                        <a href="javascript:openLogin();" class="loginBtn btn-example" style="text-decoration: none;">로그인</a>
                                                     </li>
                                                 </ul>
-
-                                                <!-- login dim-layer start -->
-                                                <div class="dim-layer">
-                                                    <div class="dimBg"></div>
-                                                    <div id="layer2" class="pop-layer">
-                                                        <div class="pop-container">
-
-
-                                                            <div class="layout-structure-content">
-                                                                <h1 class="header-main-content-logo-center">
-                                                                    <a class="back-home" href="/"><img src="/img/login/rebbit.png" width="100px" height="100px"></a>
-                                                                </h1>
-                                                                <p class="text_under_header">발그레에서 싸게 쇼핑하자</p>
-                                                                <div class="login-title-image">
-                                                                    <span class="login-bigtitle-img"><img src="/img/login/login_title.png" height="35"></span>
-                                                                </div>
-                                                                <div class="login_form_onpage">
-                                                                    <form id="sky-form1" class="log-reg-block sky-form" action="/loginPost" method="post">
-                                                                        <section>
-                                                                            <label class="login-input-text">
-                                                                                <div class="input-group-id">
-                                                                                    <input type="text" placeholder="이메일 (아이디)" name="username" class="form-control_email">
-
-                                                                                </div>
-                                                                            </label>
-                                                                        </section>
-
-                                                                        <section>
-                                                                            <label class="login-input-text-pw">
-                                                                                <div class="input-group-pw">
-                                                                                    <input type="password" placeholder="비밀번호" name="password"
-                                                                                           class="form-control_pw">
-
-                                                                                </div>
-                                                                            </label>
-                                                                        </section>
-
-                                                                        <div class="row margin-bottom-5">
-                                                                            <div class="col-xs-6">
-                                                                                <label class="checkbox_on_loginform">
-                                                                                    <input type="checkbox" name="useCookie" class="login_form_checkbox">
-                                                                                    자동 로그인
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="login-submit-button">
-                                                                            <button class="balgeure_login_submit-Btn" type="submit" value="login">로그인</button>
-                                                                        </div>
-
-                                                                    </form>
-
-                                                                    <div class="search_id_and_pw_register">
-                                                                        <p class="text-center">
-                                                                            <a href="#" data-toggle="modal" data-target="#myModal" class="search-email-and-password find_balgeure_email">이메일(아이디) 찾기</a>  |
-                                                                            <a href="/goFindPw" class="search-email-and-password find_balgeure_password">비밀번호 찾기</a>  |
-                                                                            <a href="/regist" class="search-email-and-password join_balgeure_register">회원가입</a>
-                                                                        </p>
-                                                                    </div>
-
-                                                                    <div class="simple-sns-login-method">
-                                                                        <ul class="simple-login-SNS">
-                                                                            <li class="simple-login-SNS-list" id="naverLogin">
-                                                                                <a class="member-SNS_Login member-SNS-naver-login"
-                                                                                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;naver&quot;}'
-                                                                                   data-segment='' href="#">
-                                                                                    <span class="member-SNS-login-icon member-SNS-login-icon-naver">naver</span> <strong class="member-SNS-login-text">계정으로 회원가입</strong>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="simple-login-SNS-list" id="facebookLogin">
-                                                                                <a class="member-SNS_Login member-SNS-facebook-login"
-                                                                                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;facebook&quot;}'
-                                                                                   data-segment='' href="#">
-                                                                                    <span class="member-SNS-login-icon member-SNS-login-icon-facebook">facebook</span>
-                                                                                    <strong class="member-SNS-login-text">계정으로 회원가입</strong>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="simple-login-SNS-list" id="kakaoLogin">
-                                                                                <a class="member-SNS_Login member-SNS-kakao-login"
-                                                                                   data-popup='{&quot;window&quot;:true,&quot;url&quot;:&quot;#&quot;,&quot;type&quot;:&quot;POST&quot;,&quot;title&quot;:&quot;kakao&quot;}'
-                                                                                   data-segment='' href="#">
-                                                                                    <span class="member-SNS-login-icon member-SNS-login-icon-kakao">kakao</span> <strong class="member-SNS-login-text">계정으로 회원가입</strong>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <!-- S : 로거 환경변수 -->
-
-                                                            <form name="findIdForm" method="post">
-                                                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                                    <div class="modal-dialog">
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                                                                <h4 class="modal-title" id="myModalLabel">아이디 찾기</h4>
-                                                                            </div>
-                                                                            <div class="modal-body">
-                                                                                <input type="hidden" class="R_email" id="R_email" name="R_email" value="$user.email">
-                                                                                <input type="text" class="name" id="name" name="name" placeholder="이름"><br>
-                                                                                <input type="text" class="phone" id="phone" name="phone" placeholder="핸드폰번호">
-                                                                                <input type="text" class="email_id" id="email_id" name="email_id" value="" readonly>
-                                                                                <span id="guide" style="color:#999"></span>
-                                                                            </div>
-                                                                            <div class="modal-footer">
-                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-                                                                                <button type="button" class="btn btn-primary" id="findid" name="findid">확인</button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-
-                                                            <script>
-        function PwBtn() {
-        	location.href="auth/08_2_popup";
-        }
-                                                            </script>
-
-                                                            <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-                                                            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-                                                            <script src="http://googledrive.com/host/0B-QKv6rUoIcGREtrRTljTlQ3OTg"></script><!-- ie10-viewport-bug-workaround.js -->
-                                                            <script src="http://googledrive.com/host/0B-QKv6rUoIcGeHd6VV9JczlHUjg"></script><!-- holder.js -->
-                                                            <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
-
-                                                            <!-- Validation -->
-                                                            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-                                                            <script type="text/javascript" src="jquery.validate.min.js"></script>
-                                                            <script type="text/javascript" src="additional-methods.min.js"></script>
-                                                            <script type="text/javascript" src="messages_ko.min.js"></script>
-                                                            <script src="/js/common/jquery-3.1.1.min.js"></script>
-
-                                                            <script>
-$(function() {
-    	$('#findid').on('click', function(e) {
-    		e.preventDefault;
-    		var name = $("#name").val();
-    		var phone = $("#phone").val();
-
-    		var formData = new FormData();
-
-    		formData.append("name", name);
-    		formData.append("phone", phone);
-
-    		$.ajax({
-    			type: "POST",
-    			url: "/my/privacy/findId",
-    			data: formData,
-    		    dataType: "text",
-    		    contentType: false,
-    		    processData: false,
-    		    success: function(formData) {
-    		    	console.log(formData);
-    		    	$("#email_id").val(formData);
-    		    },
-    		    error:function(request,status,error) {
-    		        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-    		    },
-    		});
-    	});
-    });
-                                                            </script>
-
-                                                            <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '504225513300446',
-            xfbml      : true,
-            version    : 'v2.8'
-        });
-        FB.AppEvents.logPageView();
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-                                                            </script>
-                                                            <div class="btn-r">
-                                                                <a href="#" class="btn-layerClose">Close</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <script type="text/javascript" src="/js/auth/login-popup-layer.js"></script>
-                                                <!-- login dim-layer end -->
-
                                                 <div class="logintype_on_balgeure">
                                                     Login with
                                                     <div class="login_icons">
-                                                        <a href="#" onclick="naverLogin();" class="sprite naver">n</a>
-                                                        <a href="#" onclick="fbLogin();" class="sprite facebook">f</a>
-                                                        <a href="#" onclick="naverLogin();" class="sprite kakaotalk">k</a>
+                                                        <a href="#" onclick="snsLogin('N');" class="sprite naver">n</a>
+                                                        <a href="#" onclick="snsLogin('F');" class="sprite facebook">f</a>
+                                                        <a href="#" onclick="snsLogin('K');" class="sprite kakaotalk">k</a>
                                                     </div>
                                                 </div>
                                                 <a class="navi joining_balgeure" href="/regist" style="text-decoration: none;">회원가입</a>
@@ -441,8 +276,8 @@ $(function() {
                                                 <ul class="mypage_sublist After_login">
                                                     <li class="afterlogin_dropdown_menu"><a href="/my/order">주문/배송조회</a></li>
                                                     <li class="afterlogin_dropdown_menu"><a href="/my/qna">1:1문의</a></li>
-                                                    <li class="afterlogin_dropdown_menu"><a href="/my/wishList">쿠폰</a></li>
-                                                    <li class="afterlogin_dropdown_menu"><a href="/my/point">적립금</a></li>
+                                                    <li class="afterlogin_dropdown_menu"><a href="/my/coupon">쿠폰</a></li>
+                                                    <li class="afterlogin_dropdown_menu"><a href="/my/point">포인트</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -471,28 +306,31 @@ $(function() {
                             <div class="fixCategory">
 
                                 #foreach($Category in $category)
+                                #set($dd2 = $Category.lv2_id)
                                 <ul>
                                     #if($dd != $Category.lv2_id)
                                     <li class="fix_li">
 
-                                        <a href="/category/179" ga-event="menu_total,menu_메이크업" segment-event="Nav Clicked"
+                                        <a href="/categoryDetail?parent=0&menu_id=$Category.lv2_id&sort=1" ga-event="menu_total,menu_메이크업" segment-event="Nav Clicked"
                                            data-nav-type="Global Navigation">$Category.lv2</a>
                                         #end
                                         <!--마우스 오버 펼쳐짐-->
                                         <div class="fixCategory_side">
                                             <div class="fixCategory_side_inner">
                                                 <ul>
-
+                                                    #foreach($Category in $category)
+                                                    #if($dd2 == $Category.lv2_id)
                                                     <li>
-                                                        <a href="/category/372" ga-event="menu_total,menu_페이스"
+                                                        <a href="/categoryDetail?parent=0&menu_id=$Category.lv3_id&sort=1" ga-event="menu_total,menu_페이스"
                                                            segment-event="Nav Clicked" data-nav-type="Global Navigation">
                                                             $Category.lv3
                                                         </a>
                                                     </li>
+                                                    #end
+                                                    #end
 
                                                 </ul>
                                             </div>
-                                            <div class="shadowBox"></div>
                                         </div>
                                     </li>
 
@@ -500,658 +338,57 @@ $(function() {
                                 #set($dd = $Category.lv2_id)
                                 #end
                             </div>
-
-
-                            <!--end fixCategory------------------------------------->
-                            <!--전체카테고리 클릭하면 펼침-->
-                            <div class="lnbOver all" id="lnbOver">
-                                <div class="bg">
-
-                                    <div class="category-block">
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/category/179"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_메이크업"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    메이크업
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc top">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/372"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_페이스"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">페이스</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/373"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_메이크업도구"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">메이크업도구</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/391"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_네일"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">네일</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/436"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_립"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">립</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/641"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_아이"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">아이</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/category/177"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_스킨"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    스킨
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc top">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/334"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_스킨/미스트"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">페이스메이크업</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/332"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_로션/오일"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">로션/오일</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/333"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_에센스/세럼"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">에센스/세럼</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/603"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_크림/아이크림"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">크림/아이크림</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/816"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_기능성"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">기능성</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/815"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_클렌징"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">클렌징</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/816"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_팩/패치"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">팩/패치</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/815"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_스킨케어도구"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">스킨케어도구</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/category/178"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_헤어"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    헤어
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc top">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/853"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_샴푸/린스/트리트먼트"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">샴푸/린스/트리트먼트</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/854"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_에센스/앰플/미스트"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">에센스/앰플/미스트</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/855"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_스타일링"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">스타일링</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/856"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_헤어도구"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">헤어도구</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/category/728"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_바디"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    바디
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc top">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/778"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_바디클렌징"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">바디클렌징</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/779"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_바디스킨케어"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">바디스킨케어</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/780"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_핸드/풋케어"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">핸드/풋케어</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/782"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_제모/데오드란트/슬리밍"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">제모/데오드란트/슬리밍</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/783"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_바디도구"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">바디도구</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/category/726"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_MEN"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    MEN
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc bottom">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/727"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_스킨"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">스킨</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/767"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_메이크업"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">메이크업</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/768"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_클렌징"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">클렌징</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/769"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_헤어"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">헤어</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/category/180"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_향수"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    향수
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc top">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/349"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_여성향수"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">여성향수</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/352"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_남성향수"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">남성향수</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/763"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_아로마"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">유니섹스향수</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="category-block additional">
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/vs/theme"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_서비스 &amp; 테마"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    서비스 &amp; 테마
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc top">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/bg/timeSale"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_한정특가"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">한정특가</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/memeDelivery"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_발그레배송"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">발그레배송</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/freebie"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_사은 증정 상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">사은 증정 상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/priceBelow9900"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_9,900원 이하 상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">9,900원 이하 상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/discount50"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_할인율 50% 이상 상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">할인율 50% 이상 상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/specialPromo"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_특가상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">특가상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/newmember/newest"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_웰컴특가"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">웰컴특가</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/box"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_온리발그레"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">온리발그레</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/category/181"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_발그레브랜드"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    발그레브랜드
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc bottom">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/category/428"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_아임발그레"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">아임발그레</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="category-block additional">
-
-                                        <div class="category-block-content">
-                                            <strong class="category-content-tit">
-                                                <a href="/vs/theme"
-                                                   class="category-tit-item"
-                                                   ga-event="menu_total,menu_서비스 &amp; 테마"
-                                                   segment-event="Nav Clicked"
-                                                   data-nav-type="Global Navigation">
-                                                    서비스 &amp; 테마
-
-                                                </a>
-                                            </strong>
-                                            <div class="category-content-desc top">
-
-                                                <ul class="category-desc-list">
-
-                                                    <li class="category-list-block">
-                                                        <a href="/bg/timeSale"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_한정특가"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">한정특가</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/memeDelivery"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_발그레배송"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">발그레배송</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/freebie"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_사은 증정 상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">사은 증정 상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/priceBelow9900"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_9,900원 이하 상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">9,900원 이하 상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/discount50"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_할인율 50% 이상 상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">할인율 50% 이상 상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/review90"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_별점 90점 이상 상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">별점 90점 이상 상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/specialPromo"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_특가상품"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">특가상품</span>
-
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="category-list-block">
-                                                        <a href="/vs/newmember/newest"
-                                                           class="category-list-item"
-                                                           ga-event="menu_total,menu_웰컴특가"
-                                                           segment-event="Nav Clicked" data-nav-type="Global Navigation">
-                                                            <span class="category-list-text">웰컴특가</span>
-                                            </div>
-                                            <span class="lnbClose"></span>
-
-                                        </div>
+                            <script>
+                            $(function() {
+                                var mUrl = "http://localhost:8088/main";
+
+                                if(location.href != mUrl) {
+                                    $('.fixCategory').css('display','none');
+                                }
+                            });
+                            </script>
+
+
+                            <!--end fixCategory------------------------------------>
+<!--전체카테고리 클릭하면 펼침-->
+                            
+        <div class="lnbOver all" id="lnbOver">
+            <div class="bg">
+                <div class="category-block">
+                #foreach($Category in $category)
+                #set($dd2 = $Category.lv2_id)
+                #if($dd != $Category.lv2_id)
+                    <div class="category-block-content">
+                        <strong class="category-content-tit">
+                            <a href="/categoryDetail?parent=0&menu_id=$Category.lv2_id&sort=1" class="category-tit-item" ga-event="menu_total,menu_메이크업" segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                            $Category.lv2
+                            </a>
+                        </strong>
+                        <div class="category-content-desc top">
+                            <ul class="category-desc-list">
+                                #foreach($Category in $category)
+                                    #if($dd2 == $Category.lv2_id)
+                                    <li class="category-list-block">
+                                        <a href="/categoryDetail?parent=0&menu_id=$Category.lv3_id&sort=1" class="category-list-item" ga-event="menu_total,menu_페이스" segment-event="Nav Clicked" data-nav-type="Global Navigation">
+                                            <span class="category-list-text">$Category.lv3</span>
+                                        </a>
+                                    </li>
+                                    #end
+                                #end
+                            </ul>
+                        </div>
+                    </div>
+                    #end
+                    #set($dd = $Category.lv2_id)
+                    #end
+                </div>
+            </div>
+            <span class="lnbClose"></span>
+        </div>
+        
+                                        
+                                        
+                                        
                         </h3>
                         <ul class="gnbUl dP fL">
 
@@ -1215,6 +452,19 @@ $(function() {
             </div>
 
         </div>
+        
+        <form id="snslogin" method="post" action="/sns/login">
+		 	<input type="hidden" name="login" id="login"/>
+		  	<input type="hidden" name="type" id="type"/>
+		</form>
+        <!-- find id jquery start -->
+        <script>
+        $(function() {
+        	$("#findId").on('click', function() {
+        		window.open('/goFindId', 'idPopup', 'left=580, top=270, width=700, height=400, scrollbars=no, toolbar=no, location=no');
+        	});
+        });
+        </script>
 
         <script>
 (function () {
@@ -1246,8 +496,17 @@ $(function() {
 
 
         <script>
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/ko_KR/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
         $(document).ready(function () {
-
+        	
+        	Kakao.init('71fb3c875e19ee24c57124b06f983a1a');
         });
 
         $(window).bind("pageshow", function (event) {
@@ -1283,4 +542,53 @@ $(function() {
 			#end
         }
         </script>
-
+        
+	<script>
+		function openLogin() {
+			window.open('/login', 'idPopup', 'left=500, top=100, width=900, height=750, scrollbars=0, toolbar=0, location=no');
+		}
+		
+		function snsLogin(type) {
+			if(type == 'N') {
+				naver_logout();
+			} else if(type == 'F') {
+				FB.getLoginStatus(function(response) {
+					if(response.status == 'connected' || response.status == 'not_authorized') {
+						FB.logout();
+					} else {
+						FB.login();
+					}
+				});
+				//FB.logout();
+			} else if(type == 'K') {
+				Kakao.Auth.logout(
+	                function(obj) {
+	                	openNewWindow("/kakao/login");
+	            	}
+	            );
+				
+			}
+		}
+		function openNewWindow(url) {
+		  var name = '_blank';
+		  var specs = 'menubar=no,status=no,toolbar=no, width=409, height=433';
+		  var newWindow = window.open(url, name, specs);
+		  newWindow.focus();
+		}
+		
+		function getReturnValue(returnValue) {
+			if(returnValue.id) {
+				$("#login").val(returnValue.id);
+				$("#type").val(returnValue.type);
+				$("#snslogin").submit();
+			}
+		}
+		
+		function naver_logout() {
+			$("body").append("<iframe id='logoutframe' style='display: none;'></iframe>");
+			$("#logoutframe").attr("src", "http://nid.naver.com/nidlogin.logout");
+			setTimeout(function() {
+				openNewWindow("/naver/login");
+			}, 2000); // 2000ms(2초)가 경과하면 이 함수가 실행됩니다.
+		}
+	</script>

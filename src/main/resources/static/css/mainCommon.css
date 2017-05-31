@@ -1,3 +1,5 @@
+
+
 div.topBanner {
     position: relative
 }
@@ -479,7 +481,7 @@ div#header_v2 .gnbTop .hover:hover .topMenu_over {
 
 .quantity-txt{
 	border-radius: 10px;
-    padding: 4px 5px 4px 5px;
+    padding: 4px 5px 4px 4px;
     line-height: 60%;
     background: #ff8fa7;
     color: #FFF;
@@ -780,11 +782,11 @@ div#header_v2 .brand.over .lnbOver {
     display: block
 }
 
-div#header_v2 .category {
+.div#header_v2 .category {
     position: relative;
     display: block;
     width: 174px;
-    height: 39px;
+    height: 41px;
     background: #f9f9fa;
     color: #000;
     font-size: 14px;
@@ -827,10 +829,10 @@ div#header_v2 .mainMenu.on, div#header_v2 .mainMenu:hover {
 
 div#header_v2 .fixCategory {
     position: absolute;
-    top: 41px;
+    top: 44px;
     padding: 15px 0 20px 15px;
-    width: 174px;
-    height: 443px;
+    width: 159px;
+    height: 407px;
     background: url("/img/header/main_header_background.png") repeat-x;
     border-top: 1px solid #8b8b8b;
     font-size: 13px;
@@ -901,7 +903,7 @@ div#header_v2 .fixCategory_side li {
 div#header_v2 .fixCategory_side_inner {
     padding: 30px 0 0 30px;
     width: 170px;
-    height: 442px;
+    height: 412px;
     background: #fff
 }
 
@@ -928,7 +930,7 @@ div#header_v2 .lnbOver .theme td {
 
 div#header_v2 .lnbOver .bg {
     background: #fff;
-    height: 442px;
+    height: 443px;
 }
 
 div#header_v2 .lnbOver a {
@@ -943,21 +945,7 @@ div#header_v2 .lnbOver .newIcon_circle {
     background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") 0 -150px
 }
 
-div#header_v2 .lnbOver.all .shadowBox {
-    right: -5px
-}
 
-div#header_v2 .shadowBox {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 5px;
-    height: 100%;
-    background: #000;
-    opacity: .03;
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=3);
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=3)
-}
 
 div#header_v2 .categoryTitle {
     padding: 7px 0 0 20px;
@@ -1215,10 +1203,10 @@ div#header_v2 .lnbClose {
     top: 0;
     right: 0;
     display: block;
-    width: 29px;
-    height: 29px;
-    background: url("/img/balgeure_icons.png") -76px -1px;
-    cursor: pointer
+    width: 27px;
+    height: 27px;
+    background: url(/img/balgeure_icons.png) -82px -1px;
+    cursor: pointer;
 }
 
 .navigation-list-newSticker {
@@ -2639,7 +2627,7 @@ div.newDealContents:after {
 }
 
 div.newDealContents .dealList {
-    width: 1080px
+    width: 100%;
 }
 
 div.newDealContents .dealList li {
@@ -2887,7 +2875,7 @@ div.newDealContents .dealBody .discount .memePercent {
 .dealBody .amount {
     position: absolute;
     top: 88px;
-    right: 15px;
+    right: 11px;
     font-size: 11px;
     color: #999;
     letter-spacing: -1px;
@@ -2965,9 +2953,9 @@ div.newDealContents .price .unit {
 }
 
 div.newDealContents .dealFoot {
-    height: 30px;
+    height: 31px;
     margin: 0px;
-    padding: 0 9px 0 14px;
+    padding: 0 10px 0 14px;
     border-top: 1px solid #f0f0f0;
 }
 
@@ -3049,7 +3037,7 @@ div.newDealContents .dealFoot .codIcon {
 
 div.newDealContents .dealFoot .zzim_wishlist{
 	float: right;
-	padding-right:5px;
+	padding-right:10px;
 }
 
 div.newDealContents .dealFoot .go_to_wishlist_ZZim{

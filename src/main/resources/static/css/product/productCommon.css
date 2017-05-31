@@ -512,7 +512,7 @@ div#header_v2 .gnbTop .hover:hover .topMenu_over {
 }
 
 .login_balgeure_btn .loginBtn{
-	width: 128px;
+	width: 132px;
     text-align: center;
     color: #FFF !important;
     background: #ff8fa7;
@@ -546,7 +546,7 @@ div#header_v2 .gnbTop .hover:hover .topMenu_over {
 
 .small_contents .joining_balgeure{
 	background: #afafaf;
-    width: 128px;
+    width: 132px;
     text-align: center;
     font-weight: bold;
     color: #FFF !important;
@@ -740,8 +740,8 @@ div#header_v2 div.gnbOuter {
     width: 100%;
     height: 42px;
     border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪�▣ヂ냈셌モ�쑩�', NanumGothicBold, '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+    border-bottom: 2px solid #ff8fa7;
+    font-family: '나눔고딕', NanumGothicBold, NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
 }
 
 div#header_v2 div.newGnb {
@@ -775,7 +775,7 @@ div#header_v2 .mainMenu {
     font-size: 14px;
     text-align: center;
     font-weight: bold;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif
 }
 
 div#header_v2 .mainMenu .newIcon {
@@ -812,7 +812,7 @@ div#header_v2 .category {
     font-size: 14px;
     text-align: center;
     font-weight: bold;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
     cursor: pointer
 }
 
@@ -1235,10 +1235,10 @@ div#header_v2 .lnbClose {
     top: 0;
     right: 0;
     display: block;
-    width: 29px;
-    height: 29px;
-    background: url("//www.memebox.com/web/images/header/headerSprite20160921.png") -440px -40px;
-    cursor: pointer
+    width: 27px;
+    height: 27px;
+    background: url(/img/balgeure_icons.png) -82px -1px;
+    cursor: pointer;
 }
 
 .navigation-list-newSticker {
@@ -2518,6 +2518,11 @@ p.noResultTitle {
     background: url("http://img2.memebox.com/static/contents/img/upload/contents_20150728135929_tRw6Wmbf7J.png")
 }
 
+.realtimeBestItemWrap{
+	width: 1101px;
+}
+
+
 div.newDealContents:after {
     content: '';
     display: block;
@@ -2526,11 +2531,11 @@ div.newDealContents:after {
 }
 
 div.newDealContents .dealList {
-    width: 1068px
+    width: 100%;
 }
 
 div.newDealContents .dealList li {
-    width: 334px;
+    width: 345px;
     height: 478px;
     border: 1px solid #f0f0f0;
     border-radius: 3px;
@@ -6192,8 +6197,8 @@ div.homeMainBanner .next {
     overflow: hidden; }
 
 .balgeurebox-deal-list-line-amount-3 .balgeurebox-deal-wrapper {
-    width: 338px;
-    height: 485px;
+    width: 345px;
+    height: 488px;
     border: 1px solid #f0f0f0;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -6206,10 +6211,16 @@ div.homeMainBanner .next {
     border: 1px solid #ff8fa7;
 }
 
+.balgeurebox-deal-image-wrap{
+	width: 340px;
+    height: 340px;
+    margin: 0 auto;
+}
+
 
 .balgeurebox-deal-info .dealBody {
     position: relative;
-    height: 116px;
+    height: 117px;
     padding: 0 10px 0 13px;
 }
 
@@ -6301,7 +6312,7 @@ div.homeMainBanner .next {
     .balgeurebox-deal-info .dealBody .balgeurebox-deal-review-count-value{
         position: absolute;
         top: 84px;
-        right: 15px;
+        right: 11px;
         font-size: 11px;
         color: #999;
         letter-spacing: -1px;
@@ -6310,7 +6321,7 @@ div.homeMainBanner .next {
 .balgeurebox-deal-info .dealFoot {
     height: 30px;
     margin: 0px;
-    padding: 0 9px 0 14px;
+    padding: 0 10px 0 14px;
     border-top: 1px solid #f0f0f0;
     background: #f0f0f0;
 }
@@ -6528,7 +6539,7 @@ div.homeMainBanner .next {
 
 .exhibit.best-moreover {
     margin-top: 20px; 
-    width: 1080px;
+    width: 1101px;
     margin: 0 auto;}
 
 /* ################################################## searchBar begin */
@@ -6566,14 +6577,14 @@ div#header_v2 .searchBar-wrap ul li {
     display: none; }
 
 .searchBar-inputBox-input {
+	margin: 3px 0 0 5px;
     display: block;
-    width: 313px;
+    width: 300px;
     height: 27px;
-    text-indent: 20px;
     padding-left: 0;
     border: none !important;
     line-height: 28px;
-    font-family: "\B098\B214\ACE0\B515\BCFC\B4DC", NanumGothicBold, "\B098\B214\ACE0\B515", NanumGothic, "\B3CB\C6C0", Dotum, AppleSDGothic, AppleGothic, "\AD74\B9BC", Gulim, sans-serif;
+    font-family: "나눔고딕", NanumGothicBold, NanumGothic, "돋움", Dotum, AppleSDGothic, AppleGothic, "굴림", Gulim, sans-serif;
     color: #1a1a1a;
     outline: none; }
 
@@ -6609,9 +6620,9 @@ input[type="text"]::-ms-clear {
     right: 0;
     display: block;
     width: 40px;
-    height: 27px;
+    height: 30px;
     text-indent: -99999px;
-    background: url("/img/header/header_icons.png") no-repeat -60px 2px;
+    background: url(/img/header/header_icons.png) no-repeat -60px 4px;
     border: none;
     background-color: #ff8fa7;
     cursor: pointer; }

@@ -1,13 +1,6 @@
 #parse("/main/header.vm")
 
 
-
-<script>
-    $(document).ready(function () {
-        $(".fixCategory").remove();
-    });
-</script>
-
 <!-- S: 배너영역 -->
 <!-- 베스트탭은 배너사용하지 않음 -->
 <!-- E: 배너영역 -->
@@ -59,12 +52,14 @@
                 </div>
             </div>
         </div>
+        <div class="filter-category">
+        </div>
 
+    </div><!-- e:filter-category-wrapper -->
 
-    </div>
-    
-    <!-- e:filter-category-wrapper -->
+    <!-- E: 발그레랭킹 중분류 -->
 
+    <!-- S: TOP-3 상품 -->
 
 
     <!-- S: 상품 목록 -->
@@ -195,7 +190,7 @@
 <link type="text/css" href="/css/product/productCommon.css?v=1747Fr" rel="stylesheet" />
 
 <!-- 배송정보 -->
-
+<div id="fb-root"></div>
 <script type="text/javascript">
     if (typeof String.prototype.trim !== 'function') {
         String.prototype.trim = function () {
@@ -317,19 +312,6 @@
                 list_name: $(el).parent().data("productlist-name"),         // Product List name
                 position: $(el).data("product-position") || $(el).index()   // Product Position
             };
-            //  var ret = {
-            //      path: window.location.pathname,
-            //      url: window.location.href,
-            //      platform: "pc",
-            //      id: $(el).data("product-id"),                               // Product ID
-            //      name: $(el).data("product-name"),                           // Product Name
-            //      brand: $(el).data("product-brand"),                         // Product Brand
-            //      position: $(el).data("product-position") || $(el).index(),  // Product Position
-            //      list: $(el).parent().data("productlist-name"),              // Product List
-            //      currency: 'KRW',                                            // Currency: Korean Won
-            //      price: $(el).data("product-price"),                         // Product Price
-            //      label: $(el).data("product-name")                           // Product Name
-            //  };
 
             // GTM tracking
             if (!!dataLayer) {
@@ -365,16 +347,6 @@
                 var promotion_creative = $(this).data("promotion-creative");
                 var promotion_link = $(this).data("promotion-link");
                 var promotion_position = $(this).data("promotion-position");
-//                analytics.track("Promotion Viewed", {
-//                    promotion_id: promotion_id,                         // Promotion ID
-//                    name: promotion_name,                               // Promotion Name
-//                    link: promotion_link,                               // Promotion Link
-//                    creative: promotion_creative,                       // Promotion Creative
-//                    position: promotion_position,                       // Promotion Position
-//                    label: promotion_name                               // Label for GA
-//                });
-
-                //Segment Analytics for Promotion Viewed v2.0
                 analytics.track("Promotion Impression", {
                     id: promotion_id,                                   // v2.0
                     value1: promotion_link,                             // v2.0
@@ -414,43 +386,7 @@
             this.dir = function (str) {
             };
         };
-    }
-    ;
-
-    /**
-     * 특정상품 썸네일 변경에 대한 A/B 테스트( 재요청 가능성 때문에 주석처리 )
-     * memeWeb-1882 상품 썸네일 A/B 테스트
-     *
-     */
-
-    /*
-
-        thumnailImageTest();
-
-    // 상품 썸네일 변경
-    function thumnailImageTest(){
-
-        // 썸네일 이미지 존재 확인
-        var isDeal = $('a[href*="/page/11310"]>div>img');
-        if( !!isDeal ){
-            // 썸네일 변경
-            isDeal.attr('src','//img2.memebox.com/static/contents/img/upload/banner_20150727153343_4vp4TsvXfk.jpg' );
-        }
-
-        // path name 추출
-        var url = window.location.pathname.split("/");
-        // 11310의 경우 썸네일 변경
-        if( url.pop() === "11310" ){
-            // 썸네일 이미지 존재 확인
-            var isThumnailImage = $('div[class="dealTopLeft fL"]>img');
-            if( !!isThumnailImage ){
-                // 썸네일 변경
-                isThumnailImage.attr('src','//img2.memebox.com/static/contents/img/upload/banner_20150727153343_4vp4TsvXfk.jpg' );
-            }
-        }
-    }
-    */
-
+    };
 
     $(function () {
 
@@ -475,79 +411,6 @@
             $(document);
                 $d.scrollTop(300000);
         });
-
-        /* Removed Legacy GA Property UA-27822703-2 (Kevin 21/22/16)
-        $("a[ga-event],button[ga-event],area[ga-event]").on('click', function(e){
-            var data = $(this).attr('ga-event');
-            if(ga && data) {
-                var items = data.split(',');
-                if(items.length >= 2) {
-                   ga('oldGA.send', 'event', items[0], items[1], {page: windowUrl('path',location.href)});
-                }
-            }
-        });
-        */
-
-        // Sidebar Modal Popup
-        /* -- 추석 연휴 사용
-        $(".sideBannerPopUp")
-                .click(function(e) {
-                    e.preventDefault();
-
-                    $.fancybox.open({
-                        type:'ajax',
-                        href: '/api/v1/getModal.php?title=deliveryDelay',
-                        padding: 0,
-                        maxWidth: 564,
-                        maxHeight: 564,
-                        minWidth: 564,
-                        minHeight: 564,
-                        autoSize: false,
-                        fitToView: false,
-                        scrolling: false,
-                        openEffect: 'none',
-                        closeBtn: false,
-                        closeClick: true,
-                        closeEffect: 'none',
-                        transitionIn: 'none',
-                        transitionOut: 'none',
-                        autoResize: false,
-                        scrollOutside: 'no',
-                        locked: true,
-                        beforeShow: function(){
-                            $(".fancybox-skin").css("box-shadow","none");
-                        }
-                    });
-                });
-        */
-
-        // Modal Popup
-//    if((/www.memebox.com\/?$/g).test(document.location.href) && $.cookie('csGuide') != 1) {
-//        $.fancybox.open({
-//            type:'ajax',
-//            href: '/api/v1/getModal.php?title=csGuide',
-//            padding: 0,
-//            maxWidth: 564,
-//            maxHeight: 374,
-//            minWidth: 564,
-//            minHeight: 374,
-//            autoSize: false,
-//            fitToView: false,
-//            scrolling: false,
-//            openEffect: 'none',
-//            closeBtn: false,
-//            closeClick: true,
-//            closeEffect: 'none',
-//            transitionIn: 'none',
-//            transitionOut: 'none',
-//            autoResize: false,
-//            scrollOutside: 'no',
-//            locked: true,
-//            afterLoad : function() {
-//                $.cookie('csGuide', '1', { expires: 1, path: '/' });
-//            }
-//        });
-//    }
 
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -698,24 +561,6 @@
     ]
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 <script type="application/ld+json">
     {
@@ -735,24 +580,6 @@
     "priceCurrency": "USD"
     }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </script>
 
@@ -789,10 +616,6 @@
                 var product_list_id = $(this).parent().data("productlist-id");
                 var product_list_name = $(this).parent().data("productlist-name");
                 var product_position = $(this).data("product-position") || ($(this).index() + (totalCount > 0 ? '_' + totalCount : ''));
-//                var product_list  = $(this).parent().data("productlist-name");
-//                var themeType     = $(this).data('recommend-type') || '';
-//                var segThemeCount = $(this).data('theme-count') || '';
-//                var label         = $(this).data('current-productid') || '';
 
 
                 analytics.track("Product Impression", {
@@ -923,26 +746,6 @@
     wcs.inflow("memebox.com");
 
     wcs_do(_nasa);
-
-
-    /* Removed Legacy GA Property UA-27822703-2 (Kevin 21/22/16)
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    // Cast GA Tracker Name to 'oldGA' to prevent clash with Segment Analytics
-    ga('create', 'UA-27822703-2', 'auto', 'oldGA');
-    ga('oldGA.require', 'ec');
-    ga('oldGA.require', 'displayfeatures');
-    ga('oldGA.require', 'linkid', 'linkid.js');
-
-    var productPatt = /\/(product|page)\/([0-9])\d+/g
-
-    if (!productPatt.test(window.location.path)) {
-        ga('oldGA.send', 'pageview');
-    }
-    */
 
 
     try {

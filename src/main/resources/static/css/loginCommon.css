@@ -803,7 +803,7 @@ a[disabled] {
 }
 
 #container {
-    width: 1048px;
+    width: 1080px;
     position: relative
 }
 
@@ -917,7 +917,7 @@ a[disabled] {
 
 div.mainVisual {
     position: relative;
-    width: 1048px;
+    width: 1080px;
     height: 477px;
     margin: 0 auto 50px;
     overflow: hidden
@@ -1365,7 +1365,7 @@ input[disabled], button[disabled] {
 
 div.mainVisual {
     position: relative;
-    width: 1048px;
+    width: 1080px;
     height: 477px;
     margin: 0 auto 50px;
     overflow: hidden
