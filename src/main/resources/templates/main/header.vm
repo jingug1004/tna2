@@ -28,7 +28,7 @@
     <meta name="msapplication-task" content="name=스킨케어;action-uri=/shop/skincare;icon-uri=/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/css/mainCommon.css">
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-	
+
     <!-- login dim-layer css start -->
     <link rel="stylesheet" type="text/css" href="/css/auth/login-popup-layer.css">
     <!-- login dim-layer css start -->
@@ -69,13 +69,13 @@
 	<script src="//connect.facebook.net/ko_KR/all.js"></script>
 	<script>
 		window.fbAsyncInit = function() {
-		  		FB.init({ 
+		  		FB.init({
 			  		appId : '232664117179969', // 앱 ID
 			  		status : true,         // 로그인 상태를 확인
 			  		cookie : true,          // 쿠키허용
 			  		xfbml : true          // parse XFBML
-		  		}); 
-		  		
+		  		});
+
 			FB.Event.subscribe('auth.login', function(response) {
 				if (response.status === 'connected') {
 		        	FB.api('/me', function(user) {
@@ -87,9 +87,9 @@
 		        	});
 		    	}
 	  		});
-		
+
 			FB.Event.subscribe('auth.logout', function(response) {
-				FB.login();    		
+				FB.login();
 	  		});
 		}
 	</script>
@@ -351,7 +351,7 @@
 
                             <!--end fixCategory------------------------------------>
 <!--전체카테고리 클릭하면 펼침-->
-                            
+
         <div class="lnbOver all" id="lnbOver">
             <div class="bg">
                 <div class="category-block">
@@ -385,10 +385,10 @@
             </div>
             <span class="lnbClose"></span>
         </div>
-        
-                                        
-                                        
-                                        
+
+
+
+
                         </h3>
                         <ul class="gnbUl dP fL">
 
@@ -452,7 +452,7 @@
             </div>
 
         </div>
-        
+
         <form id="snslogin" method="post" action="/sns/login">
 		 	<input type="hidden" name="login" id="login"/>
 		  	<input type="hidden" name="type" id="type"/>
@@ -505,7 +505,7 @@
            ref.parentNode.insertBefore(js, ref);
          }(document));
         $(document).ready(function () {
-        	
+
         	Kakao.init('71fb3c875e19ee24c57124b06f983a1a');
         });
 
@@ -542,12 +542,12 @@
 			#end
         }
         </script>
-        
+
 	<script>
 		function openLogin() {
-			window.open('/login', 'idPopup', 'left=500, top=100, width=900, height=750, scrollbars=0, toolbar=0, location=no');
+			window.open('/login', 'idPopup', 'left=500, top=100, width=409, height=433, scrollbars=0, toolbar=0, location=no');
 		}
-		
+
 		function snsLogin(type) {
 			if(type == 'N') {
 				naver_logout();
@@ -566,7 +566,7 @@
 	                	openNewWindow("/kakao/login");
 	            	}
 	            );
-				
+
 			}
 		}
 		function openNewWindow(url) {
@@ -575,7 +575,7 @@
 		  var newWindow = window.open(url, name, specs);
 		  newWindow.focus();
 		}
-		
+
 		function getReturnValue(returnValue) {
 			if(returnValue.id) {
 				$("#login").val(returnValue.id);
@@ -583,7 +583,7 @@
 				$("#snslogin").submit();
 			}
 		}
-		
+
 		function naver_logout() {
 			$("body").append("<iframe id='logoutframe' style='display: none;'></iframe>");
 			$("#logoutframe").attr("src", "http://nid.naver.com/nidlogin.logout");

@@ -120,68 +120,94 @@ public class ReviewController {
         LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
 
         Map<String, String[]> param = request.getParameterMap();
-//        추후에 reviews[] 라는 이름으로 작업해야 함.
-        String[] reviewsVm = request.getParameterValues("reviews[]");
-        for (String review : reviewsVm) {
+        String[] addPostVm = request.getParameterValues("reviewAdd[]");
 
-
-        }
         return "reviewAddPOSTsucc";
     }
 
-    @RequestMapping(value = "reviewDelDELETE", method = RequestMethod.POST)
-    @ResponseBody
-    public String reviewDelDELETE(HttpSession session,
-                                          HttpServletRequest request,
-                                          Model model,
-                                          CommonResponse commonResponse,
-                                          @RequestParam("review_id") long review_id) throws Exception {
-
-        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
-
-        reviewService.reviewDelDELETE(login.getToken(), review_id);
-
-        return "reviewDelDELETEsucc";
-
-    }
-
-    @RequestMapping(value = "reviewLikePOST", method = RequestMethod.POST)
-    @ResponseBody
-    public CommonResponse reviewLikePOST(HttpSession session,
-                                         HttpServletRequest request,
-                                         Model model,
-                                         CommonResponse commonResponse) throws Exception {
-
-        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
-
-        return null;
-
-    }
-
-    @RequestMapping(value = "reviewListPageGET", method = RequestMethod.GET)
-    @ResponseBody
-    public CommonResponse reviewListPageGET(HttpSession session,
-                                            HttpServletRequest request,
-                                            Model model,
-                                            CommonResponse commonResponse) throws Exception {
-
-        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
-
-        return null;
-
-    }
-
-    @RequestMapping(value = "reviewMyreviewPOST", method = RequestMethod.POST)
-    @ResponseBody
-    public CommonResponse reviewMyreviewPOST(HttpSession session,
-                                             HttpServletRequest request,
-                                             Model model,
-                                             CommonResponse commonResponse) throws Exception {
-
-        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
-
-        return null;
-
-    }
+//    @RequestMapping(value = "reviewDelDELETE", method = RequestMethod.POST)
+//    @ResponseBody
+//    public String reviewDelDELETE(HttpSession session,
+//                                  HttpServletRequest request,
+//                                  Model model,
+//                                  CommonResponse commonResponse,
+//                                  @RequestParam("review_id") long review_id) throws Exception {
+//
+//        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+//
+//        CommonResponse response =reviewService.reviewDelDELETE(login.getToken(), review_id);
+//
+//        return "reviewDelDELETEsucc";
+//
+//    }
+//
+//    @RequestMapping(value = "reviewLikePOST", method = RequestMethod.POST)
+//    @ResponseBody
+//    public String reviewLikePOST(HttpSession session,
+//                                 HttpServletRequest request,
+//                                 Model model,
+//                                 CommonResponse commonResponse,
+//                                 @RequestParam("review_id") long review_id) throws Exception {
+//
+//        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+//
+//        CommonResponse response = reviewService.reviewLikePOST(login.getToken(), review_id);
+//
+//
+//        return "reviewLikePOSTsucc";
+//
+//    }
+//
+//    @RequestMapping(value = "/review/list/{page}", method = RequestMethod.GET)
+//    @ResponseBody
+//    public Map<String, Object> reviewListPageGET(HttpSession session,
+//                                                 HttpServletRequest request,
+//                                                 Model model,
+//                                                 CommonResponse commonResponse,
+//                                                 @PathVariable("page") int page,
+//                                                 @RequestParam("product_id") long product_id,
+//                                                 @RequestParam("photo") int photo,
+//                                                 @RequestParam("sort") int sort) throws Exception {
+//
+//        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+//
+//        try {
+//            Map<String, Object> map = new HashMap<>();
+//
+//            Map<String, Object> list = reviewService.reviewListPageGET(login.getToken(), page, product_id, photo, sort);
+//
+//            map.put("reviewList", list);
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+////        return "reviewListPageGETsucc";
+//        return null;
+//
+//    }
+//
+//    @RequestMapping(value = "reviewMyreviewPOST", method = RequestMethod.POST)
+//    @ResponseBody
+//    public String reviewMyreviewPOST(HttpSession session,
+//                                     HttpServletRequest request,
+//                                     Model model,
+//                                     CommonResponse commonResponse) throws Exception {
+//
+//        LoginDTO02 login = (LoginDTO02) session.getAttribute("login");
+//
+//        try {
+//            Map<String, String[]> param = request.getParameterMap();
+//            String[] myreviewPostVm = request.getParameterValues("myReview[]");
+//
+//            reviewService.reviewMyreviewPOST(login.getToken());
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        return "reviewMyreviewPOSTsucc";
+//
+//    }
 
 }

@@ -7,8 +7,6 @@
 <script type="text/javascript" async=""
         src="/js/myPage/analytics.js"></script>
 <script type="text/javascript" async=""
-        src="/js/myPage/analytics.js"></script>
-<script type="text/javascript" async=""
         src="/js/myPage/fbevents.js"></script>
 <script id="facebook-jssdk"
         src="/js/myPage/all.js#xfbml=1&amp;appId=1463989610483291"></script>
@@ -55,19 +53,19 @@
 <meta property="al:web:url" content="http://localhost:8088/my/index">
 <meta property="al:ios:app_name" content="발그레">
 <meta property="al:ios:app_store_id" content="896990789">
-<meta property="al:ios:url" content="memebox://">
+<meta property="al:ios:url" content="">
 <meta property="al:android:app_name" content="발그레">
 
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="발그레 내 삶을 아름답게!">
+<meta name="twitter:title" content="화장품 싸게살 땐 발그레에서">
 <meta name="twitter:description"
       content="뷰티 No.1 발그레. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.">
 <meta property="fb:app_id" content="1463989610483291">
 <meta property="og:site_name" content="발그레">
 <meta property="og:type" content="website">
 
-<meta property="og:title" content="미미박스 내 삶을 아름답게!">
+<meta property="og:title" content="화장품 싸게살 땐 발그레에서">
 <meta property="og:description"
       content="뷰티 No.1 발그레. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.">
 <script type="text/javascript" async=""
@@ -79,15 +77,15 @@
         async=""></script>
 <script async="" src="/js/myPage/fbevents.js"></script>
 <script type="application/ld+json">
-    { "@context": "http://schema.org", "@type": "WebSite", "url": "http://www.memebox.com/","name": "미미박스 (Memebox)", "alternateName": "뷰티 No.1 미미박스. 포토리뷰 가득한 뷰티공간에서 트렌드를 쇼핑하다.","potentialAction": { "@type": "SearchAction", "target": "https://search.memebox.com/memebox/search?q={search_term_string}&at=1&door=google_search&qt=box","query-input": "required name=search_term_string" } }
+    { "@context": "http://schema.org", "@type": "WebSite", "url": "http://www.balgeure.co.kr/","name": "발그레", "alternateName": "뷰티 No.1 발그레.","potentialAction": { "@type": "SearchAction", "target": "https://search.memebox.com/memebox/search?q={search_term_string}&at=1&door=google_search&qt=box","query-input": "required name=search_term_string" } }
 </script>
 <script type="application/ld+json">
-    [{"@context":"http://schema.org","@type":"siteNavigationElement","name":"미미브랜드","url":"http://www.memebox.com/category/181"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"메이크업","url":"http://www.memebox.com/category/177"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"스킨케어","url":"http://www.memebox.com/category/179"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"헤어","url":"http://www.memebox.com/category/178"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"바디","url":"http://www.memebox.com/category/728"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"네일","url":"http://www.memebox.com/category/726"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"향수","url":"http://www.memebox.com/category/180"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"MEN","url":"http://www.memebox.com/category/458"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"이미용기기","url":"http://www.memebox.com/category/188"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"파우더룸","url":"http://www.memebox.com/category/186"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"생활/건강","url":"http://www.memebox.com/category/710"}]
+    [{"@context":"http://schema.org","@type":"siteNavigationElement","name":"발그레","url":"http://www.balgeure.co.kr/"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"메이크업","url":"http://www.memebox.com/category/177"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"스킨케어","url":"http://www.memebox.com/category/179"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"헤어","url":"http://www.memebox.com/category/178"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"바디","url":"http://www.memebox.com/category/728"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"네일","url":"http://www.memebox.com/category/726"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"향수","url":"http://www.memebox.com/category/180"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"MEN","url":"http://www.memebox.com/category/458"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"이미용기기","url":"http://www.memebox.com/category/188"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"파우더룸","url":"http://www.memebox.com/category/186"},{"@context":"http://schema.org","@type":"siteNavigationElement","name":"생활/건강","url":"http://www.memebox.com/category/710"}]
 </script>
 
-<meta name="application-name" content="미미박스">
-<meta name="msapplication-tooltip" content="미미박스, 내 삶을 아름답게!">
-<meta name="msapplication-starturl" content="http://www.memebox.com/">
+<meta name="application-name" content="발그레">
+<meta name="msapplication-tooltip" content="싸게샀다 발그레에서">
+<meta name="msapplication-starturl" content="http://www.balgeure.co.kr/">
 
 <link rel="apple-touch-icon-precomposed"
       href="/img/myPage/myP_banner_20160621103357_yaL49rgT7s.png">

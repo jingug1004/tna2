@@ -293,26 +293,6 @@
     text-indent: 10px
 }
 
-.customer-service-center {
-    margin: 0
-}
-
-.customer-service-center-title {
-    display: none
-}
-
-.customer-service-center-tel {
-    display: block;
-    padding-left: 30px;
-    margin-bottom: 30px;
-    background-image: url("/package/components/information/customerServiceCenter/v.1.0.0/pc/_images/login_icon_call.png");
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-    color: #ff5073;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none
-}
 
 .customer-service-center-trigger {
     display: block;
@@ -346,28 +326,158 @@
     font-size: 12px
 }
 
-input[type=checkbox]:before {
-    content: "";
+
+
+
+
+/* 로그인 팝업 창 CSS s*/
+
+.layout-structure-content_POPUP {
+    background-color: #fff;
+    padding: 10px;
+    margin:0 auto;
+}
+
+.Popup_login_window_inner{
+	padding: 25px;
+}
+
+.text_under_header_POPUP{
+	font-size: 26px;
+    font-weight: normal;
+}
+
+.login-popup-title-txt{
+	margin-top: 10px;
+}
+
+.login-popup-title-txt span{
+	font-size: 15px;
+    font-weight: 500;
+}
+
+.login_form_onPopup{
+    width: 339px;
+    margin-top: 30px;
+}
+
+.login-insert-Box{
+	width: 100%;
+	border-spacing: 2px;
+}
+
+.login-insert-Box #typingBox_id, .login-insert-Box #typingBox_pw{
+	text-align:left;
+	width: 255px;
+}
+
+.balgeure_ID, .balgeure_PW{
+	width: 238px;
+    height: 27px;
+    line-height: 27px;
+    border: solid 1px #ccc;
+    color: #888;
+    padding-left: 15px;
+    border: solid 1px #ccc;
+}
+
+.Loginput-pw{
+	margin-top: 6px;
+}
+
+#Btn_login_submit{
+	text-align:right;
+}
+
+.poplogin-submit-button{
+	margin-left:4px;
+}
+
+.Pop_loginBtn{
+	display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    width: 80px;
+    height: 64px;
+    color: #fff;
+    background-color: #ff8fa7;
+    border:none;
+    letter-spacing: -1px;
+
+}
+#checkBox_poplogin{
+	text-align: left;
+	position: relative;
+	float: left;
+	margin-top:6px;
+}
+
+.login_auto_checkbox{
+	margin: 0px;
+}
+
+.autologintxt{
+	font-size:11px;
+}
+
+.simple-sns-poplogin-method{
+	position: relative;
+	float: right;
+	margin-top: 6px;
+}
+
+.simple-poplogin-SNS {
+    list-style: none;
+    padding: 0;
+}
+
+
+.simple-poplogin-SNS-list {
     display: inline-block;
-    width: 22px;
-    height: 22px;
-    margin-top: -2px;
-    margin-left: -2px;
-    background-image: url("/package/components/inputGroups/_common/v.1.0.0/pc/_images/guide_checkbox_big.png");
-    background-position: 0 0;
-    background-repeat: no-repeat
+    padding-left: 5px
 }
 
-input[type=checkbox]:checked:before {
-    background-image: url("/package/components/inputGroups/_common/v.1.0.0/pc/_images/guide_checkbox_big.png");
-    background-position: 0 -30px;
-    background-repeat: no-repeat
+.simple-poplogin-SNS-list:first-child {
+    margin-left: 0;
+    padding-left: 2px
 }
 
-#memebox-service {
-    background-color: #f9f9fa;
-    font-family: "\B098\B214\ACE0\B515", NanumGothic, "\B9D1\C740\ACE0\B515", Malgun Gothic, "\B3CB\C6C0", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif
+
+.Find_id_and_pw_register{
+    margin-top: 20px;
 }
+
+.btntxt_links{
+	text-align: center;
+    padding-top: 20px;
+}
+
+.btntxt_links a{
+	background: #fff;
+    border: 1px solid #c9cbcf;
+    display: inline-block;
+    line-height: 23px !important;
+    height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+.btntxt_links .lookingForTxt{
+	display: inline-block;
+    cursor: pointer;
+    color: #555;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 1px;
+}
+
+/* 로그인 팝업 창 CSS e*/
+
+
 
 .layout-structure-content {
     background-color: #fff;
@@ -746,7 +856,8 @@ input, select, button {
 }
 
 input {
-    padding-left: 6px
+    padding-left: 6px;
+    background-color:#fff;
 }
 
 table {
@@ -775,9 +886,7 @@ button {
     margin: 0;
     padding: 0;
     cursor: pointer;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px
+    border-radius: 0;
 }
 
 a {

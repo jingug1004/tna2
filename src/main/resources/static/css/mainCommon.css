@@ -748,7 +748,7 @@ div#header_v2 .arrow {
 div#header_v2 .mainMenu {
     position: relative;
     display: block;
-    padding: 9px 15px 0;
+    padding: 11px 15px 0;
     height: 31px;
     color: #000;
     font-size: 14px;
@@ -792,13 +792,17 @@ div#header_v2 .brand.over .lnbOver {
     font-size: 14px;
     text-align: center;
     font-weight: bold;
-    font-family: '챘�싈쑦ニ녳�씳ぢ냈졗モ�앪��', NanumGothic, '챘혧�뮨р�뷜궗', Dotum, AppleSDGothic, AppleGothic, '챗쨉쨈챘짝쩌', Gulim, sans-serif;
-    cursor: pointer
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
+    cursor: pointer;
 }
 
 div#header_v2 .categoryText {
     margin-top: 10px;
     line-height: 20px;
+    font-weight: bold;
+    padding: 0 19px 0 8px;
+    font-size: 14px;
+    font-family: '나눔고딕', NanumGothic, '돋움', Dotum, AppleSDGothic, AppleGothic, '굴림', Gulim, sans-serif;
 }
 
 div#header_v2 .categoryIcon_01 {
