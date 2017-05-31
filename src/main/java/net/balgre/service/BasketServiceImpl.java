@@ -59,7 +59,7 @@ public class BasketServiceImpl implements BasketService {
 
         BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
 
-        BasketResponse response = basketRetroImpl.basketListGET("Bearer " + token);
+        BasketResponse response = basketRetroImpl.basketListGET(token);
 
         if (response == null) {
             return null;
@@ -83,7 +83,7 @@ public class BasketServiceImpl implements BasketService {
 
         BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
 
-        BasketResponse response = basketRetroImpl.basketAddPOST("Bearer " + token, itemId, itemCount);
+        BasketResponse response = basketRetroImpl.basketAddPOST(token, itemId, itemCount);
 
         if (response == null) {
             return null;
@@ -107,7 +107,7 @@ public class BasketServiceImpl implements BasketService {
 
         BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
 
-        BasketResponse response = basketRetroImpl.basketDeleteDELETE("Bearer " + token, basket_id);
+        BasketResponse response = basketRetroImpl.basketDeleteDELETE(token, basket_id);
 
         if (response == null) {
 
@@ -134,7 +134,7 @@ public class BasketServiceImpl implements BasketService {
 
         BasketRetroImpl basketRetroImpl = new BasketRetroImpl();
 
-        BasketResponse response = basketRetroImpl.basketUpdatePUT("Bearer " + token, basket_id, item_count);
+        BasketResponse response = basketRetroImpl.basketUpdatePUT(token, basket_id, item_count);
 
         if (response == null) {
 

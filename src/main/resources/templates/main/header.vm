@@ -39,7 +39,6 @@
             /*left: -5px;*/
         }
     </style>
-
     <link type="text/css" href="/css/myPage/searchBar.css" rel="stylesheet" />
     ##    productDetail CSS
     <link type="text/css" href="/css/product/shop.css" rel="stylesheet" />
@@ -92,11 +91,15 @@
 				FB.login();
 	  		});
 		}
+        $(function() {
+            if('$!request.getRequestURI()' == '/main' || '$!request.getRequestURI()' == '/' || '$!request.getRequestURI()' == '') {
+                $('.fixCategory').css('display','block');
+            }
+        });
 	</script>
 </head>
 
 <body ondragstart="return false">
-
 #set($category = $!request.getSession().getAttribute("categoryList"))
 
     ## 메인 최상단 배너
@@ -144,7 +147,7 @@
                     <div class="link_text_onRightside_top">
                         <ul class="gnbTopRight fR">
                             <li class="event_and_coupon_page">
-                                <a href="#">
+                                <a href="/event/list">
                                     <span class="dP fL">이벤트/쿠폰/멤버십</span>
                                 </a>
                             </li>
@@ -303,8 +306,7 @@
                             <!--start fixCategory------------------------------------->
                             <!--고정 카테고리-->
 
-                            <div class="fixCategory">
-
+                            <div class="fixCategory" style="display:none;">
                                 #foreach($Category in $category)
                                 #set($dd2 = $Category.lv2_id)
                                 <ul>
@@ -338,16 +340,6 @@
                                 #set($dd = $Category.lv2_id)
                                 #end
                             </div>
-                            <script>
-                            $(function() {
-                                var mUrl = "http://localhost:8088/main";
-
-                                if(location.href != mUrl) {
-                                    $('.fixCategory').css('display','none');
-                                }
-                            });
-                            </script>
-
 
                             <!--end fixCategory------------------------------------>
 <!--전체카테고리 클릭하면 펼침-->
@@ -545,7 +537,7 @@
 
 	<script>
 		function openLogin() {
-			window.open('/login', 'idPopup', 'left=500, top=100, width=409, height=433, scrollbars=0, toolbar=0, location=no');
+			window.open('/loginPop', 'idPopup', 'left=500, top=100, width=409, height=433, scrollbars=0, toolbar=0, location=no');
 		}
 
 		function snsLogin(type) {

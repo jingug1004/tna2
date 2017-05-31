@@ -21,7 +21,7 @@ public class CouponServiceImpl implements CouponService {
 		
 		CouponRetroImpl CRI = new CouponRetroImpl();
 		
-		CouponUserResponse res = CRI.myCouponList2("Bearer " + token);
+		CouponUserResponse res = CRI.myCouponList2(token);
 		
 		logger.info("[ServiceImpl] 레트로에서 받은 token : " + token);
 		
@@ -52,22 +52,22 @@ public class CouponServiceImpl implements CouponService {
 		
 		CouponRetroImpl CRI = new CouponRetroImpl();
 		
-		CouponUserResponse res = CRI.myCouponInsert2("Bearer " + token, c_id);
+		CouponUserResponse res = CRI.myCouponInsert2(token, c_id);
 		
-		if (res == null) {
-			
-			return null;
-		}
+//		if (res == null) {
+//			
+//			return null;
+//		}
 		
-		if (res.getResultCode().equals("200")) {
-			logger.info("성공 : " + res.getMessage());
-			logger.info(res.getTimestamp());
-			
+//		if (res.getResultCode().equals("200")) {
+//			logger.info("성공 : " + res.getMessage());
+//			logger.info(res.getTimestamp());
+//			
 			return res;
-		} else {
-			logger.info("실패 : " + res.getMessage());
-			
-			return null;
-		}
+//		} else {
+//			logger.info("실패 : " + res.getMessage());
+//			
+//			return null;
+//		}
 	}
 }

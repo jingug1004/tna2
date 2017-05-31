@@ -81,7 +81,13 @@ public class LoginController {
         return "/auth/login";
 
     }
+    
+    @RequestMapping(value = "/loginPop", method = RequestMethod.GET)
+    public String loginPop() throws Exception {
+        return "/auth/loginPop";
 
+    }
+    
     @RequestMapping(value = "/loginPost", method = RequestMethod.POST)
     public String loginPOST(LoginDTO dto,
                           HttpSession session,

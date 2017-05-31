@@ -20,7 +20,8 @@
 
 package net.balgre.dto;
 
-import lombok.Data;
+import lombok.Setter;
+import net.balgre.BalgreConstants;
 
 /**
  * Created by user on 2017-04-17 오후 5:26
@@ -44,10 +45,22 @@ import lombok.Data;
  *  </pre>
  */
 
-@Data
 public class LoginDTO02 {
 
+	@Setter 
     private String token;
+	
+	@Setter
     private String refreshToken;
 
+	public String getToken() {
+		return BalgreConstants.TOKEN_SUFFIX + token;
+	}
+
+	public String getRefreshToken() {
+		return BalgreConstants.TOKEN_SUFFIX + refreshToken;
+	}
+
+	
+	
 }

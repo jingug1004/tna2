@@ -1,52 +1,5 @@
-<!DOCTYPE html>
-<html xmlns:fb="http://ogp.me/ns/fb#">
-<head>
-    <meta charset="UTF-8">
-    <meta content="*" http-equiv="Access-Control-Allow-Origin">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta content="text/javascript" http-equiv="Content-Script-Type">
-    <meta content="text/css" http-equiv="Content-Style-Type">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>로그인 : 발그레</title>
-
-    <link href="/css/loginCommon.css" rel="stylesheet" type="text/css">
-
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script src="/webjars/jquery-validation/1.16.0/jquery.validate.min.js"></script>
-    <script src="//connect.facebook.net/ko_KR/all.js"></script>
-    <script>
-		window.fbAsyncInit = function() {
-		  		FB.init({
-			  		appId : '232664117179969', // 앱 ID
-			  		status : true,         // 로그인 상태를 확인
-			  		cookie : true,          // 쿠키허용
-			  		xfbml : true          // parse XFBML
-		  		});
-
-			FB.Event.subscribe('auth.login', function(response) {
-				if (response.status === 'connected') {
-		        	FB.api('/me', function(user) {
-		            	if (user) {
-		            		$("#login").val(user.id);
-							$("#type").val("F");
-							$("#snslogin").submit();
-		            	}
-		        	});
-		    	}
-	  		});
-
-			FB.Event.subscribe('auth.logout', function(response) {
-				FB.login();
-	  		});
-		}
-    </script>
-    
-
-    
-    
-</head>
-
+#parse("/main/header.vm")
+<meta charset="UTF-8">
 <div class="layout-structure-content_POPUP">
     <div class="Popup_login_window_inner">
         <p class="text_under_header_POPUP">로그인</p>
@@ -55,7 +8,7 @@
         </div>
 
         <div class="login_form_onPopup">
-                 <form id="sky-form1" class="log-reg-block sky-form" method="post">
+                 <form id="sky-form1" class="log-reg-block sky-form" method="post" action="loginPost">
                 <table class="login-insert-Box">
                     <tr>
                         <td id="typingBox_id">
@@ -115,18 +68,10 @@
 
         </div>
     </div>
+    #parse("/main/footer.vm")
 </div>
 <script>
-    (function(d){
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement('script'); js.id = id; js.async = true;
-        js.src = "//connect.facebook.net/ko_KR/all.js";
-        ref.parentNode.insertBefore(js, ref);
-      }(document));
-
      $(document).ready(function () {
-     	Kakao.init('71fb3c875e19ee24c57124b06f983a1a');
      	$("#sky-form1").validate({
     		rules: {
     			username : {
@@ -139,14 +84,7 @@
     		messages: {
     			username: { required: "아이디를 입력하세요" },
     			password: { required: "비밀번호를 입력하세요" }
-    		}, submitHandler: function(form) {
-    			var returnValue = {
-    				id: $("#username").val(),
-    				type: $("#password").val()
-    			};
-    			window.opener.getReturnValue(returnValue);
-    			window.close();
-            }
+    		}
     	});
      });
 
@@ -157,57 +95,5 @@
     	window.open('/goFindPw', 'idPopup', 'left=580, top=270, width=700, height=400, scrollbars=no, toolbar=no, location=no');
     }
 </script>
-
-<script>
-	function snsLogin(type) {
-		if(type == 'N') {
-			naver_logout();
-		} else if(type == 'F') {
-			FB.getLoginStatus(function(response) {
-				if(response.status == 'connected' || response.status == 'not_authorized') {
-					FB.logout();
-				} else {
-					FB.login();
-				}
-			});
-			//FB.logout();
-		} else if(type == 'K') {
-			Kakao.Auth.logout(
-                function(obj) {
-                	openNewWindow("/kakao/login");
-            	}
-            );
-
-		}
-	}
-	function openNewWindow(url) {
-	  var name = '_blank';
-	  var specs = 'menubar=no,status=no,toolbar=no, width=500, height=500';
-	  var newWindow = window.open(url, name, specs);
-	  newWindow.focus();
-	}
-
-	function getReturnValue(returnValue) {
-		if(returnValue.id) {
-			var returnValue = {
-   				id: returnValue.id,
-   				type: returnValue.type
-   			};
-   			window.opener.getReturnValue(returnValue);
-   			window.close();
-		}
-	}
-
-	function naver_logout() {
-		$("body").append("<iframe id='logoutframe' style='display: none;'></iframe>");
-		$("#logoutframe").attr("src", "http://nid.naver.com/nidlogin.logout");
-		setTimeout(function() {
-			openNewWindow("/naver/login");
-		}, 2000); // 2000ms(2초)가 경과하면 이 함수가 실행됩니다.
-	}
-</script>
-
-
-
 </body>
 </html>

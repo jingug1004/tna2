@@ -89,16 +89,15 @@
 
 <link rel="apple-touch-icon-precomposed"
       href="/img/myPage/myP_banner_20160621103357_yaL49rgT7s.png">
-<!--<link rel="icon" type="image/x-icon" href="//img2.memebox.com/static/contents/img/upload/contents_20140915095454_iv33dG71a8.ico">-->
+
 <link rel="shorticon icon" type="image/x-icon"
       href="//www.memebox.com/favicon.ico">
 <!--}-->
 <link rel="stylesheet" type="text/css" href="/css/myPage/common.css">
-<!--<link rel="stylesheet" type="text/css" href="/web/css/header.css">-->
+
 <link rel="stylesheet" type="text/css"
       href="/css/myPage/jquery.fancybox.css">
-<!--<link rel="stylesheet" type="text/css" href="//www.memebox.com/web/css/vendor/jquery-ui.min.css">-->
-<!--}-->
+
 
 <style>
     .bx-wrapper .bx-viewport {
@@ -121,6 +120,7 @@
 <script type="text/javascript" src="/js/myPage/searchbar.js"></script>
 <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script><![endif]-->
 <script src="/js/myPage/jquery.history.js"></script>
+
 
 
 
@@ -604,173 +604,190 @@
 <div id="container" class="mA ">
 
     <div class="myPageWrap">
-        <div class="myPageLeftMenu fL">
-            <a href="/my/index" ga-event="마이페이지,마이페이지홈">
-                <h3 class="mA">마이페이지</h3>
-            </a>
-            <ul class="myPageSubMenu">
 
-                <li class="">
-                    <a href="/my/order" ga-event="마이페이지,마이페이지_주문배송">구매정보</a>
-                    <ul class="depth">
-                        <li class="">
-                            <a href="/my/order"
-                               ga-event="마이페이지,마이페이지_주문배송">주문/배송<span class="arrow"></span></a>
-                        </li>
-                        <!--<li class="">-->
-                        <!--<a href="http://">-->
-                        <!--<span class="cancel menu">취소/환불</span>-->
-                        <!--<span class="arrow"></span>-->
-                        <!--</a>-->
-                        <!--</li>-->
-                    </ul>
-                </li>
-                <li class="">
-                    <a href="/my/wishList"
-                       ga-event="마이페이지,마이페이지_찜한상품">찜한 상품<span class="arrow"></span></a>
-                </li>
-                <li class="">
-                    <a href="/my/coupon" ga-event="마이페이지,마이페이지_미미쿠폰">혜택정보</a>
-                    <ul class="depth">
-                        <li class="">
-                            <a href="/my/coupon"
-                               ga-event="마이페이지,마이페이지_미미쿠폰">발그레쿠폰<span class="arrow"></span></a>
-                        </li>
-                        <li class="">
-                            <a href="/my/point?page=0"
-                               ga-event="마이페이지,마이페이지_미미포인트">발그레포인트<span class="arrow"></span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="">
-                    <a href="/my/privacy"
-                       ga-event="마이페이지,마이페이지_개인정보수정">개인 정보<span class="arrow"></span></a>
-                    <ul class="depth">
-                        <li class="">
-                            <a href="/my/privacy"
-                               ga-event="마이페이지,마이페이지_개인정보수정">개인정보 수정<span class="arrow"></span></a>
-                        </li>
-                        <!--<li class="selected">-->
-                        <!--<a href="/my/privacy/refund">환불계좌 등록<span class="arrow"></span></a>-->
-                        <!--</li>-->
-                    </ul>
-                </li>
-                <li class="">
-                    <a href="/my/review" ga-event="마이페이지,마이페이지_나의리뷰">
-                        <span class="myReview menuImg">나의 리뷰</span> <span class="arrow"></span>
-                    </a>
-                </li>
-                <li class="" bottom="">
-                    <a href="/my/qna"
-                       a-event="마이페이지,마이페이지_1:1문의">1:1문의<span class="arrow"></span></a>
-                    <ul class="depth">
-                        <li class="">
-                            <a href="/my/qna"
-                               ga-event="마이페이지,마이페이지_1:1문의">1:1문의하기<span class="arrow"></span></a>
-                        </li>
-                        <li class="">
-                            <a href="/my/qnaList"
-                               ga-event="마이페이지,마이페이지_1:1답변">1:1답변보기<span class="arrow"></span></a>
-                        </li>
-                    </ul>
-                </li>
-                <!--<li class="bottom ">
-                    <a href="/my/freeEvent" ga-event="마이페이지,마이페이지_무료체험응모내역">무료체험 응모내역<span class="arrow"></span></a>
-                </li>-->
-            </ul>
+        <!-- location -->
+        <div class="navigation_on_Top">
+            <span class="localNavi">
+                <a class="home" href="/"><img src="/img/myPage/home-icon.png"></a>
+            </span>
+            <span>&gt;</span>
+            <span class="on">마이페이지</span>
         </div>
-        <div class="mypageRightContents fL">
-            <div class="rightContentsTop">
-                <h4 class="fL">
-                    <span class="sub main"></span>
-                </h4>
-                <div class="localNavi">
-                    <a class="home" href="/">홈</a> <span>&gt;</span> <span class="on">마이페이지</span>
+
+        <div class="myPageLeft_Right">
+            <div class="myPageLeftMenu fL">
+                <h3 class="mA">
+                    <a href="/my/index" ga-event="마이페이지,마이페이지홈">
+                       <img src="/img/myPage/myP_leftside_title.gif">
+                    </a>
+                </h3>
+
+                <ul class="myPageSubMenu">
+
+                    <li class="">
+                        <a href="#none" class="menu1 on"><span class="Left_B">주문현황</span></a>
+                        <ul class="depth">
+                            <li class="">
+                                <a href="/my/order"
+                                   ga-event="마이페이지,마이페이지_주문배송"><span>주문/배송현황</span><span class="arrow"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#none" class="menu2 on"><span class="Left_B">쇼핑통장</span></a>
+                        <ul class="depth">
+                            <li class="">
+                                <a href="/my/coupon"
+                                   ga-event="마이페이지,마이페이지_발그레쿠폰"><span>쿠폰</span><span class="arrow"></span></a>
+                            </li>
+                            <li class="">
+                                <a href="/my/point?page=0"
+                                   ga-event="마이페이지,마이페이지_발그레포인트"><span>포인트</span><span class="arrow"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#none" class="menu3 on"><span class="Left_B">관심상품</span></a>
+                        <ul class="depth">
+                            <li class="">
+                                <a href="/my/wishList"
+                                   ga-event="마이페이지,마이페이지_위시리스트"><span>찜리스트</span><span class="arrow"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#none" class="menu4 on">
+                            <span class="Left_B"">나의 리뷰</span> <span class="arrow"></span>
+                        </a>
+                        <ul class="depth">
+                            <li class="">
+                                <a href="/my/review"
+                                   ga-event="마이페이지,마이페이지_위시리스트">리뷰등록/관리<span class="arrow"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                                       
+                    <li class="">
+                        <a href="#none" class="menu5 on"><span class="Left_B">1:1문의</span><span class="arrow"></span></a>
+                        <ul class="depth">
+                            <li class="">
+                                <a href="/my/qna"
+                                   ga-event="마이페이지,마이페이지_1:1문의"><span>1:1문의하기</span><span class="arrow"></span></a>
+                            </li>
+                            <li class="">
+                                <a href="/my/qnaList"
+                                   ga-event="마이페이지,마이페이지_1:1답변"><span>1:1답변보기</span><span class="arrow"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="">
+                        <a href="#none" class="menu6 on"><span class="Left_B">개인 정보</span><span class="arrow"></span></a>
+                        <ul class="depth">
+                            <li class="">
+                                <a href="/my/privacy"
+                                   ga-event="마이페이지,마이페이지_개인정보수정"><span>개인 정보 수정</span><span class="arrow"></span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"
+                                   ga-event="마이페이지,마이페이지_배송지목록"><span>배송지목록 설정</span><span class="arrow"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="mypageRightContents fL">
+                <div class="rightContentsTop">
+                    <h4 class="fL">
+                        <span class="sub main"></span>
+                    </h4>
+
                 </div>
-            </div>
-            <!--E : rightContentsTop-->
-            <p class="userTitle">
-                <span class="myMiniIcon fL"></span><strong>$user.name</strong>님 반갑습니다!
-            </p>
-            <table class="userInfo" cellspacing="0" cellpadding="0">
-                <caption>사용자 정보</caption>
-                <thead>
-                    <tr>
-                        <th class="id">$user.name님 계정정보</th>
-                        <th class="th_padding">최근주문 상품</th>
-                        <th class="th_padding">발그레 포인트</th>
-                        <th class="th_padding">발그레 쿠폰</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="pText center">$user.email</td>
-                        <td rowspan="2">
-                            <a class="pText" href="/my/order"
-                               ga-event="마이페이지,마이페이지홈_최근주문상품">0</a> 개
-                        </td>
-                        <td rowspan="2">
-                            <a class="pText" href="/my/point?page=0"
-                               ga-event="마이페이지,마이페이지홈_포인트">$point.totalPoint</a> P
-                        </td>
-                        <td rowspan="2">
-                            <a class="pText" href="/my/coupon"
-                               ga-event="마이페이지,마이페이지홈_쿠폰">$Coupon</a> 개
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="recommendCode">
-                            <a href="#" class="copyCode"
-                               title="추천코드 복사하기" onclick="copyIdentifyCode('IBFWSB');"
-                               ga-event="마이페이지,마이페이지홈_코드복사">
-                                추천코드 : <strong>$user.myCode</strong>
-                            </a> <a href="/extra/memeInvite" class="recommendFriend"
-                                    ga-event="마이페이지,마이페이지홈_친구추천">친구추천</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <ul class="myMainNotice">
-
-                <li>친구를 추천하고 5,000P 혜택 받으세요</li>
-                <li>최근주문상품은 최근 일주일 동안의 주문건을 제공합니다.</li>
-            </ul>
-            <div class="purchaseList">
-                <span class="titleImg tI fL">최근 구매 내역</span>
-            </div>
-
-            <div class="tabAll">
-                <table class="orderTable mA" cellpadding="0" cellspacing="0"
-                       summary="구매정보">
-                    <caption>구매정보</caption>
-                    <colgroup>
-                        <col style="width: 86px;">
-                        <col>
-                        <col style="width: 90px;">
-                        <col style="width: 85px;">
-                    </colgroup>
+                <!--E : rightContentsTop-->
+                <p class="userTitle">
+                    <span class="myMiniIcon fL"></span><strong>$user.name</strong>님 반갑습니다!
+                </p>
+                <table class="userInfo" cellspacing="0" cellpadding="0">
+                    <caption>사용자 정보</caption>
                     <thead>
                         <tr>
-                            <th>주문일</th>
-                            <th>상품명</th>
-                            <th>결제금액</th>
-                            <th class="last">상태</th>
+                            <th class="id">$user.name님 계정정보</th>
+                            <th class="th_padding">최근주문 상품</th>
+                            <th class="th_padding">발그레 포인트</th>
+                            <th class="th_padding">발그레 쿠폰</th>
                         </tr>
                     </thead>
                     <tbody>
-
-
-
                         <tr>
-                            <td colspan="4" class="empty last fW">최근 주문 내역이 없습니다.</td>
+                            <td class="pText center">$user.email</td>
+                            <td rowspan="2">
+                                <a class="pText" href="/my/order"
+                                   ga-event="마이페이지,마이페이지홈_최근주문상품">0</a> 개
+                            </td>
+                            <td rowspan="2">
+                                <a class="pText" href="/my/point?page=0"
+                                   ga-event="마이페이지,마이페이지홈_포인트">$point.totalPoint</a> P
+                            </td>
+                            <td rowspan="2">
+                                <a class="pText" href="/my/coupon"
+                                   ga-event="마이페이지,마이페이지홈_쿠폰">$Coupon</a> 개
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="recommendCode">
+                                <a href="#" class="copyCode"
+                                   title="추천코드 복사하기" onclick="copyIdentifyCode('IBFWSB');"
+                                   ga-event="마이페이지,마이페이지홈_코드복사">
+                                    추천코드 : <strong>$user.myCode</strong>
+                                </a> <a href="/extra/memeInvite" class="recommendFriend"
+                                        ga-event="마이페이지,마이페이지홈_친구추천">친구추천</a>
+                            </td>
                         </tr>
                     </tbody>
-
-                    <tfoot></tfoot>
                 </table>
+                <ul class="myMainNotice">
+
+                    <li>친구를 추천하고 5,000P 혜택 받으세요</li>
+                    <li>최근주문상품은 최근 일주일 동안의 주문건을 제공합니다.</li>
+                </ul>
+                <div class="purchaseList">
+                    <span class="titleImg tI fL">최근 구매 내역</span>
+                </div>
+
+                <div class="tabAll">
+                    <table class="orderTable mA" cellpadding="0" cellspacing="0"
+                           summary="구매정보">
+                        <caption>구매정보</caption>
+                        <colgroup>
+                            <col style="width: 86px;">
+                            <col>
+                            <col style="width: 90px;">
+                            <col style="width: 85px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>주문일</th>
+                                <th>상품명</th>
+                                <th>결제금액</th>
+                                <th class="last">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+
+                            <tr>
+                                <td colspan="4" class="empty last fW">최근 주문 내역이 없습니다.</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot></tfoot>
+                    </table>
+                </div>
             </div>
+            <!--rightContents-->
         </div>
-        <!--rightContents-->
     </div>
     <!--myPageWrap-->
 

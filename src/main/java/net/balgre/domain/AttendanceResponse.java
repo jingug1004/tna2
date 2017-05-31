@@ -17,6 +17,7 @@ import java.util.List;
 public class AttendanceResponse {
 
     private List<Attendance> attendanceList;
+    private int stamp;
     private String message;
     private String resultCode;
     private String timestamp;

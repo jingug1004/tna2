@@ -28,8 +28,7 @@ public class QnaServiceImpl implements QnaService {
         // 3. RetroImpl 인스턴스 생성, 이 부분에서 QnaRetroImpl의 생성자가 호출(실행)된다.
 
         // 4. 생성한 인스턴스의 qnaInsert2 메서드를 호출하면서 파라미터 전달
-        // * token = KEY:X-Authorization VALUE:"Bearer" + token
-        CommonResponse res = QRI.qnaInsert2("Bearer " + token, qna);
+        CommonResponse res = QRI.qnaInsert2(token, qna);
 
         logger.info("response body 왔니? : " + res);
 
@@ -55,7 +54,7 @@ public class QnaServiceImpl implements QnaService {
 
         QnaRetroImpl QRI = new QnaRetroImpl();
 
-        QnaListResponse res = QRI.qnaList2("Bearer " + token);
+        QnaListResponse res = QRI.qnaList2(token);
 
         logger.info("response body 왔니? : " + res);
 
@@ -81,7 +80,7 @@ public class QnaServiceImpl implements QnaService {
 
         UserInfoRetroImpl UIR = new UserInfoRetroImpl();
 
-        UserResponse res = UIR.getUserInfo2("Bearer " + token);
+        UserResponse res = UIR.getUserInfo2(token);
 
         logger.info("UserInfoServiceImpl Response token : " + res);
 
@@ -108,7 +107,7 @@ public class QnaServiceImpl implements QnaService {
 
         QnaRetroImpl QRI = new QnaRetroImpl();
 
-        QnaListResponse res = QRI.qnaDelete2("Bearer " + token, id);
+        QnaListResponse res = QRI.qnaDelete2(token, id);
 
         logger.info("QnaServiceImpl Response token : " + res);
 
@@ -134,7 +133,7 @@ public class QnaServiceImpl implements QnaService {
 		
 		QnaRetroImpl QRI = new QnaRetroImpl();
 		
-		Qna qna = QRI.qnaDetail2("Bearer " + token);
+		Qna qna = QRI.qnaDetail2(token);
 		
 		logger.info("response body 왔니? : " + qna);
 		
